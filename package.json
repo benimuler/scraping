@@ -1,0 +1,20 @@
+{
+  "name": "tati",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
+    "docx": "^8.0.4",
+    "encoding": "^0.1.13",
+    "jschardet": "^3.0.0",
+    "puppeteer": "^20.5.0"
+  }
+}
