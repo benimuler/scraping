@@ -1,0 +1,25 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# pipeline output (generated media + resumable state)
+out/
+output/
+runs/
+
+# node (pre-existing project)
+node_modules/
+
+# os / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/

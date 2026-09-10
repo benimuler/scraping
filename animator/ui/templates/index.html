@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ data.title }} — shot review</title>
+  <style>
+    :root {
+      --bg: #12131a; --panel: #1b1d27; --line: #2c2f3d;
+      --ink: #e8eaf2; --muted: #9aa0b5; --ok: #4ec98a; --bad: #ef6b6b;
+      --pending: #6b7290; --accent: #7aa2ff;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink);
+           font: 14px/1.5 ui-sans-serif, system-ui, -apple-system, sans-serif; }
+    header { padding: 24px 28px; border-bottom: 1px solid var(--line); }
+    h1 { margin: 0 0 6px; font-size: 20px; }
+    .muted { color: var(--muted); }
+    .bar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+           padding: 14px 28px; border-bottom: 1px solid var(--line); }
+    button { background: var(--panel); color: var(--ink); border: 1px solid var(--line);
+             border-radius: 7px; padding: 6px 12px; cursor: pointer; font-size: 13px; }
+    button:hover { border-color: var(--accent); }
+    button[disabled] { opacity: .5; cursor: default; }
+    main { display: grid; gap: 18px; padding: 22px 28px;
+           grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); }
+    .shot { background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+            overflow: hidden; display: flex; flex-direction: column; }
+    .shot h2 { margin: 0; font-size: 15px; padding: 12px 14px;
+               border-bottom: 1px solid var(--line); display: flex; gap: 8px;
+               align-items: center; justify-content: space-between; }
+    .media { background: #000; aspect-ratio: 16/9; display: flex; }
+    .media img, .media video { width: 100%; height: 100%; object-fit: contain; }
+    .body { padding: 12px 14px; display: grid; gap: 8px; }
+    .row { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+    .chip { font-size: 11px; padding: 2px 8px; border-radius: 999px;
+            border: 1px solid var(--line); color: var(--muted); }
+    .chip.done { color: var(--ok); border-color: var(--ok); }
+    .chip.failed { color: var(--bad); border-color: var(--bad); }
+    .chip.pending, .chip.running { color: var(--pending); }
+    .err { color: var(--bad); font-size: 12px; white-space: pre-wrap; }
+    details summary { cursor: pointer; color: var(--muted); font-size: 12px; }
+    details p { margin: 6px 0 0; font-size: 12px; color: var(--muted);
+                white-space: pre-wrap; }
+    audio { width: 100%; }
+    .film { padding: 0 28px 32px; }
+    .film video { width: 100%; max-width: 900px; border-radius: 12px;
+                  border: 1px solid var(--line); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="title">{{ data.title }}</h1>
+    <div class="muted" id="logline">{{ data.logline }}</div>
+  </header>
+
+  <div class="bar">
+    <button onclick="assemble()">Assemble film</button>
+    <button onclick="refresh()">Refresh</button>
+    <span class="muted" id="providers"></span>
+  </div>
+
+  <main id="shots"></main>
+
+  <div class="film" id="film"></div>
+
+<script>
+const STAGES = ["image", "video", "voice"];
+let busy = new Set();
+
+async function refresh() {
+  const data = await (await fetch("/api/status")).json();
+  document.getElementById("title").textContent = data.title;
+  document.getElementById("logline").textContent = data.logline;
+  document.getElementById("providers").textContent =
+    Object.entries(data.providers).map(([k, v]) => `${k}: ${v}`).join("  ·  ");
+  busy = new Set(data.jobs.running);
+
+  document.getElementById("shots").innerHTML = data.shots.map(renderShot).join("");
+  const film = document.getElementById("film");
+  film.innerHTML = data.film
+    ? `<h2>Final film</h2><video controls src="/media/film?t=${Date.now()}"></video>`
+    : `<p class="muted">No film assembled yet.</p>`;
+}
+
+function renderShot(shot) {
+  const t = Date.now();
+  const v = shot.stages.video, i = shot.stages.image, a = shot.stages.voice;
+  const media = v.has_file
+    ? `<video controls preload="metadata" src="/media/video/${shot.id}?t=${t}"></video>`
+    : (i.has_file ? `<img src="/media/image/${shot.id}?t=${t}" alt="">`
+                  : `<div style="margin:auto" class="muted">no frame yet</div>`);
+  const chips = STAGES.map(s =>
+    `<span class="chip ${shot.stages[s].status}">${s}: ${shot.stages[s].status}</span>`
+  ).join("");
+  const errors = STAGES.filter(s => shot.stages[s].error)
+    .map(s => `<div class="err">${s}: ${escapeHtml(shot.stages[s].error)}</div>`).join("");
+  const running = busy.has(shot.id);
+
+  return `<section class="shot">
+    <h2><span>${shot.id}</span><span class="muted">${shot.duration}s</span></h2>
+    <div class="media">${media}</div>
+    <div class="body">
+      <div class="row">${chips}</div>
+      <div>${escapeHtml(shot.action)}</div>
+      ${shot.dialogue ? `<div class="muted">“${escapeHtml(shot.dialogue)}”
+         — ${escapeHtml(shot.speaker || "")}</div>` : ""}
+      ${a.has_file ? `<audio controls src="/media/voice/${shot.id}?t=${t}"></audio>` : ""}
+      ${errors}
+      <div class="row">
+        <button ${running ? "disabled" : ""} onclick="regen('${shot.id}', STAGES)">
+          ${running ? "regenerating…" : "Regenerate shot"}</button>
+        <button ${running ? "disabled" : ""}
+          onclick="regen('${shot.id}', ['video'])">Video only</button>
+        <button ${running ? "disabled" : ""}
+          onclick="regen('${shot.id}', ['voice'])">Voice only</button>
+      </div>
+      <details><summary>prompts</summary>
+        <p><b>frame:</b> ${escapeHtml(shot.image_prompt)}</p>
+        <p><b>motion:</b> ${escapeHtml(shot.animation_prompt)}</p>
+      </details>
+    </div>
+  </section>`;
+}
+
+async function regen(shotId, stages) {
+  busy.add(shotId);
+  await fetch(`/api/regen/${shotId}`, {
+    method: "POST", headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({stages}),
+  });
+  refresh();
+}
+
+async function assemble() {
+  const res = await (await fetch("/api/assemble", {method: "POST"})).json();
+  if (!res.ok) alert("assembly failed: " + res.error);
+  refresh();
+}
+
+function escapeHtml(s) {
+  return String(s ?? "").replace(/[&<>"']/g,
+    c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+
+refresh();
+setInterval(() => { if (busy.size) refresh(); }, 4000);
+</script>
+</body>
+</html>

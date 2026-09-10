@@ -1,0 +1,126 @@
+# ---------------------------------------------------------------------------
+# animator — pipeline configuration
+# Adapters are selected purely by name here; see README "Adding a new provider".
+# ---------------------------------------------------------------------------
+
+project:
+  name: "demo"
+  # Where every artifact for a run lives (state.json, images/, video/, voice/).
+  out_dir: "out"
+  fps: 24
+  resolution: "1280x720"     # WxH of the final film
+  aspect_ratio: "16:9"
+
+script:
+  # Target shape of the breakdown. The LLM is asked to respect these.
+  min_shots: 8
+  max_shots: 12
+  min_shot_seconds: 3
+  max_shot_seconds: 6
+  target_total_seconds: 60
+  language: "en"             # language of the generated prompts
+  dialogue_language: "en"    # language spoken by the voice provider
+
+llm:
+  # Used for script breakdown + character bible.
+  provider: "claude"         # claude | offline
+  model: "claude-opus-5"
+  max_tokens: 8000
+  temperature: 0.4
+  # If no ANTHROPIC_API_KEY is present, fall back to the deterministic
+  # offline breakdown instead of failing. Set false to hard-fail.
+  fallback_offline: true
+
+providers:
+  image: "pollinations"      # pollinations | openai | gemini | huggingface | mock
+  video: "kling"             # kling | mock
+  voice: "edge_tts"          # edge_tts | mock
+  music: "silent"            # silent
+
+image:
+  pollinations:
+    model: "flux"
+    width: 1280
+    height: 720
+    # Pollinations is free and keyless; nologo requires no token for basic use.
+    nologo: true
+    timeout: 180
+    cost_per_call: 0.0       # free tier
+  openai:
+    model: "gpt-image-1"
+    size: "1536x1024"
+    timeout: 180
+    cost_per_call: 0.04
+  gemini:
+    # "Nano Banana" = gemini-2.5-flash-image
+    model: "gemini-2.5-flash-image"
+    timeout: 180
+    cost_per_call: 0.039
+  huggingface:
+    model: "stabilityai/stable-diffusion-xl-base-1.0"
+    timeout: 300
+    cost_per_call: 0.0
+  mock:
+    width: 1280
+    height: 720
+    cost_per_call: 0.0
+
+video:
+  kling:
+    # Official Kling endpoint. Use api.klingai.com for the CN console.
+    base_url: "https://api-singapore.klingai.com"
+    model_name: "kling-v1-6"
+    mode: "std"              # std | pro  (pro costs meaningfully more credits)
+    duration: 5              # seconds; Kling accepts 5 or 10
+    cfg_scale: 0.5
+    # auto  -> jwt when KLING_ACCESS_KEY/KLING_SECRET_KEY (or "ak:sk") is set,
+    #          bearer when a single opaque KLING_API_KEY is set.
+    # jwt    -> official klingai.com HS256 JWT signing.
+    # bearer -> Authorization: Bearer <KLING_API_KEY> (resellers / gateways).
+    auth_mode: "auto"
+    poll_interval: 10        # seconds between task-status polls
+    poll_timeout: 900        # give up on a task after this many seconds
+    max_retries: 4           # retries for submit/poll transport + 429/5xx
+    backoff_base: 2.0        # exponential backoff base (2s, 4s, 8s, 16s)
+    timeout: 120             # per-HTTP-request timeout
+    credits_per_call: 10     # std/5s; used for the pre-flight credit log
+    cost_per_call: 0.098     # informational, shown before every paid call
+  mock:
+    # Renders a slow ken-burns move over the still frame with ffmpeg.
+    cost_per_call: 0.0
+
+voice:
+  edge_tts:
+    # Per-character voices can be overridden in the character bible.
+    default_voice: "en-US-AriaNeural"
+    narrator_voice: "en-US-GuyNeural"
+    rate: "+0%"
+    volume: "+0%"
+    cost_per_call: 0.0
+  mock:
+    cost_per_call: 0.0
+
+music:
+  silent:
+    cost_per_call: 0.0
+
+assembly:
+  # Final mux settings.
+  video_codec: "libx264"
+  audio_codec: "aac"
+  crf: 20
+  preset: "medium"
+  audio_bitrate: "192k"
+  # Duck nothing for now; music adapter is silent.
+  dialogue_gain_db: 0
+  music_gain_db: -18
+
+safety:
+  # Hard ceiling on paid calls in a single run. The orchestrator aborts before
+  # exceeding it, so a bad config cannot drain an account.
+  max_paid_calls: 30
+  max_estimated_cost_usd: 5.0
+  # Always print the exact request that is about to be billed.
+  log_payload_before_paid_call: true
+  # Ask for interactive confirmation before the first paid call of a run.
+  confirm_before_paid: false
