@@ -292,6 +292,7 @@ class Game {
       itemShownAt: 0,
       transcripts: { [challengerId]: '', [defenderId]: '' },
       live: { verdict: 'none', heard: null, score: 0 },
+      lastTurn: null,
       rounds: [],
       perPlayer: {
         [challengerId]: { correct: 0, passes: 0, nearMisses: 0, streak: 0, bestStreak: 0, totalMs: 0, fastestMs: null, clutch: 0 },
@@ -380,13 +381,27 @@ class Game {
       heard: result.heard, score: result.score, outcome: 'correct',
     });
 
+    // מה שהתקבל נשמר במצב ולא רק כאירוע, כך שהוא נשאר על המסך עד התור הבא
+    // ומגיע גם למי שהתחבר מחדש באמצע.
+    duel.lastTurn = {
+      playerId,
+      outcome: 'correct',
+      answer: duel.item.answer,
+      matched: result.matched,
+      heard: result.heard,
+      transcript: (duel.transcripts[playerId] || '').trim() || null,
+      ms: elapsed,
+    };
+
     this.emit({
       type: 'answer',
       playerId,
       correct: true,
       answer: duel.item.answer,
+      matched: result.matched,
       heard: result.heard,
       ms: elapsed,
+      streak: p.streak,
       clockLeftMs: duel.clocks[playerId],
     });
 
@@ -411,6 +426,15 @@ class Game {
       playerId, item: duel.item.answer, ms: Date.now() - duel.itemShownAt,
       heard: duel.transcripts[playerId] || null, score: 0, outcome: 'pass',
     });
+    duel.lastTurn = {
+      playerId,
+      outcome: 'pass',
+      answer: duel.item.answer,
+      matched: null,
+      heard: null,
+      transcript: (duel.transcripts[playerId] || '').trim() || null,
+      ms: Date.now() - duel.itemShownAt,
+    };
     duel.passLockUntil = Date.now() + this.config.passLockMs;
     this.emit({ type: 'answer', playerId, correct: false, answer: duel.item.answer, passed: true });
     this._publish();
@@ -465,6 +489,8 @@ class Game {
   _endDuel(loserId) {
     const duel = this.duel;
     const winnerId = loserId === duel.challengerId ? duel.defenderId : duel.challengerId;
+    // הפריט שהיה על המסך כשהשעון נגמר — נחשף בתוצאה
+    duel.missedAnswer = duel.item ? duel.item.answer : null;
     if (this.mode === 'duel') return this._endStandaloneDuel(winnerId, loserId);
 
     const winner = this.players.get(winnerId);
@@ -501,6 +527,8 @@ class Game {
       categoryId: duel.categoryId,
       categoryName: duel.category.name,
       inheritedCategory,
+      missedAnswer: duel.missedAnswer,
+      lastTurn: duel.lastTurn,
       clocks: { ...duel.clocks },
       perPlayer: duel.perPlayer,
       rounds: duel.rounds,
@@ -550,6 +578,8 @@ class Game {
       categoryId: duel.categoryId,
       categoryName: duel.category.name,
       inheritedCategory: null,
+      missedAnswer: duel.missedAnswer,
+      lastTurn: duel.lastTurn,
       clocks: { ...duel.clocks },
       perPlayer: duel.perPlayer,
       rounds: duel.rounds,
@@ -722,11 +752,16 @@ class Game {
         clocks: duel.clocks,
         passLockMs: Math.max(0, duel.passLockUntil - Date.now()),
         live: duel.live,
+        lastTurn: duel.lastTurn,
         transcript: duel.transcripts[duel.activeId] || '',
         item: duel.item ? { image: duel.item.image, text: duel.item.text || null } : null,
         score: {
           [duel.challengerId]: duel.perPlayer[duel.challengerId].correct,
           [duel.defenderId]: duel.perPlayer[duel.defenderId].correct,
+        },
+        streak: {
+          [duel.challengerId]: duel.perPlayer[duel.challengerId].streak,
+          [duel.defenderId]: duel.perPlayer[duel.defenderId].streak,
         },
       };
     }

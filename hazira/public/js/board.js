@@ -201,6 +201,7 @@ function renderDuel(fresh) {
 
   if (fresh) renderLive(duel.live, duel.transcript);
   $('listen-who').textContent = `מאזינים ל${playerById(duel.activeId)?.name || '—'}`;
+  renderLastTurn(duel.lastTurn);
 }
 
 function renderFighter(el, playerId, duel, role) {
@@ -233,16 +234,41 @@ function renderLive(live, transcript) {
     : live?.verdict === 'correct' ? 'נכון!' : '';
 }
 
+/**
+ * מה קרה בתור הקודם: התשובה הנכונה, ולצידה הניסוח המדויק שהתקבל.
+ * הניסוח מוצג תמיד — גם כשהוא זהה לתשובה — כדי ששני השחקנים יראו בדיוק
+ * על מה ניתנה הנקודה, ולא יצטרכו לנחש מה המנוע שמע.
+ */
+function renderLastTurn(turn) {
+  const box = $('last-turn');
+  if (!turn) { box.hidden = true; return; }
+  box.hidden = false;
+  box.className = `last-turn ${turn.outcome}`;
+
+  const who = playerById(turn.playerId)?.name || '';
+  const said = turn.heard || turn.transcript;
+
+  const lines = [
+    `<div class="lt-head">${turn.outcome === 'correct' ? '✓' : '✗'} ${esc(turn.answer)}</div>`,
+  ];
+  if (turn.outcome === 'correct') {
+    lines.push(`<div class="lt-said">${esc(who)} אמר: “${esc(said || turn.answer)}”</div>`);
+    // כשההתאמה נעשתה מול מילה נרדפת, ראוי שיהיה ברור מה התקבל ולמה
+    if (turn.matched && turn.matched !== turn.answer) {
+      lines.push(`<div class="lt-note">התקבל כ“${esc(turn.matched)}”</div>`);
+    }
+    lines.push(`<div class="lt-note">${(turn.ms / 1000).toFixed(1)} שניות</div>`);
+  } else {
+    lines.push(`<div class="lt-said">${esc(who)} ויתר${said ? ` · נשמע: “${esc(said)}”` : ''}</div>`);
+  }
+  box.innerHTML = lines.join('');
+}
+
 function onAnswer(msg) {
   const flash = $('flash');
   flash.className = `flash ${msg.correct ? 'correct' : 'pass'}`;
   setTimeout(() => { flash.className = 'flash'; }, 620);
-  if (msg.correct) {
-    $('transcript').className = 'transcript correct';
-    $('verdict-note').textContent = `✓ ${msg.answer} — ${(msg.ms / 1000).toFixed(1)} שניות`;
-  } else if (msg.passed) {
-    $('verdict-note').textContent = `ויתר — התשובה הייתה ${msg.answer}`;
-  }
+  if (msg.correct) $('transcript').className = 'transcript correct';
 }
 
 // שעונים: השרת משדר עשר פעמים בשנייה, והאנימציה משלימה את מה שביניהן
@@ -284,6 +310,7 @@ function renderResult() {
     `<span style="color:${colors.get(r.winnerId)}">${esc(winner.name)}</span> הדיח את ${esc(loser.name)}`;
 
   const lines = [
+    ...(r.missedAnswer ? [`התשובה שנשארה על המסך: ${r.missedAnswer}`] : []),
     `נשארו על השעון: ${formatClock(r.clocks[r.winnerId])} שניות`,
     `${r.rounds.filter((x) => x.outcome === 'correct').length} תשובות נכונות בדו־קרב`,
   ];

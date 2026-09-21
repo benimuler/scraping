@@ -11,6 +11,17 @@
 <div class="flash" id="flash"></div>
 
 <main class="phone">
+  <!-- סרגל התקדמות: נוכח במסכים שאינם דו־קרב -->
+  <header class="topbar" id="topbar" hidden>
+    <button class="chip" id="open-trophies" type="button">
+      <span id="chip-trophies">🏆 0</span>
+    </button>
+    <div class="level-chip">
+      <span class="lvl" id="chip-level">רמה 1</span>
+      <span class="level-bar"><i id="chip-bar"></i></span>
+    </div>
+  </header>
+
   <!-- הצטרפות -->
   <section class="screen" id="s-join">
     <div class="logo">ה<span>זירה</span></div>
@@ -90,7 +101,10 @@
         <span class="who">אתה</span>
         <span class="clock" id="my-clock">--.-</span>
       </div>
-      <div class="cat-chip" id="duel-cat">—</div>
+      <div class="cat-stack">
+        <div class="cat-chip" id="duel-cat">—</div>
+        <div class="streak-chip" id="streak-chip" hidden></div>
+      </div>
       <div class="side-clock" id="rival-side">
         <span class="who" id="rival-name">יריב</span>
         <span class="clock" id="rival-clock">--.-</span>
@@ -113,6 +127,7 @@
       </div>
       <div class="transcript" id="d-transcript">…</div>
       <div class="verdict-meter"><i id="d-bar"></i></div>
+      <div class="last-turn" id="d-last-turn" hidden></div>
     </div>
 
     <div class="controls" id="d-controls">
@@ -143,9 +158,30 @@
     <h1 id="over-title">—</h1>
     <div class="my-cat" id="over-sub">—</div>
     <div class="series" id="over-series" hidden></div>
+
+    <div class="reward" id="reward" hidden>
+      <div class="xp-line"><span id="xp-gained">+0</span> ניסיון</div>
+      <div class="level-row">
+        <span id="reward-level">רמה 1</span>
+        <span class="level-bar big"><i id="reward-bar"></i></span>
+        <span class="muted" id="reward-next"></span>
+      </div>
+      <div class="bests" id="reward-bests"></div>
+      <div class="unlocked" id="reward-unlocked"></div>
+    </div>
+
     <button class="btn primary lg" id="btn-rematch" hidden>סיבוב נוסף — הפעם בקטגוריה שלך</button>
     <div class="mini-board" id="over-board"></div>
     <div class="my-stats" id="over-stats"></div>
+  </section>
+  <!-- כוננית הגביעים -->
+  <section class="screen overlay" id="s-trophies" hidden>
+    <div class="overlay-head">
+      <button class="btn ghost back" id="trophies-back" type="button">→ חזרה</button>
+      <h2>הגביעים שלי</h2>
+    </div>
+    <div class="profile-summary" id="profile-summary"></div>
+    <div class="trophy-grid" id="trophy-grid"></div>
   </section>
 </main>
 

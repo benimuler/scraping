@@ -2,12 +2,19 @@
 
 import { connect, playerColor, formatClock, toast } from './net.js';
 import { createListener, speechSupported } from './speech.js';
+import {
+  TROPHIES, applyRound, loadProfile, saveProfile, levelProgress, personalBests,
+} from './profile.mjs';
 
 const $ = (id) => document.getElementById(id);
 const screens = {
   join: $('s-join'), wait: $('s-wait'), intro: $('s-intro'), pick: $('s-pick'),
   watch: $('s-watch'), duel: $('s-duel'), decide: $('s-decide'), over: $('s-over'),
 };
+
+// שכבות שנפתחות מעל המשחק. הן לא חלק מזרימת המשחק, ולכן כפתור החזרה של
+// הטלפון סוגר אותן במקום לצאת מהאפליקציה.
+const overlays = { trophies: $('s-trophies') };
 
 const STORAGE_KEY = 'hazira:session';
 
@@ -19,6 +26,9 @@ let clock = { clocks: {}, activeId: null, at: 0, passLockMs: 0 };
 let currentItem = null;
 let micOn = false;
 let lastActiveId = null;
+let profile = loadProfile(window.localStorage);
+let scoredDuelId = null;   // כדי שדו־קרב אחד לא ייספר פעמיים ברינדור חוזר
+let lastStreak = 0;
 
 // ------------------------------------------------------------- מיקרופון
 
@@ -170,6 +180,69 @@ function routeDuel() {
 function show(name) {
   for (const [key, el] of Object.entries(screens)) el.hidden = key !== name;
   if (name !== 'duel') setMic(false);
+  renderTopbar(name);
+}
+
+// ------------------------------------------------------ ניווט וחזרה אחורה
+
+let openOverlay = null;
+
+/**
+ * פתיחת שכבה דוחפת מצב להיסטוריה, כך שכפתור החזרה של הטלפון סוגר אותה
+ * במקום לזרוק את השחקן מהמשחק — וזה הריפלקס הטבעי בטלפון.
+ */
+function showOverlay(name) {
+  if (openOverlay === name) return;
+  openOverlay = name;
+  for (const [key, el] of Object.entries(overlays)) el.hidden = key !== name;
+  history.pushState({ overlay: name }, '');
+}
+
+function closeOverlay({ fromHistory = false } = {}) {
+  if (!openOverlay) return;
+  openOverlay = null;
+  for (const el of Object.values(overlays)) el.hidden = true;
+  if (!fromHistory) history.back();
+}
+
+window.addEventListener('popstate', () => {
+  if (openOverlay) closeOverlay({ fromHistory: true });
+});
+
+$('open-trophies').addEventListener('click', () => {
+  renderTrophies();
+  showOverlay('trophies');
+});
+$('trophies-back').addEventListener('click', () => closeOverlay());
+
+/** הסרגל מיותר בתוך דו־קרב — שם כל פיקסל שייך לתמונה ולשעון. */
+function renderTopbar(screen) {
+  const show_ = screen !== 'duel' && screen !== 'join';
+  $('topbar').hidden = !show_;
+  if (!show_) return;
+
+  const p = levelProgress(profile.xp);
+  $('chip-level').textContent = `רמה ${p.level}`;
+  $('chip-bar').style.width = `${Math.round(p.ratio * 100)}%`;
+  $('chip-trophies').textContent = `🏆 ${Object.keys(profile.trophies).length}`;
+}
+
+function renderTrophies() {
+  const owned = profile.trophies;
+  const p = levelProgress(profile.xp);
+
+  $('profile-summary').innerHTML = [
+    ['רמה', p.level], ['ניצחונות', profile.wins], ['דו־קרבות', profile.duels],
+    ['תשובות', profile.correct], ['רצף שיא', profile.bestStreak],
+    ['הכי מהיר', profile.fastestMs === null ? '—' : `${(profile.fastestMs / 1000).toFixed(1)}ש׳`],
+  ].map(([label, value]) => `<div><b>${esc(value)}</b><span>${label}</span></div>`).join('');
+
+  $('trophy-grid').innerHTML = TROPHIES.map((t) => `
+    <div class="trophy-card ${owned[t.id] ? '' : 'locked'}">
+      <span class="ico">${t.icon}</span>
+      <b>${esc(t.name)}</b>
+      <span>${esc(t.desc)}</span>
+    </div>`).join('');
 }
 
 const playerById = (id) => state.players.find((p) => p.id === id) || null;
@@ -357,6 +430,8 @@ function renderDuel() {
     else if (!myTurn) setMic(false, { keepWanted: true });
   }
 
+  renderLastTurn(duel.lastTurn);
+  renderStreak(duel);
   $('d-veil').hidden = myTurn;
   $('d-veil-text').textContent = `התור של ${playerById(rivalId)?.name || 'היריב'}`;
   $('btn-pass').disabled = !myTurn;
@@ -384,11 +459,56 @@ function renderLive(live, transcript) {
     : live?.verdict === 'near' ? 'var(--warn)' : 'var(--line)';
 }
 
+/**
+ * מה קרה בתור הקודם. הניסוח שהתקבל מוצג תמיד — גם כשהוא זהה לתשובה —
+ * כדי שברור על מה בדיוק ניתנה הנקודה ומה המנוע שמע.
+ */
+function renderLastTurn(turn) {
+  const box = $('d-last-turn');
+  if (!turn) { box.hidden = true; return; }
+  box.hidden = false;
+  box.className = `last-turn ${turn.outcome}`;
+
+  const who = turn.playerId === me.id ? 'אתה' : (playerById(turn.playerId)?.name || 'היריב');
+  const said = turn.heard || turn.transcript;
+  const parts = [`<div class="lt-head">${turn.outcome === 'correct' ? '✓' : '✗'} ${esc(turn.answer)}</div>`];
+
+  if (turn.outcome === 'correct') {
+    parts.push(`<div class="lt-said">${esc(who)}: “${esc(said || turn.answer)}”</div>`);
+    if (turn.matched && turn.matched !== turn.answer) {
+      parts.push(`<div class="lt-note">התקבל כ“${esc(turn.matched)}”</div>`);
+    }
+    parts.push(`<div class="lt-note">${(turn.ms / 1000).toFixed(1)} שניות</div>`);
+  } else {
+    parts.push(`<div class="lt-said">${esc(who)} ויתר${said ? ` · נשמע: “${esc(said)}”` : ''}</div>`);
+  }
+  box.innerHTML = parts.join('');
+}
+
+/** הרצף הנוכחי שלי, מוצג רק כששווה להתרגש ממנו. */
+function renderStreak(duel) {
+  const mine = duel.streak?.[me.id] ?? 0;
+  const chip = $('streak-chip');
+  chip.hidden = mine < 2;
+  if (mine >= 2) {
+    chip.textContent = `🔥 ${mine} ברצף`;
+    if (mine !== lastStreak) {
+      // אנימציה מחדש בכל עלייה, אחרת הרצף מרגיש סטטי
+      chip.style.animation = 'none';
+      void chip.offsetWidth;
+      chip.style.animation = '';
+    }
+  }
+  lastStreak = mine;
+}
+
 function onAnswer(msg) {
   const flash = $('flash');
   flash.className = `flash ${msg.correct ? 'correct' : 'pass'}`;
   setTimeout(() => { flash.className = 'flash'; }, 620);
-  if (msg.playerId === me?.id && msg.correct && navigator.vibrate) navigator.vibrate(60);
+  if (msg.playerId === me?.id && msg.correct && navigator.vibrate) {
+    navigator.vibrate(msg.streak >= 3 ? [40, 50, 40] : 60);
+  }
 }
 
 // ------------------------------------------------------------ סיום המשחק
@@ -401,10 +521,12 @@ function renderOver() {
 
   if (duelMode) {
     $('over-title').textContent = won ? '🏆 ניצחת' : 'הפסדת';
-    $('over-sub').textContent = result
-      ? `${result.categoryName} · השעון של ${playerById(result.loserId)?.name} נגמר`
+    $('over-sub').innerHTML = result
+      ? `${esc(result.categoryName)} · השעון של ${esc(playerById(result.loserId)?.name || '')} נגמר`
+        + (result.missedAnswer ? `<br><span class="missed">התשובה הייתה: ${esc(result.missedAnswer)}</span>` : '')
       : '';
     renderSeries();
+    renderReward(result);
     // ריאנץ' רק אחרי שהשרת סגר את הסיבוב — בחלון התוצאה עוד אי אפשר
     $('btn-rematch').hidden = state.phase !== 'finished';
     // בסיבוב הבא התפקידים מתחלפים, ולכן משחקים בקטגוריה של מי שאתגר עכשיו
@@ -439,6 +561,65 @@ function renderOver() {
   ];
   $('over-stats').innerHTML = rows
     .map(([k, v]) => `<div><span>${k}</span><span>${v}</span></div>`).join('');
+}
+
+/**
+ * מקפל את הדו־קרב לפרופיל ומציג את התגמול: ניסיון, רמה, שיאים וגביעים.
+ * הקיפול קורה פעם אחת לכל דו־קרב — רינדור חוזר של אותו מסך לא יספור שוב.
+ */
+function renderReward(result) {
+  const box = $('reward');
+  if (!result || !result.perPlayer?.[me.id]) { box.hidden = true; return; }
+  box.hidden = false;
+
+  if (scoredDuelId !== result.duelId) {
+    scoredDuelId = result.duelId;
+    const mine = result.perPlayer[me.id];
+    const round = {
+      won: result.winnerId === me.id,
+      correct: mine.correct,
+      passes: mine.passes,
+      bestStreak: mine.bestStreak,
+      fastestMs: mine.fastestMs,
+      clockLeftMs: result.clocks[me.id] ?? 0,
+      totalMs: mine.totalMs,
+      totalAnswers: (result.rounds || []).filter((r) => r.outcome === 'correct').length,
+      categoryId: result.categoryId,
+    };
+
+    const bests = personalBests(profile, round);
+    const outcome = applyRound(profile, round);
+    profile = saveProfile(window.localStorage, outcome.profile);
+    box.dataset.render = JSON.stringify({
+      xpGained: outcome.xpGained,
+      levelUp: outcome.levelAfter > outcome.levelBefore,
+      unlocked: outcome.unlocked.map((t) => ({ icon: t.icon, name: t.name, desc: t.desc })),
+      bests,
+    });
+  }
+
+  const shown = JSON.parse(box.dataset.render || '{}');
+  const p = levelProgress(profile.xp);
+
+  $('xp-gained').textContent = `+${shown.xpGained ?? 0}`;
+  $('reward-level').textContent = shown.levelUp ? `⬆ רמה ${p.level}!` : `רמה ${p.level}`;
+  $('reward-next').textContent = `${p.into}/${p.need}`;
+  // התחלה מאפס כדי שהפס יתמלא מול העיניים ולא יקפוץ
+  $('reward-bar').style.width = '0%';
+  requestAnimationFrame(() => {
+    $('reward-bar').style.width = `${Math.round(p.ratio * 100)}%`;
+  });
+
+  $('reward-bests').innerHTML = (shown.bests || [])
+    .map((b) => `<div>🏅 שיא אישי — ${esc(b.label)}: ${esc(b.value)}</div>`).join('');
+
+  $('reward-unlocked').innerHTML = (shown.unlocked || []).map((t, i) => `
+    <div class="trophy-pop" style="animation-delay:${i * 140 + 200}ms">
+      <span class="ico">${t.icon}</span>
+      <span><b>גביע חדש — ${esc(t.name)}</b><span>${esc(t.desc)}</span></span>
+    </div>`).join('');
+
+  renderTopbar('over');
 }
 
 /** תוצאת הסדרה — כמה סיבובים לקח כל אחד עד כה. */

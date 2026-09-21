@@ -191,3 +191,23 @@ h1 { font-size: clamp(2rem, 4.5vw, 3.6rem); }
   .board-grid { max-width: none; }
   .duel-head { grid-template-columns: 1fr; }
 }
+
+/* ------------------------------------------- מה קרה בתור הקודם */
+
+.last-turn {
+  margin-top: 14px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-inline-start: 5px solid var(--line);
+  animation: fade-in .25s ease;
+}
+.last-turn.correct { border-inline-start-color: var(--good); }
+.last-turn.pass { border-inline-start-color: var(--warn); }
+
+.last-turn .lt-head { font-size: 1.5rem; font-weight: 700; }
+.last-turn.correct .lt-head { color: var(--good); }
+.last-turn.pass .lt-head { color: var(--warn); }
+.last-turn .lt-said { margin-top: 4px; font-size: 1.05rem; }
+.last-turn .lt-note { margin-top: 2px; color: var(--muted); font-size: .85rem; }

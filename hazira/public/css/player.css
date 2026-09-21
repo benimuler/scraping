@@ -193,3 +193,170 @@ h2 { font-size: 1.5rem; margin: 0; }
 .series .who span:last-child { font-size: 2.4rem; font-weight: 800; font-variant-numeric: tabular-nums; }
 .series .who.lead span:last-child { color: var(--accent); }
 .series .dash { color: var(--muted); font-size: 1.4rem; }
+
+/* ------------------------------------------- מה קרה בתור הקודם */
+
+.last-turn {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-inline-start: 5px solid var(--line);
+  text-align: start;
+}
+.last-turn.correct { border-inline-start-color: var(--good); }
+.last-turn.pass { border-inline-start-color: var(--warn); }
+
+.last-turn .lt-head { font-size: 1.15rem; font-weight: 700; }
+.last-turn.correct .lt-head { color: var(--good); }
+.last-turn.pass .lt-head { color: var(--warn); }
+.last-turn .lt-said { margin-top: 3px; font-size: .95rem; }
+.last-turn .lt-note { margin-top: 2px; color: var(--muted); font-size: .8rem; }
+
+.missed { color: var(--muted); font-size: .9rem; font-weight: 400; }
+
+/* ------------------------------------------------- סרגל התקדמות */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-weight: 600;
+  font-size: .9rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.chip:active { transform: scale(.96); }
+
+.level-chip { display: grid; gap: 4px; flex: 1; }
+.level-chip .lvl { font-size: .78rem; color: var(--muted); }
+
+.level-bar {
+  display: block;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--line);
+  overflow: hidden;
+}
+.level-bar.big { height: 10px; flex: 1; }
+.level-bar > i {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--accent), var(--good));
+  transition: width .8s cubic-bezier(.2, .8, .2, 1);
+}
+
+/* רצף חי בדו־קרב */
+.cat-stack { display: grid; gap: 4px; justify-items: center; }
+.streak-chip {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--bad);
+  color: #fff;
+  font-size: .78rem;
+  font-weight: 700;
+  animation: streak-pop .35s cubic-bezier(.2, 1.4, .4, 1);
+}
+@keyframes streak-pop {
+  from { transform: scale(.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* ------------------------------------------------- תגמול בסיום */
+
+.reward {
+  width: 100%;
+  max-width: 380px;
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 14px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+.xp-line { font-size: 1.35rem; font-weight: 800; color: var(--accent); }
+.level-row { display: flex; align-items: center; gap: 10px; font-size: .85rem; }
+
+.bests { display: grid; gap: 6px; }
+.bests div {
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(255, 204, 51, .12);
+  border: 1px solid rgba(255, 204, 51, .35);
+  color: var(--accent);
+  font-size: .88rem;
+}
+
+.unlocked { display: grid; gap: 8px; }
+.unlocked .trophy-pop {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255, 204, 51, .22), rgba(52, 217, 138, .12));
+  border: 1px solid var(--accent);
+  animation: trophy-in .5s cubic-bezier(.2, 1.3, .4, 1) backwards;
+  text-align: start;
+}
+.unlocked .trophy-pop .ico { font-size: 1.9rem; }
+.unlocked .trophy-pop b { display: block; }
+.unlocked .trophy-pop span { color: var(--muted); font-size: .8rem; }
+@keyframes trophy-in {
+  from { transform: translateY(14px) scale(.9); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+
+/* ------------------------------------------------- כוננית גביעים */
+
+.overlay-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 4px;
+}
+.overlay-head h2 { margin: 0; }
+.btn.back { padding: 8px 12px; color: var(--muted); }
+
+.profile-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  width: 100%;
+}
+.profile-summary div {
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  text-align: center;
+}
+.profile-summary b { display: block; font-size: 1.3rem; font-variant-numeric: tabular-nums; }
+.profile-summary span { color: var(--muted); font-size: .75rem; }
+
+.trophy-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; width: 100%; }
+.trophy-card {
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  text-align: center;
+}
+.trophy-card.locked { opacity: .4; }
+.trophy-card .ico { font-size: 2rem; display: block; }
+.trophy-card.locked .ico { filter: grayscale(1); }
+.trophy-card b { display: block; margin-top: 4px; font-size: .92rem; }
+.trophy-card span { color: var(--muted); font-size: .74rem; }
