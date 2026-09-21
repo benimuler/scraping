@@ -79,13 +79,21 @@ app.get('/api/categories', (_req, res) => res.json(content.list()));
 const LOCAL_HOST = /^(localhost|127\.0\.0\.1|\[::1\])(:\d+)?$/i;
 
 /**
+ * הכתובת שהפלטפורמה המתארחת מפרסמת, כשיש כזו. משמשת גם כשאין בקשה בהישג יד
+ * — למשל בהודעת העלייה, שאחרת הייתה מדווחת על כתובת פנימית של הקונטיינר.
+ */
+function hostedUrl() {
+  const url = process.env.PUBLIC_URL || process.env.RENDER_EXTERNAL_URL;
+  return url ? url.replace(/\/+$/, '') : null;
+}
+
+/**
  * הבסיס שממנו נבנים הקישורים שנשלחים ליריב, לפי סדר עדיפות:
- * PUBLIC_URL מפורש ← הכתובת שדרכה הגיעה הבקשה ← כתובת ה-LAN של המחשב.
+ * PUBLIC_URL מפורש ← הכתובת שדרכה הגיעה הבקשה ← כתובת הפלטפורמה ← ה-LAN.
  *
  * כשהמשחק רץ מאחורי מנהרה או על שרת מתארח, הכתובת שהיריב צריך אינה כתובת
  * ה-LAN — והיא כן מופיעה בכותרות הבקשה, ולכן הדבר עובד בלי הגדרה כלשהי.
  */
-
 function publicBase(req) {
   if (process.env.PUBLIC_URL) return process.env.PUBLIC_URL.replace(/\/+$/, '');
 
@@ -99,7 +107,8 @@ function publicBase(req) {
     return `${proto}://${host}`;
   }
 
-  return `${secure ? 'https' : 'http'}://${lanAddress()}:${PORT}`;
+  // אין בקשה להסיק ממנה (הודעת העלייה), אבל הפלטפורמה מפרסמת כתובת
+  return hostedUrl() || `${secure ? 'https' : 'http'}://${lanAddress()}:${PORT}`;
 }
 
 const joinUrl = (code, req) => `${publicBase(req)}/player.html?code=${code}`;
@@ -258,10 +267,12 @@ if (require.main === module) {
     console.log(`  🏟️  הזירה עלתה לאוויר (${secure ? 'HTTPS' : 'HTTP'})`);
     console.log('');
 
-    if (process.env.PUBLIC_URL) {
-      console.log(`  כתובת ציבורית:  ${publicBase()}`);
+    // מתארח (מנהרה או שרת): הכתובת הפנימית ואזהרת המיקרופון חסרות משמעות
+    // כאן, ואף מטעות — הפלטפורמה מסיימת TLS, כך שהמיקרופון דווקא עובד
+    const hosted = hostedUrl();
+    if (hosted) {
+      console.log(`  כתובת המשחק:  ${hosted}`);
       console.log('  זו הכתובת שאפשר לשלוח למי שלא נמצא איתכם באותה רשת.');
-      console.log(`  (על המחשב הזה:  ${scheme}://localhost:${PORT})`);
       console.log('');
       return;
     }
@@ -290,4 +301,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { app, server, rooms, content, lanAddress, lanAddresses, publicBase, secure };
+module.exports = { app, server, rooms, content, lanAddress, lanAddresses, publicBase, hostedUrl, secure };

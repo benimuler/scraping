@@ -142,3 +142,29 @@ test('PUBLIC_URL גובר גם על כותרות הבקשה', () => {
     }
   });
 });
+
+test('על שרת מתארח, בקשה בלי Host נופלת לכתובת הפלטפורמה ולא לכתובת פנימית', () => {
+  withInterfaces({ eth0: iface('10.197.100.240') }, ({ publicBase }) => {
+    process.env.RENDER_EXTERNAL_URL = 'https://hazira-c3uh.onrender.com';
+    try {
+      assert.equal(publicBase(), 'https://hazira-c3uh.onrender.com');
+      // בקשה אמיתית דרך הפרוקסי עדיין גוברת — כך דומיין מותאם עובד
+      const req = { headers: { host: 'hazira.example', 'x-forwarded-proto': 'https' } };
+      assert.equal(publicBase(req), 'https://hazira.example');
+    } finally {
+      delete process.env.RENDER_EXTERNAL_URL;
+    }
+  });
+});
+
+test('הודעת העלייה מזהה סביבה מתארחת', () => {
+  withInterfaces({ eth0: iface('10.197.100.240') }, ({ hostedUrl }) => {
+    assert.equal(hostedUrl(), null);
+    process.env.RENDER_EXTERNAL_URL = 'https://hazira-c3uh.onrender.com/';
+    try {
+      assert.equal(hostedUrl(), 'https://hazira-c3uh.onrender.com');
+    } finally {
+      delete process.env.RENDER_EXTERNAL_URL;
+    }
+  });
+});
