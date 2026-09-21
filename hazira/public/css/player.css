@@ -360,3 +360,79 @@ h2 { font-size: 1.5rem; margin: 0; }
 .trophy-card.locked .ico { filter: grayscale(1); }
 .trophy-card b { display: block; margin-top: 4px; font-size: .92rem; }
 .trophy-card span { color: var(--muted); font-size: .74rem; }
+
+/* ------------------------------------------------- חשבון והיסטוריה */
+
+.welcome-note { max-width: 320px; margin-bottom: 20px; }
+
+.history-list, .board-list { display: grid; gap: 8px; width: 100%; }
+
+.history-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 12px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-inline-start: 4px solid var(--line);
+  text-align: start;
+}
+.history-row.won { border-inline-start-color: var(--good); }
+.history-row.lost { border-inline-start-color: var(--bad); }
+.history-row .mark { font-size: 1.2rem; }
+.history-row b { display: block; font-size: .95rem; }
+.history-row span { color: var(--muted); font-size: .78rem; }
+.history-row .xp { color: var(--accent); font-weight: 700; font-size: .85rem; }
+
+.board-row {
+  display: grid;
+  grid-template-columns: 2.2rem 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 12px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  text-align: start;
+}
+.board-row.me { border-color: var(--accent); }
+.board-row .rank { font-weight: 800; color: var(--muted); font-variant-numeric: tabular-nums; }
+.board-row.top .rank { color: var(--accent); }
+.board-row b { display: block; font-size: .98rem; }
+.board-row span { color: var(--muted); font-size: .76rem; }
+.board-row .xp { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+
+.account-row {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  font-size: .9rem;
+}
+.empty-note { color: var(--muted); text-align: center; padding: 24px 12px; }
+
+/* שכבה נפתחת מעל המשחק ולא מתחתיו: בלי המיקום הזה היא מתווספת לזרימת
+   העמוד ומופיעה הרחק מתחת למסך הפעיל. */
+.screen.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background: var(--bg);
+  padding: calc(16px + env(safe-area-inset-top, 0px)) 16px
+           calc(24px + env(safe-area-inset-bottom, 0px));
+  align-content: start;
+}
+.screen.overlay .overlay-head {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding-block: 8px;
+  background: var(--bg);
+}

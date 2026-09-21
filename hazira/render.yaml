@@ -25,3 +25,15 @@ services:
       # צורך בתעודה מקומית — והדגל מוודא שקובץ תעודה שנשכח לא יבלבל.
       - key: HTTP_ONLY
         value: "1"
+      # מחבר את מסד הנתונים בלי להעתיק סיסמה לשום מקום: Render מזריקה את
+      # מחרוזת החיבור בעצמה. בלי המשתנה הזה המשחק עדיין עובד — במצב אורח.
+      - key: DATABASE_URL
+        fromDatabase:
+          name: hazira-db
+          property: connectionString
+
+databases:
+  - name: hazira-db
+    plan: free
+    region: frankfurt
+    postgresMajorVersion: "16"

@@ -16,14 +16,51 @@
     <button class="chip" id="open-trophies" type="button">
       <span id="chip-trophies">🏆 0</span>
     </button>
+    <button class="chip" id="open-history" type="button">📜</button>
+    <button class="chip" id="open-board" type="button">📊</button>
     <div class="level-chip">
       <span class="lvl" id="chip-level">רמה 1</span>
       <span class="level-bar"><i id="chip-bar"></i></span>
     </div>
+    <button class="chip" id="open-account" type="button" hidden>👤</button>
   </header>
 
+  <!-- בחירת מצב: חשבון או אורח -->
+  <section class="screen center" id="s-welcome" hidden>
+    <div class="logo">ה<span>זירה</span></div>
+    <p class="muted welcome-note">עם חשבון ההתקדמות נשמרת בין מכשירים ונכנסת לטבלת השיאים.</p>
+    <div class="decide-buttons">
+      <button class="btn primary lg block" id="go-register">הרשמה</button>
+      <button class="btn lg block" id="go-login">כבר יש לי חשבון</button>
+      <button class="btn ghost block" id="go-guest">המשך כאורח</button>
+    </div>
+    <p class="muted hint" id="welcome-guest-note" hidden>
+      חשבונות אינם זמינים כרגע — המשחק ירוץ במצב אורח.
+    </p>
+  </section>
+
+  <!-- הרשמה או כניסה -->
+  <section class="screen" id="s-auth" hidden>
+    <div class="overlay-head">
+      <button class="btn ghost back" id="auth-back" type="button">→ חזרה</button>
+      <h2 id="auth-title">הרשמה</h2>
+    </div>
+    <form id="auth-form" class="card">
+      <div class="field">
+        <label for="a-user">שם משתמש</label>
+        <input id="a-user" autocomplete="username" maxlength="20" required>
+      </div>
+      <div class="field">
+        <label for="a-pass">סיסמה</label>
+        <input id="a-pass" type="password" autocomplete="current-password" minlength="6" required>
+      </div>
+      <button class="btn primary block lg" type="submit" id="auth-submit">הרשמה</button>
+      <div class="error" id="auth-error" hidden></div>
+    </form>
+  </section>
+
   <!-- הצטרפות -->
-  <section class="screen" id="s-join">
+  <section class="screen" id="s-join" hidden>
     <div class="logo">ה<span>זירה</span></div>
     <form id="join-form" class="card">
       <div class="field">
@@ -31,7 +68,7 @@
         <input id="f-code" name="code" inputmode="latin" autocapitalize="characters"
                autocomplete="off" maxlength="4" placeholder="ABCD" required>
       </div>
-      <div class="field">
+      <div class="field" id="name-field">
         <label for="f-name">השם שלך</label>
         <input id="f-name" name="name" maxlength="24" placeholder="איך יקראו לך בזירה" required>
       </div>
@@ -174,6 +211,24 @@
     <div class="mini-board" id="over-board"></div>
     <div class="my-stats" id="over-stats"></div>
   </section>
+  <!-- היסטוריית דו־קרבות -->
+  <section class="screen overlay" id="s-history" hidden>
+    <div class="overlay-head">
+      <button class="btn ghost back" id="history-back" type="button">→ חזרה</button>
+      <h2>היסטוריית דו־קרבות</h2>
+    </div>
+    <div class="history-list" id="history-list"></div>
+  </section>
+
+  <!-- טבלת שיאים -->
+  <section class="screen overlay" id="s-board" hidden>
+    <div class="overlay-head">
+      <button class="btn ghost back" id="board-back" type="button">→ חזרה</button>
+      <h2>טבלת שיאים</h2>
+    </div>
+    <div class="board-list" id="board-list"></div>
+  </section>
+
   <!-- כוננית הגביעים -->
   <section class="screen overlay" id="s-trophies" hidden>
     <div class="overlay-head">
@@ -181,6 +236,7 @@
       <h2>הגביעים שלי</h2>
     </div>
     <div class="profile-summary" id="profile-summary"></div>
+    <div class="account-row" id="account-row"></div>
     <div class="trophy-grid" id="trophy-grid"></div>
   </section>
 </main>

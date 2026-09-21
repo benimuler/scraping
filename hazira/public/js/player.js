@@ -3,18 +3,22 @@
 import { connect, playerColor, formatClock, toast } from './net.js';
 import { createListener, speechSupported } from './speech.js';
 import {
-  TROPHIES, applyRound, loadProfile, saveProfile, levelProgress, personalBests,
+  TROPHIES, applyRound, loadProfile, saveProfile, levelProgress, personalBests, emptyProfile,
 } from './profile.mjs';
+import * as auth from './auth.mjs';
 
 const $ = (id) => document.getElementById(id);
 const screens = {
-  join: $('s-join'), wait: $('s-wait'), intro: $('s-intro'), pick: $('s-pick'),
+  welcome: $('s-welcome'), auth: $('s-auth'), join: $('s-join'),
+  wait: $('s-wait'), intro: $('s-intro'), pick: $('s-pick'),
   watch: $('s-watch'), duel: $('s-duel'), decide: $('s-decide'), over: $('s-over'),
 };
 
 // שכבות שנפתחות מעל המשחק. הן לא חלק מזרימת המשחק, ולכן כפתור החזרה של
 // הטלפון סוגר אותן במקום לצאת מהאפליקציה.
-const overlays = { trophies: $('s-trophies') };
+const overlays = {
+  trophies: $('s-trophies'), history: $('s-history'), board: $('s-board'),
+};
 
 const STORAGE_KEY = 'hazira:session';
 
@@ -27,6 +31,9 @@ let currentItem = null;
 let micOn = false;
 let lastActiveId = null;
 let profile = loadProfile(window.localStorage);
+let account = null;          // {id, username, displayName} כשמחוברים
+let accountsAvailable = false;
+let authMode = 'register';
 let scoredDuelId = null;   // כדי שדו־קרב אחד לא ייספר פעמיים ברינדור חוזר
 let lastStreak = 0;
 
@@ -126,12 +133,74 @@ function join({ code, name, categoryId, playerId }) {
   });
 }
 
-// חיבור חוזר אוטומטי אחרי רענון או נעילת מסך
-if (stored.code && stored.playerId && stored.name) {
-  join({ code: stored.code, name: stored.name, playerId: stored.playerId });
-} else {
-  show('join');
+// ------------------------------------------------------------ חשבון
+
+/**
+ * מחליט על מסך הפתיחה: חיבור חוזר לדו־קרב פתוח, חשבון קיים, או בחירה
+ * בין הרשמה לאורח. מצב אורח חייב להישאר זמין תמיד — גם כשאין מסד נתונים.
+ */
+async function bootstrap() {
+  accountsAvailable = await auth.accountsAvailable();
+
+  const session = accountsAvailable ? await auth.me() : null;
+  if (session) {
+    account = session.user;
+    profile = session.profile || emptyProfile(session.user.displayName);
+    $('f-name').value = account.displayName;
+  }
+
+  if (stored.code && stored.playerId && stored.name) {
+    return join({ code: stored.code, name: stored.name, playerId: stored.playerId });
+  }
+  if (account || auth.isGuest() || !accountsAvailable) {
+    if (!accountsAvailable) auth.setGuest(true);
+    return show('join');
+  }
+  $('welcome-guest-note').hidden = accountsAvailable;
+  show('welcome');
 }
+
+$('go-register').addEventListener('click', () => openAuth('register'));
+$('go-login').addEventListener('click', () => openAuth('login'));
+$('go-guest').addEventListener('click', () => {
+  auth.setGuest(true);
+  show('join');
+});
+$('auth-back').addEventListener('click', () => show('welcome'));
+
+function openAuth(mode) {
+  authMode = mode;
+  $('auth-title').textContent = mode === 'register' ? 'הרשמה' : 'כניסה';
+  $('auth-submit').textContent = mode === 'register' ? 'הרשמה' : 'כניסה';
+  $('a-pass').autocomplete = mode === 'register' ? 'new-password' : 'current-password';
+  $('auth-error').hidden = true;
+  show('auth');
+}
+
+$('auth-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const submit = $('auth-submit');
+  const username = $('a-user').value.trim();
+  const password = $('a-pass').value;
+  submit.disabled = true;
+
+  try {
+    const out = authMode === 'register'
+      ? await auth.register({ username, password, displayName: username })
+      : await auth.login({ username, password });
+    account = out.user;
+    profile = out.profile || emptyProfile(out.user.displayName);
+    $('f-name').value = account.displayName;
+    show('join');
+  } catch (err) {
+    $('auth-error').textContent = err.message;
+    $('auth-error').hidden = false;
+  } finally {
+    submit.disabled = false;
+  }
+});
+
+bootstrap();
 
 // ------------------------------------------------------------------ מצב
 
@@ -180,6 +249,9 @@ function routeDuel() {
 function show(name) {
   for (const [key, el] of Object.entries(screens)) el.hidden = key !== name;
   if (name !== 'duel') setMic(false);
+  // משתמש רשום משחק בשם החשבון שלו, כך שההיסטוריה והשיאים מתייחסים לאותו אדם
+  $('name-field').hidden = !!account;
+  $('open-account').hidden = !accountsAvailable;
   renderTopbar(name);
 }
 
@@ -215,9 +287,118 @@ $('open-trophies').addEventListener('click', () => {
 });
 $('trophies-back').addEventListener('click', () => closeOverlay());
 
+$('open-history').addEventListener('click', async () => {
+  showOverlay('history');
+  renderHistory(await fetchHistory());
+});
+$('history-back').addEventListener('click', () => closeOverlay());
+
+$('open-board').addEventListener('click', async () => {
+  showOverlay('board');
+  renderLeaderboard(await fetchLeaderboard());
+});
+$('board-back').addEventListener('click', () => closeOverlay());
+
+$('open-account').addEventListener('click', () => {
+  renderTrophies();
+  showOverlay('trophies');
+});
+
+/**
+ * היסטוריה של משתמש רשום מגיעה מהשרת. אורח מקבל את מה שנשמר בטלפון —
+ * פחות, אבל עדיף על מסך ריק שלא מסביר למה הוא ריק.
+ */
+async function fetchHistory() {
+  if (!account) return { local: true, duels: readLocalHistory() };
+  try {
+    return { local: false, duels: (await auth.history(40)).duels };
+  } catch (err) {
+    return { local: false, duels: [], error: err.message };
+  }
+}
+
+async function fetchLeaderboard() {
+  if (!accountsAvailable) return { players: [], unavailable: true };
+  try {
+    return { players: (await auth.leaderboard(25)).players };
+  } catch (err) {
+    return { players: [], error: err.message };
+  }
+}
+
+function renderHistory({ duels, local, error }) {
+  const list = $('history-list');
+  if (error) { list.innerHTML = `<p class="empty-note">${esc(error)}</p>`; return; }
+  if (!duels.length) {
+    list.innerHTML = `<p class="empty-note">${
+      local ? 'עדיין אין דו־קרבות. הירשמו כדי לשמור היסטוריה מלאה בין מכשירים.'
+            : 'עדיין אין דו־קרבות.'}</p>`;
+    return;
+  }
+
+  list.innerHTML = duels.map((d) => {
+    const when = new Date(d.playedAt).toLocaleDateString('he-IL', {
+      day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit',
+    });
+    const against = d.opponentName ? ` · מול ${esc(d.opponentName)}` : '';
+    return `
+      <div class="history-row ${d.won ? 'won' : 'lost'}">
+        <span class="mark">${d.won ? '🏆' : '·'}</span>
+        <span>
+          <b>${esc(d.category || 'דו־קרב')}</b>
+          <span>${when}${against} · ${d.correct} תשובות${d.passes ? `, ${d.passes} ויתורים` : ''}</span>
+        </span>
+        <span class="xp">+${d.xpGained || 0}</span>
+      </div>`;
+  }).join('');
+}
+
+function renderLeaderboard({ players, unavailable, error }) {
+  const list = $('board-list');
+  if (unavailable) {
+    list.innerHTML = '<p class="empty-note">טבלת השיאים דורשת חשבון — היא אינה זמינה כרגע.</p>';
+    return;
+  }
+  if (error) { list.innerHTML = `<p class="empty-note">${esc(error)}</p>`; return; }
+  if (!players.length) {
+    list.innerHTML = '<p class="empty-note">אף אחד עוד לא נרשם. תהיו הראשונים.</p>';
+    return;
+  }
+
+  list.innerHTML = players.map((p) => `
+    <div class="board-row ${p.rank <= 3 ? 'top' : ''} ${account && p.name === account.displayName ? 'me' : ''}">
+      <span class="rank">${p.rank}</span>
+      <span>
+        <b>${esc(p.name)}</b>
+        <span>${p.wins} ניצחונות · ${p.duels} דו־קרבות · 🏆 ${p.trophies}</span>
+      </span>
+      <span class="xp">${p.xp}</span>
+    </div>`).join('');
+}
+
+// היסטוריה מקומית לאורחים — מה שהשרת שומר לרשומים
+const LOCAL_HISTORY_KEY = 'hazira:history';
+
+function readLocalHistory() {
+  try {
+    return JSON.parse(window.localStorage.getItem(LOCAL_HISTORY_KEY) || '[]');
+  } catch {
+    return [];
+  }
+}
+
+function pushLocalHistory(entry) {
+  try {
+    const rows = [entry, ...readLocalHistory()].slice(0, 40);
+    window.localStorage.setItem(LOCAL_HISTORY_KEY, JSON.stringify(rows));
+  } catch { /* מצב פרטי */ }
+}
+
 /** הסרגל מיותר בתוך דו־קרב — שם כל פיקסל שייך לתמונה ולשעון. */
 function renderTopbar(screen) {
-  const show_ = screen !== 'duel' && screen !== 'join';
+  // מוסתר רק בדו־קרב, שם כל פיקסל שייך לתמונה ולשעון, ובמסכי הכניסה
+  // שעוד אין בהם למי להציג התקדמות
+  const show_ = !['duel', 'welcome', 'auth'].includes(screen);
   $('topbar').hidden = !show_;
   if (!show_) return;
 
@@ -236,6 +417,25 @@ function renderTrophies() {
     ['תשובות', profile.correct], ['רצף שיא', profile.bestStreak],
     ['הכי מהיר', profile.fastestMs === null ? '—' : `${(profile.fastestMs / 1000).toFixed(1)}ש׳`],
   ].map(([label, value]) => `<div><b>${esc(value)}</b><span>${label}</span></div>`).join('');
+
+  $('account-row').innerHTML = account
+    ? `<div>מחובר כ־<b>${esc(account.displayName)}</b></div>
+       <button class="btn ghost block" id="btn-logout">יציאה מהחשבון</button>`
+    : `<div class="muted">משחקים כאורח — ההתקדמות נשמרת רק בטלפון הזה.</div>${
+        accountsAvailable ? '<button class="btn primary block" id="btn-signup">הרשמה לשמירה בענן</button>' : ''}`;
+
+  $('btn-logout')?.addEventListener('click', async () => {
+    await auth.logout();
+    account = null;
+    auth.setGuest(true);
+    profile = loadProfile(window.localStorage);
+    closeOverlay();
+    show('join');
+  });
+  $('btn-signup')?.addEventListener('click', () => {
+    closeOverlay();
+    openAuth('register');
+  });
 
   $('trophy-grid').innerHTML = TROPHIES.map((t) => `
     <div class="trophy-card ${owned[t.id] ? '' : 'locked'}">
@@ -587,15 +787,10 @@ function renderReward(result) {
       categoryId: result.categoryId,
     };
 
-    const bests = personalBests(profile, round);
-    const outcome = applyRound(profile, round);
-    profile = saveProfile(window.localStorage, outcome.profile);
-    box.dataset.render = JSON.stringify({
-      xpGained: outcome.xpGained,
-      levelUp: outcome.levelAfter > outcome.levelBefore,
-      unlocked: outcome.unlocked.map((t) => ({ icon: t.icon, name: t.name, desc: t.desc })),
-      bests,
-    });
+    // מוצג מיד מחישוב מקומי, ומתוקן אם השרת מחזיר משהו אחר — כך המסך לא
+    // ממתין לרשת, ומשתמש רשום עדיין מקבל את ההכרעה הסמכותית של השרת
+    box.dataset.render = JSON.stringify(scoreLocally(round, result));
+    if (account) scoreOnServer(round, result, box);
   }
 
   const shown = JSON.parse(box.dataset.render || '{}');
@@ -620,6 +815,58 @@ function renderReward(result) {
     </div>`).join('');
 
   renderTopbar('over');
+}
+
+/** קיפול מקומי — המסלול של אורח, וגם התצוגה המיידית לרשומים. */
+function scoreLocally(round, result) {
+  const bests = personalBests(profile, round);
+  const outcome = applyRound(profile, round);
+  profile = saveProfile(window.localStorage, outcome.profile);
+
+  if (!account) {
+    pushLocalHistory({
+      playedAt: new Date().toISOString(),
+      opponentName: opponent()?.name || null,
+      category: result.categoryName,
+      won: round.won,
+      correct: round.correct,
+      passes: round.passes,
+      xpGained: outcome.xpGained,
+    });
+  }
+
+  return {
+    xpGained: outcome.xpGained,
+    levelUp: outcome.levelAfter > outcome.levelBefore,
+    unlocked: outcome.unlocked.map((t) => ({ icon: t.icon, name: t.name, desc: t.desc })),
+    bests,
+  };
+}
+
+/**
+ * השרת הוא הסמכות למשתמש רשום: הוא שומר את הפרופיל, רושם את הדו־קרב
+ * בהיסטוריה, ומזין את טבלת השיאים. כישלון רשת לא נוגע במסך — ההתקדמות
+ * המקומית כבר מוצגת, והסנכרון יתפוס בדו־קרב הבא.
+ */
+async function scoreOnServer(round, result, box) {
+  try {
+    const out = await auth.submitDuel({
+      round,
+      opponentName: opponent()?.name || null,
+      categoryName: result.categoryName,
+    });
+    profile = out.profile;
+    box.dataset.render = JSON.stringify({
+      xpGained: out.xpGained,
+      levelUp: out.levelUp,
+      unlocked: out.unlocked,
+      bests: out.bests,
+    });
+    if (!$('s-over').hidden) renderReward(state.lastResult);
+    renderTopbar('over');
+  } catch {
+    toast('ההתקדמות נשמרה בטלפון — הסנכרון לשרת ייעשה בהמשך');
+  }
 }
 
 /** תוצאת הסדרה — כמה סיבובים לקח כל אחד עד כה. */
