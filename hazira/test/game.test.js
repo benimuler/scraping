@@ -16,8 +16,9 @@ function seeded(seed = 42) {
   };
 }
 
+/** בדיקות הקובץ הזה עוסקות במשחק הלוח, ולכן מבקשות אותו במפורש. */
 function makeGame(names = ['דנה', 'יוסי'], config = {}) {
-  const game = new Game({ content, config: { gridSize: 4, ...config }, rand: seeded() });
+  const game = new Game({ content, config: { mode: 'board', gridSize: 4, ...config }, rand: seeded() });
   const ids = names.map((name) => game.addPlayer({ name }));
   return { game, ids };
 }
@@ -217,7 +218,7 @@ test('דוח הסיכום מסכם את מה שקרה בפועל', () => {
 });
 
 test('לא מתחילים משחק עם מתמודד אחד', () => {
-  const game = new Game({ content, rand: seeded() });
+  const game = new Game({ content, config: { mode: 'board' }, rand: seeded() });
   game.addPlayer({ name: 'לבד' });
   assert.throws(() => game.start(), /שני מתמודדים/);
   game.dispose();

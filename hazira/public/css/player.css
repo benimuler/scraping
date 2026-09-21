@@ -141,3 +141,29 @@ h2 { font-size: 1.5rem; margin: 0; }
 }
 .my-stats span:first-child { color: var(--muted); }
 .my-stats span:last-child { font-weight: 700; font-variant-numeric: tabular-nums; }
+
+/* ------------------------------------------------- הזמנת יריב לדו־קרב */
+
+.invite { display: grid; gap: 10px; justify-items: center; margin: 4px 0 8px; }
+.invite .qr {
+  padding: 10px;
+  background: #fff;
+  border-radius: 12px;
+  line-height: 0;
+}
+.invite .qr svg { width: min(180px, 46vw); height: auto; display: block; }
+.invite .code {
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  color: var(--accent);
+  line-height: 1;
+}
+
+/* תוצאת סדרה */
+.series { display: flex; gap: 14px; align-items: center; justify-content: center; margin: 6px 0; }
+.series .who { display: grid; gap: 2px; }
+.series .who span:first-child { color: var(--muted); font-size: .8rem; }
+.series .who span:last-child { font-size: 2.4rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.series .who.lead span:last-child { color: var(--accent); }
+.series .dash { color: var(--muted); font-size: 1.4rem; }

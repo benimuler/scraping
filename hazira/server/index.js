@@ -93,10 +93,11 @@ const ACTIONS = {
   challenge: (room, ws, msg) => room.game.challenge(ws.playerId, msg.defenderId),
   pass: (room, ws) => room.game.pass(ws.playerId),
   decide: (room, ws, msg) => room.game.decide(ws.playerId, msg.choice),
+  rematch: (room) => room.game.rematch(),
   answer: (room, ws, msg) => room.game.submitText(ws.playerId, msg.text || ''),
   speech: (room, ws, msg) => room.game.speech(ws.playerId, msg.transcript || '', !!msg.isFinal),
 };
-const PLAYER_ONLY = new Set(['challenge', 'pass', 'decide', 'answer', 'speech']);
+const PLAYER_ONLY = new Set(['challenge', 'pass', 'decide', 'answer', 'speech', 'rematch']);
 
 wss.on('connection', (ws) => {
   ws.isAlive = true;

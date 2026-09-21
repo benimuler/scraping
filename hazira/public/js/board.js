@@ -284,11 +284,17 @@ function renderResult() {
     `<span style="color:${colors.get(r.winnerId)}">${esc(winner.name)}</span> הדיח את ${esc(loser.name)}`;
 
   const lines = [
-    `${r.conquered} משבצות עברו ידיים`,
     `נשארו על השעון: ${formatClock(r.clocks[r.winnerId])} שניות`,
     `${r.rounds.filter((x) => x.outcome === 'correct').length} תשובות נכונות בדו־קרב`,
   ];
-  if (r.inheritedCategory) lines.push('המותקף ניצח — והקטגוריה של המאתגר עברה אליו');
+  // רק במשחק הלוח עוברת טריטוריה ויורשים קטגוריה
+  if (state.mode !== 'duel') {
+    lines.unshift(`${r.conquered} משבצות עברו ידיים`);
+    if (r.inheritedCategory) lines.push('המותקף ניצח — והקטגוריה של המאתגר עברה אליו');
+  } else {
+    const wins = state.series?.wins || {};
+    lines.push(`הסדרה: ${state.players.map((p) => `${p.name} ${wins[p.id] || 0}`).join(' · ')}`);
+  }
   $('result-lines').innerHTML = lines.map((l) => `<div>${esc(l)}</div>`).join('');
 }
 
@@ -300,16 +306,17 @@ async function renderFinished() {
   $('champion').textContent = playerById(state.winnerId)?.name || '—';
   const report = await fetch(`/api/rooms/${code}/report`).then((r) => r.json());
 
+  const duelMode = report.mode === 'duel';
   $('report').innerHTML = `
     <table>
       <thead><tr>
-        <th>מתמודד</th><th>משבצות</th><th>דו־קרבות</th><th>ניצחונות</th>
+        <th>מתמודד</th>${duelMode ? '' : '<th>משבצות</th>'}<th>${duelMode ? 'סיבובים' : 'דו־קרבות'}</th><th>ניצחונות</th>
         <th>תשובות</th><th>ויתורים</th><th>דיוק</th><th>זמן תגובה</th><th>רצף</th><th>בלחץ</th>
       </tr></thead>
       <tbody>${report.players.map((p) => `
         <tr>
           <td class="name">${esc(p.name)}</td>
-          <td>${p.tiles}</td>
+          ${duelMode ? '' : `<td>${p.tiles}</td>`}
           <td>${p.duels}</td>
           <td>${p.duelsWon}</td>
           <td>${p.correct}</td>

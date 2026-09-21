@@ -54,9 +54,13 @@ class Game {
     this.config = { ...DEFAULTS, ...config };
     this.rand = rand;
 
+    // 'duel' — דו־קרב עצמאי בין שני טלפונים, בלי לוח ובלי כיבוש.
+    // 'board' — משחק הכיבוש המלא על לוח המשבצות.
+    this.mode = config.mode === 'board' ? 'board' : 'duel';
     this.code = null;
     this.phase = PHASES.LOBBY;
     this.players = new Map();
+    this.series = { round: 0, wins: {} };
     this.gridSize = 0;
     this.tiles = [];
     this.controlId = null;
@@ -73,7 +77,10 @@ class Game {
 
   addPlayer({ name, categoryId }) {
     if (this.phase !== PHASES.LOBBY) throw new Error('המשחק כבר התחיל');
-    if (this.players.size >= this.config.maxGrid ** 2) throw new Error('הזירה מלאה');
+    const capacity = this.mode === 'duel' ? 2 : this.config.maxGrid ** 2;
+    if (this.players.size >= capacity) {
+      throw new Error(this.mode === 'duel' ? 'הדו־קרב מלא — שני מתמודדים' : 'הזירה מלאה');
+    }
     const id = randomUUID();
     const taken = new Set([...this.players.values()].map((p) => p.categoryId));
     const category = categoryId && !taken.has(categoryId)
@@ -122,6 +129,16 @@ class Game {
   start() {
     if (this.phase !== PHASES.LOBBY) throw new Error('המשחק כבר התחיל');
     if (this.players.size < 2) throw new Error('צריך לפחות שני מתמודדים');
+
+    if (this.mode === 'duel') {
+      if (this.players.size !== 2) throw new Error('דו־קרב הוא בין שני מתמודדים בדיוק');
+      // אין לוח ואין בחירת יריב — מגרילים מי מאתגר, והשני מגן על הקטגוריה שלו
+      const [challenger, defender] = shuffle([...this.players.keys()], this.rand);
+      this.series.round = 1;
+      for (const id of this.players.keys()) this.series.wins[id] = 0;
+      this._log({ type: 'game_start', mode: 'duel', players: 2 });
+      return this._beginDuel(challenger, defender);
+    }
 
     this.gridSize = this._chooseGridSize(this.players.size);
     this._buildBoard();
@@ -444,6 +461,8 @@ class Game {
   _endDuel(loserId) {
     const duel = this.duel;
     const winnerId = loserId === duel.challengerId ? duel.defenderId : duel.challengerId;
+    if (this.mode === 'duel') return this._endStandaloneDuel(winnerId, loserId);
+
     const winner = this.players.get(winnerId);
     const loser = this.players.get(loserId);
 
@@ -502,6 +521,66 @@ class Game {
       this._publish();
       this._startDeadline(this.config.decisionTimeoutMs, () => this.decide(winnerId, 'attack'));
     });
+  }
+
+  /** סיום דו־קרב עצמאי: אין טריטוריה ואין הדחה — רק מי לקח את הסיבוב. */
+  _endStandaloneDuel(winnerId, loserId) {
+    const duel = this.duel;
+    const winner = this.players.get(winnerId);
+
+    this._mergeStats(winnerId);
+    this._mergeStats(loserId);
+    winner.stats.duelsWon++;
+    winner.stats.timeLeftMs = duel.clocks[winnerId];
+    this.players.get(loserId).stats.timeLeftMs = 0;
+    this.series.wins[winnerId] = (this.series.wins[winnerId] || 0) + 1;
+
+    this.lastResult = {
+      duelId: duel.id,
+      winnerId,
+      loserId,
+      challengerId: duel.challengerId,
+      defenderId: duel.defenderId,
+      conquered: 0,
+      round: this.series.round,
+      categoryId: duel.categoryId,
+      categoryName: duel.category.name,
+      inheritedCategory: null,
+      clocks: { ...duel.clocks },
+      perPlayer: duel.perPlayer,
+      rounds: duel.rounds,
+    };
+    this.history.push(this.lastResult);
+    this._log({ type: 'duel_end', winnerId, loserId });
+
+    this.duel = null;
+    this.winnerId = winnerId;
+    this.controlId = winnerId;
+    this.phase = PHASES.DUEL_RESULT;
+    this._publish();
+    this._startDeadline(4_000, () => {
+      this._stopTimer();
+      this._deadline = null;
+      this.phase = PHASES.FINISHED;
+      this._publish();
+    });
+  }
+
+  /**
+   * סיבוב נוסף. התפקידים מתחלפים, כך שהפעם משחקים בקטגוריה של מי שהגן קודם —
+   * בלי זה אותה קטגוריה הייתה חוזרת שוב ושוב.
+   */
+  rematch() {
+    if (this.mode !== 'duel') throw new Error('ריאנץ׳ קיים רק בדו־קרב');
+    if (this.phase !== PHASES.FINISHED) throw new Error('הדו־קרב עוד לא נגמר');
+    const previous = this.history[this.history.length - 1];
+    if (!previous) throw new Error('אין דו־קרב קודם');
+
+    this.series.round++;
+    this.winnerId = null;
+    this.lastResult = null;
+    // מי שהגן קודם מאתגר עכשיו — כך הסיבוב הבא מתנהל בקטגוריה השנייה
+    this._beginDuel(previous.defenderId, previous.challengerId);
   }
 
   _mergeStats(playerId) {
@@ -567,15 +646,18 @@ class Game {
 
     return {
       finishedAt: new Date().toISOString(),
-      gridSize: this.gridSize,
+      mode: this.mode,
+      gridSize: this.gridSize || undefined,
+      rounds: this.mode === 'duel' ? this.series.round : undefined,
       winner: this.winnerId ? this.players.get(this.winnerId).name : null,
       duels: this.history.length,
       players,
       timeline: this.history.map((h) => ({
+        round: h.round,
         winner: this.players.get(h.winnerId)?.name,
         loser: this.players.get(h.loserId)?.name,
         category: h.categoryName,
-        conquered: h.conquered,
+        conquered: h.conquered || undefined,
         clockLeftMs: h.clocks[h.winnerId],
         rounds: h.rounds.length,
       })),
@@ -597,6 +679,8 @@ class Game {
     const duel = this.duel;
     const state = {
       phase: this.phase,
+      mode: this.mode,
+      series: this.series,
       code: this.code,
       gridSize: this.gridSize,
       tiles: this.tiles.map((t) => t.ownerId),

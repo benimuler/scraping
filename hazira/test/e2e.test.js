@@ -77,7 +77,7 @@ test('דו־קרב מלא: הצטרפות, אתגור, תשובה בדיבור �
   const res = await fetch(`http://${base}/api/rooms`, {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ config: { clockMs: 2000, gridSize: 4 } }),
+    body: JSON.stringify({ config: { mode: 'board', clockMs: 2000, gridSize: 4 } }),
   });
   const { code } = await res.json();
   assert.match(code, /^[A-Z0-9]{4}$/);
@@ -142,7 +142,7 @@ test('הודעת דיבור ממי שאינו בתורו לא משפיעה', asy
   const { code } = await fetch(`http://${base}/api/rooms`, {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ config: { clockMs: 45000, gridSize: 4 } }),
+    body: JSON.stringify({ config: { mode: 'board', clockMs: 45000, gridSize: 4 } }),
   }).then((r) => r.json());
 
   const board = client('board', { code });
@@ -166,6 +166,79 @@ test('הודעת דיבור ממי שאינו בתורו לא משפיעה', asy
   assert.equal(board.state.duel.score[rival.playerId], 0);
 
   for (const c of [board, a, b]) c.close();
+});
+
+test('דו־קרב עצמאי: שני טלפונים, הכרעה על השעון וריאנץ׳ שמחליף תפקידים', async () => {
+  const { code } = await fetch(`http://${base}/api/rooms`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ config: { mode: 'duel', clockMs: 2000 } }),
+  }).then((r) => r.json());
+
+  const dana = client('player', { code, name: 'דנה', categoryId: 'flags' });
+  const yossi = client('player', { code, name: 'יוסי', categoryId: 'animals' });
+  await dana.until((_, s) => s.players.length === 2);
+
+  assert.equal(dana.state.mode, 'duel');
+  assert.equal(dana.state.gridSize, 0, 'לדו־קרב אין לוח');
+
+  // בלי שלב בחירה — הזירה יורדת ישר לדו־קרב
+  dana.send({ t: 'start' });
+  await dana.until((_, s) => s.phase === 'duel' && s.duel?.item, 9000);
+
+  const { challengerId, defenderId } = dana.state.duel;
+  const byId = { [dana.playerId]: dana, [yossi.playerId]: yossi };
+  const challenger = byId[challengerId];
+  const defender = byId[defenderId];
+  const firstCategory = dana.state.duel.category;
+
+  // הדו־קרב מתנהל בקטגוריה של המותקף
+  assert.equal(
+    firstCategory,
+    dana.state.players.find((p) => p.id === defenderId).category,
+  );
+  assert.equal(dana.state.duel.activeId, challengerId);
+
+  // המאתגר עונה נכון, ואז המותקף שותק עד שהשעון שלו נגמר
+  const spoken = answerFor(dana.state.duel.item.image);
+  challenger.send({ t: 'speech', transcript: `זה ${spoken}`, isFinal: true });
+  await dana.until((_, s) => s.duel?.activeId === defenderId);
+
+  await dana.until((_, s) => s.phase === 'finished', 9000);
+  assert.equal(dana.state.winnerId, challengerId);
+  assert.equal(dana.state.series.wins[challengerId], 1);
+  assert.equal(dana.state.series.wins[defenderId], 0);
+  // הפסד בסיבוב אינו הדחה — שני המתמודדים נשארים
+  assert.ok(dana.state.players.every((p) => p.alive));
+
+  // ריאנץ': מי שהגן קודם מאתגר עכשיו, והקטגוריה השנייה נכנסת
+  defender.send({ t: 'rematch' });
+  await dana.until((_, s) => s.phase === 'duel' && s.duel?.item, 9000);
+  assert.equal(dana.state.duel.challengerId, defenderId);
+  assert.equal(dana.state.duel.defenderId, challengerId);
+  assert.notEqual(dana.state.duel.category, firstCategory);
+  assert.equal(dana.state.series.round, 2);
+
+  for (const c of [dana, yossi]) c.close();
+});
+
+test('דו־קרב מקבל שני מתמודדים בלבד', async () => {
+  const { code } = await fetch(`http://${base}/api/rooms`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ config: { mode: 'duel' } }),
+  }).then((r) => r.json());
+
+  const a = client('player', { code, name: 'א' });
+  const b = client('player', { code, name: 'ב' });
+  await a.until((_, s) => s.players.length === 2);
+
+  const third = client('player', { code, name: 'ג' });
+  const { msg } = await third.until((m) => m.t === 'error');
+  assert.match(msg.message, /שני מתמודדים/);
+  assert.equal(msg.fatal, true);
+
+  for (const c of [a, b, third]) c.close();
 });
 
 test('צופה לא יכול לבצע פעולות של מתמודד', async () => {
