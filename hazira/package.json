@@ -25,7 +25,13 @@
   "license": "ISC",
   "dependencies": {
     "express": "^5.2.1",
-    "ws": "^8.21.3",
-    "qrcode": "^1.5.4"
+    "qrcode": "^1.5.4",
+    "ws": "^8.21.3"
+  },
+  "devDependencies": {
+    "d3-geo": "^3.1.1",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2",
+    "world-countries": "^5.1.0"
   }
 }

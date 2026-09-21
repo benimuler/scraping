@@ -83,9 +83,13 @@ class Game {
     }
     const id = randomUUID();
     const taken = new Set([...this.players.values()].map((p) => p.categoryId));
-    const category = categoryId && !taken.has(categoryId)
+    // המזהה מגיע מהלקוח, ולכן הוא נבדק מול התוכן שנטען בפועל: בלי זה
+    // בקשה עם קטגוריה שלא קיימת (לקוח ישן, או קישור שנשמר) מפילה את
+    // הדו־קרב ברגע שמנסים לבנות ממנה חפיסה.
+    const requested = categoryId && this.content.category(categoryId) && !taken.has(categoryId)
       ? categoryId
-      : this.content.pickCategory(taken, this.rand);
+      : null;
+    const category = requested || this.content.pickCategory(taken, this.rand);
     if (!category) throw new Error('נגמרו הקטגוריות הפנויות');
 
     this.players.set(id, {

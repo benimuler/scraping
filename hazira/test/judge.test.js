@@ -71,3 +71,41 @@ test('תשובה רב-מילתית מזוהה בתוך משפט', () => {
   assert.equal(judge('זה נראה לי תפוח אדמה', potato).verdict, 'correct');
   assert.equal(judge('תפוד', potato).verdict, 'correct');
 });
+
+test('מילים קצרות שמתחילות באות שימוש אינן מתמזגות', () => {
+  // בלי מינימום לגזע, "מתח" ו"שטח" היו מתכווצות שתיהן ל"תח"
+  assert.notEqual(judge('מתח', item('שטח')).verdict, 'correct');
+  assert.notEqual(judge('שטח', item('מתח')).verdict, 'correct');
+  assert.notEqual(judge('מלח', item('שלח')).verdict, 'correct');
+  assert.notEqual(judge('בית', item('לוט')).verdict, 'correct');
+});
+
+test('קילוף אות שימוש ממשיך לעבוד במילים ארוכות', () => {
+  assert.equal(judge('הכלב', item('כלב')).verdict, 'correct');
+  assert.equal(judge('וגיטרה', item('גיטרה')).verdict, 'correct');
+  assert.equal(judge('הפיל', item('פיל')).verdict, 'correct');
+});
+
+test('תשובה של פריט אחר בקטגוריה לא נחשבת לתשובה הזו', () => {
+  const { findRivals, prepareItem } = require('../server/judge');
+  const answers = ['סודאן', 'דרום סודאן', 'גינאה', 'גינאה ביסאו'];
+  const withRivals = (answer) =>
+    prepareItem({ answer, rivals: findRivals(answer, answers) });
+
+  // מי שרואה את סודאן ואומר "דרום סודאן" נקב בשם מדינה אחרת
+  assert.equal(judge('דרום סודאן', withRivals('סודאן')).verdict, 'none');
+  assert.equal(judge('גינאה ביסאו', withRivals('גינאה')).verdict, 'none');
+
+  // והכיוון ההפוך ממשיך לעבוד כרגיל
+  assert.equal(judge('סודאן', withRivals('סודאן')).verdict, 'correct');
+  assert.equal(judge('זה סודאן נכון', withRivals('סודאן')).verdict, 'correct');
+  assert.equal(judge('דרום סודאן', withRivals('דרום סודאן')).verdict, 'correct');
+  assert.equal(judge('סודאן', withRivals('דרום סודאן')).verdict, 'none');
+});
+
+test('findRivals מוצא רק תשובות שמכילות ממש', () => {
+  const { findRivals } = require('../server/judge');
+  assert.deepEqual(findRivals('סודאן', ['סודאן', 'דרום סודאן', 'מצרים']), ['דרום סודאן']);
+  assert.deepEqual(findRivals('מצרים', ['סודאן', 'דרום סודאן', 'מצרים']), []);
+  assert.deepEqual(findRivals('טניס', ['טניס', 'טניס שולחן']), ['טניס שולחן']);
+});

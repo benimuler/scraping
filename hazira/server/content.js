@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { prepareItem } = require('./judge');
+const { prepareItem, findAllRivals } = require('./judge');
 const { shuffle } = require('./shuffle');
 
 const PACKS_DIR = path.join(__dirname, '..', 'content', 'packs');
@@ -28,11 +28,13 @@ class ContentLibrary {
       if (!pack.id || !Array.isArray(pack.items) || pack.items.length === 0) {
         throw new Error(`חבילת תוכן פגומה: ${file}`);
       }
+      // תשובות שמכילות זו את זו באותה קטגוריה חייבות להיות מובחנות בהכרעה
+      const rivals = findAllRivals(pack.items.map((i) => i.answer));
       this.categories.set(pack.id, {
         id: pack.id,
         name: pack.name || pack.id,
         hint: pack.hint || null,
-        items: pack.items.map(prepareItem),
+        items: pack.items.map((i) => prepareItem({ ...i, rivals: rivals.get(i.answer) })),
       });
     }
     if (this.categories.size === 0) throw new Error('לא נמצאו קטגוריות תוכן');
@@ -57,10 +59,27 @@ class ContentLibrary {
   }
 
   /** חפיסת פריטים מעורבבת לדו-קרב אחד. */
+  /**
+   * חפיסה לדו־קרב אחד: קלה בהתחלה, קשה בסוף.
+   *
+   * הסדר בתוך כל דרגה מעורבב, כך ששני דו־קרבות באותה קטגוריה לא מציגים
+   * בדיוק את אותה סדרה — אבל העלייה בקושי נשמרת. זה מה שמייצר את הקצב של
+   * התוכנית: הפתיחה מהירה, וההכרעה נופלת על הפריטים הקשים.
+   */
   deck(categoryId, rand = Math.random) {
     const category = this.category(categoryId);
     if (!category) throw new Error(`קטגוריה לא מוכרת: ${categoryId}`);
-    return shuffle(category.items, rand);
+
+    const bands = new Map();
+    for (const item of category.items) {
+      const level = item.difficulty || 1;
+      if (!bands.has(level)) bands.set(level, []);
+      bands.get(level).push(item);
+    }
+
+    return [...bands.keys()]
+      .sort((a, b) => a - b)
+      .flatMap((level) => shuffle(bands.get(level), rand));
   }
 }
 

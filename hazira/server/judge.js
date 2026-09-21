@@ -65,10 +65,14 @@ function soften(word) {
   return s;
 }
 
-/** מסיר אות שימוש מתחילת מילה, אם נשארת מילה בעלת אורך סביר. */
+// שארית קצרה מזו הופכת את הקילוף למסוכן: "מתח" ו"שטח" שתיהן מתחילות באות
+// שימוש, ובלי המינימום הזה שתיהן מתכווצות ל"תח" ונחשבות לאותה תשובה.
+const MIN_STEM = 3;
+
+/** מסיר אות שימוש מתחילת מילה, כל עוד נשאר גזע ארוך מספיק כדי להיות מילה. */
 function stripPrefix(word) {
   for (const p of PREFIXES) {
-    if (word.length > p.length + 1 && word.startsWith(p)) return word.slice(p.length);
+    if (word.length - p.length >= MIN_STEM && word.startsWith(p)) return word.slice(p.length);
   }
   return word;
 }
@@ -136,7 +140,50 @@ function prepareItem(item) {
     ...item,
     _accepted: accepted.map(prepareAnswer),
     _maxWords: Math.max(1, ...accepted.map((a) => tokenize(a).length)),
+    _rivals: (item.rivals || []).map(prepareAnswer),
   };
+}
+
+/**
+ * תשובות של פריטים אחרים באותה קטגוריה שמכילות את התשובה הזו. "סודאן"
+ * ו"דרום סודאן" הן שתי מדינות שונות, ובלי ההבחנה הזו מי שרואה את סודאן
+ * ואומר "דרום סודאן" היה זוכה בנקודה — כי התשובה הקצרה משובצת בארוכה.
+ */
+const containsWord = (haystack, needle) =>
+  haystack === needle || haystack.startsWith(`${needle} `)
+  || haystack.endsWith(` ${needle}`) || haystack.includes(` ${needle} `);
+
+// ההשוואה חייבת להיות על אותן צורות שההכרעה עובדת עליהן. "עשרים ואחת"
+// מכילה את "אחת" רק אחרי שה-ו' יורדת, ו"שתים עשרה" מכילה את "שתיים" רק
+// אחרי שכתיב מלא/חסר מתאחד — שתי השכבות נדרשות.
+const comparableForms = (value) => {
+  const f = forms(tokenize(value));
+  return [...f.plain, ...f.soft];
+};
+
+/**
+ * מחשב יריבים לכל התשובות בקטגוריה בבת אחת.
+ *
+ * הצורות מחושבות פעם אחת לכל תשובה ולא לכל זוג: בקטגוריה של מאתיים פריטים
+ * ההבדל הוא בין אלפי חישובים למאות, וזה מה שהופך את טעינת השרת למיידית.
+ */
+function findAllRivals(allAnswers) {
+  const prepared = allAnswers.map((answer) => ({ answer, forms: comparableForms(answer) }));
+  const result = new Map();
+  for (const mine of prepared) {
+    if (result.has(mine.answer)) continue;
+    result.set(mine.answer, prepared
+      .filter((other) => other.answer !== mine.answer
+        && other.forms.some((theirs) =>
+          mine.forms.some((m) => theirs.length > m.length && containsWord(theirs, m))))
+      .map((other) => other.answer));
+  }
+  return result;
+}
+
+/** נוחות לשימוש נקודתי; לקטגוריה שלמה עדיף findAllRivals. */
+function findRivals(answer, allAnswers) {
+  return findAllRivals(allAnswers).get(answer) || [];
 }
 
 /**
@@ -177,6 +224,19 @@ function judge(transcript, preparedItem) {
   const item = preparedItem._accepted ? preparedItem : prepareItem(preparedItem);
   const windows = tailWindows(transcript, item._maxWords);
   if (windows.length === 0) return { verdict: 'none', score: 0, matched: null, heard: null };
+
+  // אם נאמרה תשובה של פריט אחר בקטגוריה שמכילה את זו — זו לא התשובה הזו
+  if (item._rivals?.length) {
+    const rivalWords = Math.max(...item._rivals.map((r) => r.words));
+    for (const window of tailWindows(transcript, rivalWords)) {
+      const heardForms = forms(window.split(' '));
+      for (const rival of item._rivals) {
+        if (intersects(heardForms.plain, rival.plain) || intersects(heardForms.soft, rival.soft)) {
+          return { verdict: 'none', score: 0, matched: null, heard: window, rival: rival.raw };
+        }
+      }
+    }
+  }
 
   let best = { verdict: 'none', score: 0, matched: null, heard: null };
 
@@ -221,6 +281,8 @@ module.exports = {
   similarity,
   prepareItem,
   prepareAnswer,
+  findRivals,
+  findAllRivals,
   forms,
   tailWindows,
   judge,

@@ -175,8 +175,8 @@ test('דו־קרב עצמאי: שני טלפונים, הכרעה על השעון
     body: JSON.stringify({ config: { mode: 'duel', clockMs: 2000 } }),
   }).then((r) => r.json());
 
-  const dana = client('player', { code, name: 'דנה', categoryId: 'flags' });
-  const yossi = client('player', { code, name: 'יוסי', categoryId: 'animals' });
+  const dana = client('player', { code, name: 'דנה', categoryId: 'flags-europe' });
+  const yossi = client('player', { code, name: 'יוסי', categoryId: 'mammals' });
   await dana.until((_, s) => s.players.length === 2);
 
   assert.equal(dana.state.mode, 'duel');

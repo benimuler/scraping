@@ -190,3 +190,19 @@ test('הדוח של דו־קרב מסכם סיבובים ולא משבצות', (
   assert.equal(winnerRow.duelsWon, 1);
   game.dispose();
 });
+
+test('קטגוריה שלא קיימת לא מפילה את הדו־קרב', () => {
+  const game = new Game({ content, rand: seeded() });
+  // לקוח ישן או קישור שנשמר יכולים לשלוח מזהה שכבר לא קיים בתוכן
+  const a = game.addPlayer({ name: 'א', categoryId: 'category-that-vanished' });
+  const b = game.addPlayer({ name: 'ב' });
+
+  assert.ok(content.category(game.players.get(a).categoryId), 'הוקצתה קטגוריה קיימת');
+  assert.ok(content.category(game.players.get(b).categoryId));
+
+  game.start();
+  fastForward(game);
+  assert.equal(game.phase, 'duel');
+  assert.ok(game.duel.item, 'נבנתה חפיסה');
+  game.dispose();
+});
