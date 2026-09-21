@@ -1,0 +1,80 @@
+'use strict';
+
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const os = require('os');
+
+/**
+ * בחירת כתובת ה-LAN היא נקודת הכשל הנפוצה בהרצה על שני מכשירים: אם השרת
+ * מפרסם כתובת של Docker או VPN, קוד ה-QR מוביל לשום מקום והטלפון השני
+ * פשוט לא מתחבר — בלי שום הודעת שגיאה מועילה.
+ */
+const iface = (address, internal = false) => [{ family: 'IPv4', address, internal }];
+
+function withInterfaces(interfaces, fn) {
+  const original = os.networkInterfaces;
+  os.networkInterfaces = () => interfaces;
+  delete require.cache[require.resolve('../server/index.js')];
+  try {
+    return fn(require('../server/index.js'));
+  } finally {
+    os.networkInterfaces = original;
+    delete require.cache[require.resolve('../server/index.js')];
+  }
+}
+
+test('Wi-Fi אמיתי מנצח את Docker ואת ה-VPN', () => {
+  withInterfaces({
+    lo: iface('127.0.0.1', true),
+    docker0: iface('172.17.0.1'),
+    utun3: iface('10.8.0.6'),
+    en0: iface('192.168.1.24'),
+  }, ({ lanAddress }) => {
+    assert.equal(lanAddress(), '192.168.1.24');
+  });
+});
+
+test('כשיש רק כתובת של 10.x היא נבחרת', () => {
+  withInterfaces({
+    lo: iface('127.0.0.1', true),
+    eth0: iface('10.0.0.42'),
+  }, ({ lanAddress }) => {
+    assert.equal(lanAddress(), '10.0.0.42');
+  });
+});
+
+test('כתובת link-local נדחית לטובת כל חלופה', () => {
+  withInterfaces({
+    en1: iface('169.254.10.2'),
+    en0: iface('192.168.0.7'),
+  }, ({ lanAddress }) => {
+    assert.equal(lanAddress(), '192.168.0.7');
+  });
+});
+
+test('בלי שום ממשק חיצוני נופלים ל-localhost', () => {
+  withInterfaces({ lo: iface('127.0.0.1', true) }, ({ lanAddress }) => {
+    assert.equal(lanAddress(), 'localhost');
+  });
+});
+
+test('HOST_IP גובר על הניחוש האוטומטי', () => {
+  withInterfaces({ en0: iface('192.168.1.24') }, ({ lanAddress }) => {
+    process.env.HOST_IP = '192.168.1.99';
+    try {
+      assert.equal(lanAddress(), '192.168.1.99');
+    } finally {
+      delete process.env.HOST_IP;
+    }
+  });
+});
+
+test('כל הכתובות מוצעות כחלופות, מהסבירה ביותר ומטה', () => {
+  withInterfaces({
+    docker0: iface('172.17.0.1'),
+    en0: iface('192.168.1.24'),
+  }, ({ lanAddresses }) => {
+    const order = lanAddresses().map((a) => a.address);
+    assert.deepEqual(order, ['192.168.1.24', '172.17.0.1']);
+  });
+});

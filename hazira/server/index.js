@@ -29,14 +29,46 @@ app.use(express.json());
 app.use(express.static(PUBLIC_DIR));
 app.use('/media', express.static(MEDIA_DIR, { maxAge: '1h' }));
 
-/** כתובת ה-LAN שהטלפונים באותה רשת יכולים להגיע אליה. */
-function lanAddress() {
-  for (const entries of Object.values(os.networkInterfaces())) {
+// ממשקים וירטואליים (Docker, VPN, מכונות וירטואליות) — לטלפון אין דרך להגיע
+// אליהם, ולכן הם יורדים לתחתית הרשימה ולא נבחרים כל עוד יש חלופה אמיתית.
+const VIRTUAL_IFACE = /^(docker|br-|veth|virbr|vmnet|vboxnet|utun|tun|tap|zt|tailscale|wg|awdl|llw)/i;
+const PHYSICAL_IFACE = /^(en|eth|wl|wlan|wlp|enp|eno)/i;
+
+/**
+ * מדרג כתובת לפי הסיכוי שטלפון באותה רשת Wi-Fi יוכל להגיע אליה.
+ * ציון גבוה = מועמדת טובה יותר.
+ */
+function scoreAddress(name, address) {
+  let score = 0;
+  if (VIRTUAL_IFACE.test(name)) score -= 100;
+  if (PHYSICAL_IFACE.test(name)) score += 10;
+  if (address.startsWith('192.168.')) score += 30;
+  else if (address.startsWith('10.')) score += 20;
+  else if (/^172\.(1[6-9]|2\d|3[01])\./.test(address)) score += 15;
+  if (address.startsWith('169.254.')) score -= 50; // link-local, בלי DHCP
+  return score;
+}
+
+/** כל כתובות ה-IPv4 החיצוניות, מהמועמדת הסבירה ביותר ומטה. */
+function lanAddresses() {
+  const found = [];
+  for (const [name, entries] of Object.entries(os.networkInterfaces())) {
     for (const entry of entries || []) {
-      if (entry.family === 'IPv4' && !entry.internal) return entry.address;
+      if (entry.family === 'IPv4' && !entry.internal) {
+        found.push({ name, address: entry.address, score: scoreAddress(name, entry.address) });
+      }
     }
   }
-  return 'localhost';
+  return found.sort((a, b) => b.score - a.score);
+}
+
+/**
+ * הכתובת שהטלפונים יקבלו בקוד ה-QR. אפשר לכפות אותה עם HOST_IP כשהניחוש
+ * האוטומטי שגוי — מה שקורה בקלות במחשב עם Docker או VPN פעיל.
+ */
+function lanAddress() {
+  if (process.env.HOST_IP) return process.env.HOST_IP;
+  return lanAddresses()[0]?.address || 'localhost';
 }
 
 app.get('/api/categories', (_req, res) => res.json(content.list()));
@@ -185,17 +217,34 @@ heartbeat.unref();
 if (require.main === module) {
   server.listen(PORT, '0.0.0.0', () => {
     const scheme = secure ? 'https' : 'http';
+    const host = lanAddress();
+    const others = lanAddresses().filter((a) => a.address !== host);
+
     console.log('');
     console.log(`  🏟️  הזירה עלתה לאוויר (${secure ? 'HTTPS' : 'HTTP'})`);
-    console.log(`  לוח גדול:  ${scheme}://localhost:${PORT}`);
-    console.log(`  טלפונים:   ${scheme}://${lanAddress()}:${PORT}/player.html`);
-    if (!secure) {
+    console.log('');
+    console.log(`  פתחו בשני הטלפונים:  ${scheme}://${host}:${PORT}`);
+    console.log(`  (על המחשב הזה:       ${scheme}://localhost:${PORT})`);
+    console.log('');
+    console.log('  הטלפונים חייבים להיות על אותה רשת Wi-Fi כמו המחשב הזה.');
+
+    if (secure) {
+      console.log('  בכניסה הראשונה כל טלפון יציג אזהרת אבטחה — זו התעודה');
+      console.log('  המקומית שלכם. אשרו אותה פעם אחת בכל מכשיר.');
+    } else {
       console.log('');
-      console.log('  ⚠️  ב-HTTP הדפדפן חוסם את המיקרופון מחוץ ל-localhost.');
-      console.log('     להאזנה חיה מהטלפונים:  npm run cert  &&  npm start');
+      console.log('  ⚠️  ב-HTTP הדפדפן חוסם את המיקרופון מחוץ ל-localhost,');
+      console.log('     אז אפשר יהיה רק להקליד תשובות.');
+      console.log('     להאזנה חיה:  npm run cert  ואז  npm start');
+    }
+
+    if (others.length) {
+      console.log('');
+      console.log('  אם הטלפונים לא מצליחים להתחבר, נסו כתובת אחרת:');
+      for (const a of others) console.log(`     HOST_IP=${a.address} npm start      (${a.name})`);
     }
     console.log('');
   });
 }
 
-module.exports = { app, server, rooms, content, lanAddress, secure };
+module.exports = { app, server, rooms, content, lanAddress, lanAddresses, secure };
