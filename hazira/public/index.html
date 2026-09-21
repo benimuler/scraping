@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>הזירה</title>
+<link rel="stylesheet" href="/css/base.css">
+<style>
+  .hero { max-width: 560px; margin: 0 auto; padding-block: 8vh; }
+  .logo { font-size: clamp(3rem, 12vw, 5.5rem); font-weight: 800; letter-spacing: -.04em; margin-bottom: 4px; }
+  .logo span { color: var(--accent); }
+  .tagline { color: var(--muted); font-size: 1.1rem; margin-bottom: 36px; }
+  .choice { display: grid; gap: 14px; }
+  .choice .btn { padding: 22px; font-size: 1.1rem; }
+  .how { margin-top: 40px; font-size: .92rem; color: var(--muted); line-height: 1.7; }
+  .how li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap hero center">
+  <div class="logo">ה<span>זירה</span></div>
+  <p class="tagline">דו־קרב ידע ראש בראש. הטלפון מקשיב לכם בלייב.</p>
+
+  <div class="choice">
+    <button class="btn primary lg" id="open-arena">פתחו זירה על המסך הגדול</button>
+    <a class="btn lg" href="/player.html">הצטרפו כמתמודד מהטלפון</a>
+  </div>
+
+  <div class="how">
+    <ol style="text-align: start; padding-inline-start: 1.2em;">
+      <li>פתחו את הזירה על מסך גדול — טלוויזיה, מקרן או לפטופ.</li>
+      <li>כל מתמודד סורק את קוד ה-QR מהטלפון שלו ובוחר קטגוריה.</li>
+      <li>בדו־קרב מופיעה תמונה — פשוט תגידו בקול מה רואים.</li>
+    </ol>
+  </div>
+</div>
+
+<script type="module">
+  document.getElementById('open-arena').addEventListener('click', async (e) => {
+    const btn = e.currentTarget;
+    btn.disabled = true;
+    btn.textContent = 'פותח זירה…';
+    try {
+      const res = await fetch('/api/rooms', { method: 'POST', headers: { 'content-type': 'application/json' }, body: '{}' });
+      const { code } = await res.json();
+      location.href = `/board.html?code=${code}`;
+    } catch {
+      btn.disabled = false;
+      btn.textContent = 'לא הצלחתי לפתוח זירה — נסו שוב';
+    }
+  });
+</script>
+</body>
+</html>

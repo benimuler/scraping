@@ -1,0 +1,30 @@
+{
+  "name": "hazira",
+  "version": "1.0.0",
+  "description": "משחק בסגנון \"הזירה\" (כאן 11 / The Floor) — דו-קרבות ראש בראש מטלפונים נפרדים, עם האזנה חיה למיקרופון וניתוח תשובות",
+  "type": "commonjs",
+  "main": "server/index.js",
+  "scripts": {
+    "prepare": "node tools/make-demo-content.js",
+    "prestart": "node tools/make-demo-content.js",
+    "start": "node server/index.js",
+    "dev": "HTTP_ONLY=1 node server/index.js",
+    "cert": "node tools/make-cert.js",
+    "content": "node tools/make-demo-content.js --force",
+    "pretest": "node tools/make-demo-content.js",
+    "test": "HTTP_ONLY=1 node --test test/*.test.js"
+  },
+  "keywords": [
+    "hazira",
+    "the-floor",
+    "quiz",
+    "speech",
+    "hebrew"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "ws": "^8.21.3",
+    "qrcode": "^1.5.4"
+  }
+}

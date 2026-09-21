@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>הזירה — מתמודד</title>
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/player.css">
+</head>
+<body>
+<div class="flash" id="flash"></div>
+
+<main class="phone">
+  <!-- הצטרפות -->
+  <section class="screen" id="s-join">
+    <div class="logo">ה<span>זירה</span></div>
+    <form id="join-form" class="card">
+      <div class="field">
+        <label for="f-code">קוד הזירה</label>
+        <input id="f-code" name="code" inputmode="latin" autocapitalize="characters"
+               autocomplete="off" maxlength="4" placeholder="ABCD" required>
+      </div>
+      <div class="field">
+        <label for="f-name">השם שלך</label>
+        <input id="f-name" name="name" maxlength="24" placeholder="איך יקראו לך בזירה" required>
+      </div>
+      <div class="field">
+        <label for="f-cat">הקטגוריה שלך</label>
+        <select id="f-cat" name="categoryId"></select>
+        <div class="muted hint">זו הקטגוריה שבה יילחמו נגדך. בחרו משהו שאתם חזקים בו.</div>
+      </div>
+      <button class="btn primary block lg" type="submit">כניסה לזירה</button>
+      <div class="error" id="join-error" hidden></div>
+    </form>
+  </section>
+
+  <!-- ממתינים לתחילת המשחק -->
+  <section class="screen center" id="s-wait" hidden>
+    <div class="status-dot" id="conn-dot"></div>
+    <h1 id="wait-name">—</h1>
+    <div class="my-cat" id="wait-cat">—</div>
+    <p class="muted" id="wait-note">ממתינים שהמשחק יתחיל…</p>
+    <div class="mini-board" id="wait-board"></div>
+  </section>
+
+  <!-- תורי לבחור יריב -->
+  <section class="screen" id="s-pick" hidden>
+    <div class="phase-label">הבחירה אצלך</div>
+    <h2>את מי אתה תוקף?</h2>
+    <p class="muted">הדו־קרב יתנהל <b>בקטגוריה של היריב</b>. נבחרו רק מי שגובל בטריטוריה שלך.</p>
+    <div class="opt-list" id="pick-list"></div>
+    <div class="muted center" id="pick-timer"></div>
+  </section>
+
+  <!-- ממתינים לבחירה של מישהו אחר -->
+  <section class="screen center" id="s-watch" hidden>
+    <div class="phase-label" id="watch-label">—</div>
+    <h2 id="watch-title">—</h2>
+    <div class="mini-board" id="watch-board"></div>
+    <div class="watch-clocks" id="watch-clocks"></div>
+  </section>
+
+  <!-- דו־קרב -->
+  <section class="screen duel" id="s-duel" hidden>
+    <header class="duel-bar">
+      <div class="side-clock" id="my-side">
+        <span class="who">אתה</span>
+        <span class="clock" id="my-clock">--.-</span>
+      </div>
+      <div class="cat-chip" id="duel-cat">—</div>
+      <div class="side-clock" id="rival-side">
+        <span class="who" id="rival-name">יריב</span>
+        <span class="clock" id="rival-clock">--.-</span>
+      </div>
+    </header>
+
+    <figure class="item">
+      <img id="d-image" alt="">
+      <figcaption id="d-text" hidden></figcaption>
+      <div class="lock" id="d-lock" hidden><b id="d-lock-sec">3</b><span>תמונה חדשה</span></div>
+      <div class="waiting-veil" id="d-veil" hidden>
+        <span id="d-veil-text">התור של היריב</span>
+      </div>
+    </figure>
+
+    <div class="listen-box">
+      <div class="listen-head">
+        <span class="mic-dot" id="mic-dot" hidden></span>
+        <span id="mic-status">מיקרופון כבוי</span>
+      </div>
+      <div class="transcript" id="d-transcript">…</div>
+      <div class="verdict-meter"><i id="d-bar"></i></div>
+    </div>
+
+    <div class="controls" id="d-controls">
+      <button class="btn lg" id="btn-mic">🎤 הפעלת מיקרופון</button>
+      <button class="btn danger lg" id="btn-pass">ויתור</button>
+    </div>
+
+    <form class="typed" id="typed-form">
+      <input id="typed-input" placeholder="או פשוט להקליד תשובה…" autocomplete="off">
+      <button class="btn" type="submit">שלח</button>
+    </form>
+  </section>
+
+  <!-- החלטה אחרי ניצחון -->
+  <section class="screen center" id="s-decide" hidden>
+    <div class="phase-label">ניצחת</div>
+    <h2>להמשיך לתקוף?</h2>
+    <p class="muted" id="decide-note"></p>
+    <div class="decide-buttons">
+      <button class="btn primary lg block" data-choice="attack">לתקוף שוב</button>
+      <button class="btn lg block" data-choice="yield">להחזיר לזירה</button>
+    </div>
+    <div class="muted" id="decide-timer"></div>
+  </section>
+
+  <!-- הודחת / סיום -->
+  <section class="screen center" id="s-over" hidden>
+    <h1 id="over-title">—</h1>
+    <div class="my-cat" id="over-sub">—</div>
+    <div class="mini-board" id="over-board"></div>
+    <div class="my-stats" id="over-stats"></div>
+  </section>
+</main>
+
+<script type="module" src="/js/player.js"></script>
+</body>
+</html>
