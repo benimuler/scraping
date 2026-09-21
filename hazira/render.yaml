@@ -1,0 +1,27 @@
+# הגדרת פריסה ל-Render — נותנת כתובת קבועה וחינמית כמו
+# https://hazira-xyz.onrender.com, בלי לרשום דומיין ובלי כרטיס אשראי.
+#
+# איך משתמשים: ב-Render לוחצים New ← Blueprint, בוחרים את המאגר הזה,
+# ו-Render קורא את הקובץ הזה ומקים את השירות.
+#
+# למה שירות יחיד: מצב המשחק נשמר בזיכרון התהליך. כמה עותקים במקביל היו
+# מפצלים חדרים בין מכונות, ושני שחקנים באותו דו־קרב היו נוחתים על שרתים
+# שונים ולא רואים זה את זה.
+
+services:
+  - type: web
+    name: hazira
+    runtime: node
+    plan: free
+    region: frankfurt          # הקרוב ביותר לישראל מבין אזורי Render
+    rootDir: hazira            # המשחק יושב בתיקייה הזו בתוך המאגר
+    buildCommand: npm install && npm run content
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      # Render מסיים את ה-TLS בעצמו ומעביר לשרת HTTP פנימי, ולכן אין
+      # צורך בתעודה מקומית — והדגל מוודא שקובץ תעודה שנשכח לא יבלבל.
+      - key: HTTP_ONLY
+        value: "1"
