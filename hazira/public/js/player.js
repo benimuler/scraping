@@ -201,15 +201,58 @@ const opponent = () => state.players.find((p) => p.id !== me.id) || null;
 const opponentCategory = () => opponent()?.category || '—';
 
 let inviteDrawn = false;
+let inviteUrl = null;
+
 function renderInvite() {
   $('invite-code').textContent = state.code || '····';
   if (inviteDrawn || !state.code) return;
   inviteDrawn = true;
+
+  // הקישור מגיע מהשרת ולא מ-location, כי מאחורי מנהרה או שרת מתארח
+  // הכתובת שהיריב צריך אינה בהכרח זו שפתוחה אצלי
+  fetch(`/api/rooms/${state.code}`)
+    .then((r) => r.json())
+    .then(({ joinUrl }) => {
+      inviteUrl = joinUrl || `${location.origin}/player.html?code=${state.code}`;
+      $('invite-link').textContent = inviteUrl;
+    })
+    .catch(() => {
+      inviteUrl = `${location.origin}/player.html?code=${state.code}`;
+      $('invite-link').textContent = inviteUrl;
+    });
+
   fetch(`/api/rooms/${state.code}/qr.svg`)
     .then((r) => r.text())
     .then((svg) => { $('invite-qr').innerHTML = svg; })
     .catch(() => { inviteDrawn = false; });
 }
+
+/**
+ * שיתוף ההזמנה. בטלפון navigator.share פותח את תפריט השיתוף של המערכת
+ * (וואטסאפ, הודעות); בדפדפן שולחני נופלים להעתקה ללוח.
+ */
+$('invite-share').addEventListener('click', async () => {
+  const url = inviteUrl || `${location.origin}/player.html?code=${state?.code || ''}`;
+  const text = `בוא/י נשחק הזירה — דו־קרב ראש בראש. הקישור שלך: ${url}`;
+  const btn = $('invite-share');
+
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: 'הזירה', text });
+      return;
+    } catch (err) {
+      if (err?.name === 'AbortError') return; // המשתמש סגר את תפריט השיתוף
+    }
+  }
+
+  try {
+    await navigator.clipboard.writeText(url);
+    btn.textContent = 'הקישור הועתק ✓';
+    setTimeout(() => { btn.textContent = 'שליחת הזמנה'; }, 2500);
+  } catch {
+    toast('העתיקו את הקישור שמופיע למטה');
+  }
+});
 
 $('wait-start').addEventListener('click', (e) => {
   e.currentTarget.disabled = true;

@@ -73,23 +73,54 @@ function lanAddress() {
 
 app.get('/api/categories', (_req, res) => res.json(content.list()));
 
-const joinUrl = (code) => `${secure ? 'https' : 'http'}://${lanAddress()}:${PORT}/player.html?code=${code}`;
+const LOCAL_HOST = /^(localhost|127\.0\.0\.1|\[::1\])(:\d+)?$/i;
+
+/**
+ * הבסיס שממנו נבנים הקישורים שנשלחים ליריב, לפי סדר עדיפות:
+ * PUBLIC_URL מפורש ← הכתובת שדרכה הגיעה הבקשה ← כתובת ה-LAN של המחשב.
+ *
+ * כשהמשחק רץ מאחורי מנהרה או על שרת מתארח, הכתובת שהיריב צריך אינה כתובת
+ * ה-LAN — והיא כן מופיעה בכותרות הבקשה, ולכן הדבר עובד בלי הגדרה כלשהי.
+ */
+
+function publicBase(req) {
+  if (process.env.PUBLIC_URL) return process.env.PUBLIC_URL.replace(/\/+$/, '');
+
+  // מאחורי מנהרה או שרת מתארח, הכתובת הנכונה היא זו שדרכה הגיעה הבקשה —
+  // כך זה עובד בלי להגדיר כלום. localhost הוא היוצא מהכלל: קישור כזה
+  // חסר ערך למי שמקבל אותו, ולכן שם נופלים לכתובת ה-LAN.
+  const host = req?.headers?.host;
+  if (host && !LOCAL_HOST.test(host)) {
+    const proto = (req.headers['x-forwarded-proto'] || '').split(',')[0].trim()
+      || (req.secure ? 'https' : 'http');
+    return `${proto}://${host}`;
+  }
+
+  return `${secure ? 'https' : 'http'}://${lanAddress()}:${PORT}`;
+}
+
+const joinUrl = (code, req) => `${publicBase(req)}/player.html?code=${code}`;
 
 app.post('/api/rooms', (req, res) => {
   const room = rooms.create(req.body?.config || {});
-  res.json({ code: room.code, joinUrl: joinUrl(room.code) });
+  res.json({ code: room.code, joinUrl: joinUrl(room.code, req) });
 });
 
 app.get('/api/rooms/:code', (req, res) => {
   const room = rooms.get(req.params.code);
   if (!room) return res.status(404).json({ error: 'חדר לא נמצא' });
-  res.json({ code: room.code, phase: room.game.phase, players: room.game.players.size });
+  res.json({
+    code: room.code,
+    phase: room.game.phase,
+    players: room.game.players.size,
+    joinUrl: joinUrl(room.code, req),
+  });
 });
 
 app.get('/api/rooms/:code/qr.svg', async (req, res) => {
   const room = rooms.get(req.params.code);
   if (!room) return res.status(404).end();
-  const svg = await QRCode.toString(joinUrl(room.code), { type: 'svg', margin: 1, width: 320 });
+  const svg = await QRCode.toString(joinUrl(room.code, req), { type: 'svg', margin: 1, width: 320 });
   res.type('image/svg+xml').send(svg);
 });
 
@@ -223,6 +254,15 @@ if (require.main === module) {
     console.log('');
     console.log(`  🏟️  הזירה עלתה לאוויר (${secure ? 'HTTPS' : 'HTTP'})`);
     console.log('');
+
+    if (process.env.PUBLIC_URL) {
+      console.log(`  כתובת ציבורית:  ${publicBase()}`);
+      console.log('  זו הכתובת שאפשר לשלוח למי שלא נמצא איתכם באותה רשת.');
+      console.log(`  (על המחשב הזה:  ${scheme}://localhost:${PORT})`);
+      console.log('');
+      return;
+    }
+
     console.log(`  פתחו בשני הטלפונים:  ${scheme}://${host}:${PORT}`);
     console.log(`  (על המחשב הזה:       ${scheme}://localhost:${PORT})`);
     console.log('');
@@ -247,4 +287,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { app, server, rooms, content, lanAddress, lanAddresses, secure };
+module.exports = { app, server, rooms, content, lanAddress, lanAddresses, publicBase, secure };

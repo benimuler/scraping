@@ -144,8 +144,33 @@ h2 { font-size: 1.5rem; margin: 0; }
 
 /* ------------------------------------------------- הזמנת יריב לדו־קרב */
 
-.invite { display: grid; gap: 10px; justify-items: center; margin: 4px 0 8px; }
+.invite { display: grid; gap: 12px; justify-items: stretch; margin: 4px 0 8px; width: 100%; }
+.invite > p { margin: 0; text-align: center; }
+
+.invite-link {
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .82rem;
+  word-break: break-all;
+  text-align: center;
+  direction: ltr;
+}
+
+.invite-more { text-align: center; }
+.invite-more summary {
+  cursor: pointer;
+  color: var(--muted);
+  font-size: .88rem;
+  padding: 8px;
+  -webkit-tap-highlight-color: transparent;
+}
+.invite-more[open] summary { margin-bottom: 10px; }
+.invite-more > *:not(summary) { justify-self: center; }
 .invite .qr {
+  display: inline-block;
   padding: 10px;
   background: #fff;
   border-radius: 12px;
@@ -153,6 +178,7 @@ h2 { font-size: 1.5rem; margin: 0; }
 }
 .invite .qr svg { width: min(180px, 46vw); height: auto; display: block; }
 .invite .code {
+  margin-top: 10px;
   font-size: 2.6rem;
   font-weight: 800;
   letter-spacing: .14em;

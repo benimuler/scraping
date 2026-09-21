@@ -42,9 +42,15 @@
 
     <!-- בדו־קרב: מזמינים את היריב מכאן -->
     <div class="invite" id="invite" hidden>
-      <p class="muted">שהיריב יסרוק, או יקליד את הקוד:</p>
-      <div class="qr" id="invite-qr"></div>
-      <div class="code" id="invite-code">····</div>
+      <p class="muted">שלחו ליריב את הקישור:</p>
+      <button class="btn primary lg block" id="invite-share">שליחת הזמנה</button>
+      <div class="invite-link" id="invite-link"></div>
+
+      <details class="invite-more">
+        <summary>או אם אתם באותו חדר</summary>
+        <div class="qr" id="invite-qr"></div>
+        <div class="code" id="invite-code">····</div>
+      </details>
     </div>
 
     <p class="muted" id="wait-note">ממתינים שהמשחק יתחיל…</p>

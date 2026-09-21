@@ -12,7 +12,8 @@
     "cert": "node tools/make-cert.js",
     "content": "node tools/make-demo-content.js --force",
     "pretest": "node tools/make-demo-content.js",
-    "test": "HTTP_ONLY=1 node --test test/*.test.js"
+    "test": "HTTP_ONLY=1 node --test test/*.test.js",
+    "play": "node tools/tunnel.js"
   },
   "keywords": [
     "hazira",

@@ -78,3 +78,67 @@ test('כל הכתובות מוצעות כחלופות, מהסבירה ביותר
     assert.deepEqual(order, ['192.168.1.24', '172.17.0.1']);
   });
 });
+
+test('PUBLIC_URL קובע את הקישור שנשלח ליריב', () => {
+  withInterfaces({ en0: iface('192.168.1.24') }, ({ publicBase }) => {
+    process.env.PUBLIC_URL = 'https://brave-horse-42.trycloudflare.com';
+    try {
+      assert.equal(publicBase(), 'https://brave-horse-42.trycloudflare.com');
+    } finally {
+      delete process.env.PUBLIC_URL;
+    }
+  });
+});
+
+test('סלאש עודף בסוף PUBLIC_URL לא יוצר קישור שבור', () => {
+  withInterfaces({ en0: iface('192.168.1.24') }, ({ publicBase }) => {
+    process.env.PUBLIC_URL = 'https://example.com///';
+    try {
+      assert.equal(publicBase(), 'https://example.com');
+    } finally {
+      delete process.env.PUBLIC_URL;
+    }
+  });
+});
+
+test('בלי PUBLIC_URL נופלים לכתובת ה-LAN', () => {
+  withInterfaces({ en0: iface('192.168.1.24') }, ({ publicBase }) => {
+    assert.match(publicBase(), /^http:\/\/192\.168\.1\.24:\d+$/);
+  });
+});
+
+test('מאחורי מנהרה הקישור נגזר מהבקשה, בלי להגדיר כלום', () => {
+  withInterfaces({ en0: iface('192.168.1.24') }, ({ publicBase }) => {
+    const req = {
+      headers: { host: 'brave-horse-42.trycloudflare.com', 'x-forwarded-proto': 'https' },
+    };
+    assert.equal(publicBase(req), 'https://brave-horse-42.trycloudflare.com');
+  });
+});
+
+test('רשימת פרוקסי ב-x-forwarded-proto — נלקח הראשון', () => {
+  withInterfaces({ en0: iface('192.168.1.24') }, ({ publicBase }) => {
+    const req = { headers: { host: 'example.com', 'x-forwarded-proto': 'https, http' } };
+    assert.equal(publicBase(req), 'https://example.com');
+  });
+});
+
+test('בקשה מ-localhost לא מייצרת קישור שאי אפשר לשלוח', () => {
+  withInterfaces({ en0: iface('192.168.1.24') }, ({ publicBase }) => {
+    for (const host of ['localhost:3000', '127.0.0.1:3000', '[::1]:3000']) {
+      assert.match(publicBase({ headers: { host } }), /192\.168\.1\.24/, host);
+    }
+  });
+});
+
+test('PUBLIC_URL גובר גם על כותרות הבקשה', () => {
+  withInterfaces({ en0: iface('192.168.1.24') }, ({ publicBase }) => {
+    process.env.PUBLIC_URL = 'https://chosen.example';
+    try {
+      const req = { headers: { host: 'other.example', 'x-forwarded-proto': 'https' } };
+      assert.equal(publicBase(req), 'https://chosen.example');
+    } finally {
+      delete process.env.PUBLIC_URL;
+    }
+  });
+});
