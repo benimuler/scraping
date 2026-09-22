@@ -66,7 +66,7 @@ async function init(connectionString = process.env.DATABASE_URL) {
   try {
     pool = new Pool({
       connectionString,
-      // Render מנפיקה תעודה פנימית; בלי זה החיבור נדחה
+      // ספקים מנוהלים (Neon, Render) מנפיקים תעודה משלהם; בלי זה החיבור נדחה
       ssl: /localhost|127\.0\.0\.1/.test(connectionString) ? false : { rejectUnauthorized: false },
       max: 5,
       idleTimeoutMillis: 30_000,
