@@ -59,7 +59,10 @@ let ready = false;
  * את המשחק במצב אורח, וזה עדיף על אתר שלא עולה בכלל.
  */
 async function init(connectionString = process.env.DATABASE_URL) {
-  if (!connectionString) return false;
+  if (!connectionString) {
+    console.log('  ℹ️  אין DATABASE_URL — המשחק ירוץ במצב אורח בלבד (בלי הרשמה).');
+    return false;
+  }
   try {
     pool = new Pool({
       connectionString,
@@ -71,6 +74,7 @@ async function init(connectionString = process.env.DATABASE_URL) {
     });
     await pool.query(SCHEMA);
     ready = true;
+    console.log('  ✓ מסד נתונים מחובר — חשבונות, היסטוריה וטבלת שיאים פעילים.');
     return true;
   } catch (err) {
     console.error(`  ⚠️  מסד הנתונים לא זמין (${err.message}) — המשחק ירוץ במצב אורח בלבד.`);
