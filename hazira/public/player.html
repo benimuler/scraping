@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>הזירה — מתמודד</title>
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/player.css">
+</head>
+<body>
+<div class="flash" id="flash"></div>
+
+<main class="phone">
+  <!-- סרגל התקדמות: נוכח במסכים שאינם דו־קרב -->
+  <header class="topbar" id="topbar" hidden>
+    <button class="chip" id="open-trophies" type="button">
+      <span id="chip-trophies">🏆 0</span>
+    </button>
+    <button class="chip" id="open-history" type="button">📜</button>
+    <button class="chip" id="open-board" type="button">📊</button>
+    <div class="level-chip">
+      <span class="lvl" id="chip-level">רמה 1</span>
+      <span class="level-bar"><i id="chip-bar"></i></span>
+    </div>
+    <button class="chip" id="open-account" type="button" hidden>👤</button>
+  </header>
+
+  <!-- בחירת מצב: חשבון או אורח -->
+  <section class="screen center" id="s-welcome" hidden>
+    <div class="logo">ה<span>זירה</span></div>
+    <p class="muted welcome-note">עם חשבון ההתקדמות נשמרת בין מכשירים ונכנסת לטבלת השיאים.</p>
+    <div class="decide-buttons">
+      <button class="btn primary lg block" id="go-register">הרשמה</button>
+      <button class="btn lg block" id="go-login">כבר יש לי חשבון</button>
+      <button class="btn ghost block" id="go-guest">המשך כאורח</button>
+    </div>
+    <p class="muted hint" id="welcome-guest-note" hidden>
+      חשבונות אינם זמינים כרגע — המשחק ירוץ במצב אורח.
+    </p>
+  </section>
+
+  <!-- הרשמה או כניסה -->
+  <section class="screen" id="s-auth" hidden>
+    <div class="overlay-head">
+      <button class="btn ghost back" id="auth-back" type="button">→ חזרה</button>
+      <h2 id="auth-title">הרשמה</h2>
+    </div>
+    <form id="auth-form" class="card">
+      <div class="field">
+        <label for="a-user">שם משתמש</label>
+        <input id="a-user" autocomplete="username" maxlength="20" required>
+      </div>
+      <div class="field">
+        <label for="a-pass">סיסמה</label>
+        <input id="a-pass" type="password" autocomplete="current-password" minlength="6" required>
+      </div>
+      <button class="btn primary block lg" type="submit" id="auth-submit">הרשמה</button>
+      <div class="error" id="auth-error" hidden></div>
+    </form>
+  </section>
+
+  <!-- הצטרפות -->
+  <section class="screen" id="s-join" hidden>
+    <div class="logo">ה<span>זירה</span></div>
+    <form id="join-form" class="card">
+      <div class="field">
+        <label for="f-code">קוד הזירה</label>
+        <input id="f-code" name="code" inputmode="latin" autocapitalize="characters"
+               autocomplete="off" maxlength="4" placeholder="ABCD" required>
+      </div>
+      <div class="field" id="name-field">
+        <label for="f-name">השם שלך</label>
+        <input id="f-name" name="name" maxlength="24" placeholder="איך יקראו לך בזירה" required>
+      </div>
+      <div class="field">
+        <label for="f-cat">הקטגוריה שלך</label>
+        <select id="f-cat" name="categoryId"></select>
+        <div class="muted hint">זו הקטגוריה שבה יילחמו נגדך. בחרו משהו שאתם חזקים בו.</div>
+      </div>
+      <button class="btn primary block lg" type="submit">כניסה לזירה</button>
+      <div class="error" id="join-error" hidden></div>
+    </form>
+  </section>
+
+  <!-- ממתינים לתחילת המשחק -->
+  <section class="screen center" id="s-wait" hidden>
+    <div class="status-dot" id="conn-dot"></div>
+    <h1 id="wait-name">—</h1>
+    <div class="my-cat" id="wait-cat">—</div>
+
+    <!-- בדו־קרב: מזמינים את היריב מכאן -->
+    <div class="invite" id="invite" hidden>
+      <p class="muted">שלחו ליריב את הקישור:</p>
+      <button class="btn primary lg block" id="invite-share">שליחת הזמנה</button>
+      <div class="invite-link" id="invite-link"></div>
+
+      <details class="invite-more">
+        <summary>או אם אתם באותו חדר</summary>
+        <div class="qr" id="invite-qr"></div>
+        <div class="code" id="invite-code">····</div>
+      </details>
+    </div>
+
+    <p class="muted" id="wait-note">ממתינים שהמשחק יתחיל…</p>
+    <button class="btn primary lg" id="wait-start" hidden>מוכנים — מתחילים</button>
+    <div class="mini-board" id="wait-board"></div>
+  </section>
+
+  <!-- פתיח דו־קרב -->
+  <section class="screen center" id="s-intro" hidden>
+    <div class="phase-label">דו־קרב</div>
+    <h1 id="intro-versus">—</h1>
+    <div class="my-cat" id="intro-cat">—</div>
+    <p class="muted" id="intro-role">—</p>
+  </section>
+
+  <!-- תורי לבחור יריב -->
+  <section class="screen" id="s-pick" hidden>
+    <div class="phase-label">הבחירה אצלך</div>
+    <h2>את מי אתה תוקף?</h2>
+    <p class="muted">הדו־קרב יתנהל <b>בקטגוריה של היריב</b>. נבחרו רק מי שגובל בטריטוריה שלך.</p>
+    <div class="opt-list" id="pick-list"></div>
+    <div class="muted center" id="pick-timer"></div>
+  </section>
+
+  <!-- ממתינים לבחירה של מישהו אחר -->
+  <section class="screen center" id="s-watch" hidden>
+    <div class="phase-label" id="watch-label">—</div>
+    <h2 id="watch-title">—</h2>
+    <div class="mini-board" id="watch-board"></div>
+    <div class="watch-clocks" id="watch-clocks"></div>
+  </section>
+
+  <!-- דו־קרב -->
+  <section class="screen duel" id="s-duel" hidden>
+    <header class="duel-bar">
+      <div class="side-clock" id="my-side">
+        <span class="who">אתה</span>
+        <span class="clock" id="my-clock">--.-</span>
+      </div>
+      <div class="cat-stack">
+        <div class="cat-chip" id="duel-cat">—</div>
+        <div class="streak-chip" id="streak-chip" hidden></div>
+      </div>
+      <div class="side-clock" id="rival-side">
+        <span class="who" id="rival-name">יריב</span>
+        <span class="clock" id="rival-clock">--.-</span>
+      </div>
+    </header>
+
+    <figure class="item">
+      <img id="d-image" alt="">
+      <figcaption id="d-text" hidden></figcaption>
+      <div class="lock" id="d-lock" hidden><b id="d-lock-sec">3</b><span>תמונה חדשה</span></div>
+      <div class="waiting-veil" id="d-veil" hidden>
+        <span id="d-veil-text">התור של היריב</span>
+      </div>
+    </figure>
+
+    <div class="listen-box">
+      <div class="listen-head">
+        <span class="mic-dot" id="mic-dot" hidden></span>
+        <span id="mic-status">מיקרופון כבוי</span>
+      </div>
+      <div class="transcript" id="d-transcript">…</div>
+      <div class="verdict-meter"><i id="d-bar"></i></div>
+      <div class="last-turn" id="d-last-turn" hidden></div>
+    </div>
+
+    <div class="controls" id="d-controls">
+      <button class="btn lg" id="btn-mic">🎤 הפעלת מיקרופון</button>
+      <button class="btn danger lg" id="btn-pass">ויתור</button>
+    </div>
+
+    <form class="typed" id="typed-form">
+      <input id="typed-input" placeholder="או פשוט להקליד תשובה…" autocomplete="off">
+      <button class="btn" type="submit">שלח</button>
+    </form>
+  </section>
+
+  <!-- החלטה אחרי ניצחון -->
+  <section class="screen center" id="s-decide" hidden>
+    <div class="phase-label">ניצחת</div>
+    <h2>להמשיך לתקוף?</h2>
+    <p class="muted" id="decide-note"></p>
+    <div class="decide-buttons">
+      <button class="btn primary lg block" data-choice="attack">לתקוף שוב</button>
+      <button class="btn lg block" data-choice="yield">להחזיר לזירה</button>
+    </div>
+    <div class="muted" id="decide-timer"></div>
+  </section>
+
+  <!-- הודחת / סיום -->
+  <section class="screen center" id="s-over" hidden>
+    <h1 id="over-title">—</h1>
+    <div class="my-cat" id="over-sub">—</div>
+    <div class="series" id="over-series" hidden></div>
+
+    <div class="reward" id="reward" hidden>
+      <div class="xp-line"><span id="xp-gained">+0</span> ניסיון</div>
+      <div class="level-row">
+        <span id="reward-level">רמה 1</span>
+        <span class="level-bar big"><i id="reward-bar"></i></span>
+        <span class="muted" id="reward-next"></span>
+      </div>
+      <div class="bests" id="reward-bests"></div>
+      <div class="unlocked" id="reward-unlocked"></div>
+    </div>
+
+    <button class="btn primary lg" id="btn-rematch" hidden>סיבוב נוסף — הפעם בקטגוריה שלך</button>
+    <div class="mini-board" id="over-board"></div>
+    <div class="my-stats" id="over-stats"></div>
+  </section>
+  <!-- היסטוריית דו־קרבות -->
+  <section class="screen overlay" id="s-history" hidden>
+    <div class="overlay-head">
+      <button class="btn ghost back" id="history-back" type="button">→ חזרה</button>
+      <h2>היסטוריית דו־קרבות</h2>
+    </div>
+    <div class="history-list" id="history-list"></div>
+  </section>
+
+  <!-- טבלת שיאים -->
+  <section class="screen overlay" id="s-board" hidden>
+    <div class="overlay-head">
+      <button class="btn ghost back" id="board-back" type="button">→ חזרה</button>
+      <h2>טבלת שיאים</h2>
+    </div>
+    <div class="board-list" id="board-list"></div>
+  </section>
+
+  <!-- כוננית הגביעים -->
+  <section class="screen overlay" id="s-trophies" hidden>
+    <div class="overlay-head">
+      <button class="btn ghost back" id="trophies-back" type="button">→ חזרה</button>
+      <h2>הגביעים שלי</h2>
+    </div>
+    <div class="profile-summary" id="profile-summary"></div>
+    <div class="account-row" id="account-row"></div>
+    <div class="trophy-grid" id="trophy-grid"></div>
+  </section>
+</main>
+
+<script type="module" src="/js/player.js"></script>
+</body>
+</html>

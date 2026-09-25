@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>הזירה — הלוח</title>
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/board.css">
+</head>
+<body>
+<div class="flash" id="flash"></div>
+
+<div class="board-layout">
+  <!-- עמודת הלוח, גלויה תמיד -->
+  <aside class="side">
+    <div class="brand">ה<span>זירה</span></div>
+    <div class="board-grid" id="grid"></div>
+    <ul class="legend" id="legend"></ul>
+  </aside>
+
+  <main class="stage">
+    <!-- ממתינים למתמודדים -->
+    <section class="view" id="view-lobby">
+      <h1>הצטרפו לזירה</h1>
+      <div class="join-panel">
+        <div class="qr card" id="qr"></div>
+        <div class="join-info">
+          <div class="muted">קוד הזירה</div>
+          <div class="code" id="code">····</div>
+          <div class="muted join-url" id="join-url"></div>
+          <button class="btn primary lg" id="start" disabled>התחילו את המשחק</button>
+          <div class="muted" id="lobby-hint">צריך לפחות שני מתמודדים</div>
+        </div>
+      </div>
+      <div class="roster" id="roster"></div>
+    </section>
+
+    <!-- בחירת יריב -->
+    <section class="view" id="view-pick" hidden>
+      <div class="phase-label">הזירה בחרה</div>
+      <h1 id="pick-title">—</h1>
+      <p class="muted">בוחר יריב מבין מי שגובל בטריטוריה שלו. הדו־קרב יתנהל בקטגוריה <b>של היריב</b>.</p>
+      <div class="options" id="pick-options"></div>
+      <div class="countdown" id="pick-countdown"></div>
+    </section>
+
+    <!-- פתיח דו־קרב -->
+    <section class="view center-view" id="view-intro" hidden>
+      <div class="phase-label">דו־קרב</div>
+      <div class="versus" id="intro-versus"></div>
+      <div class="intro-category" id="intro-category"></div>
+    </section>
+
+    <!-- הדו־קרב עצמו -->
+    <section class="view" id="view-duel" hidden>
+      <div class="duel-head">
+        <div class="fighter" id="fighter-a"></div>
+        <div class="duel-category">
+          <div class="phase-label">הקטגוריה</div>
+          <div class="cat-name" id="duel-category">—</div>
+        </div>
+        <div class="fighter" id="fighter-b"></div>
+      </div>
+
+      <div class="arena">
+        <figure class="item-frame" id="item-frame">
+          <img id="item-image" alt="">
+          <figcaption id="item-text" hidden></figcaption>
+          <div class="pass-lock" id="pass-lock" hidden>
+            <span>ויתור — תמונה חדשה בעוד</span>
+            <b id="pass-lock-sec">3</b>
+          </div>
+        </figure>
+
+        <div class="listen">
+          <div class="listen-head">
+            <span class="mic-dot"></span>
+            <span id="listen-who">מאזינים</span>
+          </div>
+          <div class="transcript" id="transcript">…</div>
+          <div class="verdict-meter"><i id="verdict-bar"></i></div>
+          <div class="verdict-note muted" id="verdict-note"></div>
+          <div class="last-turn" id="last-turn" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- תוצאת דו־קרב -->
+    <section class="view center-view" id="view-result" hidden>
+      <div class="phase-label">הוכרע</div>
+      <h1 id="result-title">—</h1>
+      <div class="result-lines" id="result-lines"></div>
+    </section>
+
+    <!-- המנצח מחליט -->
+    <section class="view center-view" id="view-decision" hidden>
+      <div class="phase-label">ההחלטה אצל</div>
+      <h1 id="decision-name">—</h1>
+      <p class="muted">לתקוף שוב, או להחזיר את הבחירה לזירה?</p>
+      <div class="countdown" id="decision-countdown"></div>
+    </section>
+
+    <!-- סיום -->
+    <section class="view center-view" id="view-finished" hidden>
+      <div class="phase-label">אלוף הזירה</div>
+      <h1 class="champion" id="champion">—</h1>
+      <div class="report" id="report"></div>
+      <a class="btn" id="report-link" href="#" download="hazira-report.json">הורדת דוח מלא</a>
+    </section>
+  </main>
+</div>
+
+<script type="module" src="/js/board.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>הזירה</title>
+<link rel="stylesheet" href="/css/base.css">
+<style>
+  .hero { max-width: 520px; margin: 0 auto; padding-block: 6vh; }
+  .logo { font-size: clamp(3rem, 13vw, 5rem); font-weight: 800; letter-spacing: -.04em; margin-bottom: 4px; }
+  .logo span { color: var(--accent); }
+  .tagline { color: var(--muted); font-size: 1.05rem; margin-bottom: 32px; line-height: 1.5; }
+  .choice { display: grid; gap: 12px; }
+  .choice .btn { padding: 20px; font-size: 1.05rem; }
+  .how { margin-top: 36px; font-size: .92rem; color: var(--muted); line-height: 1.7; }
+  .how ol { text-align: start; padding-inline-start: 1.2em; margin: 0; }
+  .how li { margin-bottom: 6px; }
+  .alt { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
+  .alt a { color: var(--muted); font-size: .88rem; }
+</style>
+</head>
+<body>
+<div class="wrap hero center">
+  <div class="logo">ה<span>זירה</span></div>
+  <p class="tagline">דו־קרב ראש בראש. שני טלפונים, תמונות על המסך,<br>ושעון שרץ רק למי שהתור שלו.</p>
+
+  <div class="choice">
+    <button class="btn primary lg" id="open-duel">פתיחת דו־קרב</button>
+    <a class="btn lg" href="/player.html">הצטרפות עם קוד</a>
+  </div>
+
+  <div class="how">
+    <ol>
+      <li>אחד פותח דו־קרב ומקבל קוד.</li>
+      <li>השני סורק את ה-QR או מקליד את הקוד.</li>
+      <li>כל אחד בוחר קטגוריה — <b>ונלחמים בקטגוריה של היריב</b>.</li>
+      <li>מופיעה תמונה — פשוט אומרים בקול מה רואים.</li>
+    </ol>
+  </div>
+
+  <div class="alt">
+    <a href="#" id="open-board">או: משחק הזירה המלא על לוח משבצות, לקבוצה גדולה ←</a>
+  </div>
+</div>
+
+<script type="module">
+  async function createRoom(mode, target) {
+    const res = await fetch('/api/rooms', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ config: { mode } }),
+    });
+    const { code } = await res.json();
+    location.href = `${target}?code=${code}`;
+  }
+
+  document.getElementById('open-duel').addEventListener('click', async (e) => {
+    const btn = e.currentTarget;
+    btn.disabled = true;
+    btn.textContent = 'פותח דו־קרב…';
+    try {
+      await createRoom('duel', '/player.html');
+    } catch {
+      btn.disabled = false;
+      btn.textContent = 'לא הצלחתי לפתוח — נסו שוב';
+    }
+  });
+
+  document.getElementById('open-board').addEventListener('click', async (e) => {
+    e.preventDefault();
+    e.currentTarget.textContent = 'פותח זירה…';
+    try {
+      await createRoom('board', '/board.html');
+    } catch {
+      e.currentTarget.textContent = 'לא הצלחתי לפתוח — נסו שוב';
+    }
+  });
+</script>
+</body>
+</html>
