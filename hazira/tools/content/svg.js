@@ -30,9 +30,23 @@ const textSvg = (text, { bg = '#101528', color = '#eef2ff', size = 96 } = {}) =>
   return svg(body, { bg });
 };
 
+const poly = (points, fill) =>
+  `<polygon points="${points.map(([x, y]) => `${x.toFixed(1)},${y.toFixed(1)}`).join(' ')}" fill="${fill}"/>`;
+
+/** כוכב בעל מספר קצוות משתנה. ברירת המחדל חמישה — כמו ברוב הדגלים ובצורות. */
+const star = (cx, cy, r, fill, points = 5, rotation = -Math.PI / 2) => {
+  const pts = [];
+  for (let i = 0; i < points * 2; i += 1) {
+    const radius = i % 2 === 0 ? r : r * 0.4;
+    const angle = rotation + (i * Math.PI) / points;
+    pts.push([cx + radius * Math.cos(angle), cy + radius * Math.sin(angle)]);
+  }
+  return poly(pts, fill);
+};
+
 function escapeXml(value) {
   return String(value).replace(/[&<>"']/g, (c) =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' }[c]));
 }
 
-module.exports = { W, H, svg, emojiSvg, textSvg, escapeXml };
+module.exports = { W, H, svg, emojiSvg, textSvg, escapeXml, poly, star };

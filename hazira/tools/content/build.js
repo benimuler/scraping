@@ -15,8 +15,10 @@ const emoji = require('./emoji');
 const text = require('./text');
 const countries = require('./countries');
 const drawn = require('./drawn');
+const flags = require('./flags');
 const generated = require('./generated');
-const { judge, prepareItem, findAllRivals } = require('../../server/judge');
+const numeric = require('./numeric');
+const { judge, couldMatchProfile, transcriptProfile, prepareItem, findAllRivals } = require('../../server/judge');
 
 const ROOT = path.join(__dirname, '..', '..', 'content');
 const MEDIA = path.join(ROOT, 'media');
@@ -37,7 +39,10 @@ function normalize(category, kind) {
     if (Array.isArray(item)) {
       const [clue, answer, ...aliases] = item;
       if (kind === 'emoji') {
-        const slug = `${category.id}-${index}`;
+        // שם הקובץ נגזר מנקודות הקוד של האמוג'י ולא ממקומו ברשימה: כך הוספת
+        // פריט באמצע אינה משנה את שמות כל השאר, ואמוג'י שנכתב פעמיים נופל
+        // על אותו שם ומסולק בניכוי הכפילויות. בלי זה כפילות הייתה עוברת.
+        const slug = [...clue].map((ch) => ch.codePointAt(0).toString(16)).join('-');
         write(path.join(MEDIA, category.id, `${slug}.svg`), emojiSvg(clue));
         return { image: `/media/${category.id}/${slug}.svg`, answer, aliases };
       }
@@ -94,13 +99,20 @@ function findCollisions(category) {
   // שמנוע ההכרעה כבר יודע להבחין ביניהן
   const rivals = findAllRivals(category.items.map((i) => i.answer));
   const prepared = category.items.map((i) => prepareItem({ ...i, rivals: rivals.get(i.answer) }));
+  // הפרופיל תלוי בתשובה בלבד, והיא נבדקת מול כל שאר הפריטים — מחשבים פעם אחת
+  const profiles = category.items.map((i) => transcriptProfile(i.answer));
   for (let i = 0; i < category.items.length; i++) {
     for (let j = i + 1; j < category.items.length; j++) {
       const a = category.items[i];
       const b = category.items[j];
       if (a.answer === b.answer) continue; // אותו פריט בדיוק — רק כפילות
-      if (judge(a.answer, prepared[j]).verdict === 'correct'
-        || judge(b.answer, prepared[i]).verdict === 'correct') {
+      // מסנן זול לפני הכרעה מלאה: בקטגוריה של אלף תרגילים זו ההפרש בין דקה
+      // לשנייה, והוא חוסם רק זוגות שההכרעה ממילא לא יכולה לקבל
+      const canIJ = couldMatchProfile(profiles[i], prepared[j]);
+      const canJI = couldMatchProfile(profiles[j], prepared[i]);
+      if (!canIJ && !canJI) continue;
+      if ((canIJ && judge(a.answer, prepared[j]).verdict === 'correct')
+        || (canJI && judge(b.answer, prepared[i]).verdict === 'correct')) {
         // אותו זוג תשובות יכול לחזור בפריטים שונים — מדווחים עליו פעם אחת
         const key = [a.answer, b.answer].sort().join(' / ');
         if (!collisions.includes(key)) collisions.push(key);
@@ -138,7 +150,9 @@ function build({ force = false, minItems = 10, quiet = false } = {}) {
     ...text.CATEGORIES.map((c) => [c, 'text']),
     ...countries.build({ minItems }).map((c) => [c, 'drawn']),
     ...drawn.build().map((c) => [c, 'drawn']),
+    ...flags.build().map((c) => [c, 'drawn']),
     ...generated.build().map((c) => [c, 'drawn']),
+    ...numeric.build().map((c) => [c, 'drawn']),
   ];
 
   const report = { categories: 0, items: 0, skipped: [], collisions: [], smallest: Infinity };

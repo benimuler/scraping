@@ -1,14 +1,15 @@
 'use strict';
 
 /**
- * קטגוריות שנוצרות בקוד ולכן אינן חסומות בגודל.
+ * שעון, ספרות רומיות וחשבון — שלושה תחומים פתוחים.
  *
- * רוב התחומים סופיים מטבעם — יש שנים־עשר מזלות ועשרים ושתיים אותיות, וזה
- * כל מה שקיים. התחומים כאן הם היוצאים מן הכלל: שעה, מספר וחישוב הם מרחבים
- * פתוחים, ולכן אפשר לייצר מהם מאות פריטים עם דירוג קושי אמיתי ולא משוער.
+ * רוב התחומים סופיים מטבעם: יש שנים־עשר מזלות ועשרים ושתיים אותיות, וזה כל
+ * מה שקיים. כאן אין תקרה כזו, ולכן מכאן מגיע חלק גדול מהעומק של המשחק —
+ * ועם דירוג קושי אמיתי, שנגזר מהפריט עצמו ולא ממקומו ברשימה.
  */
 
-const { svg, textSvg, W, H } = require('./svg');
+const { svg, W, H } = require('./svg');
+const { numberWords, numberAliases } = require('./numbers');
 
 // ------------------------------------------------------------------ שעון
 
@@ -48,36 +49,45 @@ function timeWords(hour, minute) {
   if (minute === 45) return `רבע ל${next}`;
   if (minute === 20) return `${h} ועשרים`;
   if (minute === 40) return `עשרים ל${next}`;
-  if (minute === 10) return `${h} ועשרה`;
-  if (minute === 50) return `עשרה ל${next}`;
-  if (minute === 5) return `${h} וחמישה`;
-  if (minute === 55) return `חמישה ל${next}`;
   if (minute === 25) return `${h} עשרים וחמש`;
   if (minute === 35) return `${h} שלושים וחמש`;
   return `${h} ${minute}`;
 }
 
 /**
- * הקושי עולה לפי כמה ה"קריאה" של השעה מיידית: שעה עגולה, חצי, ואז רבעים.
+ * הקושי עולה לפי כמה ה"קריאה" של השעה מיידית: שעה עגולה, חצי, רבעים, ואז
+ * העשרים והחמישיות.
  *
- * המרווחים של עשר ועשרים דקות הושמטו בכוונה: בעברית מדוברת "אחת ועשרה"
- * ו"אחת עשרה" כמעט זהות, וכך גם "שתיים ועשרה" מול "שתים עשרה". מנוע
- * ההכרעה לא יכול להבחין ביניהן, ולכן השעון מוגבל לניסוחים חד-משמעיים —
- * מה שגם חוסם אותו על ארבעים ושמונה פריטים.
+ * שתי הגבלות, ושתיהן בגלל השפה ולא בגלל הקוד:
+ *
+ * המרווחים של עשר ועשרים דקות מושמטים לגמרי — בעברית מדוברת "אחת ועשרה"
+ * ו"אחת עשרה" כמעט זהות, וכך גם "שתיים ועשרה" מול "שתים עשרה".
+ *
+ * והניסוחים הארוכים (עשרים, עשרים וחמש) קיימים רק לשעות אחת עד תשע. שמות
+ * השעות עשר, אחת עשרה ושתים עשרה נבדלים באות אחת בלבד, וברגע שנוסף להם זנב
+ * ארוך — "עשר ועשרים" מול "אחת עשרה ועשרים" — ההבדל נעלם בתוך המשפט ומנוע
+ * ההכרעה מקבל כל אחת מהן במקום השנייה.
  */
-const MINUTE_TIERS = [[0], [30], [15], [45]];
+const SAFE_MINUTES = [[0], [30], [15], [45]];
+const LONG_MINUTES = [[20, 40], [25, 35]];
+const AMBIGUOUS_HOURS = new Set([10, 11, 12]);
 
 function clockCategory() {
   const items = [];
-  MINUTE_TIERS.forEach((minutes, tier) => {
+  const push = (hour, minute, difficulty) => items.push({
+    svg: clockSvg(hour, minute),
+    answer: timeWords(hour, minute),
+    slug: `${hour}-${minute}`,
+    difficulty,
+  });
+
+  SAFE_MINUTES.forEach((minutes, tier) => {
+    for (const minute of minutes) for (let hour = 1; hour <= 12; hour++) push(hour, minute, tier + 1);
+  });
+  LONG_MINUTES.forEach((minutes) => {
     for (const minute of minutes) {
       for (let hour = 1; hour <= 12; hour++) {
-        items.push({
-          svg: clockSvg(hour, minute),
-          answer: timeWords(hour, minute),
-          slug: `${hour}-${minute}`,
-          difficulty: tier + 1,
-        });
+        if (!AMBIGUOUS_HOURS.has(hour)) push(hour, minute, 5);
       }
     }
   });
@@ -101,47 +111,15 @@ function toRoman(n) {
   return out;
 }
 
-const ONES = ['אפס', 'אחת', 'שתיים', 'שלוש', 'ארבע', 'חמש', 'שש', 'שבע', 'שמונה', 'תשע'];
-const TEENS = ['עשר', 'אחת עשרה', 'שתים עשרה', 'שלוש עשרה', 'ארבע עשרה', 'חמש עשרה',
-  'שש עשרה', 'שבע עשרה', 'שמונה עשרה', 'תשע עשרה'];
-const TENS = ['', '', 'עשרים', 'שלושים', 'ארבעים', 'חמישים', 'שישים', 'שבעים', 'שמונים', 'תשעים'];
-const HUNDREDS = ['', 'מאה', 'מאתיים', 'שלוש מאות', 'ארבע מאות', 'חמש מאות',
-  'שש מאות', 'שבע מאות', 'שמונה מאות', 'תשע מאות'];
-
-/** מספר במילים, לפי הצורה שבה אומרים אותו בקול. */
-function numberWords(n) {
-  if (n >= 1000) {
-    const rest = n % 1000;
-    return rest ? `אלף ו${numberWords(rest)}`.replace('ו אלף', 'אלף') : 'אלף';
-  }
-  const h = Math.floor(n / 100);
-  const rest = n % 100;
-  const head = HUNDREDS[h];
-  if (!rest) return head;
-  // בעברית מדוברת יש ו' לפני היחידות: "ארבעים וארבע", לא "ארבעים ארבע"
-  const tail = rest < 10 ? ONES[rest]
-    : rest < 20 ? TEENS[rest - 10]
-      : rest % 10 === 0 ? TENS[Math.floor(rest / 10)]
-        : `${TENS[Math.floor(rest / 10)]} ו${ONES[rest % 10]}`;
-  return head ? `${head} ${tail}` : tail;
-}
-
-/** ניסוחים נוספים שנשמעים בדיבור: בלי ו' החיבור, ובספרות. */
-function spokenVariants(n) {
-  const words = numberWords(n);
-  const variants = new Set([String(n), words.replace(/ ו/g, ' ')]);
-  variants.delete(words);
-  return [...variants];
-}
-
-function romanCategory({ max = 260 } = {}) {
+function romanCategory({ max = 600 } = {}) {
   const items = [];
   for (let n = 1; n <= max; n++) {
     const symbol = toRoman(n);
-    // אורך הסימון הוא מדד הקושי הישיר: I קל, MMXLVIII קשה
+    // אורך הסימון הוא מדד הקושי הישיר: I קל, DLXXXVIII קשה
     const difficulty = Math.min(5, Math.max(1, Math.ceil(symbol.length / 2)));
+    const answer = numberWords(n);
     items.push({
-      text: symbol, answer: numberWords(n), aliases: spokenVariants(n), slug: `r${n}`, difficulty,
+      text: symbol, answer, aliases: numberAliases(n), slug: `r${n}`, difficulty,
     });
   }
   return { id: 'roman', name: 'ספרות רומיות', hint: 'איזה מספר?', items };
@@ -149,19 +127,54 @@ function romanCategory({ max = 260 } = {}) {
 
 // ----------------------------------------------------------------- חשבון
 
+/**
+ * החשבון בנוי כמשפחות תרגילים, וכל משפחה היא דרגת קושי אחת.
+ *
+ * הדירוג אינו לפי גודל המספר אלא לפי מה שהתרגיל דורש: חיבור חד-ספרתי הוא
+ * שליפה מהזיכרון, כפל דו-ספרתי הוא חישוב בראש תוך ארבעים וחמש שניות מול
+ * שעון שרץ. לכן חילוק קשה מכפל, ואחוזים קשים מכולם.
+ */
 function mathCategory() {
   const items = [];
-  const push = (text, value, difficulty) =>
+  const seen = new Set();
+  const push = (text, value, difficulty) => {
+    if (seen.has(text)) return;
+    seen.add(text);
+    const answer = numberWords(value);
     items.push({
-      text, answer: numberWords(value), aliases: spokenVariants(value),
-      slug: text.replace(/\s|[+×÷−-]/g, '_'), difficulty,
+      text,
+      answer,
+      aliases: numberAliases(value),
+      slug: `m${items.length}`,
+      difficulty,
     });
+  };
 
+  // 1 — שליפה מהזיכרון
   for (let a = 2; a <= 10; a++) for (let b = 2; b <= 9; b++) push(`${a} + ${b}`, a + b, 1);
+  for (let n = 3; n <= 30; n++) push(`${n} + ${n}`, n * 2, 1);
+
+  // 2 — חיסור חד-ספרתי ולוח הכפל
   for (let a = 11; a <= 20; a++) for (let b = 2; b <= 9; b++) push(`${a} − ${b}`, a - b, 2);
-  for (let a = 2; a <= 9; a++) for (let b = 2; b <= 9; b++) push(`${a} × ${b}`, a * b, 3);
+  for (let a = 2; a <= 9; a++) for (let b = 2; b <= 9; b++) push(`${a} × ${b}`, a * b, 2);
+
+  // 3 — חיבור דו-ספרתי
+  for (let a = 11; a <= 48; a++) for (let b = 11; b <= 19; b++) push(`${a} + ${b}`, a + b, 3);
+  for (let n = 2; n <= 25; n++) push(`${n} × ${n}`, n * n, 3);
+
+  // 4 — חיסור דו-ספרתי וחילוק
+  for (let a = 41; a <= 78; a++) for (let b = 11; b <= 19; b++) push(`${a} − ${b}`, a - b, 4);
   for (let a = 2; a <= 12; a++) for (let b = 2; b <= 9; b++) push(`${a * b} ÷ ${b}`, a, 4);
+
+  // 5 — כפל דו-ספרתי, שורשים ואחוזים
   for (let a = 11; a <= 25; a++) for (let b = 3; b <= 9; b++) push(`${a} × ${b}`, a * b, 5);
+  for (let n = 2; n <= 25; n++) push(`√${n * n}`, n, 5);
+  for (const pct of [10, 20, 25, 50, 75]) {
+    for (let base = 20; base <= 200; base += 20) {
+      if ((base * pct) % 100) continue;   // רק תוצאות שלמות
+      push(`${pct}% מתוך ${base}`, (base * pct) / 100, 5);
+    }
+  }
 
   return { id: 'math', name: 'חשבון', hint: 'כמה יוצא?', items };
 }
@@ -170,4 +183,4 @@ function build() {
   return [clockCategory(), romanCategory(), mathCategory()];
 }
 
-module.exports = { build, toRoman, numberWords, timeWords };
+module.exports = { build, toRoman, timeWords };

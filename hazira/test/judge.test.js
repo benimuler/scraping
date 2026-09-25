@@ -109,3 +109,45 @@ test('findRivals מוצא רק תשובות שמכילות ממש', () => {
   assert.deepEqual(findRivals('מצרים', ['סודאן', 'דרום סודאן', 'מצרים']), []);
   assert.deepEqual(findRivals('טניס', ['טניס', 'טניס שולחן']), ['טניס שולחן']);
 });
+
+test('מספר ארוך שמסתיים באותן מילים אינו מתקבל כמספר הקצר', () => {
+  const { findAllRivals, prepareItem } = require('../server/judge');
+  // "מאה ושלושים ואחת" מסתיימת ב"שלושים ואחת", וחלון הזנב היה תופס אותה
+  const answers = ['שלושים ואחת', 'מאה ושלושים ואחת', 'ארבעים וארבע', 'מאה וארבעים וארבע'];
+  const rivals = findAllRivals(answers);
+  const shown = (answer) => prepareItem({ answer, rivals: rivals.get(answer) });
+
+  assert.equal(judge('מאה ושלושים ואחת', shown('שלושים ואחת')).verdict, 'none');
+  assert.equal(judge('מאה וארבעים וארבע', shown('ארבעים וארבע')).verdict, 'none');
+
+  // והמספר עצמו ממשיך להתקבל, עם ו' החיבור ובלעדיה
+  assert.equal(judge('שלושים ואחת', shown('שלושים ואחת')).verdict, 'correct');
+  assert.equal(judge('מאה ושלושים ואחת', shown('מאה ושלושים ואחת')).verdict, 'correct');
+});
+
+test('רשת הדמיון מוגבלת לשגיאה של אות אחת', () => {
+  // מאתיים עשרים ושתיים ומאתיים תשעים ושתיים נבדלות בשתי אותיות מתוך עשרים,
+  // כלומר בדיוק בסף היחסי — ושתי תשובות שונות לגמרי
+  assert.equal(judge('מאתיים ועשרים ושתיים', item('מאתיים ותשעים ושתיים')).verdict, 'near');
+  // שגיאת זיהוי של אות אחת בתוך ביטוי ארוך עדיין מתקבלת
+  assert.equal(judge('ארצות הברת', item('ארצות הברית')).verdict, 'correct');
+});
+
+test('המסנן המהיר לעולם אינו חוסם תשובה שההכרעה מקבלת', () => {
+  const { couldMatch, prepareItem } = require('../server/judge');
+  const words = ['סודאן', 'דרום סודאן', 'אוסטרליה', 'אוסטריה', 'כלב', 'הכלב', 'מתח',
+    'שטח', 'ארצות הברית', 'ארצות הברת', 'עגבנייה', 'עגבניה', 'שלושים ואחת',
+    'מאה ושלושים ואחת', 'צרפת', 'ברזיל'];
+  let filtered = 0;
+  for (const said of words) {
+    for (const shown of words) {
+      const prepared = prepareItem({ answer: shown, aliases: [] });
+      const passes = couldMatch(said, prepared);
+      if (!passes) {
+        filtered += 1;
+        assert.notEqual(judge(said, prepared).verdict, 'correct', `${said} → ${shown}`);
+      }
+    }
+  }
+  assert.ok(filtered > words.length, `המסנן סינן רק ${filtered} זוגות — הוא לא עושה כלום`);
+});

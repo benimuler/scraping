@@ -3,7 +3,8 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const { ContentLibrary } = require('../server/content');
-const { judge, findRivals } = require('../server/judge');
+const { judge } = require('../server/judge');
+const { findCollisions } = require('../tools/content/build');
 
 const content = new ContentLibrary();
 
@@ -16,7 +17,7 @@ function seeded(seed = 3) {
 }
 
 test('נטענו מספיק קטגוריות למשחק לוח מלא', () => {
-  assert.ok(content.list().length >= 49, `נטענו ${content.list().length} קטגוריות`);
+  assert.ok(content.list().length >= 70, `נטענו ${content.list().length} קטגוריות`);
 });
 
 test('לכל קטגוריה יש מספיק פריטים לדו־קרב', () => {
@@ -44,18 +45,10 @@ test('הסדר בתוך דרגה מתערבב בין חפיסות', () => {
 });
 
 test('אין שתי תשובות שמנוע ההכרעה יבלבל ביניהן באותה קטגוריה', () => {
+  // אותה בדיקה שרצה בזמן הבנייה, ולא העתק שלה: אחרת הן מתפצלות עם הזמן
   const problems = [];
   for (const { id } of content.list()) {
-    const items = content.category(id).items;
-    for (let i = 0; i < items.length; i++) {
-      for (let j = i + 1; j < items.length; j++) {
-        if (items[i].answer === items[j].answer) continue;
-        if (judge(items[i].answer, items[j]).verdict === 'correct'
-          || judge(items[j].answer, items[i]).verdict === 'correct') {
-          problems.push(`${id}: ${items[i].answer} / ${items[j].answer}`);
-        }
-      }
-    }
+    for (const pair of findCollisions(content.category(id))) problems.push(`${id}: ${pair}`);
   }
   assert.deepEqual(problems, []);
 });
