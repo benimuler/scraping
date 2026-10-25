@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#131a36"/>
+  <g>
+    <!-- 4x4 arena grid: gold vs blue duel, rounded cells -->
+    <g id="cells"></g>
+    <script>/* static fallback below */</script>
+    <rect x="116" y="116" width="64" height="64" rx="12" fill="#ffcc33"/>
+    <rect x="188" y="116" width="64" height="64" rx="12" fill="#ffcc33"/>
+    <rect x="260" y="116" width="64" height="64" rx="12" fill="#5eb2f2"/>
+    <rect x="332" y="116" width="64" height="64" rx="12" fill="#5eb2f2"/>
+    <rect x="116" y="188" width="64" height="64" rx="12" fill="#ffcc33"/>
+    <rect x="188" y="188" width="64" height="64" rx="12" fill="#ffcc33"/>
+    <rect x="260" y="188" width="64" height="64" rx="12" fill="#5eb2f2"/>
+    <rect x="332" y="188" width="64" height="64" rx="12" fill="#5eb2f2"/>
+    <rect x="116" y="260" width="64" height="64" rx="12" fill="#ffcc33"/>
+    <rect x="188" y="260" width="64" height="64" rx="12" fill="#ffcc33"/>
+    <rect x="260" y="260" width="64" height="64" rx="12" fill="#5eb2f2"/>
+    <rect x="332" y="260" width="64" height="64" rx="12" fill="#5eb2f2"/>
+    <rect x="116" y="332" width="64" height="64" rx="12" fill="#ffcc33"/>
+    <rect x="188" y="332" width="64" height="64" rx="12" fill="#ffcc33"/>
+    <rect x="260" y="332" width="64" height="64" rx="12" fill="#5eb2f2"/>
+    <rect x="332" y="332" width="64" height="64" rx="12" fill="#5eb2f2"/>
+  </g>
+</svg>
