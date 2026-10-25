@@ -3,7 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>הזירה — הלוח</title>
+<title>דו קרב תמונות — הלוח</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#0a0d16">
+<link rel="icon" type="image/png" href="/icons/icon-192.png">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
 <link rel="stylesheet" href="/css/base.css">
 <link rel="stylesheet" href="/css/board.css">
 </head>
@@ -13,7 +17,7 @@
 <div class="board-layout">
   <!-- עמודת הלוח, גלויה תמיד -->
   <aside class="side">
-    <div class="brand">ה<span>זירה</span></div>
+    <div class="brand">דו קרב <span>תמונות</span></div>
     <div class="board-grid" id="grid"></div>
     <ul class="legend" id="legend"></ul>
   </aside>
@@ -21,11 +25,11 @@
   <main class="stage">
     <!-- ממתינים למתמודדים -->
     <section class="view" id="view-lobby">
-      <h1>הצטרפו לזירה</h1>
+      <h1>הצטרפו למשחק</h1>
       <div class="join-panel">
         <div class="qr card" id="qr"></div>
         <div class="join-info">
-          <div class="muted">קוד הזירה</div>
+          <div class="muted">קוד המשחק</div>
           <div class="code" id="code">····</div>
           <div class="muted join-url" id="join-url"></div>
           <button class="btn primary lg" id="start" disabled>התחילו את המשחק</button>
@@ -37,7 +41,7 @@
 
     <!-- בחירת יריב -->
     <section class="view" id="view-pick" hidden>
-      <div class="phase-label">הזירה בחרה</div>
+      <div class="phase-label">המערכת בחרה</div>
       <h1 id="pick-title">—</h1>
       <p class="muted">בוחר יריב מבין מי שגובל בטריטוריה שלו. הדו־קרב יתנהל בקטגוריה <b>של היריב</b>.</p>
       <div class="options" id="pick-options"></div>
@@ -102,10 +106,10 @@
 
     <!-- סיום -->
     <section class="view center-view" id="view-finished" hidden>
-      <div class="phase-label">אלוף הזירה</div>
+      <div class="phase-label">אלוף המשחק</div>
       <h1 class="champion" id="champion">—</h1>
       <div class="report" id="report"></div>
-      <a class="btn" id="report-link" href="#" download="hazira-report.json">הורדת דוח מלא</a>
+      <a class="btn" id="report-link" href="#" download="picduel-report.json">הורדת דוח מלא</a>
     </section>
   </main>
 </div>

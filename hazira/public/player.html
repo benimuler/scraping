@@ -3,7 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
-<title>הזירה — מתמודד</title>
+<title>דו קרב תמונות — מתמודד</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#0a0d16">
+<link rel="icon" type="image/png" href="/icons/icon-192.png">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
 <link rel="stylesheet" href="/css/base.css">
 <link rel="stylesheet" href="/css/player.css">
 </head>
@@ -27,7 +31,7 @@
 
   <!-- בחירת מצב: חשבון או אורח -->
   <section class="screen center" id="s-welcome" hidden>
-    <div class="logo">ה<span>זירה</span></div>
+    <div class="logo">דו קרב <span>תמונות</span></div>
     <p class="muted welcome-note">עם חשבון ההתקדמות נשמרת בין מכשירים ונכנסת לטבלת השיאים.</p>
     <div class="decide-buttons">
       <button class="btn primary lg block" id="go-register">הרשמה</button>
@@ -61,10 +65,10 @@
 
   <!-- הצטרפות -->
   <section class="screen" id="s-join" hidden>
-    <div class="logo">ה<span>זירה</span></div>
+    <div class="logo">דו קרב <span>תמונות</span></div>
     <form id="join-form" class="card">
       <div class="field">
-        <label for="f-code">קוד הזירה</label>
+        <label for="f-code">קוד המשחק</label>
         <input id="f-code" name="code" inputmode="latin" autocapitalize="characters"
                autocomplete="off" maxlength="4" placeholder="ABCD" required>
       </div>
