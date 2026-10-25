@@ -89,7 +89,7 @@ $('f-code').value = (new URLSearchParams(location.search).get('code') || stored.
 $('f-name').value = stored.name || '';
 
 fetch('/api/categories').then((r) => r.json()).then((cats) => {
-  $('f-cat').innerHTML = '<option value="">שהזירה תבחר בשבילי</option>' +
+  $('f-cat').innerHTML = '<option value="">שהמערכת תבחר בשבילי</option>' +
     cats.map((c) => `<option value="${c.id}">${c.name} (${c.size} פריטים)</option>`).join('');
 });
 
@@ -506,12 +506,12 @@ function renderInvite() {
  */
 $('invite-share').addEventListener('click', async () => {
   const url = inviteUrl || `${location.origin}/player.html?code=${state?.code || ''}`;
-  const text = `בוא/י נשחק הזירה — דו־קרב ראש בראש. הקישור שלך: ${url}`;
+  const text = `בוא/י נשחק דו קרב תמונות — דו־קרב ראש בראש. הקישור שלך: ${url}`;
   const btn = $('invite-share');
 
   if (navigator.share) {
     try {
-      await navigator.share({ title: 'הזירה', text });
+      await navigator.share({ title: 'דו קרב תמונות', text });
       return;
     } catch (err) {
       if (err?.name === 'AbortError') return; // המשתמש סגר את תפריט השיתוף
@@ -554,7 +554,7 @@ function renderWatch() {
     duel_result: ['הוכרע', state.lastResult ? `${playerById(state.lastResult.winnerId)?.name} ניצח` : '—'],
     decision: ['החלטה', `${controller?.name || '—'} מחליט אם לתקוף שוב`],
   };
-  const [label, title] = labels[state.phase] || ['הזירה', '—'];
+  const [label, title] = labels[state.phase] || ['דו־קרב', '—'];
   $('watch-label').textContent = label;
   $('watch-title').textContent = title;
   renderMiniBoard($('watch-board'));
@@ -670,7 +670,7 @@ function renderLastTurn(turn) {
   box.className = `last-turn ${turn.outcome}`;
 
   const who = turn.playerId === me.id ? 'אתה' : (playerById(turn.playerId)?.name || 'היריב');
-  const said = turn.heard || turn.transcript;
+  const said = turn.transcript || turn.heard;
   const parts = [`<div class="lt-head">${turn.outcome === 'correct' ? '✓' : '✗'} ${esc(turn.answer)}</div>`];
 
   if (turn.outcome === 'correct') {
@@ -737,8 +737,8 @@ function renderOver() {
     $('over-series').hidden = true;
     $('btn-rematch').hidden = true;
     $('over-title').textContent = state.phase === 'finished'
-      ? (won ? '🏆 אלוף הזירה' : 'נגמר המשחק')
-      : 'הודחת מהזירה';
+      ? (won ? '🏆 אלוף הדו־קרב' : 'נגמר המשחק')
+      : 'הודחת מהמשחק';
     $('over-sub').textContent = state.phase === 'finished' && !won
       ? `הזוכה: ${playerById(state.winnerId)?.name || '—'}`
       : `${me.tiles} משבצות · ${me.category}`;
