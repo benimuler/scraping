@@ -56,6 +56,7 @@ function normalize(category, kind) {
         image: `/media/${category.id}/${slug}.svg`,
         answer: item.answer,
         aliases: item.aliases || [],
+        ...(item.typedAliases ? { typedAliases: item.typedAliases } : {}),
         difficulty: item.difficulty,
       };
     }
