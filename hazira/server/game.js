@@ -333,7 +333,7 @@ class Game {
    * תמלול חי מהטלפון. רק השחקן שהשליטה אצלו נשמע.
    * @returns {{verdict:string}|null}
    */
-  speech(playerId, transcript, isFinal = false) {
+  speech(playerId, transcript, isFinal = false, typed = false) {
     const duel = this.duel;
     if (this.phase !== PHASES.DUEL || !duel) return null;
     if (playerId !== duel.activeId) return null;
@@ -343,7 +343,7 @@ class Game {
       ? `${duel.transcripts[playerId]} ${transcript}`.trim().slice(-300)
       : transcript;
 
-    const result = judge(duel.transcripts[playerId], duel.item);
+    const result = judge(duel.transcripts[playerId], duel.item, { typed });
     duel.live = { verdict: result.verdict, heard: result.heard, score: result.score };
 
     if (result.verdict === 'correct') {
@@ -361,7 +361,7 @@ class Game {
 
   /** קלט חלופי: תשובה מוקלדת (כשאין מיקרופון או כשהוא נכשל). */
   submitText(playerId, text) {
-    return this.speech(playerId, text, true);
+    return this.speech(playerId, text, true, true);
   }
 
   _scoreCorrect(playerId, result) {
