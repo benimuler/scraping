@@ -151,3 +151,15 @@ test('המסנן המהיר לעולם אינו חוסם תשובה שההכרע
   }
   assert.ok(filtered > words.length, `המסנן סינן רק ${filtered} זוגות — הוא לא עושה כלום`);
 });
+
+test('אות בודדת מוקלדת: מדויקת בלבד, בלי התנגשות הומופונים', () => {
+  const { prepareItem, judge } = require('../server/judge');
+  const bet = prepareItem({ answer: 'בית', aliases: [], typedAliases: ['ב'] });
+  const vav = prepareItem({ answer: 'וו', aliases: ['ואו'], typedAliases: ['ו'] });
+  assert.equal(judge('ב', bet, { typed: true }).verdict, 'correct');
+  assert.equal(judge('ו', vav, { typed: true }).verdict, 'correct');
+  assert.equal(judge('ב', vav, { typed: true }).verdict, 'none');
+  assert.equal(judge('ו', bet, { typed: true }).verdict, 'none');
+  // בקול ב' עדיין לא מתקבלת על בית
+  assert.equal(judge('ב', bet).verdict, 'none');
+});
