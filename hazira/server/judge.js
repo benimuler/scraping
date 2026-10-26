@@ -338,8 +338,24 @@ const couldMatch = (transcript, preparedItem) =>
  * מכריע אם התמלול החי מכיל תשובה נכונה לפריט.
  * @returns {{verdict:'correct'|'near'|'none', score:number, matched:string|null, heard:string|null}}
  */
-function judge(transcript, preparedItem) {
+function judge(transcript, preparedItem, { typed = false } = {}) {
   const item = preparedItem._accepted ? preparedItem : prepareItem(preparedItem);
+  // תשובה מוקלדת אינה עוברת זיהוי דיבור, ולכן אין בה בלבול הומופונים. אות
+  // בודדת (ב, ו, ה...) שאי אפשר לקבל בקול בלי להתנגש בפריט אחר מתקבלת כאן
+  // בהתאמה מדויקת בלבד, על המילה האחרונה שהוקלדה.
+  if (typed) {
+    const last = tokenize(transcript).pop();
+    if (last && item.typedAliases?.some((a) => normalize(a) === last)) {
+      return { verdict: 'correct', score: 1, matched: item.answer, heard: last };
+    }
+    // אות בודדת מוקלדת היא מדויקת או כלום: בלי הומופונים ובלי מרחק עריכה
+    if (last && last.length === 1) {
+      const exact = item._accepted.some((a) => a.exact === last);
+      return exact
+        ? { verdict: 'correct', score: 1, matched: item.answer, heard: last }
+        : { verdict: 'none', score: 0, matched: null, heard: last };
+    }
+  }
   const windows = tailWindows(transcript, item._maxWords);
   if (windows.length === 0) return { verdict: 'none', score: 0, matched: null, heard: null };
 
