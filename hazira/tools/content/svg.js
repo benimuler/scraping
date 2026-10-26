@@ -34,7 +34,7 @@ let fontFaceCache = null;
 function hebrewFontFace() {
   if (fontFaceCache === null) {
     try {
-      const b64 = fs.readFileSync(path.join(__dirname, 'assets', 'noto-hebrew-subset.woff2')).toString('base64');
+      const b64 = fs.readFileSync(path.join(__dirname, '7-noto-hebrew-subset.woff2')).toString('base64');
       fontFaceCache = `<style>@font-face{font-family:'NotoHebrewSubset';src:url(data:font/woff2;base64,${b64}) format('woff2');font-weight:700}</style>`;
     } catch {
       fontFaceCache = ''; // בלי הקובץ נשארים עם גופני המערכת, כמו קודם
