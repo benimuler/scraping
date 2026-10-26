@@ -71,14 +71,14 @@ function countSvg(n, draw) {
 function countCategory() {
   const items = [];
   for (const [slug, , draw] of COUNT_SHAPES) {
-    for (let n = 1; n <= 20; n++) {
+    for (let n = 3; n <= 30; n++) {
       const answer = numberWords(n, 'm');
       items.push({
         svg: countSvg(n, draw),
         answer,
         aliases: numberAliases(n, 'm'),
         slug: `${slug}-${n}`,
-        difficulty: n <= 4 ? 1 : n <= 8 ? 2 : n <= 12 ? 3 : n <= 16 ? 4 : 5,
+        difficulty: n <= 8 ? 1 : n <= 13 ? 2 : n <= 19 ? 3 : n <= 25 ? 4 : 5,
       });
     }
   }
