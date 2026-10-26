@@ -150,6 +150,8 @@ function build() {
     id: 'hebrew-letters', name: 'אותיות עבריות', hint: 'איזו אות?',
     items: HEBREW_LETTERS.map(([glyph, answer, difficulty, aliases]) => ({
       svg: textSvg(glyph, { size: 220 }), answer, aliases: aliases.filter((a) => a !== answer),
+      // מקלידים אות בודדת בלי סיכון הומופונים, גם כשבקול היא לא מתקבלת
+      typedAliases: [glyph],
       difficulty, slug: `letter-${answer}`,
     })),
   });
