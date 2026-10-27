@@ -10,7 +10,7 @@ import * as auth from './auth.mjs';
 const $ = (id) => document.getElementById(id);
 const screens = {
   welcome: $('s-welcome'), auth: $('s-auth'), join: $('s-join'),
-  wait: $('s-wait'), intro: $('s-intro'), pick: $('s-pick'),
+  wait: $('s-wait'), quickwait: $('s-quickwait'), intro: $('s-intro'), pick: $('s-pick'),
   watch: $('s-watch'), duel: $('s-duel'), decide: $('s-decide'), over: $('s-over'),
 };
 
@@ -1055,4 +1055,4 @@ function writeStored(value) {
 function esc(value) {
   return String(value ?? '').replace(/[&<>"']/g, (c) =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  }
+    }
