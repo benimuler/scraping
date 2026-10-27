@@ -6,8 +6,8 @@ const { validate } = require('../tools/content/fetch-photos');
 const { findCollisions } = require('../tools/content/build');
 const fs = require('fs');
 const path = require('path');
-test('all 19 photo pools are reviewed, licensed, attributed, deep and unique', () => {
-  assert.equal(CATEGORIES.length, 19);
+test('all photo pools are reviewed, licensed, attributed, deep and unique', () => {
+  assert.ok(CATEGORIES.length >= 20);
   let count = 0;
   for (const c of CATEGORIES) {
     validate(c);
