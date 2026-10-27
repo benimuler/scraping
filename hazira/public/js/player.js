@@ -680,10 +680,16 @@ function renderDuel() {
   const myTurn = duel.activeId === me.id;
 
   const winsNow = state.series?.wins || {};
-  $('duel-cat').textContent = duel.category
+  $('duel-cat').textContent = duel.category + (duel.decider ? ' · מכריע אקראי' : '')
     + (state.series?.round ? ` · סיבוב ${state.series.round} · ${winsNow[me.id] || 0}:${winsNow[rivalId] || 0}` : '');
   if (duel.item?.credit) {
-    $('d-credit').textContent = `תמונה: ${duel.item.credit}`;
+    $('d-credit').replaceChildren();
+    const creditLink = document.createElement('a');
+    creditLink.textContent = `תמונה: ${duel.item.credit}`;
+    if (duel.item.source?.startsWith('https://commons.wikimedia.org/')) {
+      creditLink.href = duel.item.source; creditLink.target = '_blank'; creditLink.rel = 'noopener noreferrer';
+    }
+    $('d-credit').append(creditLink);
     $('d-credit').hidden = false;
   } else {
     $('d-credit').hidden = true;
@@ -814,7 +820,7 @@ function renderOver() {
   const won = duelMode ? result?.winnerId === me.id : state.winnerId === me.id;
 
   if (duelMode) {
-    const matchWinnerId = state.series?.matchWinnerId || null;
+    const matchWinnerId = state.matchWinnerId || null;
     const matchOver = !!matchWinnerId;
     const matchWon = matchWinnerId === me.id;
     $('over-title').textContent = matchOver
@@ -831,7 +837,7 @@ function renderOver() {
     renderReward(result);
     // ריאנץ' רק אחרי שהשרת סגר את הסיבוב, ורק כל עוד המשחק לא הוכרע
     $('btn-rematch').hidden = state.phase !== 'finished' || matchOver;
-    $('btn-newmatch').hidden = !matchOver;
+    $('btn-newmatch').hidden = state.phase !== 'finished' || !matchOver;
     // בסיבוב השני התפקידים מתחלפים; ב-1:1 מחכה סיבוב מכריע בקטגוריה אקראית
     $('btn-rematch').textContent = (state.series?.round || 1) >= 2
       ? 'סיבוב מכריע — קטגוריה אקראית'
@@ -878,6 +884,12 @@ function renderReward(result) {
   if (!result || !result.perPlayer?.[me.id]) { box.hidden = true; return; }
   box.hidden = false;
 
+  const rewardKey = `${account?.id || 'guest'}:${stored.code || state.code}:${me.id}:${result.duelId}`;
+  const cachedReward = readRewardCache()[rewardKey];
+  if (cachedReward) {
+    scoredDuelId = result.duelId;
+    box.dataset.render = JSON.stringify(cachedReward);
+  }
   if (scoredDuelId !== result.duelId) {
     scoredDuelId = result.duelId;
     const mine = result.perPlayer[me.id];
@@ -896,6 +908,7 @@ function renderReward(result) {
     // מוצג מיד מחישוב מקומי, ומתוקן אם השרת מחזיר משהו אחר — כך המסך לא
     // ממתין לרשת, ומשתמש רשום עדיין מקבל את ההכרעה הסמכותית של השרת
     box.dataset.render = JSON.stringify(scoreLocally(round, result));
+    cacheReward(rewardKey, JSON.parse(box.dataset.render));
     if (account) scoreOnServer(round, result, box);
   }
 
@@ -968,6 +981,7 @@ async function scoreOnServer(round, result, box) {
       unlocked: out.unlocked,
       bests: out.bests,
     });
+    cacheReward(`${account?.id || 'guest'}:${stored.code || state.code}:${me.id}:${result.duelId}`, JSON.parse(box.dataset.render));
     if (!$('s-over').hidden) renderReward(state.lastResult);
     renderTopbar('over');
   } catch {
@@ -991,15 +1005,17 @@ function renderSeries() {
 }
 
 $('btn-rematch').addEventListener('click', (e) => {
-  e.currentTarget.disabled = true;
+  const button = e.currentTarget;
+  button.disabled = true;
   net.send({ t: 'rematch' });
-  setTimeout(() => { e.currentTarget.disabled = false; }, 1500);
+  setTimeout(() => { button.disabled = false; }, 1500);
 });
 
 $('btn-newmatch').addEventListener('click', (e) => {
-  e.currentTarget.disabled = true;
+  const button = e.currentTarget;
+  button.disabled = true;
   net.send({ t: 'newmatch' });
-  setTimeout(() => { e.currentTarget.disabled = false; }, 1500);
+  setTimeout(() => { button.disabled = false; }, 1500);
 });
 
 // ------------------------------------------------------------- לוח ושעון
@@ -1055,4 +1071,14 @@ function writeStored(value) {
 function esc(value) {
   return String(value ?? '').replace(/[&<>"']/g, (c) =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-      }
+}
+
+function readRewardCache() {
+  try { return JSON.parse(localStorage.getItem('hazira:scored-rounds') || '{}'); } catch { return {}; }
+}
+function cacheReward(key, reward) {
+  try {
+    const cache = readRewardCache(); cache[key] = reward;
+    localStorage.setItem('hazira:scored-rounds', JSON.stringify(Object.fromEntries(Object.entries(cache).slice(-100))));
+  } catch { /* storage unavailable */ }
+}
