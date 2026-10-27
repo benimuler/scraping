@@ -393,6 +393,170 @@
       "subjectSource": "https://en.wikipedia.org/wiki/Jigsaw_%28tool%29",
       "reviewed": true,
       "difficulty": 3
+    },
+    {
+      "answer": "מברג",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Screw_Driver_display.jpg/960px-Screw_Driver_display.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Screw_Driver_display.jpg",
+      "artist": "Fcb981 at English Wikipedia",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+      "credit": "Fcb981 at English Wikipedia · CC BY 2.5",
+      "subjectSource": "https://en.wikipedia.org/wiki/Screwdriver",
+      "subjectTitle": "Screwdriver",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "answer": "מפתח אלן",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Set_of_eight_hex_allen_keys_on_ring_on_table.jpg/960px-Set_of_eight_hex_allen_keys_on_ring_on_table.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Set_of_eight_hex_allen_keys_on_ring_on_table.jpg",
+      "artist": "Leon Brooks",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "credit": "Leon Brooks · Public domain",
+      "subjectSource": "https://en.wikipedia.org/wiki/Hex_key",
+      "subjectTitle": "Allen key",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "answer": "אקדח דבק",
+      "aliases": [
+        "אקדח דבק חם"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Stanley-Hot-Glue-Gun-GR35K.jpg/960px-Stanley-Hot-Glue-Gun-GR35K.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Stanley-Hot-Glue-Gun-GR35K.jpg",
+      "artist": "Evan-Amos",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "credit": "Evan-Amos · Public domain",
+      "subjectSource": "https://en.wikipedia.org/wiki/Hot-melt_adhesive",
+      "subjectTitle": "Hot-melt adhesive",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "answer": "חותך ברגים",
+      "aliases": [
+        "מספרי ברגים"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Bolt_cutter.webp/960px-Bolt_cutter.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Bolt_cutter.webp",
+      "artist": "Wikideas1",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "credit": "Wikideas1 · CC0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Bolt_cutter",
+      "subjectTitle": "Bolt cutter",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "answer": "מהדק סיכות",
+      "aliases": [
+        "מהדק סיכות תעשייתי"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Tool-heavy-stapler.jpg/960px-Tool-heavy-stapler.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Tool-heavy-stapler.jpg",
+      "artist": "Evan-Amos",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "credit": "Evan-Amos · Public domain",
+      "subjectSource": "https://en.wikipedia.org/wiki/Staple_gun",
+      "subjectTitle": "Staple gun",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "answer": "מריצה",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/2008-07-15_Construction_wheelbarrow_at_Duke.jpg/960px-2008-07-15_Construction_wheelbarrow_at_Duke.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:2008-07-15_Construction_wheelbarrow_at_Duke.jpg",
+      "artist": "Ildar Sagdejev ( Specious )",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "credit": "Ildar Sagdejev ( Specious ) · CC BY-SA 4.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Wheelbarrow",
+      "subjectTitle": "Wheelbarrow",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "answer": "סדן",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/2011-09-17._%D0%9A%D1%83%D0%B7%D0%BD%D0%B5%D1%87%D0%BD%D1%8B%D0%B9_%D1%84%D0%B5%D1%81%D1%82%D0%B8%D0%B2%D0%B0%D0%BB%D1%8C_%D0%B2_%D0%94%D0%BE%D0%BD%D0%B5%D1%86%D0%BA%D0%B5_286.jpg/960px-2011-09-17._%D0%9A%D1%83%D0%B7%D0%BD%D0%B5%D1%87%D0%BD%D1%8B%D0%B9_%D1%84%D0%B5%D1%81%D1%82%D0%B8%D0%B2%D0%B0%D0%BB%D1%8C_%D0%B2_%D0%94%D0%BE%D0%BD%D0%B5%D1%86%D0%BA%D0%B5_286.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:2011-09-17._%D0%9A%D1%83%D0%B7%D0%BD%D0%B5%D1%87%D0%BD%D1%8B%D0%B9_%D1%84%D0%B5%D1%81%D1%82%D0%B8%D0%B2%D0%B0%D0%BB%D1%8C_%D0%B2_%D0%94%D0%BE%D0%BD%D0%B5%D1%86%D0%BA%D0%B5_286.jpg",
+      "artist": "Andrey Butko",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "credit": "Andrey Butko · CC BY-SA 3.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Anvil",
+      "subjectTitle": "Anvil",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "answer": "סולם",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Ladder.webp/960px-Ladder.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Ladder.webp",
+      "artist": "Wikideas1",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "credit": "Wikideas1 · CC0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Ladder",
+      "subjectTitle": "Ladder",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "answer": "מגל",
+      "aliases": [],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Hasiya_krish.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Hasiya_krish.jpg",
+      "artist": "Krish Dulal",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "credit": "Krish Dulal · CC BY-SA 3.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Sickle",
+      "subjectTitle": "Sickle",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "answer": "מזמרה",
+      "aliases": [
+        "מספרי גיזום"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Secateur_ouvert.jpg/960px-Secateur_ouvert.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Secateur_ouvert.jpg",
+      "artist": "KoS",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "credit": "KoS · Public domain",
+      "subjectSource": "https://en.wikipedia.org/wiki/Pruning_shears",
+      "subjectTitle": "Pruning shears",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "answer": "מזלף",
+      "aliases": [
+        "משפך גינה"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/MetalwateringcansDec08.jpg/960px-MetalwateringcansDec08.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:MetalwateringcansDec08.jpg",
+      "artist": "Bas Leenders at https://www.flickr.com/photos/basl/",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "credit": "Bas Leenders at https://www.flickr.com/photos/basl/ · CC BY-SA 2.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Watering_can",
+      "subjectTitle": "Watering can",
+      "difficulty": 2,
+      "reviewed": true
     }
   ]
 }
