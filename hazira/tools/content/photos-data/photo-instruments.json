@@ -1,0 +1,143 @@
+{
+ "id": "photo-instruments",
+ "name": "כלי נגינה (תמונות)",
+ "hint": "אומרים את שם כלי הנגינה",
+ "items": [
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Violin_VL100.png",
+   "answer": "כינור",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Just plain Bill · CC0",
+   "source": "https://commons.wikimedia.org/wiki/File:Violin_VL100.png"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Classical_Guitar_two_views.jpg/960px-Classical_Guitar_two_views.jpg",
+   "answer": "גיטרה",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Martin Möller · CC BY-SA 2.0 de",
+   "source": "https://commons.wikimedia.org/wiki/File:Classical_Guitar_two_views.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Steinway_%26_Sons_concert_grand_piano%2C_model_D-274%2C_manufactured_at_Steinway%27s_factory_in_Hamburg%2C_Germany.png/960px-Steinway_%26_Sons_concert_grand_piano%2C_model_D-274%2C_manufactured_at_Steinway%27s_factory_in_Hamburg%2C_Germany.png",
+   "answer": "פסנתר",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Steinway &amp; Sons, 10 Rondenbarg, Hamburg D-22525, Germany, eu.steinway.com.Steinway &amp; Sons, 1 Steinway Place, Long Island City, New York 11105, The United States, www.steinway.com. · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Steinway_%26_Sons_concert_grand_piano%2C_model_D-274%2C_manufactured_at_Steinway's_factory_in_Hamburg%2C_Germany.png"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Gretsch_Catalina_Special_Edition_2020.jpg/960px-Gretsch_Catalina_Special_Edition_2020.jpg",
+   "answer": "תופים",
+   "aliases": [
+    "מערכת תופים"
+   ],
+   "difficulty": 2,
+   "credit": "w:de:User:claudioverfuerth · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Gretsch_Catalina_Special_Edition_2020.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Shinobue_and_other_flutes-3.jpg",
+   "answer": "חליל",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Photos by Yasuhiko Sano, Nov 2005, Buffet Crampon and Yamaha; Editing + Collage Gisbert König · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Shinobue_and_other_flutes-3.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Clarinet_range.svg/960px-Clarinet_range.svg.png",
+   "answer": "קלרינט",
+   "aliases": [
+    "קלרינטה"
+   ],
+   "difficulty": 3,
+   "credit": "Why? I Ask · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Clarinet_range.svg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Sax_range.svg/960px-Sax_range.svg.png",
+   "answer": "סקסופון",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Tkgd2007 · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Sax_range.svg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Yamaha_Trumpet_YTR-8335LA_crop.jpg/960px-Yamaha_Trumpet_YTR-8335LA_crop.jpg",
+   "answer": "חצוצרה",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Yamaha Corporation · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Yamaha_Trumpet_YTR-8335LA_crop.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Trombone_range.svg/960px-Trombone_range.svg.png",
+   "answer": "טרומבון",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Tkgd2007 · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Trombone_range.svg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Cello_front_side.png",
+   "answer": "צ׳לו",
+   "aliases": [
+    "צלו"
+   ],
+   "difficulty": 2,
+   "credit": "Georg Feitscher · CC BY 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Cello_front_side.png"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/AGK_bass1_full.jpg/960px-AGK_bass1_full.jpg",
+   "answer": "קונטרבס",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "User:AndrewKepert · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:AGK_bass1_full.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Range_of_harp.JPG/960px-Range_of_harp.JPG",
+   "answer": "נבל",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Number Googol · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Range_of_harp.JPG"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/A_converter_free-bass_piano-accordion_and_a_Russian_bayan.jpg/960px-A_converter_free-bass_piano-accordion_and_a_Russian_bayan.jpg",
+   "answer": "אקורדיון",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Necz0r · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:A_converter_free-bass_piano-accordion_and_a_Russian_bayan.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Range_of_22-fret_five_string_banjo.png",
+   "answer": "בנג׳ו",
+   "aliases": [
+    "בנגו"
+   ],
+   "difficulty": 4,
+   "credit": "ThomasLucas · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Range_of_22-fret_five_string_banjo.png"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Range_mandolin.PNG",
+   "answer": "מנדולינה",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Range_mandolin.PNG"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Derbouka.jpg",
+   "answer": "דרבוקה",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Abdelouali · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Derbouka.jpg"
+  }
+ ]
+}
