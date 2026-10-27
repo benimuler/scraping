@@ -25,7 +25,9 @@ class Room {
 
   detach(ws) {
     this.sockets.delete(ws);
-    if (ws.playerId) this.game.setConnected(ws.playerId, false);
+    if (ws.playerId && ![...this.sockets].some(other => other.playerId === ws.playerId && other.readyState === 1)) {
+      this.game.setConnected(ws.playerId, false);
+    }
   }
 
   send(ws, payload) {
