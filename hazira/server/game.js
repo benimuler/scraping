@@ -23,6 +23,7 @@ const { shuffle } = require('./shuffle');
  */
 
 const DEFAULTS = {
+  matchWins: 2,
   clockMs: 45_000,
   passLockMs: 3_000,
   pickTimeoutMs: 30_000,
@@ -61,6 +62,7 @@ class Game {
     this.phase = PHASES.LOBBY;
     this.players = new Map();
     this.series = { round: 0, wins: {} };
+    this.matchWinnerId = null;
     this.gridSize = 0;
     this.tiles = [];
     this.controlId = null;
@@ -272,17 +274,20 @@ class Game {
     this._beginDuel(this.controlId, options[Math.floor(this.rand() * options.length)]);
   }
 
-  _beginDuel(challengerId, defenderId) {
+  _beginDuel(challengerId, defenderId, { categoryId = null, decider = false } = {}) {
     const defender = this.players.get(defenderId);
-    const categoryId = defender.categoryId;
-    const deck = this.content.deck(categoryId, this.rand);
+    // סיבוב מכריע מתנהל בקטגוריה אקראית שלא שייכת לאף מתמודד — אחרת
+    // הדו־קרב מתנהל כרגיל בקטגוריה של המותקף
+    const effectiveCategoryId = categoryId || defender.categoryId;
+    const deck = this.content.deck(effectiveCategoryId, this.rand);
 
     this.duel = {
       id: randomUUID(),
       challengerId,
       defenderId,
-      categoryId,
-      category: this.content.category(categoryId),
+      categoryId: effectiveCategoryId,
+      category: this.content.category(effectiveCategoryId),
+      decider,
       deck,
       cursor: 0,
       item: null,
@@ -532,6 +537,7 @@ class Game {
       clocks: { ...duel.clocks },
       perPlayer: duel.perPlayer,
       rounds: duel.rounds,
+      surrenderedBy: duel.surrenderedBy || null,
     };
     this.history.push(this.lastResult);
     this._log({ type: 'duel_end', winnerId, loserId, conquered });
@@ -566,6 +572,10 @@ class Game {
     winner.stats.timeLeftMs = duel.clocks[winnerId];
     this.players.get(loserId).stats.timeLeftMs = 0;
     this.series.wins[winnerId] = (this.series.wins[winnerId] || 0) + 1;
+    // פורמט המשחק: ראשון לשני ניצחונות. 2:0 מספיק; אם אחרי שני סיבובים
+    // התוצאה 1:1 — הסיבוב השלישי מכריע בקטגוריה אקראית.
+    const matchOver = this.series.wins[winnerId] >= this.config.matchWins;
+    if (matchOver) this.matchWinnerId = winnerId;
 
     this.lastResult = {
       duelId: duel.id,
@@ -583,9 +593,11 @@ class Game {
       clocks: { ...duel.clocks },
       perPlayer: duel.perPlayer,
       rounds: duel.rounds,
+      surrenderedBy: duel.surrenderedBy || null,
+      matchOver,
     };
     this.history.push(this.lastResult);
-    this._log({ type: 'duel_end', winnerId, loserId });
+    this._log({ type: 'duel_end', winnerId, loserId, matchOver });
 
     this.duel = null;
     this.winnerId = winnerId;
@@ -607,14 +619,58 @@ class Game {
   rematch() {
     if (this.mode !== 'duel') throw new Error('ריאנץ׳ קיים רק בדו־קרב');
     if (this.phase !== PHASES.FINISHED) throw new Error('הדו־קרב עוד לא נגמר');
+    if (this.matchWinnerId) throw new Error('המשחק הוכרע — אפשר לפתוח משחק חדש');
     const previous = this.history[this.history.length - 1];
     if (!previous) throw new Error('אין דו־קרב קודם');
 
     this.series.round++;
     this.winnerId = null;
     this.lastResult = null;
+
+    if (this.series.round >= 3) {
+      // סיבוב מכריע: קטגוריה אקראית שלא שייכת לאף אחד מהמתמודדים,
+      // והגרלה מחדש מי מאתגר — ככה אף צד לא נכנס עם יתרון קטגוריה.
+      const taken = new Set([...this.players.values()].map((p) => p.categoryId));
+      const categoryId = this.content.pickCategory(taken, this.rand);
+      if (!categoryId) throw new Error('אין קטגוריה פנויה לסיבוב המכריע');
+      const [challengerId, defenderId] = shuffle([...this.players.keys()], this.rand);
+      return this._beginDuel(challengerId, defenderId, { categoryId, decider: true });
+    }
+
     // מי שהגן קודם מאתגר עכשיו — כך הסיבוב הבא מתנהל בקטגוריה השנייה
     this._beginDuel(previous.defenderId, previous.challengerId);
+  }
+
+  /** משחק חדש בין אותם מתמודדים, אחרי שהמשחק הקודם הוכרע. */
+  newMatch() {
+    if (this.mode !== 'duel') throw new Error('משחק חדש קיים רק בדו־קרב');
+    if (this.phase !== PHASES.FINISHED) throw new Error('המשחק עוד לא נגמר');
+    if (!this.matchWinnerId) throw new Error('המשחק עוד לא הוכרע — אפשר להמשיך בסיבוב הבא');
+
+    this.series = { round: 0, wins: {} };
+    for (const id of this.players.keys()) this.series.wins[id] = 0;
+    this.matchWinnerId = null;
+    this.winnerId = null;
+    this.lastResult = null;
+
+    const [challengerId, defenderId] = shuffle([...this.players.keys()], this.rand);
+    this.series.round = 1;
+    this._log({ type: 'match_start', mode: 'duel', players: 2 });
+    return this._beginDuel(challengerId, defenderId);
+  }
+
+  /** הכנעה: מי שמכניע מפסיד את הדו־קרב מיד, בלי קשר לשעון. */
+  surrender(playerId) {
+    const duel = this.duel;
+    if (!duel || (this.phase !== PHASES.DUEL && this.phase !== PHASES.DUEL_INTRO)) {
+      throw new Error('אין דו־קרב פעיל');
+    }
+    if (playerId !== duel.challengerId && playerId !== duel.defenderId) {
+      throw new Error('רק משתתפי הדו־קרב יכולים להיכנע');
+    }
+    duel.surrenderedBy = playerId;
+    this._log({ type: 'surrender', playerId });
+    this._endDuel(playerId);
   }
 
   _mergeStats(playerId) {
@@ -715,6 +771,8 @@ class Game {
       phase: this.phase,
       mode: this.mode,
       series: this.series,
+      matchWins: this.config.matchWins,
+      matchWinnerId: this.matchWinnerId,
       code: this.code,
       gridSize: this.gridSize,
       tiles: this.tiles.map((t) => t.ownerId),
@@ -746,6 +804,7 @@ class Game {
         id: duel.id,
         challengerId: duel.challengerId,
         defenderId: duel.defenderId,
+        decider: !!duel.decider,
         category: duel.category.name,
         categoryHint: duel.category.hint || null,
         activeId: duel.activeId,
@@ -754,7 +813,7 @@ class Game {
         live: duel.live,
         lastTurn: duel.lastTurn,
         transcript: duel.transcripts[duel.activeId] || '',
-        item: duel.item ? { image: duel.item.image, text: duel.item.text || null } : null,
+        item: duel.item ? { image: duel.item.image, text: duel.item.text || null, credit: duel.item.credit || null } : null,
         score: {
           [duel.challengerId]: duel.perPlayer[duel.challengerId].correct,
           [duel.defenderId]: duel.perPlayer[duel.defenderId].correct,
