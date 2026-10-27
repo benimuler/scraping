@@ -25,6 +25,7 @@ const { shuffle } = require('./shuffle');
 const DEFAULTS = {
   matchWins: 2,
   clockMs: 45_000,
+  introMs: 5_000,
   passLockMs: 3_000,
   pickTimeoutMs: 30_000,
   decisionTimeoutMs: 15_000,
@@ -73,6 +74,9 @@ class Game {
     this._timer = null;
     this._deadline = null;
     this._lastTickAt = null;
+    this.readyIds = new Set();
+    this.readinessEpoch = 0;
+    this._resumePhase = null;
   }
 
   // ---------------------------------------------------------------- שחקנים
@@ -119,6 +123,51 @@ class Game {
     const p = this.players.get(id);
     if (!p) return;
     p.connected = connected;
+    if (!connected && this.mode === 'duel') {
+      this.readyIds.clear();
+      this.readinessEpoch++;
+      if (this.phase === PHASES.DUEL_INTRO || this.phase === PHASES.DUEL) {
+        this._resumePhase = this.phase;
+        this._stopTimer();
+        this._deadline = null;
+        this.phase = 'duel_paused';
+      }
+    }
+    this._publish();
+  }
+
+  /** Only explicit, current consent from each connected player can advance a duel. */
+  requestReady(playerId, action, epoch) {
+    if (this.mode !== 'duel') throw new Error('אישור משותף קיים בדו־קרב');
+    if (!this.players.get(playerId)?.connected) throw new Error('רק מתמודד מחובר יכול לאשר');
+    if (epoch !== this.readinessEpoch) throw new Error('המצב השתנה — אשרו שוב');
+    const expected = this.phase === PHASES.LOBBY ? 'start'
+      : this.phase === 'duel_paused' ? 'resume'
+      : this.phase === PHASES.FINISHED ? (this.matchWinnerId ? 'newmatch' : 'rematch') : null;
+    if (!expected || action !== expected) throw new Error('אי אפשר להתקדם בשלב הזה');
+    if (this.players.size !== 2 || [...this.players.values()].some(p => !p.connected)) {
+      throw new Error('ממתינים ששני המתמודדים יהיו מחוברים');
+    }
+    this.readyIds.add(playerId);
+    if (this.readyIds.size < 2) return this._publish();
+    this.readyIds.clear();
+    this.readinessEpoch++;
+    if (action === 'start') return this.start();
+    if (action === 'rematch') return this.rematch();
+    if (action === 'newmatch') return this.newMatch();
+    this.phase = PHASES.DUEL_INTRO;
+    this._countdown(this._resumePhase === PHASES.DUEL);
+  }
+
+  _countdown(resume = false) {
+    this._startDeadline(this.config.introMs, () => {
+      // A disconnect cancels this deadline. Never run an absent player's clock.
+      this.phase = PHASES.DUEL;
+      if (!resume) this._nextItem();
+      this._lastTickAt = Date.now();
+      this._startTicking();
+      this._publish();
+    });
     this._publish();
   }
 
@@ -312,13 +361,7 @@ class Game {
     this._log({ type: 'duel_start', challengerId, defenderId, categoryId });
     this._publish();
 
-    this._startDeadline(3_000, () => {
-      this.phase = PHASES.DUEL;
-      this._nextItem();
-      this._lastTickAt = Date.now();
-      this._startTicking();
-      this._publish();
-    });
+    this._countdown();
   }
 
   _nextItem() {
@@ -771,6 +814,7 @@ class Game {
     const state = {
       phase: this.phase,
       mode: this.mode,
+      readiness: { epoch: this.readinessEpoch, playerIds: [...this.readyIds] },
       series: this.series,
       matchWins: this.config.matchWins,
       matchWinnerId: this.matchWinnerId,
