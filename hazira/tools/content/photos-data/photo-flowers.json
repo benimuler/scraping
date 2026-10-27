@@ -1,0 +1,131 @@
+{
+ "id": "photo-flowers",
+ "name": "פרחים (תמונות)",
+ "hint": "אומרים את שם הפרח",
+ "items": [
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Small_Red_Rose.JPG/960px-Small_Red_Rose.JPG",
+   "answer": "ורד",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Small_Red_Rose.JPG"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/a/a9/A_sunflower.jpg",
+   "answer": "חמנייה",
+   "aliases": [
+    "חמניה"
+   ],
+   "difficulty": 2,
+   "credit": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:A_sunflower.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Tulipa_gesneriana_001.jpg",
+   "answer": "צבעוני",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Katalinks (who is also \"Екатерина\"). Original uploader was Katalinks at ru.wikipedia · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Tulipa_gesneriana_001.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Vandeae_various_examples.jpg/960px-Vandeae_various_examples.jpg",
+   "answer": "סחלב",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Angraecum_infundibulare.jpg: Planta cultivada no Jardim Botânico do Rio de Janeiro, fotografia de M. A. P. Accardo Filho. Vanda-lissochiloides.jpg: Giovanelli derivative work: Anna Frodesiak (talk) · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Vandeae_various_examples.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Narzisse.jpg/960px-Narzisse.jpg",
+   "answer": "נרקיס",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Martin Hirtreiter · CC BY 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Narzisse.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/Cyclamen_purpurascens_280803.jpg",
+   "answer": "רקפת",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Cyclamen_purpurascens_280803.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Kalanyot.jpg/960px-Kalanyot.jpg",
+   "answer": "כלנית",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Takpic · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Kalanyot.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Madonna_Lilly_-_enhanced.jpg/960px-Madonna_Lilly_-_enhanced.jpg",
+   "answer": "סוסן",
+   "aliases": [
+    "שושן"
+   ],
+   "difficulty": 3,
+   "credit": "Arielinson · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Madonna_Lilly_-_enhanced.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Pacratium_maritimum_Paestum.jpg/960px-Pacratium_maritimum_Paestum.jpg",
+   "answer": "חבצלת השרון",
+   "aliases": [
+    "חבצלת"
+   ],
+   "difficulty": 3,
+   "credit": "User:Stemonitis · CC BY-SA 2.5",
+   "source": "https://commons.wikimedia.org/wiki/File:Pacratium_maritimum_Paestum.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Gerbera_Israel_2024.jpg/960px-Gerbera_Israel_2024.jpg",
+   "answer": "ג׳רברה",
+   "aliases": [
+    "גרברה"
+   ],
+   "difficulty": 3,
+   "credit": "Laliv g · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Gerbera_Israel_2024.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Iris_sibirica_Bobrovnya4.JPG/960px-Iris_sibirica_Bobrovnya4.JPG",
+   "answer": "אירוס",
+   "aliases": [
+    "איריס"
+   ],
+   "difficulty": 3,
+   "credit": "Аимаина хикари · CC0",
+   "source": "https://commons.wikimedia.org/wiki/File:Iris_sibirica_Bobrovnya4.JPG"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Jim_Clark_1965.jpg/960px-Jim_Clark_1965.jpg",
+   "answer": "לוטוס",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Unknown photographer; NL-HaNA, ANEFO / neg. stroken, 1945-1989, 2.24.01.05, item number 918-4009 · CC0",
+   "source": "https://commons.wikimedia.org/wiki/File:Jim_Clark_1965.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Starr_030418-0058_Bougainvillea_spectabilis.jpg/960px-Starr_030418-0058_Bougainvillea_spectabilis.jpg",
+   "answer": "בוגנוויליה",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "Forest &amp; Kim Starr · CC BY 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Starr_030418-0058_Bougainvillea_spectabilis.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Chrysanthemum_weyrichii_2.jpg",
+   "answer": "חרצית",
+   "aliases": [
+    "מרגריטה"
+   ],
+   "difficulty": 3,
+   "credit": "Ghislain118 (AD) http://www.fleurs-des-montagnes.net · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Chrysanthemum_weyrichii_2.jpg"
+  }
+ ]
+}
