@@ -1,0 +1,183 @@
+{
+ "id": "photo-birds",
+ "name": "ציפורים (תמונות)",
+ "hint": "אומרים את שם הציפור",
+ "items": [
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/2/2b/A_collage_of_Asio.jpg",
+   "answer": "ינשוף",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Dorhi · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:A_collage_of_Asio.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/American_Flamingo_Phoenicopterus_ruber_%2820275785490%29.jpg/960px-American_Flamingo_Phoenicopterus_ruber_%2820275785490%29.jpg",
+   "answer": "פלמינגו",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Lip Kee · CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:American_Flamingo_Phoenicopterus_ruber_(20275785490).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Pfau_imponierend.jpg/960px-Pfau_imponierend.jpg",
+   "answer": "טווס",
+   "aliases": [
+    "טווס מצוי"
+   ],
+   "difficulty": 2,
+   "credit": "BS Thurner Hof · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Pfau_imponierend.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Bald_Eagle_Portrait.jpg/960px-Bald_Eagle_Portrait.jpg",
+   "answer": "עיט קירח",
+   "aliases": [
+    "עיט"
+   ],
+   "difficulty": 3,
+   "credit": "Saffron Blaze · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Bald_Eagle_Portrait.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg",
+   "answer": "פינגווין",
+   "aliases": [
+    "פינגווין קיסרי"
+   ],
+   "difficulty": 2,
+   "credit": "Ian Duffy from UK · CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Citron-crested_Cockatoo.jpg",
+   "answer": "קקדו",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Doug Janson · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Citron-crested_Cockatoo.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/2007-10-28_AfricanGrayParrot_Meru.jpg",
+   "answer": "תוכי אפור",
+   "aliases": [
+    "תוכי"
+   ],
+   "difficulty": 3,
+   "credit": "OPi@Toumoto(おぴ～＠とうもと（・Θ・）) http://opi.toumoto.net · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:2007-10-28_AfricanGrayParrot_Meru.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Anas_undulata%2C_Pretoria_country_club.jpg/960px-Anas_undulata%2C_Pretoria_country_club.jpg",
+   "answer": "ברווז",
+   "aliases": [
+    "ברווז מלרד"
+   ],
+   "difficulty": 3,
+   "credit": "JMK · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Anas_undulata%2C_Pretoria_country_club.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Corvus_corax_%28Common_Raven%29%2C_Yosemite_NP%2C_CA%2C_US_-_Diliff.jpg/960px-Corvus_corax_%28Common_Raven%29%2C_Yosemite_NP%2C_CA%2C_US_-_Diliff.jpg",
+   "answer": "עורב",
+   "aliases": [
+    "עורב שחור"
+   ],
+   "difficulty": 2,
+   "credit": "Diliff · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Corvus_corax_(Common_Raven)%2C_Yosemite_NP%2C_CA%2C_US_-_Diliff.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/House_Sparrow_Passer_domesticus_Male_by_Dr._Raju_Kasambe_DSCN0393_%2811%29.jpg/960px-House_Sparrow_Passer_domesticus_Male_by_Dr._Raju_Kasambe_DSCN0393_%2811%29.jpg",
+   "answer": "דרור",
+   "aliases": [
+    "דרור הבית"
+   ],
+   "difficulty": 3,
+   "credit": "Dr. Raju Kasambe · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:House_Sparrow_Passer_domesticus_Male_by_Dr._Raju_Kasambe_DSCN0393_(11).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Rauchschwalbe_Hirundo_rustica.jpg/960px-Rauchschwalbe_Hirundo_rustica.jpg",
+   "answer": "סנונית",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Andreas Trepte · CC BY-SA 2.5",
+   "source": "https://commons.wikimedia.org/wiki/File:Rauchschwalbe_Hirundo_rustica.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Carduelis_carduelis_close_up.jpg/960px-Carduelis_carduelis_close_up.jpg",
+   "answer": "חוחית",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "Francis C. Franklin · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Carduelis_carduelis_close_up.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Emu_1_-_Tidbinbilla.jpg/960px-Emu_1_-_Tidbinbilla.jpg",
+   "answer": "אמו",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "JJ Harrison (https://www.jjharrison.com.au/) · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Emu_1_-_Tidbinbilla.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Struthio_Diversity.jpg/960px-Struthio_Diversity.jpg",
+   "answer": "יען",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "PaleoNeolitic (montage creator) Diego Delso ninara · CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Struthio_Diversity.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Pelican_4995.jpg/960px-Pelican_4995.jpg",
+   "answer": "שקנאי",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Dori · CC BY-SA 3.0 us",
+   "source": "https://commons.wikimedia.org/wiki/File:Pelican_4995.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Lord_Biro_-_Swan_1_%28by-sa%29.jpg/960px-Lord_Biro_-_Swan_1_%28by-sa%29.jpg",
+   "answer": "ברבור",
+   "aliases": [
+    "ברבור מצוי"
+   ],
+   "difficulty": 3,
+   "credit": "Paul Boxley from Edinburgh, UK · CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Lord_Biro_-_Swan_1_(by-sa).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Brown_Leghorn_rooster_in_Australia.jpg/960px-Brown_Leghorn_rooster_in_Australia.jpg",
+   "answer": "תרנגול",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Fernando de Sousa from Melbourne, Australia · CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Brown_Leghorn_rooster_in_Australia.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/8/81/Hoopoe_%2815433167656%29.jpg",
+   "answer": "דוכיפת",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "Koshy Koshy from Faridabad, Haryana, India · CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Hoopoe_(15433167656).jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/6/64/Accipiter_badius_Ludhiana%2C_India.jpg",
+   "answer": "נץ",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "Vu3axe · CC BY 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Accipiter_badius_Ludhiana%2C_India.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Chlamydotis_undulata_250544786.jpg/960px-Chlamydotis_undulata_250544786.jpg",
+   "answer": "חוברה",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "Mourad Harzallah · CC BY 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Chlamydotis_undulata_250544786.jpg"
+  }
+ ]
+}
