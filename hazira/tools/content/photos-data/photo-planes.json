@@ -1,115 +1,682 @@
 {
- "id": "photo-planes",
- "name": "מטוסים מפורסמים",
- "hint": "אומרים את שם המטוס",
- "items": [
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/B-747_Iberia.jpg/960px-B-747_Iberia.jpg",
-   "answer": "בואינג 747",
-   "aliases": [
-    "747",
-    "ג׳מבו"
-   ],
-   "difficulty": 2,
-   "credit": "Iberia Airlines · CC BY 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:B-747_Iberia.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/A6-EDY_A380_Emirates_31_jan_2013_jfk_%288442269364%29_%28cropped%29.jpg/960px-A6-EDY_A380_Emirates_31_jan_2013_jfk_%288442269364%29_%28cropped%29.jpg",
-   "answer": "איירבוס A380",
-   "aliases": [
-    "A380"
-   ],
-   "difficulty": 3,
-   "credit": "Maarten Visser from Capelle aan den IJssel, Nederland · CC BY-SA 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:A6-EDY_A380_Emirates_31_jan_2013_jfk_(8442269364)_(cropped).jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/3/39/Concorde_216_%28G-BOAF%29_last_flight.jpg",
-   "answer": "קונקורד",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "Arpingstone · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Concorde_216_(G-BOAF)_last_flight.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Falcon31.jpg/960px-Falcon31.jpg",
-   "answer": "F-16",
-   "aliases": [
-    "אף 16"
-   ],
-   "difficulty": 2,
-   "credit": "U.S. Air Force photo by Tech. Sgt. Kevin Gruenwald · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Falcon31.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/F-35A_flight_%28cropped%29.jpg/960px-F-35A_flight_%28cropped%29.jpg",
-   "answer": "F-35",
-   "aliases": [
-    "אף 35"
-   ],
-   "difficulty": 3,
-   "credit": "U.S. Air Force photo by Master Sgt. Donald R. Allen · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:F-35A_flight_(cropped).jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Serbian_mig-29_missiles.jpg/960px-Serbian_mig-29_missiles.jpg",
-   "answer": "מיג-29",
-   "aliases": [
-    "מיג 29"
-   ],
-   "difficulty": 4,
-   "credit": "Krasimir Grozev · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Serbian_mig-29_missiles.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/IAF_AH-64.jpg/960px-IAF_AH-64.jpg",
-   "answer": "אפאצ׳י",
-   "aliases": [
-    "מסוק אפאצ׳י"
-   ],
-   "difficulty": 4,
-   "credit": "Nehemia Gershuni-Aylho · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:IAF_AH-64.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Ray_Flying_Legends_2005-1.jpg/960px-Ray_Flying_Legends_2005-1.jpg",
-   "answer": "ספיטפייר",
-   "aliases": [],
-   "difficulty": 4,
-   "credit": "The original uploader was Bryan Fury75 at French Wikipedia. · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Ray_Flying_Legends_2005-1.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/B-2_Spirits_on_Deployment_to_Indo-Asia-Pacific.jpg",
-   "answer": "B-2",
-   "aliases": [
-    "בומברדיר B-2",
-    "B-2 ספיריט"
-   ],
-   "difficulty": 4,
-   "credit": "Senior Airman Joel Pfiester · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:B-2_Spirits_on_Deployment_to_Indo-Asia-Pacific.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/9/93/Cessna_F172K_take_off_from_the_grass_runway.jpg",
-   "answer": "ססנה",
-   "aliases": [
-    "ססנה 172"
-   ],
-   "difficulty": 4,
-   "credit": "АнИгМа · CC BY-SA 4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Cessna_F172K_take_off_from_the_grass_runway.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/F-15%2C_71st_Fighter_Squadron%2C_in_flight.JPG/960px-F-15%2C_71st_Fighter_Squadron%2C_in_flight.JPG",
-   "answer": "F-15",
-   "aliases": [
-    "אף 15"
-   ],
-   "difficulty": 3,
-   "credit": "U.S. Air Force photo/Staff Sgt. Samuel Rogers · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:F-15%2C_71st_Fighter_Squadron%2C_in_flight.JPG"
-  }
- ]
+  "id": "photo-planes",
+  "name": "מטוסים מפורסמים",
+  "hint": "אומרים את שם המטוס",
+  "items": [
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Douglas_DC-3%2C_SE-CFP.jpg/960px-Douglas_DC-3%2C_SE-CFP.jpg",
+      "answer": "דאגלס DC3",
+      "aliases": [
+        "DC-3 דקוטה"
+      ],
+      "difficulty": 4,
+      "credit": "Towpilot · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Douglas_DC-3,_SE-CFP.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Towpilot",
+      "subjectSource": "https://en.wikipedia.org/wiki/Douglas_DC-3",
+      "subjectTitle": "Douglas DC-3",
+      "imageDescription": "This is a picture of a Working Life Museums in Sweden, number",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Continental_Airlines_DC-10.jpg/960px-Continental_Airlines_DC-10.jpg",
+      "answer": "דאגלס DC10",
+      "aliases": [
+        "מקדונל דאגלס DC-10"
+      ],
+      "difficulty": 4,
+      "credit": "Danielkang7744 at English Wikipedia · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Continental_Airlines_DC-10.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Danielkang7744 at English Wikipedia",
+      "subjectSource": "https://en.wikipedia.org/wiki/McDonnell_Douglas_DC-10",
+      "subjectTitle": "McDonnell Douglas DC-10",
+      "imageDescription": "A continental airlines DC-10.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/11df_-_Delta_Air_Lines_Lockheed_L-1011_TriStar_1%3B_N1732D%40FLL%3B30.01.1998_%285016025629%29.jpg/960px-11df_-_Delta_Air_Lines_Lockheed_L-1011_TriStar_1%3B_N1732D%40FLL%3B30.01.1998_%285016025629%29.jpg",
+      "answer": "לוקהיד טריסטאר",
+      "aliases": [
+        "לוקהיד L-1011"
+      ],
+      "difficulty": 4,
+      "credit": "Aero Icarus from Zürich, Switzerland · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:11df_-_Delta_Air_Lines_Lockheed_L-1011_TriStar_1;_N1732D@FLL;30.01.1998_(5016025629).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Aero Icarus from Zürich, Switzerland",
+      "subjectSource": "https://en.wikipedia.org/wiki/Lockheed_L-1011_TriStar",
+      "subjectTitle": "Lockheed L-1011 TriStar",
+      "imageDescription": "11df - Delta Air Lines Lockheed L-1011 TriStar 1; N1732D@FLL;30.01.1998",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Antonov_Design_Bureau_Antonov_An-225_Mriya_at_Leipzig_Halle_%28EDDP-LEJ%29.jpg/960px-Antonov_Design_Bureau_Antonov_An-225_Mriya_at_Leipzig_Halle_%28EDDP-LEJ%29.jpg",
+      "answer": "אנטונוב 225",
+      "aliases": [
+        "אנטונוב An-225 מרייה"
+      ],
+      "difficulty": 4,
+      "credit": "Myroslav Kaplun · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Antonov_Design_Bureau_Antonov_An-225_Mriya_at_Leipzig_Halle_(EDDP-LEJ).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Myroslav Kaplun",
+      "subjectSource": "https://en.wikipedia.org/wiki/Antonov_An-225_Mriya",
+      "subjectTitle": "Antonov An-225 Mriya",
+      "imageDescription": "Antonov Design Bureau Antonov An-225 Mriya UR-82060 Leipzig Halle - Leipzig - (EDDP / LEJ)",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/%D0%90%D0%BD%D1%82%D0%BE%D0%BD%D0%BE%D0%B2_%D0%90%D0%BD-124_9773054055093%2C_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0_-_%D0%94%D0%BE%D0%BC%D0%BE%D0%B4%D0%B5%D0%B4%D0%BE%D0%B2%D0%BE_RP2297.jpg/960px-%D0%90%D0%BD%D1%82%D0%BE%D0%BD%D0%BE%D0%B2_%D0%90%D0%BD-124_9773054055093%2C_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0_-_%D0%94%D0%BE%D0%BC%D0%BE%D0%B4%D0%B5%D0%B4%D0%BE%D0%B2%D0%BE_RP2297.jpg",
+      "answer": "אנטונוב 124",
+      "aliases": [
+        "אנטונוב An-124 רוסלן"
+      ],
+      "difficulty": 4,
+      "credit": "Alex Beltyukov · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%D0%90%D0%BD%D1%82%D0%BE%D0%BD%D0%BE%D0%B2_%D0%90%D0%BD-124_9773054055093,_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0_-_%D0%94%D0%BE%D0%BC%D0%BE%D0%B4%D0%B5%D0%B4%D0%BE%D0%B2%D0%BE_RP2297.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Alex Beltyukov",
+      "subjectSource": "https://en.wikipedia.org/wiki/Antonov_An-124_Ruslan",
+      "subjectTitle": "Antonov An-124 Ruslan",
+      "imageDescription": "",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Lockheed_C-130_Hercules.jpg/960px-Lockheed_C-130_Hercules.jpg",
+      "answer": "הרקולס",
+      "aliases": [
+        "לוקהיד C-130 הרקולס"
+      ],
+      "difficulty": 4,
+      "credit": "U.S. Air Force photo by Tech. Sgt. Howard Blair · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Lockheed_C-130_Hercules.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "U.S. Air Force photo by Tech. Sgt. Howard Blair",
+      "subjectSource": "https://en.wikipedia.org/wiki/Lockheed_C-130_Hercules",
+      "subjectTitle": "Lockheed C-130 Hercules",
+      "imageDescription": "A C-130E Hercules from the 43rd Airlift Wing, Pope Air Force Base, N.C., flies over the Atlantic Ocean. The C-130 Hercules primarily performs the intratheater portion of the airlift mission. The aircraft is capable of operating from rough, dirt strips and is the prime transport for paradropping troops and equipment into hostile areas.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/C-17_test_sortie.jpg/960px-C-17_test_sortie.jpg",
+      "answer": "גלובמאסטר C17",
+      "aliases": [
+        "בואינג C-17 גלובמאסטר III"
+      ],
+      "difficulty": 4,
+      "credit": "U.S. Air Force · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:C-17_test_sortie.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "U.S. Air Force",
+      "subjectSource": "https://en.wikipedia.org/wiki/Boeing_C-17_Globemaster_III",
+      "subjectTitle": "Boeing C-17 Globemaster III",
+      "imageDescription": "A U.S. Air Force C-17 Globemaster III T-1 flies over Owens Valley, California, for a test sortie. Edwards Air Force Base, California, welcomed the aircraft home after 208 days of life-extension modifications in San Antonio, Texas. The T-1 is the first Air Force C-17 built to perform developmental testing.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/USAF_C-5_Galaxy_in_flight.jpg/960px-USAF_C-5_Galaxy_in_flight.jpg",
+      "answer": "גלקסי C5",
+      "aliases": [
+        "לוקהיד C-5 גלקסי"
+      ],
+      "difficulty": 4,
+      "credit": "U.S. Air Force photo by Brett Snow · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:USAF_C-5_Galaxy_in_flight.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "U.S. Air Force photo by Brett Snow",
+      "subjectSource": "https://en.wikipedia.org/wiki/Lockheed_C-5_Galaxy",
+      "subjectTitle": "Lockheed C-5 Galaxy",
+      "imageDescription": "With its tremendous payload capability, the large C-5 Galaxy, an outsized-cargo transport, provides the Air Mobility Command intertheater airlift in support of United States national defence. The C-5 is one of the largest aircraft in the world. It can carry outsized cargo intercontinental ranges and can take off or land in relatively short distances. Ground crews can load and off load the C-5 simultaneously at the front and rear cargo openings since the nose and aft doors open the full width and height of the cargo compartment. It can also \"kneel down\" to facilitate loading directly from truck bed levels.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/P-51-361.jpg/960px-P-51-361.jpg",
+      "answer": "מוסטנג",
+      "aliases": [
+        "נורת' אמריקן P-51 מוסטנג"
+      ],
+      "difficulty": 4,
+      "credit": "USAAF/361st FG Association (via Al Richards) · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:P-51-361.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "USAAF/361st FG Association (via Al Richards)",
+      "subjectSource": "https://en.wikipedia.org/wiki/North_American_P-51_Mustang",
+      "subjectTitle": "North American P-51 Mustang",
+      "imageDescription": "P-51D-5NA Mustang 44-13357 ; Lt Vernon Richards, Tika IV 8th AF / 374th FS / 361s t FG. Was later assigned to Lt. Alfred B Cook Jr who renamed it Sailor Girl Shirl - KIA 16 Nov 44 - crashed near Little Walden.",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Bundesarchiv_Bild_101I-662-6659-37%2C_Flugzeug_Messerschmitt_Me_109.jpg",
+      "answer": "מסרשמיט 109",
+      "aliases": [
+        "מסרשמיט Bf 109"
+      ],
+      "difficulty": 4,
+      "credit": "Hebenstreit · CC BY-SA 3.0 de",
+      "source": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_101I-662-6659-37,_Flugzeug_Messerschmitt_Me_109.jpg",
+      "license": "CC BY-SA 3.0 de",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+      "artist": "Hebenstreit",
+      "subjectSource": "https://en.wikipedia.org/wiki/Messerschmitt_Bf_109",
+      "subjectTitle": "Messerschmitt Bf 109",
+      "imageDescription": "",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Hawker_Hurricane_I_%27R4118_UP-W%27_%28G-HUPW%29_%2841455530471%29.jpg/960px-Hawker_Hurricane_I_%27R4118_UP-W%27_%28G-HUPW%29_%2841455530471%29.jpg",
+      "answer": "הוקר הוריקן",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Alan Wilson from Stilton, Peterborough, Cambs, UK · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hawker_Hurricane_I_%27R4118_UP-W%27_(G-HUPW)_(41455530471).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Alan Wilson from Stilton, Peterborough, Cambs, UK",
+      "subjectSource": "https://en.wikipedia.org/wiki/Hawker_Hurricane",
+      "subjectTitle": "Hawker Hurricane",
+      "imageDescription": "c/n G5-92301. This is the only airworthy Hurricane with a genuine Battle of Britain history. Since 2015 she has lodged with the Shuttleworth Collection and is seen displaying at the 2017 Season Premier Airshow at Old Warden, Bedfordshire, UK. 7th May 2017",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Croatian_MiG-21_%28cropped%29.jpg/960px-Croatian_MiG-21_%28cropped%29.jpg",
+      "answer": "מיג 21",
+      "aliases": [
+        "מיג-21"
+      ],
+      "difficulty": 4,
+      "credit": "Gojanovic123456789 · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Croatian_MiG-21_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Gojanovic123456789",
+      "subjectSource": "https://en.wikipedia.org/wiki/Mikoyan-Gurevich_MiG-21",
+      "subjectTitle": "Mikoyan-Gurevich MiG-21",
+      "imageDescription": "MiG-21",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/QF-4_Holloman_AFB.jpg/960px-QF-4_Holloman_AFB.jpg",
+      "answer": "פנטום",
+      "aliases": [
+        "מקדונל דאגלס F-4 פנטום"
+      ],
+      "difficulty": 4,
+      "credit": "USAF · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:QF-4_Holloman_AFB.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "USAF",
+      "subjectSource": "https://en.wikipedia.org/wiki/McDonnell_Douglas_F-4_Phantom_II",
+      "subjectTitle": "McDonnell Douglas F-4 Phantom II",
+      "imageDescription": "Holloman AFB F-4 Phantom II",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/US_Navy_051105-F-5480T-005_An_F-14D_Tomcat_conducts_a_mission_over_the_Persian_Gulf-region.jpg/960px-US_Navy_051105-F-5480T-005_An_F-14D_Tomcat_conducts_a_mission_over_the_Persian_Gulf-region.jpg",
+      "answer": "טומקט",
+      "aliases": [
+        "F-14 טומקט"
+      ],
+      "difficulty": 4,
+      "credit": "U.S. Navy photo · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:US_Navy_051105-F-5480T-005_An_F-14D_Tomcat_conducts_a_mission_over_the_Persian_Gulf-region.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "U.S. Navy photo",
+      "subjectSource": "https://en.wikipedia.org/wiki/Grumman_F-14_Tomcat",
+      "subjectTitle": "Grumman F-14 Tomcat",
+      "imageDescription": "Persian Gulf (Nov. 5, 2005) – An F-14D Tomcat, assigned to the “Tomcatters” of Fighter Squadron Three One (VF-31), conducts a mission over the Persian Gulf-region. VF-31 is assigned to Carrier Air Wing Eight (CVW-8), currently embarked aboard the Nimitz-class aircraft carrier USS Theodore Roosevelt (CVN 71). U.S. Air Force photo by Tech. Sgt. Rob Tabor (RELEASED)",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/44/FA-18C_desert_refueling.jpg",
+      "answer": "הורנט",
+      "aliases": [
+        "מקדונל דאגלס F/A-18 הורנט"
+      ],
+      "difficulty": 4,
+      "credit": "US Air Force · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:FA-18C_desert_refueling.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "US Air Force",
+      "subjectSource": "https://en.wikipedia.org/wiki/McDonnell_Douglas_F/A-18_Hornet",
+      "subjectTitle": "McDonnell Douglas F/A-18 Hornet",
+      "imageDescription": "An F/A-18C receives fueling from a 434th Air Refueling KC-135",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/F-22_Raptor_edit1_%28cropped%29.jpg/960px-F-22_Raptor_edit1_%28cropped%29.jpg",
+      "answer": "ראפטור",
+      "aliases": [
+        "לוקהיד מרטין F-22 ראפטור"
+      ],
+      "difficulty": 4,
+      "credit": "F-22_Raptor.JPG : Master Sgt. Andy Dunaway · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:F-22_Raptor_edit1_(cropped).jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "F-22_Raptor.JPG : Master Sgt. Andy Dunaway",
+      "subjectSource": "https://en.wikipedia.org/wiki/Lockheed_Martin_F-22_Raptor",
+      "subjectTitle": "Lockheed Martin F-22 Raptor",
+      "imageDescription": "An F-22 Raptor flies over Kadena Air Base, Japan, Jan. 23 2009 on a routine training mission. The F-22 is deployed from the 27th Fighter Squadron at Langley Air Force Base, Va.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Two_Mirage_III_of_the_Royal_Australian_Air_Force_1.JPEG/960px-Two_Mirage_III_of_the_Royal_Australian_Air_Force_1.JPEG",
+      "answer": "מיראז 3",
+      "aliases": [
+        "מיראז' 3"
+      ],
+      "difficulty": 4,
+      "credit": "TSGT CURT EDDINGS · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Two_Mirage_III_of_the_Royal_Australian_Air_Force_1.JPEG",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "TSGT CURT EDDINGS",
+      "subjectSource": "https://en.wikipedia.org/wiki/Dassault_Mirage_III",
+      "subjectTitle": "Dassault Mirage III",
+      "imageDescription": "A Mirage III D (foreground) and Mirage III O aircraft of No. 2 Operational Conversion Unit RAAF in flight during a combined US-Australian Air Force exercise, Pacific Consort.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Rafale_-_RIAT_2009_%283751416421%29.jpg/960px-Rafale_-_RIAT_2009_%283751416421%29.jpg",
+      "answer": "ראפאל",
+      "aliases": [
+        "דאסו ראפאל"
+      ],
+      "difficulty": 4,
+      "credit": "Tim Felce (Airwolfhound) · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rafale_-_RIAT_2009_(3751416421).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Tim Felce (Airwolfhound)",
+      "subjectSource": "https://en.wikipedia.org/wiki/Dassault_Rafale",
+      "subjectTitle": "Dassault Rafale",
+      "imageDescription": "Rafale - RIAT 2009",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Fairchild_Republic_A-10_Thunderbolt_II_-_32156159151.jpg/960px-Fairchild_Republic_A-10_Thunderbolt_II_-_32156159151.jpg",
+      "answer": "A10 תאנדרבולט",
+      "aliases": [
+        "פיירצ'יילד רפבליק A-10 ת'נדרבולט II"
+      ],
+      "difficulty": 4,
+      "credit": "Master Sgt. William Greer, U.S. Air Force · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Fairchild_Republic_A-10_Thunderbolt_II_-_32156159151.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Master Sgt. William Greer, U.S. Air Force",
+      "subjectSource": "https://en.wikipedia.org/wiki/Fairchild_Republic_A-10_Thunderbolt_II",
+      "subjectTitle": "Fairchild Republic A-10 Thunderbolt II",
+      "imageDescription": "An A-10 Thunderbolt II, assigned to the 74th Fighter Squadron, Moody Air Force Base, GA, returns to mission after receiving fuel from a KC-135 Stratotanker, 340th Expeditionary Air Refueling Squadron, over the skies of Afghanistan in support of Operation Enduring Freedom, May 8, 2011.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Lockheed_SR-71_Blackbird.jpg/960px-Lockheed_SR-71_Blackbird.jpg",
+      "answer": "SR71 בלקבירד",
+      "aliases": [
+        "לוקהיד SR-71"
+      ],
+      "difficulty": 4,
+      "credit": "USAF / Judson Brohmer · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Lockheed_SR-71_Blackbird.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "USAF / Judson Brohmer",
+      "subjectSource": "https://en.wikipedia.org/wiki/Lockheed_SR-71_Blackbird",
+      "subjectTitle": "Lockheed SR-71 Blackbird",
+      "imageDescription": "The SR-71B Blackbird , flown by the Dryden Flight Research Center as NASA 831, slices across the snow-covered southern Sierra Nevada Mountains of California after being refueled by an Air Force tanker during a 1994 flight. SR-71B was the trainer version of the SR-71. Notice the dual cockpit to allow the instructor to fly the airplane.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Usaf.u2.750pix.jpg/960px-Usaf.u2.750pix.jpg",
+      "answer": "U2",
+      "aliases": [
+        "לוקהיד U-2"
+      ],
+      "difficulty": 4,
+      "credit": "United States Department of the Air Force · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Usaf.u2.750pix.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "United States Department of the Air Force",
+      "subjectSource": "https://en.wikipedia.org/wiki/Lockheed_U-2",
+      "subjectTitle": "Lockheed U-2",
+      "imageDescription": "[ Original description ] An air-to-air left side view of a TR-1 tactical reconnaissance aircraft. The U-2 Dragon Lady is considered the leader among manned intelligence, surveillance and reconnaissance systems. An aircraft such as this collected images over the Gulf Coast region after Hurricanes Katrina and Rita. Picture prepared for Wikipedia by Adrian Pingstone in April 2003.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/B-52_Stratofortress_assigned_to_the_307th_Bomb_Wing_%28cropped%29.jpg/960px-B-52_Stratofortress_assigned_to_the_307th_Bomb_Wing_%28cropped%29.jpg",
+      "answer": "B52",
+      "aliases": [
+        "בואינג B-52 סטרטופורטרס"
+      ],
+      "difficulty": 4,
+      "credit": "Airman 1st Class Victor J. Caputo · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:B-52_Stratofortress_assigned_to_the_307th_Bomb_Wing_(cropped).jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Airman 1st Class Victor J. Caputo",
+      "subjectSource": "https://en.wikipedia.org/wiki/Boeing_B-52_Stratofortress",
+      "subjectTitle": "Boeing B-52 Stratofortress",
+      "imageDescription": "A B-52 Stratofortress assigned to the 307th Bomb Wing, Barksdale Air Force Base, Louisiana, approaches the refueling boom of a KC-135 Stratotanker from the 931st Air Refueling Group, McConnell Air Force Base, Wichita, Kansas",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/B-1B_air_refueling.jpg/960px-B-1B_air_refueling.jpg",
+      "answer": "B1 לנסר",
+      "aliases": [
+        "רוקוול B-1 לנסר"
+      ],
+      "difficulty": 4,
+      "credit": "USAF · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:B-1B_air_refueling.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "USAF",
+      "subjectSource": "https://en.wikipedia.org/wiki/Rockwell_B-1_Lancer",
+      "subjectTitle": "Rockwell B-1 Lancer",
+      "imageDescription": "B-1B",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/MV-22_mcas_Miramar_2014.JPG/960px-MV-22_mcas_Miramar_2014.JPG",
+      "answer": "אוספריי",
+      "aliases": [
+        "בל-בואינג V-22"
+      ],
+      "difficulty": 4,
+      "credit": "FOX 52 · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:MV-22_mcas_Miramar_2014.JPG",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "FOX 52",
+      "subjectSource": "https://en.wikipedia.org/wiki/Bell%E2%80%93Boeing_V-22_Osprey",
+      "subjectTitle": "Bell–Boeing V-22 Osprey",
+      "imageDescription": "MV-22 MAGTF demo Miramar air station 2014",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/CH-47_assigned_to_3rd_General_Support_Aviation_Battalion%2C_82nd_Combat_Aviation_Brigade.jpg/960px-CH-47_assigned_to_3rd_General_Support_Aviation_Battalion%2C_82nd_Combat_Aviation_Brigade.jpg",
+      "answer": "צינוק",
+      "aliases": [
+        "בואינג CH-47 צ'ינוק"
+      ],
+      "difficulty": 4,
+      "credit": "Sgt. Steven Galimore · CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:CH-47_assigned_to_3rd_General_Support_Aviation_Battalion,_82nd_Combat_Aviation_Brigade.jpg",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Sgt. Steven Galimore",
+      "subjectSource": "https://en.wikipedia.org/wiki/Boeing_CH-47_Chinook",
+      "subjectTitle": "Boeing CH-47 Chinook",
+      "imageDescription": "A CH-47 Chinook helicopter assigned to 3rd General Support Aviation Battalion, 82nd Combat Aviation Brigade, 82nd Airborne Division performs a tactical take off for onlookers during the 82nd ABN Div. All-American Week Airborne Review on Sicily Drop Zone at Fort Bragg, N.C. (U.S. Army Photo by)",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/CH-53D_Sea_Stallion_of_HMH-362_in_Afghanistan_on_26_May_2012.jpg/960px-CH-53D_Sea_Stallion_of_HMH-362_in_Afghanistan_on_26_May_2012.jpg",
+      "answer": "יסעור",
+      "aliases": [
+        "סיקורסקי CH-53 סי סטליון"
+      ],
+      "difficulty": 4,
+      "credit": "Staff Sgt. Raul Gonzalez, USMC · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:CH-53D_Sea_Stallion_of_HMH-362_in_Afghanistan_on_26_May_2012.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Staff Sgt. Raul Gonzalez, USMC",
+      "subjectSource": "https://en.wikipedia.org/wiki/Sikorsky_CH-53_Sea_Stallion",
+      "subjectTitle": "Sikorsky CH-53 Sea Stallion",
+      "imageDescription": "A U.S. Marine Corps CH-53D Sea Stallion with Marine Heavy Helicopter Squadron 362, 3rd Marine Aircraft Wing (Forward) lands on Forward Operating Base Edinburgh, Helmand province, Afghanistan, 26 May 2012. The helicopter was transporting U.S. Marines with Regional Command (SouthWest) and Afghan National Army soldiers with 4th Kandak, 2nd Brigade, 215th Corps.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/National-Guard-UH-60-Black-Hawk-operations-at-Fort-McCoy.jpg/960px-National-Guard-UH-60-Black-Hawk-operations-at-Fort-McCoy.jpg",
+      "answer": "בלק הוק",
+      "aliases": [
+        "סיקורסקי UH-60 בלאק הוק"
+      ],
+      "difficulty": 4,
+      "credit": "147th Aviation Regiment · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:National-Guard-UH-60-Black-Hawk-operations-at-Fort-McCoy.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "147th Aviation Regiment",
+      "subjectSource": "https://en.wikipedia.org/wiki/Sikorsky_UH-60_Black_Hawk",
+      "subjectTitle": "Sikorsky UH-60 Black Hawk",
+      "imageDescription": "An aircrew with the 1st Battalion, 147th Aviation Regiment of the Wisconsin National Guard at Madison operate a UH-60 Black Hawk helicopter at the headquarters helo pad March 11, 2019, at Fort McCoy, Wis. Members of the unit regularly complete training operations at Fort McCoy and the unit also supports numerous training events at the installation each year.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/UH1_Huey_-_Fly_Navy_2017_%2826938005897%29.jpg/960px-UH1_Huey_-_Fly_Navy_2017_%2826938005897%29.jpg",
+      "answer": "יואי",
+      "aliases": [
+        "בל UH-1 אירוקוי"
+      ],
+      "difficulty": 4,
+      "credit": "Airwolfhound from Hertfordshire, UK · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:UH1_Huey_-_Fly_Navy_2017_(26938005897).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Airwolfhound from Hertfordshire, UK",
+      "subjectSource": "https://en.wikipedia.org/wiki/Bell_UH-1_Iroquois",
+      "subjectTitle": "Bell UH-1 Iroquois",
+      "imageDescription": "UH-1H Huey (Bell 205) with registration G-HUEY - Fly Navy 2017",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/EC-135_-_RIAT_2011_%286199185182%29.jpg/960px-EC-135_-_RIAT_2011_%286199185182%29.jpg",
+      "answer": "יורוקופטר EC135",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Tim Felce (Airwolfhound) · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:EC-135_-_RIAT_2011_(6199185182).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Tim Felce (Airwolfhound)",
+      "subjectSource": "https://en.wikipedia.org/wiki/Eurocopter_EC135",
+      "subjectTitle": "Eurocopter EC135",
+      "imageDescription": "EC-135 - RIAT 2011",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Robinson_R44_II_%28cropped%29.jpg/960px-Robinson_R44_II_%28cropped%29.jpg",
+      "answer": "רובינסון R44",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "D. Miller · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Robinson_R44_II_(cropped).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "D. Miller",
+      "subjectSource": "https://en.wikipedia.org/wiki/Robinson_R44",
+      "subjectTitle": "Robinson R44",
+      "imageDescription": "Robinson R44 II",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/G-AVRZ_Piper_PA-28-180_Cherokee_C_at_Northrepps.jpg/960px-G-AVRZ_Piper_PA-28-180_Cherokee_C_at_Northrepps.jpg",
+      "answer": "פייפר צירוקי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Mike Burdett · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:G-AVRZ_Piper_PA-28-180_Cherokee_C_at_Northrepps.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Mike Burdett",
+      "subjectSource": "https://en.wikipedia.org/wiki/Piper_PA-28_Cherokee",
+      "subjectTitle": "Piper PA-28 Cherokee",
+      "imageDescription": "Piper PA-28-180 Cherokee over Northrepps",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Tc-90_04l.jpg/960px-Tc-90_04l.jpg",
+      "answer": "קינג אייר",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "海上自衛隊 · CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tc-90_04l.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "海上自衛隊",
+      "subjectSource": "https://en.wikipedia.org/wiki/Beechcraft_King_Air",
+      "subjectTitle": "Beechcraft King Air",
+      "imageDescription": "ＴＣ-９０ 固定翼機",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Bundesarchiv_Bild_102-12963%2C_Flugboot_%22Do_X%22.jpg",
+      "answer": "דורניר DOX",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Unknown author Unknown author · CC BY-SA 3.0 de",
+      "source": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_102-12963,_Flugboot_%22Do_X%22.jpg",
+      "license": "CC BY-SA 3.0 de",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+      "artist": "Unknown author Unknown author",
+      "subjectSource": "https://en.wikipedia.org/wiki/Dornier_Do_X",
+      "subjectTitle": "Dornier Do X",
+      "imageDescription": "For documentary purposes the German Federal Archive often retained the original image captions , which may be erroneous, biased, obsolete or politically extreme . Was Deutschland an Reparationen gleistet hat ! Ein interessanter Ueberblick über die bisher geleisteten Sachlieferungen Deutschlands auf Reparations-Conto. Das grösste Flugboot der Welt auf Reparationsconto. Das Schwesterschiff der \"Do X\", welches an Italien abgeliefert wurde.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/First_flight2.jpg/960px-First_flight2.jpg",
+      "answer": "רייט פלייר",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "John T. Daniels · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:First_flight2.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "John T. Daniels",
+      "subjectSource": "https://en.wikipedia.org/wiki/Wright_Flyer",
+      "subjectTitle": "Wright Flyer",
+      "imageDescription": "First successful flight of the Wright Flyer , by the Wright brothers . The machine traveled 120 ft (36.6 m) in 12 seconds at 10:35 a.m. at Kill Devil Hills , North Carolina . Orville Wright was at the controls of the machine, lying prone on the lower wing with his hips in the cradle which operated the wing-warping mechanism. Wilbur Wright ran alongside to balance the machine, and just released his hold on the forward upright of the right wing in the photo. The starting rail, the wing-rest, a coil box, and other items needed for flight preparation are visible behind the machine. This is described as \"the first sustained and controlled heavier-than-air , powered flight\" by the Fédération Aéronautique Internationale , but is not listed by the FAI as an official record.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/B-747_Iberia.jpg/960px-B-747_Iberia.jpg",
+      "answer": "בואינג 747",
+      "aliases": [
+        "747",
+        "ג׳מבו"
+      ],
+      "difficulty": 2,
+      "credit": "Iberia Airlines · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:B-747_Iberia.jpg",
+      "artist": "Iberia Airlines",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/A6-EDY_A380_Emirates_31_jan_2013_jfk_%288442269364%29_%28cropped%29.jpg/960px-A6-EDY_A380_Emirates_31_jan_2013_jfk_%288442269364%29_%28cropped%29.jpg",
+      "answer": "איירבוס A380",
+      "aliases": [
+        "A380"
+      ],
+      "difficulty": 3,
+      "credit": "Maarten Visser from Capelle aan den IJssel, Nederland · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:A6-EDY_A380_Emirates_31_jan_2013_jfk_(8442269364)_(cropped).jpg",
+      "artist": "Maarten Visser from Capelle aan den IJssel, Nederland",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Falcon31.jpg/960px-Falcon31.jpg",
+      "answer": "F-16",
+      "aliases": [
+        "אף 16"
+      ],
+      "difficulty": 2,
+      "credit": "U.S. Air Force photo by Tech. Sgt. Kevin Gruenwald · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Falcon31.jpg",
+      "artist": "U.S. Air Force photo by Tech. Sgt. Kevin Gruenwald",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/F-35A_flight_%28cropped%29.jpg/960px-F-35A_flight_%28cropped%29.jpg",
+      "answer": "F-35",
+      "aliases": [
+        "אף 35"
+      ],
+      "difficulty": 3,
+      "credit": "U.S. Air Force photo by Master Sgt. Donald R. Allen · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:F-35A_flight_(cropped).jpg",
+      "artist": "U.S. Air Force photo by Master Sgt. Donald R. Allen",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Serbian_mig-29_missiles.jpg/960px-Serbian_mig-29_missiles.jpg",
+      "answer": "מיג-29",
+      "aliases": [
+        "מיג 29"
+      ],
+      "difficulty": 4,
+      "credit": "Krasimir Grozev · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Serbian_mig-29_missiles.jpg",
+      "artist": "Krasimir Grozev",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/IAF_AH-64.jpg/960px-IAF_AH-64.jpg",
+      "answer": "אפאצ׳י",
+      "aliases": [
+        "מסוק אפאצ׳י"
+      ],
+      "difficulty": 4,
+      "credit": "Nehemia Gershuni-Aylho · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:IAF_AH-64.jpg",
+      "artist": "Nehemia Gershuni-Aylho",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Ray_Flying_Legends_2005-1.jpg/960px-Ray_Flying_Legends_2005-1.jpg",
+      "answer": "ספיטפייר",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "The original uploader was Bryan Fury75 at French Wikipedia . · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ray_Flying_Legends_2005-1.jpg",
+      "artist": "The original uploader was Bryan Fury75 at French Wikipedia .",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/F-15%2C_71st_Fighter_Squadron%2C_in_flight.JPG/960px-F-15%2C_71st_Fighter_Squadron%2C_in_flight.JPG",
+      "answer": "F-15",
+      "aliases": [
+        "אף 15"
+      ],
+      "difficulty": 3,
+      "credit": "U.S. Air Force photo/Staff Sgt. Samuel Rogers · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:F-15,_71st_Fighter_Squadron,_in_flight.JPG",
+      "artist": "U.S. Air Force photo/Staff Sgt. Samuel Rogers",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "reviewed": true
+    }
+  ]
 }
