@@ -1,143 +1,607 @@
 {
- "id": "photo-instruments",
- "name": "כלי נגינה (תמונות)",
- "hint": "אומרים את שם כלי הנגינה",
- "items": [
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Violin_VL100.png",
-   "answer": "כינור",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Just plain Bill · CC0",
-   "source": "https://commons.wikimedia.org/wiki/File:Violin_VL100.png"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Classical_Guitar_two_views.jpg/960px-Classical_Guitar_two_views.jpg",
-   "answer": "גיטרה",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Martin Möller · CC BY-SA 2.0 de",
-   "source": "https://commons.wikimedia.org/wiki/File:Classical_Guitar_two_views.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Steinway_%26_Sons_concert_grand_piano%2C_model_D-274%2C_manufactured_at_Steinway%27s_factory_in_Hamburg%2C_Germany.png/960px-Steinway_%26_Sons_concert_grand_piano%2C_model_D-274%2C_manufactured_at_Steinway%27s_factory_in_Hamburg%2C_Germany.png",
-   "answer": "פסנתר",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Steinway &amp; Sons, 10 Rondenbarg, Hamburg D-22525, Germany, eu.steinway.com.Steinway &amp; Sons, 1 Steinway Place, Long Island City, New York 11105, The United States, www.steinway.com. · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Steinway_%26_Sons_concert_grand_piano%2C_model_D-274%2C_manufactured_at_Steinway's_factory_in_Hamburg%2C_Germany.png"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Gretsch_Catalina_Special_Edition_2020.jpg/960px-Gretsch_Catalina_Special_Edition_2020.jpg",
-   "answer": "תופים",
-   "aliases": [
-    "מערכת תופים"
-   ],
-   "difficulty": 2,
-   "credit": "w:de:User:claudioverfuerth · CC BY-SA 4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Gretsch_Catalina_Special_Edition_2020.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Shinobue_and_other_flutes-3.jpg",
-   "answer": "חליל",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Photos by Yasuhiko Sano, Nov 2005, Buffet Crampon and Yamaha; Editing + Collage Gisbert König · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Shinobue_and_other_flutes-3.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Clarinet_range.svg/960px-Clarinet_range.svg.png",
-   "answer": "קלרינט",
-   "aliases": [
-    "קלרינטה"
-   ],
-   "difficulty": 3,
-   "credit": "Why? I Ask · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Clarinet_range.svg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Sax_range.svg/960px-Sax_range.svg.png",
-   "answer": "סקסופון",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Tkgd2007 · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Sax_range.svg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Yamaha_Trumpet_YTR-8335LA_crop.jpg/960px-Yamaha_Trumpet_YTR-8335LA_crop.jpg",
-   "answer": "חצוצרה",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Yamaha Corporation · CC BY-SA 4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Yamaha_Trumpet_YTR-8335LA_crop.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Trombone_range.svg/960px-Trombone_range.svg.png",
-   "answer": "טרומבון",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "Tkgd2007 · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Trombone_range.svg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Cello_front_side.png",
-   "answer": "צ׳לו",
-   "aliases": [
-    "צלו"
-   ],
-   "difficulty": 2,
-   "credit": "Georg Feitscher · CC BY 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Cello_front_side.png"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/AGK_bass1_full.jpg/960px-AGK_bass1_full.jpg",
-   "answer": "קונטרבס",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "User:AndrewKepert · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:AGK_bass1_full.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Range_of_harp.JPG/960px-Range_of_harp.JPG",
-   "answer": "נבל",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "Number Googol · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Range_of_harp.JPG"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/A_converter_free-bass_piano-accordion_and_a_Russian_bayan.jpg/960px-A_converter_free-bass_piano-accordion_and_a_Russian_bayan.jpg",
-   "answer": "אקורדיון",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "Necz0r · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:A_converter_free-bass_piano-accordion_and_a_Russian_bayan.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Range_of_22-fret_five_string_banjo.png",
-   "answer": "בנג׳ו",
-   "aliases": [
-    "בנגו"
-   ],
-   "difficulty": 4,
-   "credit": "ThomasLucas · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Range_of_22-fret_five_string_banjo.png"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Range_mandolin.PNG",
-   "answer": "מנדולינה",
-   "aliases": [],
-   "difficulty": 4,
-   "credit": "Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Range_mandolin.PNG"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Derbouka.jpg",
-   "answer": "דרבוקה",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "Abdelouali · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Derbouka.jpg"
-  }
- ]
+  "id": "photo-instruments",
+  "name": "כלי נגינה (תמונות)",
+  "hint": "אומרים את שם כלי הנגינה",
+  "items": [
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Kumalae_ukulele_of_c._1910.webm/960px--Kumalae_ukulele_of_c._1910.webm.jpg",
+      "answer": "יוקללה",
+      "aliases": [
+        "יוקולילי"
+      ],
+      "difficulty": 4,
+      "credit": "St Cecilia's Hall: all things musical instruments · CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kumalae_ukulele_of_c._1910.webm",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "St Cecilia's Hall: all things musical instruments",
+      "subjectSource": "https://en.wikipedia.org/wiki/Ukulele",
+      "subjectTitle": "Ukulele",
+      "imageDescription": "Chris J. Day discusses and plays the Kumalae ukulele of c. 1910. https://collections.ed.ac.uk/stcecilias/record/96147",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/3_string_prim_balalaika.png/960px-3_string_prim_balalaika.png",
+      "answer": "בללייקה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "User:MaGz96 · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:3_string_prim_balalaika.png",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "User:MaGz96",
+      "subjectSource": "https://en.wikipedia.org/wiki/Balalaika",
+      "subjectTitle": "Balalaika",
+      "imageDescription": "3 string prim balalaika - no background",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Sitar%2C_late_19th_Century.jpg/960px-Sitar%2C_late_19th_Century.jpg",
+      "answer": "סיטאר",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "unknown, MET museum · CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sitar,_late_19th_Century.jpg",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "unknown, MET museum",
+      "subjectSource": "https://en.wikipedia.org/wiki/Sitar",
+      "subjectTitle": "Sitar",
+      "imageDescription": "Sitar, late 19th Century",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/%C5%AAd_MET_DP340079.jpg/960px-%C5%AAd_MET_DP340079.jpg",
+      "answer": "עוד",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Creator:Manol (Emmanuel Venios) · CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:%C5%AAd_MET_DP340079.jpg",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Creator:Manol (Emmanuel Venios)",
+      "subjectSource": "https://en.wikipedia.org/wiki/Oud",
+      "subjectTitle": "Oud",
+      "imageDescription": "Turkish; Ūd; Chordophone-Lute-plucked-unfretted",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Lute_%28by_Princess_Ruto%2C_2013-02-11%29.jpg/960px-Lute_%28by_Princess_Ruto%2C_2013-02-11%29.jpg",
+      "answer": "לאוטה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Ching · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lute_(by_Princess_Ruto,_2013-02-11).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Ching",
+      "subjectSource": "https://en.wikipedia.org/wiki/Lute",
+      "subjectTitle": "Lute",
+      "imageDescription": "Lute (by Princess Ruto, 2013-02-11)",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Japanese_Koto.jpg/960px-Japanese_Koto.jpg",
+      "answer": "קוטו (כלי נגינה)",
+      "aliases": [
+        "קוטו"
+      ],
+      "difficulty": 4,
+      "credit": "Original uploader and author was Smgregory at en.wikipedia · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Japanese_Koto.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Original uploader and author was Smgregory at en.wikipedia",
+      "subjectSource": "https://en.wikipedia.org/wiki/Koto_%28instrument%29",
+      "subjectTitle": "Koto (instrument)",
+      "imageDescription": "A picture of the Japanese 13-stringed koto.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Erhu_in_the_Mets.jpg/960px-Erhu_in_the_Mets.jpg",
+      "answer": "ארהו",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Unknown author Unknown author · CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Erhu_in_the_Mets.jpg",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Unknown author Unknown author",
+      "subjectSource": "https://en.wikipedia.org/wiki/Erhu",
+      "subjectTitle": "Erhu",
+      "imageDescription": "Erhu in the Mets",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Cimbalom_%28from_Emil_Richards_Collection%29.jpg/960px-Cimbalom_%28from_Emil_Richards_Collection%29.jpg",
+      "answer": "צימבלום",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Xylosmygame · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cimbalom_(from_Emil_Richards_Collection).jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Xylosmygame",
+      "subjectSource": "https://en.wikipedia.org/wiki/Cimbalom",
+      "subjectTitle": "Cimbalom",
+      "imageDescription": "Cimbalom (from Emil Richards Collection). Range E2-E6, with an additional lower D2 string",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/ClavecinRuckers%26Taskin.JPG/960px-ClavecinRuckers%26Taskin.JPG",
+      "answer": "צמבלו",
+      "aliases": [
+        "צ'מבלו"
+      ],
+      "difficulty": 4,
+      "credit": "Gérard Janot · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:ClavecinRuckers%26Taskin.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Gérard Janot",
+      "subjectSource": "https://en.wikipedia.org/wiki/Harpsichord",
+      "subjectTitle": "Harpsichord",
+      "imageDescription": "Clavecin par Andreas Ruckers (Anvers, 1646) ravalé par Pascal Taskin (Paris, 1780)",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Neunkirchen_am_Brand_Kirche_Orgel-20210411-RM-155230.jpg/960px-Neunkirchen_am_Brand_Kirche_Orgel-20210411-RM-155230.jpg",
+      "answer": "עוגב",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Ermell · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Neunkirchen_am_Brand_Kirche_Orgel-20210411-RM-155230.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Ermell",
+      "subjectSource": "https://en.wikipedia.org/wiki/Pipe_organ",
+      "subjectTitle": "Pipe organ",
+      "imageDescription": "Pipe organ in the collegiate church of St. Michael in Neunkirchen am Brand",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/R.A.Moog_minimoog_2.jpg/960px-R.A.Moog_minimoog_2.jpg",
+      "answer": "סינתיסייזר",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "glacial23 · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:R.A.Moog_minimoog_2.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "glacial23",
+      "subjectSource": "https://en.wikipedia.org/wiki/Synthesizer",
+      "subjectTitle": "Synthesizer",
+      "imageDescription": "Early Minimoog by R.A.Moog (ca.1970)",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/16-hole_chrom_10-hole_diatonic.jpg/960px-16-hole_chrom_10-hole_diatonic.jpg",
+      "answer": "מפוחית",
+      "aliases": [
+        "מפוחית פה"
+      ],
+      "difficulty": 4,
+      "credit": "George Leung · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:16-hole_chrom_10-hole_diatonic.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "George Leung",
+      "subjectSource": "https://en.wikipedia.org/wiki/Harmonica",
+      "subjectTitle": "Harmonica",
+      "imageDescription": "Comparison between 16-hole chromatic and 10-hole diatonic.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Buenos_Aires_-_Bandoneon_tango_player_-_7435.jpg/960px-Buenos_Aires_-_Bandoneon_tango_player_-_7435.jpg",
+      "answer": "בנדונאון",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Jorge Royan · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Buenos_Aires_-_Bandoneon_tango_player_-_7435.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Jorge Royan",
+      "subjectSource": "https://en.wikipedia.org/wiki/Bandoneon",
+      "subjectTitle": "Bandoneon",
+      "imageDescription": "Matías Rubino, a bandoneon tango player. Buenos Aires, Argentina",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Wheatstone_English_Concertina.jpg/960px-Wheatstone_English_Concertina.jpg",
+      "answer": "קונצרטינה",
+      "aliases": [
+        "מפוחית יד"
+      ],
+      "difficulty": 4,
+      "credit": "The original uploader was DannyChapman at English Wikipedia . · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Wheatstone_English_Concertina.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "The original uploader was DannyChapman at English Wikipedia .",
+      "subjectSource": "https://en.wikipedia.org/wiki/Concertina",
+      "subjectTitle": "Concertina",
+      "imageDescription": "English Concertina, made by Wheatstone & Co around 1920, velcro added by owner!",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Oboe_Patricola_Artista_PT1.jpg/960px-Oboe_Patricola_Artista_PT1.jpg",
+      "answer": "אבוב",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Fratelli Patricola, Editor/Bearbeiter User:Gisbert K · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Oboe_Patricola_Artista_PT1.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Fratelli Patricola, Editor/Bearbeiter User:Gisbert K",
+      "subjectSource": "https://en.wikipedia.org/wiki/Oboe",
+      "subjectTitle": "Oboe",
+      "imageDescription": "Oboe",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/English_Horn_picture.jpg/960px-English_Horn_picture.jpg",
+      "answer": "קרן אנגלית",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Hustvedt · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:English_Horn_picture.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Hustvedt",
+      "subjectSource": "https://en.wikipedia.org/wiki/Cor_anglais",
+      "subjectTitle": "Cor anglais",
+      "imageDescription": "An English Horn, or Cor anglais.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Yamaha_Horn_YHR-667V.tif/lossy-page1-960px-Yamaha_Horn_YHR-667V.tif.jpg",
+      "answer": "קרן יער",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Yamaha Corporation · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Yamaha_Horn_YHR-667V.tif",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Yamaha Corporation",
+      "subjectSource": "https://en.wikipedia.org/wiki/French_horn",
+      "subjectTitle": "French horn",
+      "imageDescription": "Yamaha Double horn , model YHR-667V. In F/Bb, yellow brass, four valves.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Yamaha_Bass_tuba_YFB-822.tif/lossy-page1-500px-Yamaha_Bass_tuba_YFB-822.tif.jpg",
+      "answer": "טובה (כלי נגינה)",
+      "aliases": [
+        "טובה"
+      ],
+      "difficulty": 4,
+      "credit": "Yamaha Corporation · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Yamaha_Bass_tuba_YFB-822.tif",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Yamaha Corporation",
+      "subjectSource": "https://en.wikipedia.org/wiki/Tuba",
+      "subjectTitle": "Tuba",
+      "imageDescription": "Yamaha Bass tuba , model YFB-822. In F, yellow brass, 4 front pistons + 1 rotary valve.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Piccolo.jpg/960px-Piccolo.jpg",
+      "answer": "פיקולו",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "User:Caesura · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Piccolo.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "User:Caesura",
+      "subjectSource": "https://en.wikipedia.org/wiki/Piccolo",
+      "subjectTitle": "Piccolo",
+      "imageDescription": "Yamaha YPC32 piccolo. The body is made from ABS resin, and the head is plated with silver.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Flute_de_pan_MHNT_ETH_AC_NH_31_Sav%C3%A8s.jpg/960px-Flute_de_pan_MHNT_ETH_AC_NH_31_Sav%C3%A8s.jpg",
+      "answer": "חליל פאן",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Didier Descouens · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Flute_de_pan_MHNT_ETH_AC_NH_31_Sav%C3%A8s.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Didier Descouens",
+      "subjectSource": "https://en.wikipedia.org/wiki/Pan_flute",
+      "subjectTitle": "Pan flute",
+      "imageDescription": "Pan flute Population : Solomon Islands Date of collection : the nineteenth century (4th Quarter) - Former collection of Théophile Savès Materials : Reed, bamboo, rope Size : 22 x 11 x 1.5 cm",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/2016-01_Ocarina_front.jpg/960px-2016-01_Ocarina_front.jpg",
+      "answer": "אוקרינה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "0x010C · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2016-01_Ocarina_front.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "0x010C",
+      "subjectSource": "https://en.wikipedia.org/wiki/Ocarina",
+      "subjectTitle": "Ocarina",
+      "imageDescription": "A 12 hole Ocarina",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Shofar-16-Zachi-Evenor.jpg/960px-Shofar-16-Zachi-Evenor.jpg",
+      "answer": "שופר",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Zachi Evenor · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Shofar-16-Zachi-Evenor.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Zachi Evenor",
+      "subjectSource": "https://en.wikipedia.org/wiki/Shofar",
+      "subjectTitle": "Shofar",
+      "imageDescription": "Shofar (Jewish ritual horn) שופר",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Bongos_Meinl_HB100-NT.jpg",
+      "answer": "בונגוס",
+      "aliases": [
+        "תופי בונגו"
+      ],
+      "difficulty": 4,
+      "credit": "http://muzyczny.pl · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bongos_Meinl_HB100-NT.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "http://muzyczny.pl",
+      "subjectSource": "https://en.wikipedia.org/wiki/Bongo_drum",
+      "subjectTitle": "Bongo drum",
+      "imageDescription": "Bongos Meinl HB100-NT",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Pandeiro_new_30-09-07.jpg",
+      "answer": "תוף מרים",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Frenciscobcn · CC BY-SA 1.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pandeiro_new_30-09-07.jpg",
+      "license": "CC BY-SA 1.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0",
+      "artist": "Frenciscobcn",
+      "subjectSource": "https://en.wikipedia.org/wiki/Tambourine",
+      "subjectTitle": "Tambourine",
+      "imageDescription": "pandeiro new 30/09/07.jpg",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Marimba_One_4000_Series.jpg/960px-Marimba_One_4000_Series.jpg",
+      "answer": "מרימבה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Marimbaone · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Marimba_One_4000_Series.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Marimbaone",
+      "subjectSource": "https://en.wikipedia.org/wiki/Marimba",
+      "subjectTitle": "Marimba",
+      "imageDescription": "Marimba One 4000-series Concert Marimba",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Vibes_joelocke_koeln2007.jpg",
+      "answer": "ויברפון",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Nadja von Massow (nadworks) · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vibes_joelocke_koeln2007.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Nadja von Massow (nadworks)",
+      "subjectSource": "https://en.wikipedia.org/wiki/Vibraphone",
+      "subjectTitle": "Vibraphone",
+      "imageDescription": "Musser vibraphone (played by Joe Locke at Köln (Germany) June 27, 2007)",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Glockenspiel-malletech.jpg/960px-Glockenspiel-malletech.jpg",
+      "answer": "גלוקנשפיל",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "flamurai · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Glockenspiel-malletech.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "flamurai",
+      "subjectSource": "https://en.wikipedia.org/wiki/Glockenspiel",
+      "subjectTitle": "Glockenspiel",
+      "imageDescription": "Photograph of a modern en:glockenspiel .",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/76/COLLECTIE_TROPENMUSEUM_Gong_hangend_in_een_standaard_onderdeel_van_gamelan_Semar_Pagulingan_TMnr_1340-13.jpg",
+      "answer": "גונג",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Tropenmuseum · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:COLLECTIE_TROPENMUSEUM_Gong_hangend_in_een_standaard_onderdeel_van_gamelan_Semar_Pagulingan_TMnr_1340-13.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Tropenmuseum",
+      "subjectSource": "https://en.wikipedia.org/wiki/Gong",
+      "subjectTitle": "Gong",
+      "imageDescription": "Gong, hanging in a frame, part of the Gamelan Semar Pagulingan",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/ZildjianCustomRide.jpg/960px-ZildjianCustomRide.jpg",
+      "answer": "מצלתיים",
+      "aliases": [
+        "מצילה"
+      ],
+      "difficulty": 4,
+      "credit": "Jdpaschal · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:ZildjianCustomRide.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Jdpaschal",
+      "subjectSource": "https://en.wikipedia.org/wiki/Cymbal",
+      "subjectTitle": "Cymbal",
+      "imageDescription": "Zildjian A Custom 22\" Ping Ride Cymbal",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Triangle_001.jpg/960px-Triangle_001.jpg",
+      "answer": "משולש (כלי נגינה)",
+      "aliases": [
+        "משולש"
+      ],
+      "difficulty": 4,
+      "credit": "Anonymous Unknown author · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Triangle_001.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Anonymous Unknown author",
+      "subjectSource": "https://en.wikipedia.org/wiki/Triangle_%28musical_instrument%29",
+      "subjectTitle": "Triangle (musical instrument)",
+      "imageDescription": "Picture of a Triangle and beater",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Castagnetten%2C_BK-NM-11430-78.jpg/960px-Castagnetten%2C_BK-NM-11430-78.jpg",
+      "answer": "קסטנייטות",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Rijksmuseum · CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Castagnetten,_BK-NM-11430-78.jpg",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Rijksmuseum",
+      "subjectSource": "https://en.wikipedia.org/wiki/Castanets",
+      "subjectTitle": "Castanets",
+      "imageDescription": "Identificatie Titel(s): Castagnetten Objecttype: muziekinstrument slaginstrument castagnet Objectnummer: BK-NM-11430-78 Omschrijving: Een paar castagnetten van bruin hout. Vervaardiging Vervaardiger: anoniem, anoniem Plaats vervaardiging: Italië (mogelijk). Spanje (mogelijk) Datering: 1800 - 1896 Materiaal: hout touw Afmetingen: per stuk: h 7,0 cm. × b 5,0 cm. × d 1,8 cm. bij elkaar: d 3,2 cm. Verwerving en rechten Credit line: Aankoop met steun van De Staat der Nederlanden en de Vereeniging van Noord-Nederlandsche Muziekgeschiedenis Verwerving: aankoop 1899 Copyright: Publiek domein",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Maracas.jpg",
+      "answer": "מרקס",
+      "aliases": [
+        "מאראקס"
+      ],
+      "difficulty": 4,
+      "credit": "Axel Heymann · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Maracas.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Axel Heymann",
+      "subjectSource": "https://en.wikipedia.org/wiki/Maraca",
+      "subjectTitle": "Maraca",
+      "imageDescription": "Maracas aus Holz",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Violin_VL100.png",
+      "answer": "כינור",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Just plain Bill · CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Violin_VL100.png",
+      "artist": "Just plain Bill",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Classical_Guitar_two_views.jpg/960px-Classical_Guitar_two_views.jpg",
+      "answer": "גיטרה",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Martin Möller · CC BY-SA 2.0 de",
+      "source": "https://commons.wikimedia.org/wiki/File:Classical_Guitar_two_views.jpg",
+      "artist": "Martin Möller",
+      "license": "CC BY-SA 2.0 de",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Steinway_%26_Sons_concert_grand_piano%2C_model_D-274%2C_manufactured_at_Steinway%27s_factory_in_Hamburg%2C_Germany.png/960px-Steinway_%26_Sons_concert_grand_piano%2C_model_D-274%2C_manufactured_at_Steinway%27s_factory_in_Hamburg%2C_Germany.png",
+      "answer": "פסנתר",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Steinway & Sons, 10 Rondenbarg, Hamburg D-22525, Germany, eu.steinway.com . Steinway & Sons, 1 Steinway Place, Long Island City, New York 11105, The United States, www.steinway.com . · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Steinway_%26_Sons_concert_grand_piano,_model_D-274,_manufactured_at_Steinway%27s_factory_in_Hamburg,_Germany.png",
+      "artist": "Steinway & Sons, 10 Rondenbarg, Hamburg D-22525, Germany, eu.steinway.com . Steinway & Sons, 1 Steinway Place, Long Island City, New York 11105, The United States, www.steinway.com .",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Gretsch_Catalina_Special_Edition_2020.jpg/960px-Gretsch_Catalina_Special_Edition_2020.jpg",
+      "answer": "תופים",
+      "aliases": [
+        "מערכת תופים"
+      ],
+      "difficulty": 2,
+      "credit": "w:de:User:claudioverfuerth · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gretsch_Catalina_Special_Edition_2020.jpg",
+      "artist": "w:de:User:claudioverfuerth",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Yamaha_Trumpet_YTR-8335LA_crop.jpg/960px-Yamaha_Trumpet_YTR-8335LA_crop.jpg",
+      "answer": "חצוצרה",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Yamaha Corporation · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Yamaha_Trumpet_YTR-8335LA_crop.jpg",
+      "artist": "Yamaha Corporation",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Cello_front_side.png",
+      "answer": "צ׳לו",
+      "aliases": [
+        "צלו"
+      ],
+      "difficulty": 2,
+      "credit": "Georg Feitscher · CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cello_front_side.png",
+      "artist": "Georg Feitscher",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/AGK_bass1_full.jpg/960px-AGK_bass1_full.jpg",
+      "answer": "קונטרבס",
+      "aliases": [],
+      "difficulty": 3,
+      "credit": "User:AndrewKepert · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:AGK_bass1_full.jpg",
+      "artist": "User:AndrewKepert",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Derbouka.jpg",
+      "answer": "דרבוקה",
+      "aliases": [],
+      "difficulty": 3,
+      "credit": "Abdelouali · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Derbouka.jpg",
+      "artist": "Abdelouali",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    }
+  ]
 }
