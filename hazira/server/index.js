@@ -310,17 +310,19 @@ const wss = new WebSocketServer({ server, path: '/ws' });
 
 /** פעולות שהלקוח יכול לבקש, ומי מורשה לבקש אותן. */
 const ACTIONS = {
-  start: (room) => room.game.start(),
+  start: (room, ws, msg) => room.game.mode === 'duel'
+    ? room.game.requestReady(ws.playerId, 'start', msg.epoch) : room.game.start(),
   challenge: (room, ws, msg) => room.game.challenge(ws.playerId, msg.defenderId),
   pass: (room, ws) => room.game.pass(ws.playerId),
   decide: (room, ws, msg) => room.game.decide(ws.playerId, msg.choice),
-  rematch: (room) => room.game.rematch(),
-  newmatch: (room) => room.game.newMatch(),
+  rematch: (room, ws, msg) => room.game.requestReady(ws.playerId, 'rematch', msg.epoch),
+  newmatch: (room, ws, msg) => room.game.requestReady(ws.playerId, 'newmatch', msg.epoch),
+  resume: (room, ws, msg) => room.game.requestReady(ws.playerId, 'resume', msg.epoch),
   surrender: (room, ws) => room.game.surrender(ws.playerId),
   answer: (room, ws, msg) => room.game.submitText(ws.playerId, msg.text || ''),
   speech: (room, ws, msg) => room.game.speech(ws.playerId, msg.transcript || '', !!msg.isFinal),
 };
-const PLAYER_ONLY = new Set(['challenge', 'pass', 'decide', 'answer', 'speech', 'rematch', 'newmatch', 'surrender']);
+const PLAYER_ONLY = new Set(['resume', 'challenge', 'pass', 'decide', 'answer', 'speech', 'rematch', 'newmatch', 'surrender']);
 
 wss.on('connection', (ws) => {
   ws.isAlive = true;
@@ -375,11 +377,7 @@ function handleHello(ws, msg) {
       } catch (err) {
         return send(ws, { t: 'error', message: err.message, fatal: true });
       }
-      // חדר משחק מהיר: ברגע ששני השחקנים בפנים, מתחילים בלי לחיצה נוספת
-      if (room.game.config.autoStart && room.game.phase === 'lobby'
-          && room.game.players.size === 2) {
-        try { room.game.start(); } catch { /* מישהו לחץ התחל בדיוק באותו רגע */ }
-      }
+
     }
   }
 
