@@ -183,7 +183,10 @@ test('דו־קרב עצמאי: שני טלפונים, הכרעה על השעון
   assert.equal(dana.state.gridSize, 0, 'לדו־קרב אין לוח');
 
   // בלי שלב בחירה — הזירה יורדת ישר לדו־קרב
-  dana.send({ t: 'start' });
+  dana.send({ t: 'start', epoch: dana.state.readiness.epoch });
+  await dana.until((_, s) => s.readiness.playerIds.length === 1);
+  assert.equal(dana.state.phase, 'lobby');
+  yossi.send({ t: 'start', epoch: dana.state.readiness.epoch });
   await dana.until((_, s) => s.phase === 'duel' && s.duel?.item, 9000);
 
   const { challengerId, defenderId } = dana.state.duel;
@@ -212,7 +215,10 @@ test('דו־קרב עצמאי: שני טלפונים, הכרעה על השעון
   assert.ok(dana.state.players.every((p) => p.alive));
 
   // ריאנץ': מי שהגן קודם מאתגר עכשיו, והקטגוריה השנייה נכנסת
-  defender.send({ t: 'rematch' });
+  defender.send({ t: 'rematch', epoch: dana.state.readiness.epoch });
+  await dana.until((_, s) => s.readiness.playerIds.length === 1);
+  assert.equal(dana.state.phase, 'finished');
+  challenger.send({ t: 'rematch', epoch: dana.state.readiness.epoch });
   await dana.until((_, s) => s.phase === 'duel' && s.duel?.item, 9000);
   assert.equal(dana.state.duel.challengerId, defenderId);
   assert.equal(dana.state.duel.defenderId, challengerId);
