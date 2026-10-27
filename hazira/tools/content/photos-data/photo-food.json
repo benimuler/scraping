@@ -1,0 +1,177 @@
+{
+ "id": "photo-food",
+ "name": "מאכלים (תמונות)",
+ "hint": "אומרים את שם המנה",
+ "items": [
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Das_coisas_simples_e_boas_da_vida._Aqui_na_Piazza_25_Aprile_%2825157691204%29.jpg/960px-Das_coisas_simples_e_boas_da_vida._Aqui_na_Piazza_25_Aprile_%2825157691204%29.jpg",
+   "answer": "פיצה",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Shoichi Iwashita · CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Das_coisas_simples_e_boas_da_vida._Aqui_na_Piazza_25_Aprile_(25157691204).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Bistro_56_Burger_and_French_Fries.jpg/960px-Bistro_56_Burger_and_French_Fries.jpg",
+   "answer": "המבורגר",
+   "aliases": [
+    "בורגר"
+   ],
+   "difficulty": 2,
+   "credit": "Yotam Nachum · CC0",
+   "source": "https://commons.wikimedia.org/wiki/File:Bistro_56_Burger_and_French_Fries.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/JapanesFood.jpg/960px-JapanesFood.jpg",
+   "answer": "סושי",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Shahzad Afzal · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:JapanesFood.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Hummus_from_The_Nile.jpg/960px-Hummus_from_The_Nile.jpg",
+   "answer": "חומוס",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Paul Goyette · CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Hummus_from_The_Nile.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Falafel_beim_Isarinselfest_M%C3%BCnchen_2.jpg/960px-Falafel_beim_Isarinselfest_M%C3%BCnchen_2.jpg",
+   "answer": "פלאפל",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Burkhard Mücke · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Falafel_beim_Isarinselfest_M%C3%BCnchen_2.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/PikiWiki_Israel_62597_shakshuka_beet.jpg/960px-PikiWiki_Israel_62597_shakshuka_beet.jpg",
+   "answer": "שקשוקה",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "ישראל פרקר · CC BY 2.5",
+   "source": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_62597_shakshuka_beet.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/%28Pasta%29_by_David_Adam_Kess_%28pic.2%29.jpg/960px-%28Pasta%29_by_David_Adam_Kess_%28pic.2%29.jpg",
+   "answer": "פסטה",
+   "aliases": [
+    "ספגטי"
+   ],
+   "difficulty": 2,
+   "credit": "David Adam Kess · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:(Pasta)_by_David_Adam_Kess_(pic.2).jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Bologna_sandwich.jpg",
+   "answer": "כריך",
+   "aliases": [
+    "סנדוויץ׳",
+    "סנדוויץ"
+   ],
+   "difficulty": 2,
+   "credit": "Diderot's dreams · CC BY 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Bologna_sandwich.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Maize_-_Corn.jpg/960px-Maize_-_Corn.jpg",
+   "answer": "טאקו",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "WiseMan42 · CC0",
+   "source": "https://commons.wikimedia.org/wiki/File:Maize_-_Corn.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Falafel%27s_Etc_-_Dinner.jpg/960px-Falafel%27s_Etc_-_Dinner.jpg",
+   "answer": "קציצות",
+   "aliases": [
+    "קציצה"
+   ],
+   "difficulty": 3,
+   "credit": "Ernesto Andrade · CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Falafel's_Etc_-_Dinner.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Red_lentil_soup.jpg",
+   "answer": "מרק עדשים",
+   "aliases": [
+    "מרק"
+   ],
+   "difficulty": 3,
+   "credit": "Gilabrand at English Wikipedia · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Red_lentil_soup.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/FoodOmelete.jpg/960px-FoodOmelete.jpg",
+   "answer": "חביתה",
+   "aliases": [
+    "אומלט"
+   ],
+   "difficulty": 2,
+   "credit": "Renee Comet (photographer) · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:FoodOmelete.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Bourekas.jpg/960px-Bourekas.jpg",
+   "answer": "בורקס",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Shlomif at en.wikipedia · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Bourekas.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Couscous.jpeg/960px-Couscous.jpeg",
+   "answer": "קוסקוס",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "User:Vinzv · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Couscous.jpeg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Wiener-Schnitzel02.jpg/960px-Wiener-Schnitzel02.jpg",
+   "answer": "שניצל",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Kobako · CC BY-SA 2.5",
+   "source": "https://commons.wikimedia.org/wiki/File:Wiener-Schnitzel02.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Pita_From_Greece.jpg/960px-Pita_From_Greece.jpg",
+   "answer": "פיתה",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Pita_From_Greece.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Challah_Bread_Six_Braid_1.JPG/960px-Challah_Bread_Six_Braid_1.JPG",
+   "answer": "חלה",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Aviv Hod · CC BY 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Challah_Bread_Six_Braid_1.JPG"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/HK_SW_Wing_Lok_Street_FWD_Financial_Centre_shop_Maxim%27s_MX_Restaurant_afternoon_meal_food_July_2020_SS2_02.jpg/960px-HK_SW_Wing_Lok_Street_FWD_Financial_Centre_shop_Maxim%27s_MX_Restaurant_afternoon_meal_food_July_2020_SS2_02.jpg",
+   "answer": "נקניקייה בלחמנייה",
+   "aliases": [
+    "נקניקיה בלחמניה",
+    "הוט דוג"
+   ],
+   "difficulty": 2,
+   "credit": "Lim Tsze Kin 207073 · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:HK_SW_Wing_Lok_Street_FWD_Financial_Centre_shop_Maxim's_MX_Restaurant_afternoon_meal_food_July_2020_SS2_02.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Farshirovannyi_peretz.jpg/960px-Farshirovannyi_peretz.jpg",
+   "answer": "פלפל ממולא",
+   "aliases": [
+    "ממולאים"
+   ],
+   "difficulty": 4,
+   "credit": "User:Zserghei · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Farshirovannyi_peretz.jpg"
+  }
+ ]
+}
