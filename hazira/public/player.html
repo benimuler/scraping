@@ -13,6 +13,7 @@
 </head>
 <body>
 <div class="flash" id="flash"></div>
+<button id="sound-toggle" type="button" class="chip sound-toggle" aria-label="השתקת צלילים">🔊</button>
 
 <main class="phone">
   <!-- סרגל התקדמות: נוכח במסכים שאינם דו־קרב -->
@@ -115,7 +116,7 @@
   <section class="screen center" id="s-quickwait" hidden>
     <div class="status-dot"></div>
     <h1>מחפשים יריב אקראי…</h1>
-    <p class="muted">ברגע שמישהו נוסף יפתח משחק מהיר, תשובצו יחד אוטומטית.
+    <p class="muted">ברגע שמישהו נוסף יפתח משחק מהיר, תשובצו יחד. המשחק יתחיל רק אחרי ששניכם תאשרו מוכנות.
       אם אף אחד לא מחובר כרגע — ההמתנה פשוט תימשך. אפשר לבטל ולחזור מאוחר יותר.</p>
     <button class="btn ghost lg" id="quick-cancel">ביטול</button>
   </section>
@@ -126,6 +127,7 @@
     <h1 id="intro-versus">—</h1>
     <div class="my-cat" id="intro-cat">—</div>
     <p class="muted" id="intro-role">—</p>
+    <h1 id="intro-countdown" aria-live="polite"></h1>
   </section>
 
   <!-- תורי לבחור יריב -->
@@ -223,6 +225,7 @@
       <div class="unlocked" id="reward-unlocked"></div>
     </div>
 
+    <p class="muted" id="ready-note" aria-live="polite"></p>
     <button class="btn primary lg" id="btn-rematch" hidden>סיבוב נוסף — הפעם בקטגוריה שלך</button>
     <button class="btn primary lg" id="btn-newmatch" hidden>משחק חדש מול אותו יריב</button>
     <div class="mini-board" id="over-board"></div>
