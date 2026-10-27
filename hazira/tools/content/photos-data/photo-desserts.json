@@ -1,0 +1,130 @@
+{
+ "id": "photo-desserts",
+ "name": "קינוחים (תמונות)",
+ "hint": "אומרים את שם הקינוח",
+ "items": [
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Classic_Hanukkah_sufganiyot.JPG/960px-Classic_Hanukkah_sufganiyot.JPG",
+   "answer": "סופגנייה",
+   "aliases": [
+    "סופגניה"
+   ],
+   "difficulty": 2,
+   "credit": "Noam Furer · CC0",
+   "source": "https://commons.wikimedia.org/wiki/File:Classic_Hanukkah_sufganiyot.JPG"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/2018_01_Croissant_IMG_0685.JPG/960px-2018_01_Croissant_IMG_0685.JPG",
+   "answer": "קרואסון",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Daniela Kloth · GFDL 1.2",
+   "source": "https://commons.wikimedia.org/wiki/File:2018_01_Croissant_IMG_0685.JPG"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Chocolate_fudge_cake.jpg",
+   "answer": "עוגת שוקולד",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Tracy Hunter from Kabul,, Afghanistan · CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Chocolate_fudge_cake.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Cheesecake_Crumbs-Israeli_style_%D7%A2%D7%95%D7%92%D7%AA_%D7%92%D7%91%D7%99%D7%A0%D7%94_%D7%A4%D7%99%D7%A8%D7%95%D7%A8%D7%99%D7%9D.jpg/960px-Cheesecake_Crumbs-Israeli_style_%D7%A2%D7%95%D7%92%D7%AA_%D7%92%D7%91%D7%99%D7%A0%D7%94_%D7%A4%D7%99%D7%A8%D7%95%D7%A8%D7%99%D7%9D.jpg",
+   "answer": "עוגת גבינה",
+   "aliases": [
+    "עוגת גבינה אפויה"
+   ],
+   "difficulty": 2,
+   "credit": "Peteravivangel · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Cheesecake_Crumbs-Israeli_style_%D7%A2%D7%95%D7%92%D7%AA_%D7%92%D7%91%D7%99%D7%A0%D7%94_%D7%A4%D7%99%D7%A8%D7%95%D7%A8%D7%99%D7%9D.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Vanila_ice_cream_and_other_flavours.jpg/960px-Vanila_ice_cream_and_other_flavours.jpg",
+   "answer": "גלידה",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Laliv g · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Vanila_ice_cream_and_other_flavours.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Foodiesfeed.com_pouring-honey-on-pancakes-with-walnuts.jpg/960px-Foodiesfeed.com_pouring-honey-on-pancakes-with-walnuts.jpg",
+   "answer": "פנקייק",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Mae Mu · CC0",
+   "source": "https://commons.wikimedia.org/wiki/File:Foodiesfeed.com_pouring-honey-on-pancakes-with-walnuts.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Acibadem_Kurabiyesi.jpg",
+   "answer": "מקרון",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Mcozturk at English Wikipedia · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Acibadem_Kurabiyesi.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Tiramisu_Fanes.jpg",
+   "answer": "טירמיסו",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Markus Mitterauer from Austria aka addicted · CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Tiramisu_Fanes.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/3/34/Chocolate02.jpg",
+   "answer": "שוקולד",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Chocolate02.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Tootsie-Roll-Pop-Orange.jpg/960px-Tootsie-Roll-Pop-Orange.jpg",
+   "answer": "סוכרייה על מקל",
+   "aliases": [
+    "סוכריה על מקל"
+   ],
+   "difficulty": 2,
+   "credit": "Evan-Amos · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Tootsie-Roll-Pop-Orange.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Doughnut.jpg/960px-Doughnut.jpg",
+   "answer": "דונאט",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Angeldm · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Doughnut.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Koekjestrommel_open.jpg",
+   "answer": "עוגייה",
+   "aliases": [
+    "עוגיה",
+    "עוגיות"
+   ],
+   "difficulty": 2,
+   "credit": "Pudding4brains · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Koekjestrommel_open.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/2014_0531_Cr%C3%A8me_br%C3%BBl%C3%A9e_Doi_Mae_Salong_%28cropped%29.jpg/960px-2014_0531_Cr%C3%A8me_br%C3%BBl%C3%A9e_Doi_Mae_Salong_%28cropped%29.jpg",
+   "answer": "קרם ברולה",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "Takeaway · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:2014_0531_Cr%C3%A8me_br%C3%BBl%C3%A9e_Doi_Mae_Salong_(cropped).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Apple_pie.jpg/960px-Apple_pie.jpg",
+   "answer": "פאי תפוחים",
+   "aliases": [
+    "פאי"
+   ],
+   "difficulty": 3,
+   "credit": "Dan Parsons · CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Apple_pie.jpg"
+  }
+ ]
+}
