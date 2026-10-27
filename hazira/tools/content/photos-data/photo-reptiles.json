@@ -1,0 +1,111 @@
+{
+ "id": "photo-reptiles",
+ "name": "זוחלים (תמונות)",
+ "hint": "אומרים את שם הזוחל",
+ "items": [
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Crocodilia_collage2.jpg/960px-Crocodilia_collage2.jpg",
+   "answer": "תנין",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "MathKnight · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Crocodilia_collage2.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Cobra_hood.jpg",
+   "answer": "קוברה",
+   "aliases": [
+    "נחש קוברה"
+   ],
+   "difficulty": 2,
+   "credit": "Saleem Hameed · CC BY 2.5",
+   "source": "https://commons.wikimedia.org/wiki/File:Cobra_hood.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Marine-Iguana-Espanola.jpg/960px-Marine-Iguana-Espanola.jpg",
+   "answer": "איגואנה",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Benjamint444 · GFDL 1.2",
+   "source": "https://commons.wikimedia.org/wiki/File:Marine-Iguana-Espanola.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Chamaeleonidae-01.jpg/960px-Chamaeleonidae-01.jpg",
+   "answer": "זיקית",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "MathKnight · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Chamaeleonidae-01.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Testudo_x4.jpg/960px-Testudo_x4.jpg",
+   "answer": "צב יבשה",
+   "aliases": [
+    "צב"
+   ],
+   "difficulty": 2,
+   "credit": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Testudo_x4.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Taggecko_Phelsuma_madagascariensis_060114_1.jpg/960px-Taggecko_Phelsuma_madagascariensis_060114_1.jpg",
+   "answer": "שממית",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "No machine-readable author provided. BS Thurner Hof assumed (based on copyright claims). · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Taggecko_Phelsuma_madagascariensis_060114_1.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Anaconda_Range.jpg",
+   "answer": "אנקונדה",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Bubblesorg · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Anaconda_Range.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Gekko_gecko_%28rock%29_by_Robert_Michniewicz.jpg/960px-Gekko_gecko_%28rock%29_by_Robert_Michniewicz.jpg",
+   "answer": "גקו",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Robert Michniewicz · CC BY 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Gekko_gecko_(rock)_by_Robert_Michniewicz.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Ybkom_1b_%287687416142%29.jpg/960px-Ybkom_1b_%287687416142%29.jpg",
+   "answer": "דרקון קומודו",
+   "aliases": [
+    "לטאת כוח"
+   ],
+   "difficulty": 4,
+   "credit": "Greg Goebel from Loveland CO, USA · CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Ybkom_1b_(7687416142).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Roughtail_rock_agama_%28Stellagama_stellio_brachydactyla%29_2.jpg/960px-Roughtail_rock_agama_%28Stellagama_stellio_brachydactyla%29_2.jpg",
+   "answer": "חרדון",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Charles J. Sharp · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Roughtail_rock_agama_(Stellagama_stellio_brachydactyla)_2.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/ArbeLevy-Vipera_palaestinae_3.jpg/960px-ArbeLevy-Vipera_palaestinae_3.jpg",
+   "answer": "צפע",
+   "aliases": [
+    "צפע מצוי"
+   ],
+   "difficulty": 4,
+   "credit": "ארבל לוי-ArbeLevy, לוכד נחשים · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:ArbeLevy-Vipera_palaestinae_3.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Benny_Trapp_Malpolon_insignitus.jpg/960px-Benny_Trapp_Malpolon_insignitus.jpg",
+   "answer": "קשקשן",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "Benny Trapp · CC BY 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Benny_Trapp_Malpolon_insignitus.jpg"
+  }
+ ]
+}
