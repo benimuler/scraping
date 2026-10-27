@@ -1,131 +1,433 @@
 {
- "id": "photo-flowers",
- "name": "פרחים (תמונות)",
- "hint": "אומרים את שם הפרח",
- "items": [
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Small_Red_Rose.JPG/960px-Small_Red_Rose.JPG",
-   "answer": "ורד",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Small_Red_Rose.JPG"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/a/a9/A_sunflower.jpg",
-   "answer": "חמנייה",
-   "aliases": [
-    "חמניה"
-   ],
-   "difficulty": 2,
-   "credit": "Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:A_sunflower.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Tulipa_gesneriana_001.jpg",
-   "answer": "צבעוני",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Katalinks (who is also \"Екатерина\"). Original uploader was Katalinks at ru.wikipedia · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Tulipa_gesneriana_001.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Vandeae_various_examples.jpg/960px-Vandeae_various_examples.jpg",
-   "answer": "סחלב",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Angraecum_infundibulare.jpg: Planta cultivada no Jardim Botânico do Rio de Janeiro, fotografia de M. A. P. Accardo Filho. Vanda-lissochiloides.jpg: Giovanelli derivative work: Anna Frodesiak (talk) · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Vandeae_various_examples.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Narzisse.jpg/960px-Narzisse.jpg",
-   "answer": "נרקיס",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "Martin Hirtreiter · CC BY 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Narzisse.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/Cyclamen_purpurascens_280803.jpg",
-   "answer": "רקפת",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Cyclamen_purpurascens_280803.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Kalanyot.jpg/960px-Kalanyot.jpg",
-   "answer": "כלנית",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Takpic · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Kalanyot.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Madonna_Lilly_-_enhanced.jpg/960px-Madonna_Lilly_-_enhanced.jpg",
-   "answer": "סוסן",
-   "aliases": [
-    "שושן"
-   ],
-   "difficulty": 3,
-   "credit": "Arielinson · CC BY-SA 4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Madonna_Lilly_-_enhanced.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Pacratium_maritimum_Paestum.jpg/960px-Pacratium_maritimum_Paestum.jpg",
-   "answer": "חבצלת השרון",
-   "aliases": [
-    "חבצלת"
-   ],
-   "difficulty": 3,
-   "credit": "User:Stemonitis · CC BY-SA 2.5",
-   "source": "https://commons.wikimedia.org/wiki/File:Pacratium_maritimum_Paestum.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Gerbera_Israel_2024.jpg/960px-Gerbera_Israel_2024.jpg",
-   "answer": "ג׳רברה",
-   "aliases": [
-    "גרברה"
-   ],
-   "difficulty": 3,
-   "credit": "Laliv g · CC BY-SA 4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Gerbera_Israel_2024.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Iris_sibirica_Bobrovnya4.JPG/960px-Iris_sibirica_Bobrovnya4.JPG",
-   "answer": "אירוס",
-   "aliases": [
-    "איריס"
-   ],
-   "difficulty": 3,
-   "credit": "Аимаина хикари · CC0",
-   "source": "https://commons.wikimedia.org/wiki/File:Iris_sibirica_Bobrovnya4.JPG"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Jim_Clark_1965.jpg/960px-Jim_Clark_1965.jpg",
-   "answer": "לוטוס",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "Unknown photographer; NL-HaNA, ANEFO / neg. stroken, 1945-1989, 2.24.01.05, item number 918-4009 · CC0",
-   "source": "https://commons.wikimedia.org/wiki/File:Jim_Clark_1965.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Starr_030418-0058_Bougainvillea_spectabilis.jpg/960px-Starr_030418-0058_Bougainvillea_spectabilis.jpg",
-   "answer": "בוגנוויליה",
-   "aliases": [],
-   "difficulty": 4,
-   "credit": "Forest &amp; Kim Starr · CC BY 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Starr_030418-0058_Bougainvillea_spectabilis.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Chrysanthemum_weyrichii_2.jpg",
-   "answer": "חרצית",
-   "aliases": [
-    "מרגריטה"
-   ],
-   "difficulty": 3,
-   "credit": "Ghislain118 (AD) http://www.fleurs-des-montagnes.net · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Chrysanthemum_weyrichii_2.jpg"
-  }
- ]
+  "id": "photo-flowers",
+  "name": "פרחים (תמונות)",
+  "hint": "אומרים את שם הפרח",
+  "items": [
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Common_Jasmine.jpg/960px-Common_Jasmine.jpg",
+      "answer": "יסמין (צמח)",
+      "aliases": [
+        "יסמין"
+      ],
+      "difficulty": 4,
+      "credit": "Jim Evans · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Common_Jasmine.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Jim Evans",
+      "subjectSource": "https://en.wikipedia.org/wiki/Jasmine",
+      "subjectTitle": "Jasmine",
+      "imageDescription": "Common (officinale) Jasmine",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Gardeniaflower.jpg/960px-Gardeniaflower.jpg",
+      "answer": "גרדניה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Queerbubbles · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gardeniaflower.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Queerbubbles",
+      "subjectSource": "https://en.wikipedia.org/wiki/Gardenia",
+      "subjectTitle": "Gardenia",
+      "imageDescription": "Gardenia flower from the gardens at Monticello",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Pet%C3%BAnia_%28do_tupi_petyma%2C_%27tabaco%27%29.jpg/960px-Pet%C3%BAnia_%28do_tupi_petyma%2C_%27tabaco%27%29.jpg",
+      "answer": "פטוניה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Gabriel Collares · CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pet%C3%BAnia_(do_tupi_petyma,_%27tabaco%27).jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "Gabriel Collares",
+      "subjectSource": "https://en.wikipedia.org/wiki/Petunia",
+      "subjectTitle": "Petunia",
+      "imageDescription": "Petúnia (Petunia sp.). Nome com origem última no tupi petyma, 'tabaco'. Por sua semelhança com a flor do tabaco (ambas são espécies da família das solanáceas), foi nomeada com base no nome indígena para o fumo, mais precisamente o nome vindo do dialeto tupinambá, petym. O responsável pela nomeação foi Antoine-Laurent de Jussieu, botânico francês, em 1803.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Hydrangea_arborescens_139866012.jpg/960px-Hydrangea_arborescens_139866012.jpg",
+      "answer": "הידרנגאה",
+      "aliases": [
+        "הידרנג'אה"
+      ],
+      "difficulty": 4,
+      "credit": "Jacob Malcom · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hydrangea_arborescens_139866012.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Jacob Malcom",
+      "subjectSource": "https://en.wikipedia.org/wiki/Hydrangea",
+      "subjectTitle": "Hydrangea",
+      "imageDescription": "wild hydrangea ( Hydrangea arborescens )",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/PaeoniaSuffruticosa7.jpg/960px-PaeoniaSuffruticosa7.jpg",
+      "answer": "אדמונית",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Taken by Fanghong · CC BY 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:PaeoniaSuffruticosa7.jpg",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+      "artist": "Taken by Fanghong",
+      "subjectSource": "https://en.wikipedia.org/wiki/Peony",
+      "subjectTitle": "Peony",
+      "imageDescription": "Peony",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Geranium_February_2008-1.jpg/960px-Geranium_February_2008-1.jpg",
+      "answer": "גרניום",
+      "aliases": [
+        "גרניון"
+      ],
+      "difficulty": 4,
+      "credit": "Alvesgaspar · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Geranium_February_2008-1.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Alvesgaspar",
+      "subjectSource": "https://en.wikipedia.org/wiki/Geranium",
+      "subjectTitle": "Geranium",
+      "imageDescription": "Cut-leaved Crane's-bill ( Geranium dissectum ).",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3b/W_carnation4051.jpg",
+      "answer": "ציפורן",
+      "aliases": [
+        "ציפורן הקרינפול"
+      ],
+      "difficulty": 4,
+      "credit": "草花写真館 · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:W_carnation4051.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "草花写真館",
+      "subjectSource": "https://en.wikipedia.org/wiki/Dianthus_caryophyllus",
+      "subjectTitle": "Dianthus caryophyllus",
+      "imageDescription": "カーネーション 撮影場所： 広見町 撮影日：2004年5月23日",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Anthurium3.JPG/960px-Anthurium3.JPG",
+      "answer": "אנתוריום",
+      "aliases": [
+        "אנתוריון"
+      ],
+      "difficulty": 4,
+      "credit": "N. Perrault, auteur du guide complet du canotage · CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Anthurium3.JPG",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "N. Perrault, auteur du guide complet du canotage",
+      "subjectSource": "https://en.wikipedia.org/wiki/Anthurium",
+      "subjectTitle": "Anthurium",
+      "imageDescription": "Anthurium sp.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Ave-do-para%C3%ADso%2C_Strelitzia_reginae%2C_em_Bag%C3%A9%2C_Rio_Grande_do_Sul%2C_Brasil_-_55211233712.jpg/960px-Ave-do-para%C3%ADso%2C_Strelitzia_reginae%2C_em_Bag%C3%A9%2C_Rio_Grande_do_Sul%2C_Brasil_-_55211233712.jpg",
+      "answer": "ציפור גן עדן",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Gabriel Collares · CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ave-do-para%C3%ADso,_Strelitzia_reginae,_em_Bag%C3%A9,_Rio_Grande_do_Sul,_Brasil_-_55211233712.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "Gabriel Collares",
+      "subjectSource": "https://en.wikipedia.org/wiki/Strelitzia_reginae",
+      "subjectTitle": "Strelitzia reginae",
+      "imageDescription": "Ave-do-paraíso, Strelitzia reginae, em Bagé, Rio Grande do Sul, Brasil",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Alstroemeria_aurantiaca.jpg/960px-Alstroemeria_aurantiaca.jpg",
+      "answer": "אלסטרומריה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "JJ Harrison ( https://www.jjharrison.com.au/ ) · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Alstroemeria_aurantiaca.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "JJ Harrison ( https://www.jjharrison.com.au/ )",
+      "subjectSource": "https://en.wikipedia.org/wiki/Alstroemeria",
+      "subjectTitle": "Alstroemeria",
+      "imageDescription": "Alstroemeria aurea in southern Tasmania, Australia",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Persian_Buttercup_01.jpg/960px-Persian_Buttercup_01.jpg",
+      "answer": "נורית אסיה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "SuperJew · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Persian_Buttercup_01.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "SuperJew",
+      "subjectSource": "https://en.wikipedia.org/wiki/Ranunculus_asiaticus",
+      "subjectTitle": "Ranunculus asiaticus",
+      "imageDescription": "A Persian Buttercup ( Ranunculus asiaticus ) in the Nataf area.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Papaver_rhoeas_Lincolnshire_2026.jpg/960px-Papaver_rhoeas_Lincolnshire_2026.jpg",
+      "answer": "פרג אגסני",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Kieran Roy Powell · CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Papaver_rhoeas_Lincolnshire_2026.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "Kieran Roy Powell",
+      "subjectSource": "https://en.wikipedia.org/wiki/Papaver_rhoeas",
+      "subjectTitle": "Papaver rhoeas",
+      "imageDescription": "Flower of Papaver rhoeas, Lincolnshire, England",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Lupinus_polyphyllus_526960203.jpg/960px-Lupinus_polyphyllus_526960203.jpg",
+      "answer": "תורמוס",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Cheongweei Gan · CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lupinus_polyphyllus_526960203.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "Cheongweei Gan",
+      "subjectSource": "https://en.wikipedia.org/wiki/Lupinus",
+      "subjectTitle": "Lupinus",
+      "imageDescription": "Large-leaved lupine ( Lupinus polyphyllus ) in Sweden",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Antirrhinum_majus_BCBG_%2802%29.jpg/960px-Antirrhinum_majus_BCBG_%2802%29.jpg",
+      "answer": "לוע הארי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Craig Franklin · CC BY-SA 3.0 au",
+      "source": "https://commons.wikimedia.org/wiki/File:Antirrhinum_majus_BCBG_(02).jpg",
+      "license": "CC BY-SA 3.0 au",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/au/deed.en",
+      "artist": "Craig Franklin",
+      "subjectSource": "https://en.wikipedia.org/wiki/Antirrhinum",
+      "subjectTitle": "Antirrhinum",
+      "imageDescription": "The making of this file was supported by Wikimedia Australia . To see other files made with WM-AU support, please see the category Supported by Wikimedia Australia .",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Chinese_Wisteria_Bl%C3%BCtentrauben.JPG/960px-Chinese_Wisteria_Bl%C3%BCtentrauben.JPG",
+      "answer": "ויסטריה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "3268zauber · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chinese_Wisteria_Bl%C3%BCtentrauben.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "3268zauber",
+      "subjectSource": "https://en.wikipedia.org/wiki/Wisteria",
+      "subjectTitle": "Wisteria",
+      "imageDescription": "Chinesische Wisteria (Wisteria sinensis) / auch Chinesischer Blauregen genannt",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Magnolia_sieboldii_flower_1.jpg/960px-Magnolia_sieboldii_flower_1.jpg",
+      "answer": "מגנוליה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "William (Ned) Friedman · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Magnolia_sieboldii_flower_1.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "William (Ned) Friedman",
+      "subjectSource": "https://en.wikipedia.org/wiki/Magnolia",
+      "subjectTitle": "Magnolia",
+      "imageDescription": "Magnolia sieboldii flower, male phase.​ Arnold Arboretum of Harvard University, accession #404-97*A.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Camellia_sasanqua1JAM343.jpg/960px-Camellia_sasanqua1JAM343.jpg",
+      "answer": "קמליה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "junichiro aoyama from Kyoto, Japan · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Camellia_sasanqua1JAM343.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "junichiro aoyama from Kyoto, Japan",
+      "subjectSource": "https://en.wikipedia.org/wiki/Camellia",
+      "subjectTitle": "Camellia",
+      "imageDescription": "Camellia sasanqua",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Plumeria_rubra-4.JPG/960px-Plumeria_rubra-4.JPG",
+      "answer": "פלומריה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Varun Pabrai · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Plumeria_rubra-4.JPG",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Varun Pabrai",
+      "subjectSource": "https://en.wikipedia.org/wiki/Plumeria",
+      "subjectTitle": "Plumeria",
+      "imageDescription": "a very fragrant pink flower",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Tagetes_erecta_chendumalli_chedi.jpg/960px-Tagetes_erecta_chendumalli_chedi.jpg",
+      "answer": "טגטס",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Ezhuttukari · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tagetes_erecta_chendumalli_chedi.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Ezhuttukari",
+      "subjectSource": "https://en.wikipedia.org/wiki/Tagetes",
+      "subjectTitle": "Tagetes",
+      "imageDescription": "Tagetes erecta full plant.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Zinnia_single_layer_and_12_Petals_2.jpg/960px-Zinnia_single_layer_and_12_Petals_2.jpg",
+      "answer": "ציניה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "শক্তিশেল · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Zinnia_single_layer_and_12_Petals_2.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "শক্তিশেল",
+      "subjectSource": "https://en.wikipedia.org/wiki/Zinnia",
+      "subjectTitle": "Zinnia",
+      "imageDescription": "Zinnia is a genus of plants of the sunflower tribe within the daisy family. They are native to scrub and dry grassland in an area stretching from the Southwestern United States to South America, with a centre of diversity in Mexico. Members of the genus are notable for their solitary long-stemmed flowers that come in a variety of bright colors. The genus name honors German master botanist Johann Gottfried Zinn (1727–59). This photo is taken at TSR in Tripura, India.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Myosotis_arvensis_ois.JPG/960px-Myosotis_arvensis_ois.JPG",
+      "answer": "זכריני",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Sedum Tauno Erik · CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Myosotis_arvensis_ois.JPG",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+      "artist": "Sedum Tauno Erik",
+      "subjectSource": "https://en.wikipedia.org/wiki/Myosotis",
+      "subjectTitle": "Myosotis",
+      "imageDescription": "Põld lõosilma õis.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Convallaria_majalis_inflorescence_-_Keila.jpg/960px-Convallaria_majalis_inflorescence_-_Keila.jpg",
+      "answer": "שושנת העמקים (צמח)",
+      "aliases": [
+        "שושנת העמקים"
+      ],
+      "difficulty": 4,
+      "credit": "Ivar Leidus · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Convallaria_majalis_inflorescence_-_Keila.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Ivar Leidus",
+      "subjectSource": "https://en.wikipedia.org/wiki/Lily_of_the_valley",
+      "subjectTitle": "Lily of the valley",
+      "imageDescription": "Lily of the valley inflorescence",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Nerium_oleander_flowers_leaves.jpg/960px-Nerium_oleander_flowers_leaves.jpg",
+      "answer": "הרדוף",
+      "aliases": [
+        "הרדוף הנחלים"
+      ],
+      "difficulty": 4,
+      "credit": "Alvesgaspar · CC BY 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Nerium_oleander_flowers_leaves.jpg",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+      "artist": "Alvesgaspar",
+      "subjectSource": "https://en.wikipedia.org/wiki/Nerium",
+      "subjectTitle": "Nerium",
+      "imageDescription": "Flowers and leaves of Nerium oleander",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/LantanaFlowerLeaves.jpg/960px-LantanaFlowerLeaves.jpg",
+      "answer": "לנטנה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Alvesgaspar · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:LantanaFlowerLeaves.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Alvesgaspar",
+      "subjectSource": "https://en.wikipedia.org/wiki/Lantana",
+      "subjectTitle": "Lantana",
+      "imageDescription": "Flower and leaves of Lantana camara",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Narzisse.jpg/960px-Narzisse.jpg",
+      "answer": "נרקיס",
+      "aliases": [],
+      "difficulty": 3,
+      "credit": "Martin Hirtreiter · CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Narzisse.jpg",
+      "artist": "Martin Hirtreiter",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Madonna_Lilly_-_enhanced.jpg/960px-Madonna_Lilly_-_enhanced.jpg",
+      "answer": "שושן צחור",
+      "aliases": [
+        "שושן"
+      ],
+      "difficulty": 3,
+      "credit": "Arielinson · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Madonna_Lilly_-_enhanced.jpg",
+      "artist": "Arielinson",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Iris_sibirica_Bobrovnya4.JPG/960px-Iris_sibirica_Bobrovnya4.JPG",
+      "answer": "אירוס",
+      "aliases": [
+        "איריס"
+      ],
+      "difficulty": 3,
+      "credit": "Аимаина хикари · CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Iris_sibirica_Bobrovnya4.JPG",
+      "artist": "Аимаина хикари",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Starr_030418-0058_Bougainvillea_spectabilis.jpg/960px-Starr_030418-0058_Bougainvillea_spectabilis.jpg",
+      "answer": "בוגנוויליה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Forest & Kim Starr · CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Starr_030418-0058_Bougainvillea_spectabilis.jpg",
+      "artist": "Forest & Kim Starr",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "reviewed": true
+    }
+  ]
 }
