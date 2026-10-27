@@ -1,0 +1,131 @@
+{
+ "id": "photo-bugs",
+ "name": "חרקים (תמונות)",
+ "hint": "אומרים את שם החרק",
+ "items": [
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Monarch_Butterfly_Red_Zinnia_2050px.jpg/960px-Monarch_Butterfly_Red_Zinnia_2050px.jpg",
+   "answer": "פרפר מונרך",
+   "aliases": [
+    "מונרך",
+    "דנאית מלכותית"
+   ],
+   "difficulty": 3,
+   "credit": "Photo (c)2006 Derek Ramsey (Ram-Man) · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Monarch_Butterfly_Red_Zinnia_2050px.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Apis_mellifera_%2852848692477%29.jpg/960px-Apis_mellifera_%2852848692477%29.jpg",
+   "answer": "דבורה",
+   "aliases": [
+    "דבורת דבש"
+   ],
+   "difficulty": 2,
+   "credit": "Gilles San Martin from Namur, Belgium · CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Apis_mellifera_(52848692477).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Polistes_in_Catalonia.jpg/960px-Polistes_in_Catalonia.jpg",
+   "answer": "צרעה",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Hans Hillewaert · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Polistes_in_Catalonia.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Carpenter_ant_Tanzania_crop.jpg/960px-Carpenter_ant_Tanzania_crop.jpg",
+   "answer": "נמלה",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Muhammad Mahdi Karim · GFDL 1.2",
+   "source": "https://commons.wikimedia.org/wiki/File:Carpenter_ant_Tanzania_crop.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Musca_domestica_housefly.jpg/960px-Musca_domestica_housefly.jpg",
+   "answer": "זבוב",
+   "aliases": [
+    "זבוב הבית"
+   ],
+   "difficulty": 3,
+   "credit": "Muhammad Mahdi Karim · GFDL 1.2",
+   "source": "https://commons.wikimedia.org/wiki/File:Musca_domestica_housefly.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Mosquito_-_Ochlerotatus_canadensis%2C_Pickering_Creek_Audubon_Center%2C_Easton%2C_Maryland.jpg/960px-Mosquito_-_Ochlerotatus_canadensis%2C_Pickering_Creek_Audubon_Center%2C_Easton%2C_Maryland.jpg",
+   "answer": "יתוש",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Judy Gallagher · CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Mosquito_-_Ochlerotatus_canadensis%2C_Pickering_Creek_Audubon_Center%2C_Easton%2C_Maryland.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Tettigonia_virdissima_nymph_on_Phleum_pratense.jpg/960px-Tettigonia_virdissima_nymph_on_Phleum_pratense.jpg",
+   "answer": "חרגול",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Richard Bartz, Munich aka Makro Freak Image:MFB.jpg · CC BY-SA 2.5",
+   "source": "https://commons.wikimedia.org/wiki/File:Tettigonia_virdissima_nymph_on_Phleum_pratense.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Tick_male_%28aka%29.jpg",
+   "answer": "קרצית",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "André Karwath aka Aka · CC BY-SA 2.5",
+   "source": "https://commons.wikimedia.org/wiki/File:Tick_male_(aka).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Xenopsylla_cheopis_flea_PHIL_2069_lores.jpg/960px-Xenopsylla_cheopis_flea_PHIL_2069_lores.jpg",
+   "answer": "פרעוש",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "CDC/Dr. Pratt · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Xenopsylla_cheopis_flea_PHIL_2069_lores.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Libellulidae_%28Japan%29.jpg/960px-Libellulidae_%28Japan%29.jpg",
+   "answer": "שפירית",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Alpsdake · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Libellulidae_(Japan).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/7-Spotted-Ladybug-Coccinella-septempunctata-sq1.jpg/960px-7-Spotted-Ladybug-Coccinella-septempunctata-sq1.jpg",
+   "answer": "פרת משה רבנו",
+   "aliases": [
+    "חיפושית נקודה",
+    "חיפושית"
+   ],
+   "difficulty": 2,
+   "credit": "Photographer: Dominik Stodulski Graphic Processing: User:MathKnight · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:7-Spotted-Ladybug-Coccinella-septempunctata-sq1.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Solea_solea_%281_week%29.jpg/960px-Solea_solea_%281_week%29.jpg",
+   "answer": "זחל",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Hans Hillewaert · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Solea_solea_(1_week).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Scorpiones-01.jpg/960px-Scorpiones-01.jpg",
+   "answer": "עקרב",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "MathKnight · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Scorpiones-01.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Flickr_-_Lukjonis_-_Jumping_spider_-_Evarcha_arcuata_%28Set_of_pictures%29_%281%29.jpg/960px-Flickr_-_Lukjonis_-_Jumping_spider_-_Evarcha_arcuata_%28Set_of_pictures%29_%281%29.jpg",
+   "answer": "קופצני",
+   "aliases": [
+    "קופצנית"
+   ],
+   "difficulty": 5,
+   "credit": "Lukas Jonaitis from Vilnius, Lithuania · CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Flickr_-_Lukjonis_-_Jumping_spider_-_Evarcha_arcuata_(Set_of_pictures)_(1).jpg"
+  }
+ ]
+}
