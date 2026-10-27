@@ -1,154 +1,606 @@
 {
- "id": "photo-vehicles",
- "name": "כלי תחבורה (תמונות)",
- "hint": "אומרים את כלי התחבורה",
- "items": [
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/1966_Toyota_Corolla_02.jpg/960px-1966_Toyota_Corolla_02.jpg",
-   "answer": "מכונית",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Mytho88 · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:1966_Toyota_Corolla_02.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Trucks.gif",
-   "answer": "משאית",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "siehe unten/see below - Zusammenstellung durch/Combination by Magellan · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Trucks.gif"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Purple_Harley_Davidson_%E2%80%93_Front.jpg/960px-Purple_Harley_Davidson_%E2%80%93_Front.jpg",
-   "answer": "אופנוע",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "בר · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Purple_Harley_Davidson_%E2%80%93_Front.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/%D7%A4%D7%93%D7%9C.jpg/960px-%D7%A4%D7%93%D7%9C.jpg",
-   "answer": "אופניים",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "YB13B · CC BY-SA 4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:%D7%A4%D7%93%D7%9C.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Buses02.jpg",
-   "answer": "אוטובוס",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "MathKnight · CC BY 2.5",
-   "source": "https://commons.wikimedia.org/wiki/File:Buses02.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Piaggio_X8_400_2007_Scooter.jpg/960px-Piaggio_X8_400_2007_Scooter.jpg",
-   "answer": "קטנוע",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "Khaosaming · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Piaggio_X8_400_2007_Scooter.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Modern-tractor.jpg/960px-Modern-tractor.jpg",
-   "answer": "טרקטור",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Solitude · CC BY-SA 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Modern-tractor.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/4X-EDA_Micha_A.jpg/960px-4X-EDA_Micha_A.jpg",
-   "answer": "מטוס נוסעים",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "LLHZ2805 · CC BY-SA 4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:4X-EDA_Micha_A.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/LAPD_Bell_206_Jetranger.jpg/960px-LAPD_Bell_206_Jetranger.jpg",
-   "answer": "מסוק",
-   "aliases": [
-    "הליקופטר"
-   ],
-   "difficulty": 2,
-   "credit": "Mfield - Matthew Field, http://www.photography.mattfield.com · CC BY 2.5",
-   "source": "https://commons.wikimedia.org/wiki/File:LAPD_Bell_206_Jetranger.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Yachts_in_the_marina_-_geograph.org.uk_-_4696913.jpg/960px-Yachts_in_the_marina_-_geograph.org.uk_-_4696913.jpg",
-   "answer": "יאכטה",
-   "aliases": [
-    "ספינה"
-   ],
-   "difficulty": 3,
-   "credit": "Steve Fareham · CC BY-SA 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Yachts_in_the_marina_-_geograph.org.uk_-_4696913.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Netanya_198808e1.jpg/960px-Netanya_198808e1.jpg",
-   "answer": "רכבת",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Nick Slocombe · Attribution",
-   "source": "https://commons.wikimedia.org/wiki/File:Netanya_198808e1.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/0/00/Halle_ad_Saale_Strassenbahn.jpg",
-   "answer": "חשמלית",
-   "aliases": [
-    "טרם"
-   ],
-   "difficulty": 3,
-   "credit": "Markv · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Halle_ad_Saale_Strassenbahn.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Taxi_in_Israel_Gett_and_Yango.jpg/960px-Taxi_in_Israel_Gett_and_Yango.jpg",
-   "answer": "מונית",
-   "aliases": [
-    "טקסי"
-   ],
-   "difficulty": 2,
-   "credit": "Vcohen · CC BY-SA 4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Taxi_in_Israel_Gett_and_Yango.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Four_wheeler.jpg/960px-Four_wheeler.jpg",
-   "answer": "טרקטורון",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "fir0002 flagstaffotos [at] gmail.com Canon 20D + Tamron 28-75mm f/2.8 · GFDL 1.2",
-   "source": "https://commons.wikimedia.org/wiki/File:Four_wheeler.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Heftruck.JPG/960px-Heftruck.JPG",
-   "answer": "מלגזה",
-   "aliases": [],
-   "difficulty": 4,
-   "credit": "Vitaly Volkov · CC BY 2.5",
-   "source": "https://commons.wikimedia.org/wiki/File:Heftruck.JPG"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Oasis_of_the_Seas_%28cropped%29.jpg/960px-Oasis_of_the_Seas_%28cropped%29.jpg",
-   "answer": "אוניית תענוגות",
-   "aliases": [
-    "אוניה",
-    "אוניית נוסעים"
-   ],
-   "difficulty": 3,
-   "credit": "Baldwin040 · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Oasis_of_the_Seas_(cropped).jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Falcon31.jpg/960px-Falcon31.jpg",
-   "answer": "מטוס קרב",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "U.S. Air Force photo by Tech. Sgt. Kevin Gruenwald · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Falcon31.jpg"
-  }
- ]
+  "id": "photo-vehicles",
+  "name": "כלי תחבורה (תמונות)",
+  "hint": "אומרים את כלי התחבורה",
+  "items": [
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Stockholm%2C_ambulans%2C_2014%2C_21.jpg/960px-Stockholm%2C_ambulans%2C_2014%2C_21.jpg",
+      "answer": "אמבולנס",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "AleWi · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Stockholm,_ambulans,_2014,_21.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "AleWi",
+      "subjectSource": "https://en.wikipedia.org/wiki/Ambulance",
+      "subjectTitle": "Ambulance",
+      "imageDescription": "Ambulans vid S:t Jacobs kyrka under Kulturfestivalen.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Dublin_Fire_Brigade_Pump_Ladder_D32.jpg/960px-Dublin_Fire_Brigade_Pump_Ladder_D32.jpg",
+      "answer": "כבאית",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "William Murphy · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dublin_Fire_Brigade_Pump_Ladder_D32.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "William Murphy",
+      "subjectSource": "https://en.wikipedia.org/wiki/Fire_engine",
+      "subjectTitle": "Fire engine",
+      "imageDescription": "Dublin Fire Brigade is the largest full time brigade in the country. They provide a fire and emergency response service to 1.2 million people throughout the city and county of Dublin. Dublin has 15 fire stations with over 850 fire services personnel.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Washington_DC_Metropolitan_Police_Department_Dodge_Charger_No._1605.jpg/960px-Washington_DC_Metropolitan_Police_Department_Dodge_Charger_No._1605.jpg",
+      "answer": "ניידת משטרה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Raymond Wambsgans · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Washington_DC_Metropolitan_Police_Department_Dodge_Charger_No._1605.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Raymond Wambsgans",
+      "subjectSource": "https://en.wikipedia.org/wiki/Police_car",
+      "subjectTitle": "Police car",
+      "imageDescription": "Washington DC Metropolitan Police Department Dodge Charger No. 1605",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/SnowmobilesYellowstone.jpg/960px-SnowmobilesYellowstone.jpg",
+      "answer": "אופנוע שלג",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "(NPS Photo), uploaded by en:User:Great Scott . · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:SnowmobilesYellowstone.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "(NPS Photo), uploaded by en:User:Great Scott .",
+      "subjectSource": "https://en.wikipedia.org/wiki/Snowmobile",
+      "subjectTitle": "Snowmobile",
+      "imageDescription": "A snowmobile tour at Yellowstone National Park",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Xiaomi_M365_blanche.jpg/960px-Xiaomi_M365_blanche.jpg",
+      "answer": "קורקינט חשמלי",
+      "aliases": [
+        "קורקינט ממונע"
+      ],
+      "difficulty": 4,
+      "credit": "Axel.206 · CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Xiaomi_M365_blanche.jpg",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Axel.206",
+      "subjectSource": "https://en.wikipedia.org/wiki/E-scooter",
+      "subjectTitle": "E-scooter",
+      "imageDescription": "Xiaomi M365 blanche",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Black_x2_and_white_i2.jpg",
+      "answer": "סגוויי",
+      "aliases": [
+        "רכינוע"
+      ],
+      "difficulty": 4,
+      "credit": "Source: aleehk82 [1] Derivative work: 丁 ( talk ) · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Black_x2_and_white_i2.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Source: aleehk82 [1] Derivative work: 丁 ( talk )",
+      "subjectSource": "https://en.wikipedia.org/wiki/Segway",
+      "subjectTitle": "Segway",
+      "imageDescription": "Two kinds of Segway PTs.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Jamesunicycle.jpg/960px-Jamesunicycle.jpg",
+      "answer": "חד אופן",
+      "aliases": [
+        "חד-אופן"
+      ],
+      "difficulty": 4,
+      "credit": "BuckyB89 · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jamesunicycle.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "BuckyB89",
+      "subjectSource": "https://en.wikipedia.org/wiki/Unicycle",
+      "subjectTitle": "Unicycle",
+      "imageDescription": "man riding unicycle",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Tandem_bike_with_double_electric_batteries.jpg/960px-Tandem_bike_with_double_electric_batteries.jpg",
+      "answer": "אופני טנדם",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "FrogsLegs71 · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tandem_bike_with_double_electric_batteries.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "FrogsLegs71",
+      "subjectSource": "https://en.wikipedia.org/wiki/Tandem_bicycle",
+      "subjectTitle": "Tandem bicycle",
+      "imageDescription": "Tandem bike with double electric batteries",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Corsa_bacchetta.jpg",
+      "answer": "אופני שכיבה",
+      "aliases": [
+        "אופנוח"
+      ],
+      "difficulty": 4,
+      "credit": "The original uploader was Jeffssmith1 at English Wikipedia . · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Corsa_bacchetta.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "The original uploader was Jeffssmith1 at English Wikipedia .",
+      "subjectSource": "https://en.wikipedia.org/wiki/Recumbent_bicycle",
+      "subjectTitle": "Recumbent bicycle",
+      "imageDescription": "Bacchetta Corsa model, from website with permission",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Yamaha_Drive_2_golf_car.jpg/960px-Yamaha_Drive_2_golf_car.jpg",
+      "answer": "קלנועית גולף",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Eveningbeach · CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Yamaha_Drive_2_golf_car.jpg",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Eveningbeach",
+      "subjectSource": "https://en.wikipedia.org/wiki/Golf_cart",
+      "subjectTitle": "Golf cart",
+      "imageDescription": "Yamaha golf car in golf course. Florida, USA.",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/69/Man_in_wheelchair_with_AFO_braces_and_crutches_b.jpg",
+      "answer": "כיסא גלגלים",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "File:Man in wheelchair with AFO braces and crutches.jpg : Pagemaker787 derivative work: Georgfotoart · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Man_in_wheelchair_with_AFO_braces_and_crutches_b.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "File:Man in wheelchair with AFO braces and crutches.jpg : Pagemaker787 derivative work: Georgfotoart",
+      "subjectSource": "https://en.wikipedia.org/wiki/Wheelchair",
+      "subjectTitle": "Wheelchair",
+      "imageDescription": "Man in wheelchair wearing AFO braces",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/CatD9T.jpg/960px-CatD9T.jpg",
+      "answer": "דחפור",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Shaun Greiner · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:CatD9T.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Shaun Greiner",
+      "subjectSource": "https://en.wikipedia.org/wiki/Bulldozer",
+      "subjectTitle": "Bulldozer",
+      "imageDescription": "Caterpillar D9T",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Excavator_Postiguet_Beach_2.jpg/960px-Excavator_Postiguet_Beach_2.jpg",
+      "answer": "מחפר",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "kallerna · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Excavator_Postiguet_Beach_2.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "kallerna",
+      "subjectSource": "https://en.wikipedia.org/wiki/Excavator",
+      "subjectTitle": "Excavator",
+      "imageDescription": "Excavator on Postiguet Beach, Alicante.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Backhoe_loader_Cat420E_left.jpg/960px-Backhoe_loader_Cat420E_left.jpg",
+      "answer": "מחפרון",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Shaun Greiner from Creve Coeur, United States of America · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Backhoe_loader_Cat420E_left.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Shaun Greiner from Creve Coeur, United States of America",
+      "subjectSource": "https://en.wikipedia.org/wiki/Backhoe_loader",
+      "subjectTitle": "Backhoe loader",
+      "imageDescription": "Caterpillar 420E IT backhoe loader, left side",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/John_Deere_roller%2C_U.S._Navy%2C_Camp_Covington%2C_NMCB-133%2C_080928-N-1106H-001.jpg/960px-John_Deere_roller%2C_U.S._Navy%2C_Camp_Covington%2C_NMCB-133%2C_080928-N-1106H-001.jpg",
+      "answer": "מכבש",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Builder 2nd Class Stuart Helvie, U.S. Navy (U.S. Navy photo) · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:John_Deere_roller,_U.S._Navy,_Camp_Covington,_NMCB-133,_080928-N-1106H-001.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Builder 2nd Class Stuart Helvie, U.S. Navy (U.S. Navy photo)",
+      "subjectSource": "https://en.wikipedia.org/wiki/Road_roller",
+      "subjectTitle": "Road roller",
+      "imageDescription": "Builder 3rd Class Jeremy Stanowski uses a John Deere roller. 080928-N-1106H-001 CAMP COVINGTON, Guam (Sept. 28, 2008) Builder 3rd Class Jeremy Stanowski, assigned to Naval Mobile Construction Battalion (NMCB) 133, uses a John Deere Caterpillar roller to properly compact the ground before placing concrete during the construction of their \"Hardstand\" project at Camp Covington. NMCB-133 is on a seven-month deployment. — Released (Text by U.S. Navy) This is a Caterpillar, not a John Deere - look at the style of cab and steering column housing.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Corn_combine_harvest_with_grain_cart-4.jpg/960px-Corn_combine_harvest_with_grain_cart-4.jpg",
+      "answer": "קומביין",
+      "aliases": [
+        "קומביין תבואות"
+      ],
+      "difficulty": 4,
+      "credit": "Wikideas1 · CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Corn_combine_harvest_with_grain_cart-4.jpg",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Wikideas1",
+      "subjectSource": "https://en.wikipedia.org/wiki/Combine_harvester",
+      "subjectTitle": "Combine harvester",
+      "imageDescription": "Corn combine harvest with grain cart",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Freightliner_M2_106_6x4_2014_%2814240376744%29.jpg/960px-Freightliner_M2_106_6x4_2014_%2814240376744%29.jpg",
+      "answer": "משאית עפר",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "order_242 from Chile · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Freightliner_M2_106_6x4_2014_(14240376744).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "order_242 from Chile",
+      "subjectSource": "https://en.wikipedia.org/wiki/Dump_truck",
+      "subjectTitle": "Dump truck",
+      "imageDescription": "Freightliner M2 106 6x4 2014",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Bois_d%27Arc_Bash_2016_43_%28parade%29.jpg/960px-Bois_d%27Arc_Bash_2016_43_%28parade%29.jpg",
+      "answer": "גרר (רכב)",
+      "aliases": [
+        "גרר"
+      ],
+      "difficulty": 4,
+      "credit": "Michael Barera · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bois_d%27Arc_Bash_2016_43_(parade).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Michael Barera",
+      "subjectSource": "https://en.wikipedia.org/wiki/Tow_truck",
+      "subjectTitle": "Tow truck",
+      "imageDescription": "A Benson Bros. Wrecker Service, Inc. Dodge Ram tow truck in the parade at the 31st Annual Bois d'Arc Bash in Commerce , Texas ( United States ).",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Peugeot-204-cabriolet-de-1968-rouge-China-1135-villegiature-arriere.jpg/960px-Peugeot-204-cabriolet-de-1968-rouge-China-1135-villegiature-arriere.jpg",
+      "answer": "מכונית גג נפתח",
+      "aliases": [
+        "קבריולה"
+      ],
+      "difficulty": 4,
+      "credit": "Rundvald · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Peugeot-204-cabriolet-de-1968-rouge-China-1135-villegiature-arriere.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Rundvald",
+      "subjectSource": "https://en.wikipedia.org/wiki/Convertible",
+      "subjectTitle": "Convertible",
+      "imageDescription": "A beautiful and charming Peugeot 204 convertible China red 1135 from 1968 (53 hp DIN, 6 tax horsepower), on holiday by the sea.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Opel_Astra_Caravan_1.9_CDTI_rear.JPG/960px-Opel_Astra_Caravan_1.9_CDTI_rear.JPG",
+      "answer": "סטיישן",
+      "aliases": [
+        "מכונית סטיישן"
+      ],
+      "difficulty": 4,
+      "credit": "M 93 · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Opel_Astra_Caravan_1.9_CDTI_rear.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "M 93",
+      "subjectSource": "https://en.wikipedia.org/wiki/Station_wagon",
+      "subjectTitle": "Station wagon",
+      "imageDescription": "Opel Astra Caravan",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/2019_Chrysler_Pacifica_Touring_L%2C_front_7.4.19.jpg/960px-2019_Chrysler_Pacifica_Touring_L%2C_front_7.4.19.jpg",
+      "answer": "מיניוואן",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Kevauto · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2019_Chrysler_Pacifica_Touring_L,_front_7.4.19.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Kevauto",
+      "subjectSource": "https://en.wikipedia.org/wiki/Minivan",
+      "subjectTitle": "Minivan",
+      "imageDescription": "A 2019 Chrysler Pacifica photographed in Kew Gardens Hills, Queens , New York , USA",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/1994_Toyota_T100_Deluxe%2C_rear_left.jpg/960px-1994_Toyota_T100_Deluxe%2C_rear_left.jpg",
+      "answer": "טנדר",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Mr.choppers · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:1994_Toyota_T100_Deluxe,_rear_left.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Mr.choppers",
+      "subjectSource": "https://en.wikipedia.org/wiki/Pickup_truck",
+      "subjectTitle": "Pickup truck",
+      "imageDescription": "1994 Toyota T100 Deluxe in Greenwich, CT.",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/32/Hymer-Motorhome.JPG",
+      "answer": "קרוואן ממונע",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "S.parker755 · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hymer-Motorhome.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "S.parker755",
+      "subjectSource": "https://en.wikipedia.org/wiki/Motorhome",
+      "subjectTitle": "Motorhome",
+      "imageDescription": "A Hymer Coachbuilt Motorhome",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Polish_army_conducts_live-fire_training_180613-Z-CN767-067.jpg/960px-Polish_army_conducts_live-fire_training_180613-Z-CN767-067.jpg",
+      "answer": "נגמש",
+      "aliases": [
+        "נגמ\"ש"
+      ],
+      "difficulty": 4,
+      "credit": "Spc. Robert Douglas, Michigan Army National Guard · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Polish_army_conducts_live-fire_training_180613-Z-CN767-067.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Spc. Robert Douglas, Michigan Army National Guard",
+      "subjectSource": "https://en.wikipedia.org/wiki/Armoured_personnel_carrier",
+      "subjectTitle": "Armoured personnel carrier",
+      "imageDescription": "A Polish army Kolowy Transporter Opancerzony Rosomak, or “KTO Wolverine”, waits for a live-fire training exercise to begin at Bemowo Piskie Training Area June 13, 2018. Saber Strike 18 is the eighth iteration of the long-standing U.S. Army Europe-led cooperative training exercise designed to enhance interoperability among allies and regional partners. (Michigan Army National Guard photo by Spc. Robert Douglas/ released.)",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/US_Navy_040730-N-1234E-002_PCU_Virginia_%28SSN_774%29_returns_to_the_General_Dynamics_Electric_Boat_shipyard.jpg/960px-US_Navy_040730-N-1234E-002_PCU_Virginia_%28SSN_774%29_returns_to_the_General_Dynamics_Electric_Boat_shipyard.jpg",
+      "answer": "צוללת",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "U.S. Navy photo by General Dynamics Electric Boat · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:US_Navy_040730-N-1234E-002_PCU_Virginia_(SSN_774)_returns_to_the_General_Dynamics_Electric_Boat_shipyard.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "U.S. Navy photo by General Dynamics Electric Boat",
+      "subjectSource": "https://en.wikipedia.org/wiki/Submarine",
+      "subjectTitle": "Submarine",
+      "imageDescription": "Groton, Conn. (July 30, 2004) - The nation’s newest and most advanced nuclear-powered attack submarine and the lead ship of its class, PCU Virginia (SSN 774) returns to the General Dynamics Electric Boat shipyard following the successful completion of its first voyage in open seas called \"alpha\" sea trials. Virginia is the Navy’s only major combatant ready to join the fleet that was designed with the post-Cold War security environment in mind and embodies the war fighting and operational capabilities required to dominate the littorals while maintaining undersea dominance in the open ocean. Virginia and the rest of the ships of its class are designed specifically to incorporate emergent technologies that will provide new capabilities to meet new threats. Virginia will be delivered to the U.S. Navy this fall. U.S. Navy photo by General Dynamics Electric Boat (RELEASED)",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/DFDS_Transmanche_Ferry_loading_at_Newhaven_Harbour.jpg/960px-DFDS_Transmanche_Ferry_loading_at_Newhaven_Harbour.jpg",
+      "answer": "מעבורת",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "FrogsLegs71 · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:DFDS_Transmanche_Ferry_loading_at_Newhaven_Harbour.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "FrogsLegs71",
+      "subjectSource": "https://en.wikipedia.org/wiki/Ferry",
+      "subjectTitle": "Ferry",
+      "imageDescription": "DFDS Transmanche Ferry loading at Newhaven Harbour",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Gondola_Ride.jpg/960px-Gondola_Ride.jpg",
+      "answer": "גונדולה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Njsmith3 · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gondola_Ride.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Njsmith3",
+      "subjectSource": "https://en.wikipedia.org/wiki/Gondola",
+      "subjectTitle": "Gondola",
+      "imageDescription": "Gondola Ride A photo by Shaun Bowden kindly released by his widow",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Couple_of_teenagers_riding_a_jetski_splashing_on_the_Mekong_in_Laos.jpg/960px-Couple_of_teenagers_riding_a_jetski_splashing_on_the_Mekong_in_Laos.jpg",
+      "answer": "אופנוע ים",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Basile Morin · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Couple_of_teenagers_riding_a_jetski_splashing_on_the_Mekong_in_Laos.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Basile Morin",
+      "subjectSource": "https://en.wikipedia.org/wiki/Jet_ski",
+      "subjectTitle": "Jet ski",
+      "imageDescription": "Couple of teenagers riding a jetski splashing on the Mekong in Don Det, Si Phan Don , Laos .",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/2006_Ojiya_balloon_festival_011.jpg/960px-2006_Ojiya_balloon_festival_011.jpg",
+      "answer": "כדור פורח",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Kropsoq · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2006_Ojiya_balloon_festival_011.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Kropsoq",
+      "subjectSource": "https://en.wikipedia.org/wiki/Hot_air_balloon",
+      "subjectTitle": "Hot air balloon",
+      "imageDescription": "2006 Ojiya Balloon Festival (2006年おぢや風船一揆)",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Zeppellin_NT_amk.JPG/960px-Zeppellin_NT_amk.JPG",
+      "answer": "ספינת אוויר",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "AngMoKio · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Zeppellin_NT_amk.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "AngMoKio",
+      "subjectSource": "https://en.wikipedia.org/wiki/Airship",
+      "subjectTitle": "Airship",
+      "imageDescription": "Zeppelin NT",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Baku_Funicular.jpg/960px-Baku_Funicular.jpg",
+      "answer": "פוניקולר",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "AlixSaz · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Baku_Funicular.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "AlixSaz",
+      "subjectSource": "https://en.wikipedia.org/wiki/Funicular",
+      "subjectTitle": "Funicular",
+      "imageDescription": "Wagons of the funicular on the road. Baku, Azerbaijan",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Number_4468_Mallard_in_York.jpg/960px-Number_4468_Mallard_in_York.jpg",
+      "answer": "קטר קיטור",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "PTG Dudva · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Number_4468_Mallard_in_York.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "PTG Dudva",
+      "subjectSource": "https://en.wikipedia.org/wiki/Steam_locomotive",
+      "subjectTitle": "Steam locomotive",
+      "imageDescription": "The famous speed record holding steam locomotive No. 4468 Mallard at the National Railway Museum in York. Having been a long term static exhibit here a few yards away inside the Great Hall, she is pictured here outside in the summer sun, on one of the two turntable access sidings on the north side of the hall. This venture outside was so she could be posed alongside new build steam locomotive No. 60163 Tornado (pictured in this image on the other siding). This was because the next day Tornado was to be given the honour of towing Mallard to the NRM's satellite site, the Shildon Locomotion Museum in County Durham. This would be first time Mallard would be seen on the main line for a number of years. See this image for a picture of the move taking place. She was returned to York over a year later on 19 July 2011, this time towed by No. 5972 Olton Hall (of Harry Potter fame).",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/1966_Toyota_Corolla_02.jpg/960px-1966_Toyota_Corolla_02.jpg",
+      "answer": "מכונית",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Mytho88 · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:1966_Toyota_Corolla_02.jpg",
+      "artist": "Mytho88",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Purple_Harley_Davidson_%E2%80%93_Front.jpg/960px-Purple_Harley_Davidson_%E2%80%93_Front.jpg",
+      "answer": "אופנוע",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "בר · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Purple_Harley_Davidson_%E2%80%93_Front.jpg",
+      "artist": "בר",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Piaggio_X8_400_2007_Scooter.jpg/960px-Piaggio_X8_400_2007_Scooter.jpg",
+      "answer": "קטנוע",
+      "aliases": [],
+      "difficulty": 3,
+      "credit": "Khaosaming · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Piaggio_X8_400_2007_Scooter.jpg",
+      "artist": "Khaosaming",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Modern-tractor.jpg/960px-Modern-tractor.jpg",
+      "answer": "טרקטור",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Solitude · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Modern-tractor.jpg",
+      "artist": "Solitude",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/4X-EDA_Micha_A.jpg/960px-4X-EDA_Micha_A.jpg",
+      "answer": "מטוס נוסעים",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "LLHZ2805 · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:4X-EDA_Micha_A.jpg",
+      "artist": "LLHZ2805",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/LAPD_Bell_206_Jetranger.jpg/960px-LAPD_Bell_206_Jetranger.jpg",
+      "answer": "מסוק",
+      "aliases": [
+        "הליקופטר"
+      ],
+      "difficulty": 2,
+      "credit": "Mfield - Matthew Field, http://www.photography.mattfield.com · CC BY 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:LAPD_Bell_206_Jetranger.jpg",
+      "artist": "Mfield - Matthew Field, http://www.photography.mattfield.com",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Oasis_of_the_Seas_%28cropped%29.jpg/960px-Oasis_of_the_Seas_%28cropped%29.jpg",
+      "answer": "אוניית תענוגות",
+      "aliases": [
+        "אוניה",
+        "אוניית נוסעים"
+      ],
+      "difficulty": 3,
+      "credit": "Baldwin040 · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Oasis_of_the_Seas_(cropped).jpg",
+      "artist": "Baldwin040",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Falcon31.jpg/960px-Falcon31.jpg",
+      "answer": "מטוס קרב",
+      "aliases": [],
+      "difficulty": 3,
+      "credit": "U.S. Air Force photo by Tech. Sgt. Kevin Gruenwald · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Falcon31.jpg",
+      "artist": "U.S. Air Force photo by Tech. Sgt. Kevin Gruenwald",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "reviewed": true
+    }
+  ]
 }
