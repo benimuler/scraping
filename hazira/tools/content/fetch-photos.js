@@ -1,150 +1,62 @@
 'use strict';
-
 /**
- * בונה את photos-data.json: לכל פריט ב-photos-def.js שולף את תמונת הערך
- * מוויקיפדיה העברית (pageimage — תמונה אמיתית), ובונוס: קרדיט ורישיון
- * מוויקימדיה קומונס. הריצו פעם אחת וכשמעדכנים הגדרות:
+ * Reviewed photo pools live in photos-data/<category>.json.
+ * Do not automatically substitute Wikipedia search hits: a licensed photo can
+ * still be the wrong subject (the old pipeline selected a portrait for lotus).
  *
- *   node tools/content/fetch-photos.js
- *
- * התוצאה נכנסת לריפו, כדי שה-build (גם ב-Render) לא יהיה תלוי ברשת.
+ * node tools/content/fetch-photos.js            Offline safety validation.
+ * node tools/content/fetch-photos.js --refresh  Recheck current Commons license
+ * metadata, preserving reviewed image choices. Writes only if ALL checks pass.
+ * New subjects require exact-page provenance and manual pixel review first.
  */
-
 const fs = require('fs');
 const path = require('path');
-const { CATEGORIES } = require('./photos-def');
-
-const HE_API = 'https://he.wikipedia.org/w/api.php';
-const COMMONS_API = 'https://commons.wikimedia.org/w/api.php';
-const OUT = path.join(__dirname, 'photos-data.json');
-const THUMB_WIDTH = 640;
-
-async function api(base, params) {
-  const url = `${base}?${new URLSearchParams({ action: 'query', format: 'json', formatversion: '2', ...params })}`;
-  const res = await fetch(url, { headers: { 'user-agent': 'hazira-content-builder/1.0 (trivia game; contact: hazirapicduel@mailfence.com)' } });
-  if (!res.ok) throw new Error(`${res.status} ${url}`);
-  return res.json();
-}
-
-const stripHtml = (html) => String(html || '')
-  .replace(/<[^>]+>/g, ' ')
-  .replace(/\s+/g, ' ')
-  .trim();
-
-/**
- * מחזיר מפה title-> {image, pageimage} לערכים שיש להם תמונה.
- * המפתח הוא הכותרת המקורית מההגדרות, גם אחרי הפניות ונרמול —
- * אחרת "ארנב" הולך לאיבוד כשוויקיפדיה פותרת אותו ל"ארנבים".
- */
-async function fetchThumbs(titles) {
-  const out = new Map();
-  for (let i = 0; i < titles.length; i += 50) {
-    const batch = titles.slice(i, i + 50);
-    const data = await api(HE_API, {
-      prop: 'pageimages',
-      piprop: 'thumbnail',
-      pithumbsize: String(THUMB_WIDTH),
-      redirects: '1',
-      titles: batch.join('|'),
-    });
-    const resolved = new Map();
-    for (const n of data.query?.normalized || []) resolved.set(n.to, n.from);
-    for (const r of data.query?.redirects || []) resolved.set(r.to, resolved.get(r.from) || r.from);
-    for (const page of Object.values(data.query?.pages || {})) {
-      if (!page.thumbnail?.source) continue;
-      const from = resolved.get(page.title) || page.title;
-      out.set(from, { image: page.thumbnail.source, pageimage: page.pageimage });
-    }
+const DIR = path.join(__dirname, 'photos-data');
+const strip = (s) => String(s || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+const free = (s) => /^(CC BY(?:-SA)? [1234]|CC0|Public domain)/.test(s) && !/NC|ND/.test(s);
+function validate(category) {
+  const answers = new Set();
+  const images = new Set();
+  for (const item of category.items) {
+    if (!item.answer || !item.reviewed) throw Error(`${category.id}: missing answer/pixel review`);
+    if (!free(item.license) || !item.artist || !item.credit) throw Error(`${category.id}/${item.answer}: missing free license/credit`);
+    const source = new URL(item.source);
+    const image = new URL(item.image);
+    if (source.hostname !== 'commons.wikimedia.org' || !source.pathname.startsWith('/wiki/File:')) throw Error('Invalid Commons source');
+    if (!['upload.wikimedia.org', 'thumb.wikimedia.org'].includes(image.hostname) || !/\.(jpe?g|png|webp)$/i.test(image.pathname)) throw Error('Not a reviewed raster asset');
+    if (answers.has(item.answer) || images.has(item.image)) throw Error(`${category.id}: duplicate answer/image`);
+    answers.add(item.answer); images.add(item.image);
   }
-  // fallback לכותרות שהשאילתה המקובצת החמיצה: REST summary עוקב אחרי הפניות,
-  // ואם גם זה לא מצליח — חיפוש חופשי ולוקחים את התוצאה הראשונה
-  for (const title of titles) {
-    if (out.has(title)) continue;
-    try {
-      const search = await api(HE_API, { list: 'search', srsearch: title, srnamespace: '0', srlimit: '1' });
-      const hit = search.query?.search?.[0]?.title;
-      if (hit) {
-        const data = await api(HE_API, {
-          prop: 'pageimages', piprop: 'thumbnail', pithumbsize: String(THUMB_WIDTH), redirects: '1', titles: hit,
-        });
-        const page = data.query?.pages?.[0];
-        if (page?.thumbnail?.source) {
-          out.set(title, { image: page.thumbnail.source, pageimage: page.pageimage });
-          continue;
-        }
-      }
-    } catch { /* ממשיכים ל-REST */ }
-    try {
-      const res = await fetch(`https://he.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`, {
-        headers: { 'user-agent': 'hazira-content-builder/1.0 (contact: hazirapicduel@mailfence.com)' },
-      });
-      if (!res.ok) continue;
-      const d = await res.json();
-      const image = d.thumbnail?.source;
-      if (!image) continue;
-      // שם הקובץ מחולץ מה-URL כדי שנוכל למשוך קרדיט מקומונס
-      const clean = image.split('?')[0];
-      const m = clean.match(/\/thumb\/[^/]+\/[^/]+\/([^/]+)\//) || clean.match(/\/wikipedia\/[^/]+\/[^/]+\/[^/]+\/([^/]+)$/);
-      out.set(title, { image, pageimage: m ? decodeURIComponent(m[1]) : null });
-    } catch { /* השאר בלי תמונה */ }
-  }
-  return out;
 }
-
-/** קרדיט ורישיון לקבצים מקומונס, באצוות של 50. */
-async function fetchCredits(pageimages) {
-  const out = new Map();
-  const titles = pageimages.map((f) => `File:${f}`);
-  for (let i = 0; i < titles.length; i += 50) {
-    const batch = titles.slice(i, i + 50);
-    const data = await api(COMMONS_API, { prop: 'imageinfo', iiprop: 'extmetadata', titles: batch.join('|') });
-    for (const page of Object.values(data.query?.pages || {})) {
-      const meta = page.imageinfo?.[0]?.extmetadata;
-      if (!meta) continue;
-      const artist = stripHtml(meta.Artist?.value);
-      const license = stripHtml(meta.LicenseShortName?.value);
-      const file = (page.title || '').replace(/^File:/, '');
-      if (artist || license) out.set(file, { artist, license });
-    }
-  }
-  return out;
-}
-
 async function main() {
-  const titles = [...new Set(CATEGORIES.flatMap((c) => c.items.map((i) => i[0])))];
-  console.log(`שולף תמונות ל-${titles.length} ערכים…`);
-  const thumbs = await fetchThumbs(titles);
-
-  const missing = titles.filter((t) => !thumbs.has(t));
-  if (missing.length) console.warn(`⚠ בלי תמונה (${missing.length}): ${missing.join(', ')}`);
-
-  console.log('שולף קרדיטים מקומונס…');
-  const credits = await fetchCredits([...new Set([...thumbs.values()].map((t) => t.pageimage).filter(Boolean))]);
-
-  let itemCount = 0;
-  const categories = [];
-  for (const cat of CATEGORIES) {
-    const items = [];
-    for (const [title, answer, aliases, difficulty] of cat.items) {
-      const thumb = thumbs.get(title);
-      if (!thumb) continue;
-      const credit = credits.get(thumb.pageimage);
-      items.push({
-        image: thumb.image,
-        answer,
-        aliases,
-        difficulty,
-        credit: credit ? [credit.artist, credit.license].filter(Boolean).join(' · ') : 'ויקימדיה קומונס',
-        source: `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(thumb.pageimage)}`,
-      });
-      itemCount++;
+  const files = fs.readdirSync(DIR).filter((f) => f.endsWith('.json')).sort();
+  const categories = files.map((f) => JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8')));
+  categories.forEach(validate);
+  if (process.argv.includes('--refresh')) {
+    for (const c of categories) {
+      for (let n = 0; n < c.items.length; n += 20) {
+        const batch = c.items.slice(n, n + 20);
+        const titles = batch.map((i) => decodeURIComponent(new URL(i.source).pathname.slice('/wiki/'.length)));
+        const url = new URL('https://commons.wikimedia.org/w/api.php');
+        url.search = new URLSearchParams({action: 'query', format: 'json', formatversion: '2', prop: 'imageinfo', iiprop: 'extmetadata', titles: titles.join('|')});
+        const response = await fetch(url, {headers: {'User-Agent': 'PicDuelContent/2.0 (hazirapicduel@mailfence.com)'}});
+        if (!response.ok) throw Error(`Commons ${response.status}; no files written`);
+        const data = await response.json();
+        const pages = new Map((data.query?.pages || []).map((p) => [p.title.replaceAll(' ', '_'), p]));
+        batch.forEach((i, k) => {
+          const meta = pages.get(titles[k].replaceAll(' ', '_'))?.imageinfo?.[0]?.extmetadata;
+          const license = strip(meta?.LicenseShortName?.value);
+          const artist = strip(meta?.Artist?.value);
+          if (!free(license) || !artist) throw Error(`${titles[k]} no longer passes; no files written`);
+          i.license = license; i.artist = artist; i.credit = `${artist} · ${license}`;
+          i.licenseUrl = meta.LicenseUrl?.value || '';
+        });
+      }
     }
-    if (items.length >= 10) categories.push({ id: cat.id, name: cat.name, hint: cat.hint, items });
-    else console.warn(`⚠ הקטגוריה ${cat.id} נשארה עם ${items.length} פריטים — נשמטת`);
+    categories.forEach(validate);
+    categories.forEach((c, n) => fs.writeFileSync(path.join(DIR, files[n]), JSON.stringify(c, null, 2) + '\n'));
   }
-
-  fs.writeFileSync(OUT, JSON.stringify({ generatedAt: new Date().toISOString(), categories }, null, 2));
-  console.log(`נכתבו ${categories.length} קטגוריות, ${itemCount} פריטים עם תמונה, ל-${path.relative(process.cwd(), OUT)}`);
+  console.log(`${categories.length} reviewed categories, ${categories.reduce((n, c) => n + c.items.length, 0)} items validated`);
 }
-
-main().catch((err) => { console.error(err); process.exit(1); });
+if (require.main === module) main().catch((e) => { console.error(e.message); process.exitCode = 1; });
+module.exports = { validate, free };
