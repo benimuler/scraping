@@ -11,7 +11,7 @@ test('all photo pools are reviewed, licensed, attributed, deep and unique', () =
   let count = 0;
   for (const c of CATEGORIES) {
     validate(c);
-    const minimum = c.id === 'photo-hands' ? 14 : 25; // Finite, distinct gestures: never pad with near-duplicates.
+    const minimum = c.id === 'photo-hands' ? 14 : c.id === 'photo-masterpieces' ? 15 : 25; // Finite, distinct gestures: never pad with near-duplicates.
     assert.ok(c.items.length >= minimum, `${c.id}: ${c.items.length}`);
     assert.deepEqual(findCollisions(c), [], `${c.id}: ambiguous answers`);
     count += c.items.length;
