@@ -44,7 +44,7 @@ function normalize(category, kind) {
         answer: item.answer,
         aliases: item.aliases || [],
         ...(item.credit ? { credit: item.credit } : {}),
-        ...(item.source ? { source: item.source } : {}),
+        ...Object.fromEntries(['source', 'license', 'licenseUrl', 'artist', 'subjectSource'].filter((key) => item[key]).map((key) => [key, item[key]])),
         difficulty: item.difficulty,
       };
     }
