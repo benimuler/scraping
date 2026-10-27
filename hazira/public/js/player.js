@@ -90,7 +90,7 @@ const stored = readStored();
 $('f-code').value = (params.get('code') || stored.code || '').toUpperCase();
 $('f-name').value = stored.name || '';
 // במשחק מהיר אין קוד — היריב משובץ אוטומטית מול שחקן אקראי אחר שמחכה
-if (quickMode) $('code-field').hidden = true;
+if (quickMode) { $('code-field').hidden = true; $('f-code').required = false; }
 
 fetch('/api/categories').then((r) => r.json()).then((cats) => {
   $('f-cat').innerHTML = '<option value="">שהמערכת תבחר בשבילי</option>' +
@@ -1055,4 +1055,4 @@ function writeStored(value) {
 function esc(value) {
   return String(value ?? '').replace(/[&<>"']/g, (c) =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-    }
+      }
