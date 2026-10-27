@@ -1,183 +1,757 @@
 {
- "id": "photo-birds",
- "name": "ציפורים (תמונות)",
- "hint": "אומרים את שם הציפור",
- "items": [
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/2/2b/A_collage_of_Asio.jpg",
-   "answer": "ינשוף",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Dorhi · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:A_collage_of_Asio.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/American_Flamingo_Phoenicopterus_ruber_%2820275785490%29.jpg/960px-American_Flamingo_Phoenicopterus_ruber_%2820275785490%29.jpg",
-   "answer": "פלמינגו",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Lip Kee · CC BY-SA 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:American_Flamingo_Phoenicopterus_ruber_(20275785490).jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Pfau_imponierend.jpg/960px-Pfau_imponierend.jpg",
-   "answer": "טווס",
-   "aliases": [
-    "טווס מצוי"
-   ],
-   "difficulty": 2,
-   "credit": "BS Thurner Hof · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Pfau_imponierend.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Bald_Eagle_Portrait.jpg/960px-Bald_Eagle_Portrait.jpg",
-   "answer": "עיט קירח",
-   "aliases": [
-    "עיט"
-   ],
-   "difficulty": 3,
-   "credit": "Saffron Blaze · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Bald_Eagle_Portrait.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg",
-   "answer": "פינגווין",
-   "aliases": [
-    "פינגווין קיסרי"
-   ],
-   "difficulty": 2,
-   "credit": "Ian Duffy from UK · CC BY 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Citron-crested_Cockatoo.jpg",
-   "answer": "קקדו",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "Doug Janson · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Citron-crested_Cockatoo.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/2007-10-28_AfricanGrayParrot_Meru.jpg",
-   "answer": "תוכי אפור",
-   "aliases": [
-    "תוכי"
-   ],
-   "difficulty": 3,
-   "credit": "OPi@Toumoto(おぴ～＠とうもと（・Θ・）) http://opi.toumoto.net · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:2007-10-28_AfricanGrayParrot_Meru.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Anas_undulata%2C_Pretoria_country_club.jpg/960px-Anas_undulata%2C_Pretoria_country_club.jpg",
-   "answer": "ברווז",
-   "aliases": [
-    "ברווז מלרד"
-   ],
-   "difficulty": 3,
-   "credit": "JMK · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Anas_undulata%2C_Pretoria_country_club.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Corvus_corax_%28Common_Raven%29%2C_Yosemite_NP%2C_CA%2C_US_-_Diliff.jpg/960px-Corvus_corax_%28Common_Raven%29%2C_Yosemite_NP%2C_CA%2C_US_-_Diliff.jpg",
-   "answer": "עורב",
-   "aliases": [
-    "עורב שחור"
-   ],
-   "difficulty": 2,
-   "credit": "Diliff · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Corvus_corax_(Common_Raven)%2C_Yosemite_NP%2C_CA%2C_US_-_Diliff.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/House_Sparrow_Passer_domesticus_Male_by_Dr._Raju_Kasambe_DSCN0393_%2811%29.jpg/960px-House_Sparrow_Passer_domesticus_Male_by_Dr._Raju_Kasambe_DSCN0393_%2811%29.jpg",
-   "answer": "דרור",
-   "aliases": [
-    "דרור הבית"
-   ],
-   "difficulty": 3,
-   "credit": "Dr. Raju Kasambe · CC BY-SA 4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:House_Sparrow_Passer_domesticus_Male_by_Dr._Raju_Kasambe_DSCN0393_(11).jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Rauchschwalbe_Hirundo_rustica.jpg/960px-Rauchschwalbe_Hirundo_rustica.jpg",
-   "answer": "סנונית",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "Andreas Trepte · CC BY-SA 2.5",
-   "source": "https://commons.wikimedia.org/wiki/File:Rauchschwalbe_Hirundo_rustica.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Carduelis_carduelis_close_up.jpg/960px-Carduelis_carduelis_close_up.jpg",
-   "answer": "חוחית",
-   "aliases": [],
-   "difficulty": 4,
-   "credit": "Francis C. Franklin · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Carduelis_carduelis_close_up.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Emu_1_-_Tidbinbilla.jpg/960px-Emu_1_-_Tidbinbilla.jpg",
-   "answer": "אמו",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "JJ Harrison (https://www.jjharrison.com.au/) · CC BY-SA 4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Emu_1_-_Tidbinbilla.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Struthio_Diversity.jpg/960px-Struthio_Diversity.jpg",
-   "answer": "יען",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "PaleoNeolitic (montage creator) Diego Delso ninara · CC BY 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Struthio_Diversity.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Pelican_4995.jpg/960px-Pelican_4995.jpg",
-   "answer": "שקנאי",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "Dori · CC BY-SA 3.0 us",
-   "source": "https://commons.wikimedia.org/wiki/File:Pelican_4995.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Lord_Biro_-_Swan_1_%28by-sa%29.jpg/960px-Lord_Biro_-_Swan_1_%28by-sa%29.jpg",
-   "answer": "ברבור",
-   "aliases": [
-    "ברבור מצוי"
-   ],
-   "difficulty": 3,
-   "credit": "Paul Boxley from Edinburgh, UK · CC BY-SA 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Lord_Biro_-_Swan_1_(by-sa).jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Brown_Leghorn_rooster_in_Australia.jpg/960px-Brown_Leghorn_rooster_in_Australia.jpg",
-   "answer": "תרנגול",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Fernando de Sousa from Melbourne, Australia · CC BY-SA 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Brown_Leghorn_rooster_in_Australia.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/8/81/Hoopoe_%2815433167656%29.jpg",
-   "answer": "דוכיפת",
-   "aliases": [],
-   "difficulty": 4,
-   "credit": "Koshy Koshy from Faridabad, Haryana, India · CC BY 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Hoopoe_(15433167656).jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/6/64/Accipiter_badius_Ludhiana%2C_India.jpg",
-   "answer": "נץ",
-   "aliases": [],
-   "difficulty": 4,
-   "credit": "Vu3axe · CC BY 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Accipiter_badius_Ludhiana%2C_India.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Chlamydotis_undulata_250544786.jpg/960px-Chlamydotis_undulata_250544786.jpg",
-   "answer": "חוברה",
-   "aliases": [],
-   "difficulty": 4,
-   "credit": "Mourad Harzallah · CC BY 4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Chlamydotis_undulata_250544786.jpg"
-  }
- ]
+  "id": "photo-birds",
+  "name": "ציפורים (תמונות)",
+  "hint": "אומרים את שם הציפור",
+  "items": [
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Columba_livia_%28Rock_Dove%2C_wild%29%2C_Duncansby_Head%2C_Caithness%2C_Scotland_1.jpg/960px-Columba_livia_%28Rock_Dove%2C_wild%29%2C_Duncansby_Head%2C_Caithness%2C_Scotland_1.jpg",
+      "answer": "יונת סלע",
+      "aliases": [
+        "יונת הסלע"
+      ],
+      "difficulty": 4,
+      "credit": "william_stephens · CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Columba_livia_(Rock_Dove,_wild),_Duncansby_Head,_Caithness,_Scotland_1.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "william_stephens",
+      "subjectSource": "https://en.wikipedia.org/wiki/Rock_dove",
+      "subjectTitle": "Rock dove",
+      "imageDescription": "Rock Dove Columba livia , Duncansby Head, Caithness, Scotland.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Male_wild_turkey_%28Meleagris_gallopavo%29_strutting.jpg/960px-Male_wild_turkey_%28Meleagris_gallopavo%29_strutting.jpg",
+      "answer": "תרנגול הודו",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Frank Schulenburg · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Male_wild_turkey_(Meleagris_gallopavo)_strutting.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Frank Schulenburg",
+      "subjectSource": "https://en.wikipedia.org/wiki/Turkey_%28bird%29",
+      "subjectTitle": "Turkey (bird)",
+      "imageDescription": "Adult male wild turkey ( Meleagris gallopavo intermedia ) strutting at Deer Island Open Space Preserve near Novato, Marin County, California",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Reichenow%27s_helmeted_guineafowl_%28Numida_meleagris_reichenowi%29_Serengeti.jpg/960px-Reichenow%27s_helmeted_guineafowl_%28Numida_meleagris_reichenowi%29_Serengeti.jpg",
+      "answer": "פנינייה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Reichenow%27s_helmeted_guineafowl_(Numida_meleagris_reichenowi)_Serengeti.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Charles J. Sharp",
+      "subjectSource": "https://en.wikipedia.org/wiki/Helmeted_guinea_fowl",
+      "subjectTitle": "Helmeted guinea fowl",
+      "imageDescription": "Reichenow's helmeted guineafowl ( Numida meleagris reichenowi ), Serengeti National Park, Tanzania",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Coturnix_coturnix%2C_Fraunberg%2C_Bayern%2C_Deutschland_1%2C_Ausschnitt.jpg/960px-Coturnix_coturnix%2C_Fraunberg%2C_Bayern%2C_Deutschland_1%2C_Ausschnitt.jpg",
+      "answer": "שליו",
+      "aliases": [
+        "שליו נודד"
+      ],
+      "difficulty": 4,
+      "credit": "christoph_moning · CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Coturnix_coturnix,_Fraunberg,_Bayern,_Deutschland_1,_Ausschnitt.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "christoph_moning",
+      "subjectSource": "https://en.wikipedia.org/wiki/Common_quail",
+      "subjectTitle": "Common quail",
+      "imageDescription": "Common quail ( Coturnix coturnix ), Fraunberg, Bayern, Deutschland",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Grey_crowned_crane_%28Balearica_regulorum_gibbericeps%29.jpg/960px-Grey_crowned_crane_%28Balearica_regulorum_gibbericeps%29.jpg",
+      "answer": "עגור כתר",
+      "aliases": [
+        "עגור כתר לבן-לחיים"
+      ],
+      "difficulty": 4,
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Grey_crowned_crane_(Balearica_regulorum_gibbericeps).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Charles J. Sharp",
+      "subjectSource": "https://en.wikipedia.org/wiki/Grey_crowned_crane",
+      "subjectTitle": "Grey crowned crane",
+      "imageDescription": "Grey crowned crane ( Balearica regulorum gibbericeps ), Nr Lake Bunyonyi, Uganda",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/White_stork_%28Ciconia_ciconia%29_Bia%C5%82owieza.jpg/960px-White_stork_%28Ciconia_ciconia%29_Bia%C5%82owieza.jpg",
+      "answer": "חסידה לבנה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:White_stork_(Ciconia_ciconia)_Bia%C5%82owieza.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Charles J. Sharp",
+      "subjectSource": "https://en.wikipedia.org/wiki/White_stork",
+      "subjectTitle": "White stork",
+      "imageDescription": "White stork ( Ciconia ciconia ) Białowieża, Poland",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Il_pescatore_solitario.jpg/960px-Il_pescatore_solitario.jpg",
+      "answer": "אנפה אפורה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Giacomo Cimino ( foto.giacomocimino.workers.dev · @giacomociminoph ) · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Il_pescatore_solitario.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Giacomo Cimino ( foto.giacomocimino.workers.dev · @giacomociminoph )",
+      "subjectSource": "https://en.wikipedia.org/wiki/Grey_heron",
+      "subjectTitle": "Grey heron",
+      "imageDescription": "A grey heron (Ardea cinerea) standing in the rushing water of a river. The bird is captured in a side profile while hunting for prey.",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Little_egret_%28Egretta_garzetta%29_Photograph_by_Shantanu_Kuveskar.jpg",
+      "answer": "לבנית קטנה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Shantanu Kuveskar · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Little_egret_(Egretta_garzetta)_Photograph_by_Shantanu_Kuveskar.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Shantanu Kuveskar",
+      "subjectSource": "https://en.wikipedia.org/wiki/Little_egret",
+      "subjectTitle": "Little egret",
+      "imageDescription": "Little egret (Egretta garzetta) Photograph by Shantanu Kuveskar Location : Mangaon, Raigad, Maharashtra, India",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Roseate_Spoonbill_-_Myakka_River_State_Park.jpg/960px-Roseate_Spoonbill_-_Myakka_River_State_Park.jpg",
+      "answer": "כפן ורוד",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "User:Mwanner · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Roseate_Spoonbill_-_Myakka_River_State_Park.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "User:Mwanner",
+      "subjectSource": "https://en.wikipedia.org/wiki/Roseate_spoonbill",
+      "subjectTitle": "Roseate spoonbill",
+      "imageDescription": "Roseate Spoonbill Platalea ajaja - Myakka River State Park, Sarasota County, Florida.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Oceanografic_Scarlet_Ibis_02.jpg/960px-Oceanografic_Scarlet_Ibis_02.jpg",
+      "answer": "מגלן שני",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Rafa Esteve · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Oceanografic_Scarlet_Ibis_02.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Rafa Esteve",
+      "subjectSource": "https://en.wikipedia.org/wiki/Scarlet_ibis",
+      "subjectTitle": "Scarlet ibis",
+      "imageDescription": "Scarlet Ibis in the Wetlands Aviary of the Oceanogràfic in Valencia",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Puffin_%28Fratercula_arctica%29.jpg/960px-Puffin_%28Fratercula_arctica%29.jpg",
+      "answer": "תוכי ים",
+      "aliases": [
+        "תוכי ים אטלנטי"
+      ],
+      "difficulty": 4,
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Puffin_(Fratercula_arctica).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Charles J. Sharp",
+      "subjectSource": "https://en.wikipedia.org/wiki/Atlantic_puffin",
+      "subjectTitle": "Atlantic puffin",
+      "imageDescription": "Atlantic puffin ( Fratercula arctica grabae ) on the North Coast of Skomer Island, Pembrokeshire, Wales",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Alcedo_atthis_-England-8_%28cropped%29.jpg/960px-Alcedo_atthis_-England-8_%28cropped%29.jpg",
+      "answer": "שלדג גמדי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Tony Wood · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Alcedo_atthis_-England-8_(cropped).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Tony Wood",
+      "subjectSource": "https://en.wikipedia.org/wiki/Common_kingfisher",
+      "subjectTitle": "Common kingfisher",
+      "imageDescription": "A Common Kingfisher in England.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Pied_kingfisher_%28Ceryle_rudis_leucomelanurus%29_male.jpg/960px-Pied_kingfisher_%28Ceryle_rudis_leucomelanurus%29_male.jpg",
+      "answer": "פרפור עקוד",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pied_kingfisher_(Ceryle_rudis_leucomelanurus)_male.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Charles J. Sharp",
+      "subjectSource": "https://en.wikipedia.org/wiki/Pied_kingfisher",
+      "subjectTitle": "Pied kingfisher",
+      "imageDescription": "Pied kingfisher ( Ceryle rudis leucomelanurus ) male, Chambal River, UP, India",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Bee-eater_%2819270331108%29.jpg/960px-Bee-eater_%2819270331108%29.jpg",
+      "answer": "שרקרק מצוי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Andy Morffew from Itchen Abbas, Hampshire, UK · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bee-eater_(19270331108).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Andy Morffew from Itchen Abbas, Hampshire, UK",
+      "subjectSource": "https://en.wikipedia.org/wiki/European_bee-eater",
+      "subjectTitle": "European bee-eater",
+      "imageDescription": "Taken in Hungary. About 5 metres away with my 500 + 1.4x - I just managed to fit it in!",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Erithacus_rubecula_with_cocked_head.jpg/960px-Erithacus_rubecula_with_cocked_head.jpg",
+      "answer": "אדום החזה",
+      "aliases": [
+        "אדום-החזה"
+      ],
+      "difficulty": 4,
+      "credit": "Francis C. Franklin · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Erithacus_rubecula_with_cocked_head.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Francis C. Franklin",
+      "subjectSource": "https://en.wikipedia.org/wiki/European_robin",
+      "subjectTitle": "European robin",
+      "imageDescription": "European Robin ( Erithacus rubecula )",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Blue_jay_in_PP_%2830960%29.jpg/960px-Blue_jay_in_PP_%2830960%29.jpg",
+      "answer": "עורבני כחול",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Rhododendrites · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Blue_jay_in_PP_(30960).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Rhododendrites",
+      "subjectSource": "https://en.wikipedia.org/wiki/Blue_jay",
+      "subjectTitle": "Blue jay",
+      "imageDescription": "Blue jay in Prospect Park, Brooklyn.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Eurasian_magpie_2024_03_03_02.jpg/960px-Eurasian_magpie_2024_03_03_02.jpg",
+      "answer": "עקעק",
+      "aliases": [
+        "עקעק זנבתן"
+      ],
+      "difficulty": 4,
+      "credit": "Alexis Lours · CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Eurasian_magpie_2024_03_03_02.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "Alexis Lours",
+      "subjectSource": "https://en.wikipedia.org/wiki/Eurasian_magpie",
+      "subjectTitle": "Eurasian magpie",
+      "imageDescription": "An Eurasian magpie ( Pica pica ) in Gennevilliers, France.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Great_tit_%28Parus_major%29%2C_Parc_du_Rouge-Cloitre%2C_For%C3%AAt_de_Soignes%2C_Brussels_%2826194636951%29.jpg/960px-Great_tit_%28Parus_major%29%2C_Parc_du_Rouge-Cloitre%2C_For%C3%AAt_de_Soignes%2C_Brussels_%2826194636951%29.jpg",
+      "answer": "ירגזי מצוי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Frank Vassen from Brussels, Belgium · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Great_tit_(Parus_major),_Parc_du_Rouge-Cloitre,_For%C3%AAt_de_Soignes,_Brussels_(26194636951).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Frank Vassen from Brussels, Belgium",
+      "subjectSource": "https://en.wikipedia.org/wiki/Great_tit",
+      "subjectTitle": "Great tit",
+      "imageDescription": "Panasonic GX7 + Panasonic Lumix G Vario 100-300, O.I.S",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/PileatedWoodpeckerFeedingonTree%2C_crop.jpg/960px-PileatedWoodpeckerFeedingonTree%2C_crop.jpg",
+      "answer": "נקר",
+      "aliases": [
+        "נקריים"
+      ],
+      "difficulty": 4,
+      "credit": "Joshlaymon · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:PileatedWoodpeckerFeedingonTree,_crop.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Joshlaymon",
+      "subjectSource": "https://en.wikipedia.org/wiki/Woodpecker",
+      "subjectTitle": "Woodpecker",
+      "imageDescription": "A male Pileated woodpecker foraging on a tree",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/006_Toco_toucan_in_Encontro_das_%C3%81guas_State_Park_Photo_by_Giles_Laurent.jpg/960px-006_Toco_toucan_in_Encontro_das_%C3%81guas_State_Park_Photo_by_Giles_Laurent.jpg",
+      "answer": "טוקן טוקו",
+      "aliases": [
+        "טוקן הטוקו"
+      ],
+      "difficulty": 4,
+      "credit": "Giles Laurent · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:006_Toco_toucan_in_Encontro_das_%C3%81guas_State_Park_Photo_by_Giles_Laurent.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Giles Laurent",
+      "subjectSource": "https://en.wikipedia.org/wiki/Toco_toucan",
+      "subjectTitle": "Toco toucan",
+      "imageDescription": "Toco toucan in Parque Estadual Encontro das Águas, Brazil",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Scarlet_macaw_%28Ara_macao_cyanopterus%29_Copan.jpg/960px-Scarlet_macaw_%28Ara_macao_cyanopterus%29_Copan.jpg",
+      "answer": "ארה ארגמנית",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Scarlet_macaw_(Ara_macao_cyanopterus)_Copan.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Charles J. Sharp",
+      "subjectSource": "https://en.wikipedia.org/wiki/Scarlet_macaw",
+      "subjectTitle": "Scarlet macaw",
+      "imageDescription": "Scarlet macaw ( Ara macao ) Copan, Honduras",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Cockatiel_3.jpg/960px-Cockatiel_3.jpg",
+      "answer": "קוקטייל",
+      "aliases": [
+        "נימפית מצויצת"
+      ],
+      "difficulty": 4,
+      "credit": "Photo by: Ganatron – paulweberphoto.com · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cockatiel_3.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Photo by: Ganatron – paulweberphoto.com",
+      "subjectSource": "https://en.wikipedia.org/wiki/Cockatiel",
+      "subjectTitle": "Cockatiel",
+      "imageDescription": "Cockatiel (Male) ( Nymphicus hollandicus",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Rainbow_lorikeet_%28Trichoglossus_moluccanus_moluccanus%29_Sydney.jpg/960px-Rainbow_lorikeet_%28Trichoglossus_moluccanus_moluccanus%29_Sydney.jpg",
+      "answer": "לורי קשת",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rainbow_lorikeet_(Trichoglossus_moluccanus_moluccanus)_Sydney.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Charles J. Sharp",
+      "subjectSource": "https://en.wikipedia.org/wiki/Rainbow_lorikeet",
+      "subjectTitle": "Rainbow lorikeet",
+      "imageDescription": "Rainbow lorikeet ( Trichoglossus moluccanus moluccanus ), Royal Botanic Gardens, Sydney, NSW, Australia",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Secretary_bird_Mara_for_WC.jpg/960px-Secretary_bird_Mara_for_WC.jpg",
+      "answer": "לבלר (עוף)",
+      "aliases": [
+        "לבלר"
+      ],
+      "difficulty": 4,
+      "credit": "Sumeet Moghe · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Secretary_bird_Mara_for_WC.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Sumeet Moghe",
+      "subjectSource": "https://en.wikipedia.org/wiki/Secretarybird",
+      "subjectTitle": "Secretarybird",
+      "imageDescription": "Secretary bird in the Maasai Mara",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Balaeniceps_rex_-Ueno_Zoo%2C_Tokyo%2C_Japan-8a.jpg/960px-Balaeniceps_rex_-Ueno_Zoo%2C_Tokyo%2C_Japan-8a.jpg",
+      "answer": "מנעלן",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Bob Owen · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Balaeniceps_rex_-Ueno_Zoo,_Tokyo,_Japan-8a.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Bob Owen",
+      "subjectSource": "https://en.wikipedia.org/wiki/Shoebill",
+      "subjectTitle": "Shoebill",
+      "imageDescription": "Shoebill at Ueno Zoo, Tokyo, Japan.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Gyps_fulvus_in_flight_-_Spain.jpg/960px-Gyps_fulvus_in_flight_-_Spain.jpg",
+      "answer": "נשר מקראי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Pierre Dalous · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gyps_fulvus_in_flight_-_Spain.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Pierre Dalous",
+      "subjectSource": "https://en.wikipedia.org/wiki/Eurasian_griffon_vulture",
+      "subjectTitle": "Eurasian griffon vulture",
+      "imageDescription": "Griffon vulture",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/AndeanCondorMale.jpg/960px-AndeanCondorMale.jpg",
+      "answer": "קונדור האנדים",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Greg Hume · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:AndeanCondorMale.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Greg Hume",
+      "subjectSource": "https://en.wikipedia.org/wiki/Andean_condor",
+      "subjectTitle": "Andean condor",
+      "imageDescription": "Male Andean Condor ( Vultur gryphus ) - taken at the Cincinnati Zoo, USA.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Falco_peregrinus_m_Humber_Bay_Park_Toronto.jpg/960px-Falco_peregrinus_m_Humber_Bay_Park_Toronto.jpg",
+      "answer": "בז נודד",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Mykola Swarnyk · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_m_Humber_Bay_Park_Toronto.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Mykola Swarnyk",
+      "subjectSource": "https://en.wikipedia.org/wiki/Peregrine_falcon",
+      "subjectTitle": "Peregrine falcon",
+      "imageDescription": "Male peregrine falcon (Falco peregrinus) in Humber Bay Park West in Toronto",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/American_Barn_Owl_%28Tyto_furcata_guatemalae%29%2C_Orange_Walk.jpg/960px-American_Barn_Owl_%28Tyto_furcata_guatemalae%29%2C_Orange_Walk.jpg",
+      "answer": "תנשמת",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:American_Barn_Owl_(Tyto_furcata_guatemalae),_Orange_Walk.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Charles J. Sharp",
+      "subjectSource": "https://en.wikipedia.org/wiki/Barn_owl",
+      "subjectTitle": "Barn owl",
+      "imageDescription": "American Barn Owl ( Tyto furcata guatemalae ), Orange Walk, Belize",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/SnowyOwlAmericanBlackDuck.jpg/960px-SnowyOwlAmericanBlackDuck.jpg",
+      "answer": "אוח שלג",
+      "aliases": [
+        "אוח השלג"
+      ],
+      "difficulty": 4,
+      "credit": "Chuck Homler d/b/a Focus On Wildlife · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:SnowyOwlAmericanBlackDuck.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Chuck Homler d/b/a Focus On Wildlife",
+      "subjectSource": "https://en.wikipedia.org/wiki/Snowy_owl",
+      "subjectTitle": "Snowy owl",
+      "imageDescription": "A Snowy Owl carries its kill, an American Black Duck, in \"the pool\" in Biddeford Pool, Maine . (Low Tide)",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/2021-05-05_Phalacrocorax_carbo_carbo%2C_Killingworth_Lake%2C_Northumberland_1-1.jpg/960px-2021-05-05_Phalacrocorax_carbo_carbo%2C_Killingworth_Lake%2C_Northumberland_1-1.jpg",
+      "answer": "קורמורן גדול",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "MPF · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2021-05-05_Phalacrocorax_carbo_carbo,_Killingworth_Lake,_Northumberland_1-1.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "MPF",
+      "subjectSource": "https://en.wikipedia.org/wiki/Great_cormorant",
+      "subjectTitle": "Great cormorant",
+      "imageDescription": "Great Cormorant, nominate Phalacrocorax carbo carbo , adult in full breeding plumage; individual with yellow gular patch. Killingworth Lake, Northumberland.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Pair_of_mandarin_ducks.jpg/960px-Pair_of_mandarin_ducks.jpg",
+      "answer": "ברווז מנדרין",
+      "aliases": [
+        "מנדרין סיני"
+      ],
+      "difficulty": 4,
+      "credit": "Francis C. Franklin · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pair_of_mandarin_ducks.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Francis C. Franklin",
+      "subjectSource": "https://en.wikipedia.org/wiki/Mandarin_duck",
+      "subjectTitle": "Mandarin duck",
+      "imageDescription": "Pair of Mandarin ducks ( Aix galericulata ), at Martin Mere , Lancashire, UK",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Black_swan_%28Cygnus_atratus%29_Scottsdale.jpg/960px-Black_swan_%28Cygnus_atratus%29_Scottsdale.jpg",
+      "answer": "ברבור שחור",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Black_swan_(Cygnus_atratus)_Scottsdale.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Charles J. Sharp",
+      "subjectSource": "https://en.wikipedia.org/wiki/Black_swan",
+      "subjectTitle": "Black swan",
+      "imageDescription": "Black swan ( Cygnus atratus ), near Scottsdale, TAS, Australia",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Canada_goose_on_Seedskadee_NWR_%2827826185489%29.jpg/960px-Canada_goose_on_Seedskadee_NWR_%2827826185489%29.jpg",
+      "answer": "אווז קנדי",
+      "aliases": [
+        "ברנטה קנדית"
+      ],
+      "difficulty": 4,
+      "credit": "USFWS Mountain-Prairie · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Canada_goose_on_Seedskadee_NWR_(27826185489).jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "USFWS Mountain-Prairie",
+      "subjectSource": "https://en.wikipedia.org/wiki/Canada_goose",
+      "subjectTitle": "Canada goose",
+      "imageDescription": "Photo: Tom Koerner/USFWS",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/TeTuatahianui.jpg/960px-TeTuatahianui.jpg",
+      "answer": "קיווי (עוף)",
+      "aliases": [
+        "קיווי"
+      ],
+      "difficulty": 4,
+      "credit": "Maungatautari Ecological Island Trust · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:TeTuatahianui.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Maungatautari Ecological Island Trust",
+      "subjectSource": "https://en.wikipedia.org/wiki/Kiwi_%28bird%29",
+      "subjectTitle": "Kiwi (bird)",
+      "imageDescription": "Te Tuatahi a nui , a male kiwi on Maungatautari mountain. (North Island brown kiwi, Apteryx mantelli ). In early 2007 a transmitter attached to Te Tuatahi a nui, which gives staff valuable information about his health, indicated that the five year old is sitting on an egg, a first for this ecological reserve. With North Island brown kiwi the female lays the eggs while the male has responsibility for them during the 85 days of incubation.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Southern_Cassowary_7071.jpg/960px-Southern_Cassowary_7071.jpg",
+      "answer": "קזואר מצוי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Summerdrought · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Southern_Cassowary_7071.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Summerdrought",
+      "subjectSource": "https://en.wikipedia.org/wiki/Southern_cassowary",
+      "subjectTitle": "Southern cassowary",
+      "imageDescription": "A free ranging Southern Cassowary ( Casuarius casuarius ) at Etty Bay, north Queensland, Australia.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/American_Flamingo_Phoenicopterus_ruber_%2820275785490%29.jpg/960px-American_Flamingo_Phoenicopterus_ruber_%2820275785490%29.jpg",
+      "answer": "פלמינגו",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Lip Kee · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:American_Flamingo_Phoenicopterus_ruber_(20275785490).jpg",
+      "artist": "Lip Kee",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Pfau_imponierend.jpg/960px-Pfau_imponierend.jpg",
+      "answer": "טווס",
+      "aliases": [
+        "טווס מצוי"
+      ],
+      "difficulty": 2,
+      "credit": "BS Thurner Hof · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pfau_imponierend.jpg",
+      "artist": "BS Thurner Hof",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Bald_Eagle_Portrait.jpg/960px-Bald_Eagle_Portrait.jpg",
+      "answer": "עיט קירח",
+      "aliases": [
+        "עיט"
+      ],
+      "difficulty": 3,
+      "credit": "Saffron Blaze · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bald_Eagle_Portrait.jpg",
+      "artist": "Saffron Blaze",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg",
+      "answer": "פינגווין",
+      "aliases": [
+        "פינגווין קיסרי"
+      ],
+      "difficulty": 2,
+      "credit": "Ian Duffy from UK · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg",
+      "artist": "Ian Duffy from UK",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Anas_undulata%2C_Pretoria_country_club.jpg/960px-Anas_undulata%2C_Pretoria_country_club.jpg",
+      "answer": "ברווז",
+      "aliases": [
+        "ברווז מלרד"
+      ],
+      "difficulty": 3,
+      "credit": "JMK · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Anas_undulata,_Pretoria_country_club.jpg",
+      "artist": "JMK",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Corvus_corax_%28Common_Raven%29%2C_Yosemite_NP%2C_CA%2C_US_-_Diliff.jpg/960px-Corvus_corax_%28Common_Raven%29%2C_Yosemite_NP%2C_CA%2C_US_-_Diliff.jpg",
+      "answer": "עורב",
+      "aliases": [
+        "עורב שחור"
+      ],
+      "difficulty": 2,
+      "credit": "Diliff · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Corvus_corax_(Common_Raven),_Yosemite_NP,_CA,_US_-_Diliff.jpg",
+      "artist": "Diliff",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/House_Sparrow_Passer_domesticus_Male_by_Dr._Raju_Kasambe_DSCN0393_%2811%29.jpg/960px-House_Sparrow_Passer_domesticus_Male_by_Dr._Raju_Kasambe_DSCN0393_%2811%29.jpg",
+      "answer": "דרור",
+      "aliases": [
+        "דרור הבית"
+      ],
+      "difficulty": 3,
+      "credit": "Dr. Raju Kasambe · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:House_Sparrow_Passer_domesticus_Male_by_Dr._Raju_Kasambe_DSCN0393_(11).jpg",
+      "artist": "Dr. Raju Kasambe",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Rauchschwalbe_Hirundo_rustica.jpg/960px-Rauchschwalbe_Hirundo_rustica.jpg",
+      "answer": "סנונית",
+      "aliases": [],
+      "difficulty": 3,
+      "credit": "Andreas Trepte · CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Rauchschwalbe_Hirundo_rustica.jpg",
+      "artist": "Andreas Trepte",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Carduelis_carduelis_close_up.jpg/960px-Carduelis_carduelis_close_up.jpg",
+      "answer": "חוחית",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Francis C. Franklin · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Carduelis_carduelis_close_up.jpg",
+      "artist": "Francis C. Franklin",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Emu_1_-_Tidbinbilla.jpg/960px-Emu_1_-_Tidbinbilla.jpg",
+      "answer": "אמו",
+      "aliases": [],
+      "difficulty": 3,
+      "credit": "JJ Harrison ( https://www.jjharrison.com.au/ ) · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Emu_1_-_Tidbinbilla.jpg",
+      "artist": "JJ Harrison ( https://www.jjharrison.com.au/ )",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Pelican_4995.jpg/960px-Pelican_4995.jpg",
+      "answer": "שקנאי",
+      "aliases": [],
+      "difficulty": 3,
+      "credit": "Dori · CC BY-SA 3.0 us",
+      "source": "https://commons.wikimedia.org/wiki/File:Pelican_4995.jpg",
+      "artist": "Dori",
+      "license": "CC BY-SA 3.0 us",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/us/deed.en",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Lord_Biro_-_Swan_1_%28by-sa%29.jpg/960px-Lord_Biro_-_Swan_1_%28by-sa%29.jpg",
+      "answer": "ברבור",
+      "aliases": [
+        "ברבור מצוי"
+      ],
+      "difficulty": 3,
+      "credit": "Paul Boxley from Edinburgh, UK · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lord_Biro_-_Swan_1_(by-sa).jpg",
+      "artist": "Paul Boxley from Edinburgh, UK",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Brown_Leghorn_rooster_in_Australia.jpg/960px-Brown_Leghorn_rooster_in_Australia.jpg",
+      "answer": "תרנגול",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Fernando de Sousa from Melbourne, Australia · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Brown_Leghorn_rooster_in_Australia.jpg",
+      "artist": "Fernando de Sousa from Melbourne, Australia",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Chlamydotis_undulata_250544786.jpg/960px-Chlamydotis_undulata_250544786.jpg",
+      "answer": "חוברה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Mourad Harzallah · CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chlamydotis_undulata_250544786.jpg",
+      "artist": "Mourad Harzallah",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "reviewed": true
+    }
+  ]
 }
