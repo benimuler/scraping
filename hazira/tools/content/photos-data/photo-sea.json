@@ -1,174 +1,685 @@
 {
- "id": "photo-sea",
- "name": "חיות ים (תמונות)",
- "hint": "אומרים את שם חיית הים",
- "items": [
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Great_White_Shark_%2814730796397%29.jpg/960px-Great_White_Shark_%2814730796397%29.jpg",
-   "answer": "כריש לבן",
-   "aliases": [
-    "כריש"
-   ],
-   "difficulty": 2,
-   "credit": "Elias Levy · CC BY 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Great_White_Shark_(14730796397).jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Blue_Whale_001_noaa_body_color.jpg",
-   "answer": "לווייתן כחול",
-   "aliases": [
-    "לוויתן כחול",
-    "לווייתן",
-    "לוויתן"
-   ],
-   "difficulty": 2,
-   "credit": "NOAA Fisheries (TBjornstad 11:20, 18 April 2007 (UTC)) · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Blue_Whale_001_noaa_body_color.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Delf%C3%ADn.jpg",
-   "answer": "דולפין",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "marfis75 · CC BY-SA 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Delf%C3%ADn.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Octopus_vulgaris2.jpg/960px-Octopus_vulgaris2.jpg",
-   "answer": "תמנון",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Beckmannjan · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Octopus_vulgaris2.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Jelly_cc11.jpg/960px-Jelly_cc11.jpg",
-   "answer": "מדוזה",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Dan90266 · CC BY-SA 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Jelly_cc11.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Starfish_-_sea_star_-_mosaic_showing_diversity.jpg/960px-Starfish_-_sea_star_-_mosaic_showing_diversity.jpg",
-   "answer": "כוכב ים",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Authors: File:Goniasteridae - Fromia monilis.jpg - Hectonichus File:Asterias rubens 01 Espen Rekdal.jpg - Espen Rekdal / Espen Rekdal Photography File:Cushion Sea Star, Cottongarden Bay.jpg - Dartrider File:Acanthaster planci mauritiensis.jpg - Philippe Bourjon File:Culcita novaeguineae 46596444.jpg - Greg III Espera File:Labidiaster annulatus.JPG - WereSpielChequers Mosaic created by Podzemnik · CC BY-SA 4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Starfish_-_sea_star_-_mosaic_showing_diversity.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Hippocampus_histrix%2C_Timor_Oriental.jpg/960px-Hippocampus_histrix%2C_Timor_Oriental.jpg",
-   "answer": "סוסון ים",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "prilfish · CC BY 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Hippocampus_histrix%2C_Timor_Oriental.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Chelonia_Mydas.JPG/960px-Chelonia_Mydas.JPG",
-   "answer": "צב ים",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Bthv · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Chelonia_Mydas.JPG"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Brachyura_montage.jpg/960px-Brachyura_montage.jpg",
-   "answer": "סרטן",
-   "aliases": [
-    "סרטנים"
-   ],
-   "difficulty": 2,
-   "credit": "Biopics Dan Boone Honguyenseo Bernard Picton Biopics Philippe Boujon Splette Nosferattus Rushenb · CC BY-SA 4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Brachyura_montage.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/KreeftbijDenOsse.jpg/960px-KreeftbijDenOsse.jpg",
-   "answer": "לובסטר",
-   "aliases": [
-    "שרימפס"
-   ],
-   "difficulty": 3,
-   "credit": "Bart Braun · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:KreeftbijDenOsse.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Georgia_Aquarium_-_Cuttlefish_Jan_2006.jpg/960px-Georgia_Aquarium_-_Cuttlefish_Jan_2006.jpg",
-   "answer": "דיונון",
-   "aliases": [
-    "קלמארי"
-   ],
-   "difficulty": 3,
-   "credit": "Diliff · CC BY 2.5",
-   "source": "https://commons.wikimedia.org/wiki/File:Georgia_Aquarium_-_Cuttlefish_Jan_2006.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Goldfish3.jpg",
-   "answer": "דג זהב",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "No machine-readable author provided. Heptagon assumed (based on copyright claims). · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Goldfish3.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Sea_lion_on_the_beach.jpg/960px-Sea_lion_on_the_beach.jpg",
-   "answer": "אריה ים",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "Tomas Sobek · CC BY 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Sea_lion_on_the_beach.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Oberon%2C_Titania_and_Puck_with_Fairies_Dancing._William_Blake._c.1786.jpg/960px-Oberon%2C_Titania_and_Puck_with_Fairies_Dancing._William_Blake._c.1786.jpg",
-   "answer": "פוקה",
-   "aliases": [
-    "כלב ים"
-   ],
-   "difficulty": 3,
-   "credit": "William Blake · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Oberon%2C_Titania_and_Puck_with_Fairies_Dancing._William_Blake._c.1786.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Noaa-walrus22.jpg/960px-Noaa-walrus22.jpg",
-   "answer": "ניבתן",
-   "aliases": [
-    "סוס ים"
-   ],
-   "difficulty": 4,
-   "credit": "Captain Budd Christman, NOAA Corps · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Noaa-walrus22.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Killerwhales_jumping.jpg/960px-Killerwhales_jumping.jpg",
-   "answer": "קטלן",
-   "aliases": [
-    "אורקה",
-    "לווייתן קטלן",
-    "לוויתן קטלן"
-   ],
-   "difficulty": 3,
-   "credit": "Robert Pittman · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Water_baloon_%282196115607%29.jpg/960px-Water_baloon_%282196115607%29.jpg",
-   "answer": "דג נפוח",
-   "aliases": [
-    "דג תאווה",
-    "אבו נפיחה"
-   ],
-   "difficulty": 4,
-   "credit": "TANAKA Juuyoh (田中十洋) · CC BY 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Water_baloon_(2196115607).jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/7/79/Competitive_table_tennis.jpg",
-   "answer": "סרטן שולחן",
-   "aliases": [],
-   "difficulty": 4,
-   "credit": "CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Competitive_table_tennis.jpg"
-  }
- ]
+  "id": "photo-sea",
+  "name": "חיות ים (תמונות)",
+  "hint": "אומרים את שם חיית הים",
+  "items": [
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Similan_Dive_Center_-_great_whale_shark.jpg/960px-Similan_Dive_Center_-_great_whale_shark.jpg",
+      "answer": "כריש לווייתני",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Abe Khao Lak · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Similan_Dive_Center_-_great_whale_shark.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Abe Khao Lak",
+      "subjectSource": "https://en.wikipedia.org/wiki/Whale_shark",
+      "subjectTitle": "Whale shark",
+      "imageDescription": "Whale shark at the Andaman sea",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Scalloped_Hammerhead_Shark_Sphyrna_Lewini_%28226845659%29.jpeg/960px-Scalloped_Hammerhead_Shark_Sphyrna_Lewini_%28226845659%29.jpeg",
+      "answer": "פטישן",
+      "aliases": [
+        "פטישניים"
+      ],
+      "difficulty": 4,
+      "credit": "Kris Mikael Krister · CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Scalloped_Hammerhead_Shark_Sphyrna_Lewini_(226845659).jpeg",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "Kris Mikael Krister",
+      "subjectSource": "https://en.wikipedia.org/wiki/Hammerhead_shark",
+      "subjectTitle": "Hammerhead shark",
+      "imageDescription": "500px provided description: The wide-set eyes give hammerheads long visual range, better than most sharks. [#sea ,#ocean ,#animals ,#animal ,#shark ,#wildlife ,#underwater ,#diving ,#dive ,#marine ,#costa rica ,#marine life ,#scuba ,#cocos island ,#scuba diving ,#hammerhead shark ,#scubadive ,#scuba dive]",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Tiger_shark.jpg/960px-Tiger_shark.jpg",
+      "answer": "כריש טיגרי",
+      "aliases": [
+        "כריש טיגריסי"
+      ],
+      "difficulty": 4,
+      "credit": "Albert kok · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tiger_shark.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Albert kok",
+      "subjectSource": "https://en.wikipedia.org/wiki/Tiger_shark",
+      "subjectTitle": "Tiger shark",
+      "imageDescription": "Tiger shark, Bahamas",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Dharavandhoo_Thila_-_Manata_Black_Pearl.JPG/960px-Dharavandhoo_Thila_-_Manata_Black_Pearl.JPG",
+      "answer": "מנטה (דג)",
+      "aliases": [
+        "מנטה"
+      ],
+      "difficulty": 4,
+      "credit": "Shiyam ElkCloner · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dharavandhoo_Thila_-_Manata_Black_Pearl.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Shiyam ElkCloner",
+      "subjectSource": "https://en.wikipedia.org/wiki/Manta_ray",
+      "subjectTitle": "Manta ray",
+      "imageDescription": "Reef manta ray ( Manta alfredi) at Dharavandhoo Thila, Maldives",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Eagle_Ray_Turks_and_Caicos_Dec_15_2006.JPG/960px-Eagle_Ray_Turks_and_Caicos_Dec_15_2006.JPG",
+      "answer": "טחן נקוד",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "the manta ray had a family · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Eagle_Ray_Turks_and_Caicos_Dec_15_2006.JPG",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "the manta ray had a family",
+      "subjectSource": "https://en.wikipedia.org/wiki/Spotted_eagle_ray",
+      "subjectTitle": "Spotted eagle ray",
+      "imageDescription": "Spotted Eagle Ray picture taken with Canon G7 camera with underwater case while snorkeling at Princess Alexandra National Park (Coral Gardens), Providenciales, Turks and Caicos, on December 17, 2006. Eagle Ray was located approximately 50 feet from shore in 20' deep water, spotted on 3 consecutive days. A ray with identical markings was spotted in the same location on December 25, 2007.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Clown_fish_in_the_Andaman_Coral_Reef.jpg/960px-Clown_fish_in_the_Andaman_Coral_Reef.jpg",
+      "answer": "דג ליצן",
+      "aliases": [
+        "שושנון כתום מזויף"
+      ],
+      "difficulty": 4,
+      "credit": "Ritiks · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Clown_fish_in_the_Andaman_Coral_Reef.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Ritiks",
+      "subjectSource": "https://en.wikipedia.org/wiki/Ocellaris_clownfish",
+      "subjectTitle": "Ocellaris clownfish",
+      "imageDescription": "Clown fish in the Andaman Coral Reef.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Pterois_volitans_Manado-e_edit.jpg/960px-Pterois_volitans_Manado-e_edit.jpg",
+      "answer": "זהרון אדום",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Photo by Jens Petersen , Edited by User:Olegiwit (cloned in part of fins) and Fir0002 (removed spots and noise) · CC BY 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Pterois_volitans_Manado-e_edit.jpg",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+      "artist": "Photo by Jens Petersen , Edited by User:Olegiwit (cloned in part of fins) and Fir0002 (removed spots and noise)",
+      "subjectSource": "https://en.wikipedia.org/wiki/Red_lionfish",
+      "subjectTitle": "Red lionfish",
+      "imageDescription": "Pterois volitans , also known as red or common lionfish. Picture taken at Tasik Ria, Manado, Sulawesi, Indonesia.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Mola_mola.jpg/960px-Mola_mola.jpg",
+      "answer": "דג שמש",
+      "aliases": [
+        "דג שמש מגובשש"
+      ],
+      "difficulty": 4,
+      "credit": "U.S. National Oceanic and Atmospheric Administration · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Mola_mola.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "U.S. National Oceanic and Atmospheric Administration",
+      "subjectSource": "https://en.wikipedia.org/wiki/Ocean_sunfish",
+      "subjectTitle": "Ocean sunfish",
+      "imageDescription": "Mola mola (en: Ocean Sunfish; pt: Peixe lua)",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Xiphias_gladius_Linnaeus%2C_1758_2599925021.jpg/960px-Xiphias_gladius_Linnaeus%2C_1758_2599925021.jpg",
+      "answer": "דג חרב",
+      "aliases": [
+        "דג-חרב"
+      ],
+      "difficulty": 4,
+      "credit": "Naturalis Biodiversity Center · CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Xiphias_gladius_Linnaeus,_1758_2599925021.jpg",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Naturalis Biodiversity Center",
+      "subjectSource": "https://en.wikipedia.org/wiki/Swordfish",
+      "subjectTitle": "Swordfish",
+      "imageDescription": "Xiphias gladius Linnaeus, 1758 2599925021",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Ansjovis.jpg/960px-Ansjovis.jpg",
+      "answer": "אנשובי",
+      "aliases": [
+        "עפיין אירופי"
+      ],
+      "difficulty": 4,
+      "credit": "Jschop · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ansjovis.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Jschop",
+      "subjectSource": "https://en.wikipedia.org/wiki/European_anchovy",
+      "subjectTitle": "European anchovy",
+      "imageDescription": "An anchovy, leftward",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Atlantic_Cod%2C_Atlantischer_Kabeljau_%28Gadus_morhua%29.jpg/960px-Atlantic_Cod%2C_Atlantischer_Kabeljau_%28Gadus_morhua%29.jpg",
+      "answer": "בקלה",
+      "aliases": [
+        "בקלה אטלנטית"
+      ],
+      "difficulty": 4,
+      "credit": "Wilhelm Thomas Fiege · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Atlantic_Cod,_Atlantischer_Kabeljau_(Gadus_morhua).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Wilhelm Thomas Fiege",
+      "subjectSource": "https://en.wikipedia.org/wiki/Atlantic_cod",
+      "subjectTitle": "Atlantic cod",
+      "imageDescription": "An Atlantic cod ( Gadus morhua ), taken at Ozeaneum Stralsund aquarium, Stralsund, Germany.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Sealife%2C_Bray%2C_Ireland._%286985874908%29.jpg/960px-Sealife%2C_Bray%2C_Ireland._%286985874908%29.jpg",
+      "answer": "לברק",
+      "aliases": [
+        "לברק חלק"
+      ],
+      "difficulty": 4,
+      "credit": "Miguel Mendez from Malahide, Ireland · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sealife,_Bray,_Ireland._(6985874908).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Miguel Mendez from Malahide, Ireland",
+      "subjectSource": "https://en.wikipedia.org/wiki/European_seabass",
+      "subjectTitle": "European seabass",
+      "imageDescription": "Camera: Sony NEX-5n Lens: Sony DT 50mm f/1.8 (with the LA-EA2 adapter) Wanted to test my new LA-EA2 and, what can I say, it rocks. It makes the NEX bulkier but you can always leave it at home when traveling and put a Sigma 30mm, making it a truly modular system. Very happy with the PDAF speed and accuracy and high ISO performance.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Sparus_aurata%2C_Alpes-Maritimes%2C_Provence-Alpes-C%C3%B4te_d%27Azur%2C_FR_imported_from_iNaturalist_photo_207799710.jpg/960px-Sparus_aurata%2C_Alpes-Maritimes%2C_Provence-Alpes-C%C3%B4te_d%27Azur%2C_FR_imported_from_iNaturalist_photo_207799710.jpg",
+      "answer": "דניס",
+      "aliases": [
+        "ספרוס זהוב"
+      ],
+      "difficulty": 4,
+      "credit": "(c) Julien Renoult, some rights reserved (CC BY) · CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sparus_aurata,_Alpes-Maritimes,_Provence-Alpes-C%C3%B4te_d%27Azur,_FR_imported_from_iNaturalist_photo_207799710.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "(c) Julien Renoult, some rights reserved (CC BY)",
+      "subjectSource": "https://en.wikipedia.org/wiki/Gilt-head_bream",
+      "subjectTitle": "Gilt-head bream",
+      "imageDescription": "Photo of Gilthead Seabream (undefined) uploaded from iNaturalist .",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Moray_eel.jpg/960px-Moray_eel.jpg",
+      "answer": "מורנה",
+      "aliases": [
+        "מורניים"
+      ],
+      "difficulty": 4,
+      "credit": "Mstroeck at en.wikipedia · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Moray_eel.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Mstroeck at en.wikipedia",
+      "subjectSource": "https://en.wikipedia.org/wiki/Moray_eel",
+      "subjectTitle": "Moray eel",
+      "imageDescription": "Photo of a moray eel taken in the Maldives by Michael Ströck (mstroeck) in 2006. Released under the GFDL.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Leafy_Seadragon_on_Kangaroo_Island.jpg/960px-Leafy_Seadragon_on_Kangaroo_Island.jpg",
+      "answer": "דרקון ים עלי",
+      "aliases": [
+        "סוסון האצה"
+      ],
+      "difficulty": 4,
+      "credit": "James Rosindell · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Leafy_Seadragon_on_Kangaroo_Island.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "James Rosindell",
+      "subjectSource": "https://en.wikipedia.org/wiki/Leafy_seadragon",
+      "subjectTitle": "Leafy seadragon",
+      "imageDescription": "Leafy Seadragon on Kangaroo Island taken with Nikon D300 in Ikelite Housing with auxiliary flash and Nikon 10-24mm lens",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Nautilus_belauensis_from_Palau.jpg/960px-Nautilus_belauensis_from_Palau.jpg",
+      "answer": "נאוטילוס",
+      "aliases": [
+        "נאוטילוסיים"
+      ],
+      "difficulty": 4,
+      "credit": "Manuae · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nautilus_belauensis_from_Palau.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Manuae",
+      "subjectSource": "https://en.wikipedia.org/wiki/Nautilus",
+      "subjectTitle": "Nautilus",
+      "imageDescription": "Nautilus, Palau",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Sepia_com%C3%BAn_%28Sepia_officinalis%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2020-07-21%2C_DD_62.jpg/960px-Sepia_com%C3%BAn_%28Sepia_officinalis%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2020-07-21%2C_DD_62.jpg",
+      "answer": "דיונון הרוקחים",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Diego Delso · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sepia_com%C3%BAn_(Sepia_officinalis),_Parque_natural_de_la_Arr%C3%A1bida,_Portugal,_2020-07-21,_DD_62.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Diego Delso",
+      "subjectSource": "https://en.wikipedia.org/wiki/Common_cuttlefish",
+      "subjectTitle": "Common cuttlefish",
+      "imageDescription": "Common cuttlefish ( Sepia officinalis ), Arrábida National Park , Portugal. The common cuttlefish is one of the largest and best-known cuttlefish species. They are a migratory species that spend the summer and spring inshore for spawning and then move to depths of 100 to 200m during autumn and winter. They only have a lifespan of 1–2 years and have many predators including sharks, dolphins, seals, fish, and cephalopods which includes other cuttlefish. During the day, most cuttlefish can be found buried below the substrate and fairly inactive. At night however, they are actively searching for prey and can ambush them from under the substrate. Cuttlefish are carnivorous and eat a variety of organisms including crustaceans (crabs and shrimp), small fish, molluscs (clams and snails), and sometimes other cuttlefish.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Tachypleus_gigas.JPG/960px-Tachypleus_gigas.JPG",
+      "answer": "סרטן פרסה",
+      "aliases": [
+        "סרטני פרסה"
+      ],
+      "difficulty": 4,
+      "credit": "Shubham Chatterjee · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tachypleus_gigas.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Shubham Chatterjee",
+      "subjectSource": "https://en.wikipedia.org/wiki/Horseshoe_crab",
+      "subjectTitle": "Horseshoe crab",
+      "imageDescription": "A female Indo-Pacific horseshoe crab, photographed in the West Bengal-Odisha coastal region on the Indian coastline of the Bay of Bengal. It was carried by a local fisher man from the seabed to the coast by mistake. This specimen was alive when photographed.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Macrocheira_kaempferi.jpg/960px-Macrocheira_kaempferi.jpg",
+      "answer": "סרטן עכביש יפני",
+      "aliases": [
+        "סרטן-עכביש יפני"
+      ],
+      "difficulty": 4,
+      "credit": "Lycaon (Hans Hillewaert) · CC BY 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Macrocheira_kaempferi.jpg",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+      "artist": "Lycaon (Hans Hillewaert)",
+      "subjectSource": "https://en.wikipedia.org/wiki/Japanese_spider_crab",
+      "subjectTitle": "Japanese spider crab",
+      "imageDescription": "Japanese Spider Crab ( Macrocheira kaempferi )",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/OdontodactylusScyllarus2.jpg/960px-OdontodactylusScyllarus2.jpg",
+      "answer": "חסילון גמל שלמה",
+      "aliases": [
+        "טרפידים"
+      ],
+      "difficulty": 4,
+      "credit": "Roy L. Caldwell, Department of Integrative Biology, University of California, Berkeley · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:OdontodactylusScyllarus2.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Roy L. Caldwell, Department of Integrative Biology, University of California, Berkeley",
+      "subjectSource": "https://en.wikipedia.org/wiki/Mantis_shrimp",
+      "subjectTitle": "Mantis shrimp",
+      "imageDescription": "A photograph of A female Odontodactylus Scyllarus mantis shrimp. Mantis shrimp or stomatopods are an ancient group of marine predators that are only distantly related to other more familiar crustaceans, such as crabs, shrimp and lobsters. While most occur in shallow tropical marine waters, a few species are found in more temperate seas. Although they are called mantis shrimp, they are neither shrimp nor mantid (a species of insect), but received their name due to their resemblance to both praying mantis and shrimp. Mantis shrimp appear in a variety of colors, from shades of browns to bright neon colors.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Tripneustes_ventricosus_%28West_Indian_Sea_Egg-top%29_and_Echinometra_viridis_%28Reef_Urchin_-_bottom%29.jpg/960px-Tripneustes_ventricosus_%28West_Indian_Sea_Egg-top%29_and_Echinometra_viridis_%28Reef_Urchin_-_bottom%29.jpg",
+      "answer": "קיפוד ים",
+      "aliases": [
+        "קיפודי ים"
+      ],
+      "difficulty": 4,
+      "credit": "Nhobgood ( talk ) Nick Hobgood · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tripneustes_ventricosus_(West_Indian_Sea_Egg-top)_and_Echinometra_viridis_(Reef_Urchin_-_bottom).jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Nhobgood ( talk ) Nick Hobgood",
+      "subjectSource": "https://en.wikipedia.org/wiki/Sea_urchin",
+      "subjectTitle": "Sea urchin",
+      "imageDescription": "Tripneustes ventricosus (West Indian Sea Egg-top) and Echinometra viridis (Reef Urchin - bottom).",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Giant_clam_%28Tridacna_gigas%29_Michaelmas_Cay.jpg/960px-Giant_clam_%28Tridacna_gigas%29_Michaelmas_Cay.jpg",
+      "answer": "צדפת ענק",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Giant_clam_(Tridacna_gigas)_Michaelmas_Cay.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Charles J. Sharp",
+      "subjectSource": "https://en.wikipedia.org/wiki/Giant_clam",
+      "subjectTitle": "Giant clam",
+      "imageDescription": "Giant clam ( Tridacna gigas ), Michaelmas Cay, Great Barrier Reef, Queensland, Australia. Rental camera so ignore metadata.",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/09/Argopecten_irradians.jpg",
+      "answer": "מסרק",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Rachael Norris and Marina Freudzon / Mayscallop at en.wikipedia · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Argopecten_irradians.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Rachael Norris and Marina Freudzon / Mayscallop at en.wikipedia",
+      "subjectSource": "https://en.wikipedia.org/wiki/Scallop",
+      "subjectTitle": "Scallop",
+      "imageDescription": "A live individual of Argopecten irradians , the Atlantic Bay scallop, photographed at the Marine Biological Laboratory in Woods Hole",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Miesmuscheln-2.jpg/960px-Miesmuscheln-2.jpg",
+      "answer": "מול כחול",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Rainer Zenz · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Miesmuscheln-2.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Rainer Zenz",
+      "subjectSource": "https://en.wikipedia.org/wiki/Blue_mussel",
+      "subjectTitle": "Blue mussel",
+      "imageDescription": "Miesmuscheln: Seitlich, von der Unterseite aus und aufgeklappt mit durchtrenntem Schließmuskel",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/2020-11_Kerguelen_Islands_-_Southern_elephant_seal_30.jpg/960px-2020-11_Kerguelen_Islands_-_Southern_elephant_seal_30.jpg",
+      "answer": "פיל ים",
+      "aliases": [
+        "פיל ים דרומי"
+      ],
+      "difficulty": 4,
+      "credit": "Antoine Lamielle · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2020-11_Kerguelen_Islands_-_Southern_elephant_seal_30.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Antoine Lamielle",
+      "subjectSource": "https://en.wikipedia.org/wiki/Southern_elephant_seal",
+      "subjectTitle": "Southern elephant seal",
+      "imageDescription": "A male Southern elephant seal , Kerguelen Islands , TAAF , France.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Dugong.JPG/960px-Dugong.JPG",
+      "answer": "תחש המשכן",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Gejuni · CC BY-SA 3.0 de",
+      "source": "https://commons.wikimedia.org/wiki/File:Dugong.JPG",
+      "license": "CC BY-SA 3.0 de",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+      "artist": "Gejuni",
+      "subjectSource": "https://en.wikipedia.org/wiki/Dugong",
+      "subjectTitle": "Dugong",
+      "imageDescription": "Dugong ( Dugong dugon )",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Manatee_with_calf.PD_-_colour_corrected.jpg/960px-Manatee_with_calf.PD_-_colour_corrected.jpg",
+      "answer": "פרת ים",
+      "aliases": [
+        "תחש נהרות קריבי"
+      ],
+      "difficulty": 4,
+      "credit": "Galen Rathbun · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Manatee_with_calf.PD_-_colour_corrected.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Galen Rathbun",
+      "subjectSource": "https://en.wikipedia.org/wiki/West_Indian_manatee",
+      "subjectTitle": "West Indian manatee",
+      "imageDescription": "A manatee and her calf. West Indian Manatee, an endangered aquatic mammal of Puerto Rico.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Mother_and_baby_sperm_whale.jpg/960px-Mother_and_baby_sperm_whale.jpg",
+      "answer": "ראשתן",
+      "aliases": [
+        "ראשתן גדול-ראש"
+      ],
+      "difficulty": 4,
+      "credit": "Gabriel Barathieu · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mother_and_baby_sperm_whale.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Gabriel Barathieu",
+      "subjectSource": "https://en.wikipedia.org/wiki/Sperm_whale",
+      "subjectTitle": "Sperm whale",
+      "imageDescription": "A mother sperm whale and her calf off the coast of Mauritius. The calf has remoras attached to its body.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Humpback_whale_breaching_off_Cabo_San_Lucas.jpg/960px-Humpback_whale_breaching_off_Cabo_San_Lucas.jpg",
+      "answer": "לווייתן גדול סנפיר",
+      "aliases": [
+        "לווייתן גדול-סנפיר"
+      ],
+      "difficulty": 4,
+      "credit": "Juan Cruzado Cortés · CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Humpback_whale_breaching_off_Cabo_San_Lucas.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "Juan Cruzado Cortés",
+      "subjectSource": "https://en.wikipedia.org/wiki/Humpback_whale",
+      "subjectTitle": "Humpback whale",
+      "imageDescription": "Humpback whale breaching off Cabo San Lucas, Mexico",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Oceanogr%C3%A0fic_29102004.jpg/960px-Oceanogr%C3%A0fic_29102004.jpg",
+      "answer": "לבנתן",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Javier Yaya Tur / CIUDAD DE LAS ARTES Y LAS CIENCIAS from Valencia, España · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Oceanogr%C3%A0fic_29102004.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Javier Yaya Tur / CIUDAD DE LAS ARTES Y LAS CIENCIAS from Valencia, España",
+      "subjectSource": "https://en.wikipedia.org/wiki/Beluga_whale",
+      "subjectTitle": "Beluga whale",
+      "imageDescription": "Ciudad de las Artes y las Ciencias. Valencia. www.cac.es",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/%D0%9D%D0%B0%D1%80%D0%B2%D0%B0%D0%BB_%D0%B2_%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B9_%D0%90%D1%80%D0%BA%D1%82%D0%B8%D0%BA%D0%B5.jpg/960px-%D0%9D%D0%B0%D1%80%D0%B2%D0%B0%D0%BB_%D0%B2_%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B9_%D0%90%D1%80%D0%BA%D1%82%D0%B8%D0%BA%D0%B5.jpg",
+      "answer": "חדשן",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "пресс-служба ПАО \"Газпром нефть\" · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B0%D1%80%D0%B2%D0%B0%D0%BB_%D0%B2_%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B9_%D0%90%D1%80%D0%BA%D1%82%D0%B8%D0%BA%D0%B5.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "пресс-служба ПАО \"Газпром нефть\"",
+      "subjectSource": "https://en.wikipedia.org/wiki/Narwhal",
+      "subjectTitle": "Narwhal",
+      "imageDescription": "Нарвал у островов Карла-Александра и Джексона (северная часть архипелага Земля Франца-Иосифа), июнь 2019",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Leatherback_sea_turtle_Tinglar%2C_USVI_%285839996547%29.jpg/960px-Leatherback_sea_turtle_Tinglar%2C_USVI_%285839996547%29.jpg",
+      "answer": "צב ים גילדי",
+      "aliases": [
+        "צב ים גלדי"
+      ],
+      "difficulty": 4,
+      "credit": "U.S. Fish and Wildlife Service Southeast Region · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Leatherback_sea_turtle_Tinglar,_USVI_(5839996547).jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "U.S. Fish and Wildlife Service Southeast Region",
+      "subjectSource": "https://en.wikipedia.org/wiki/Leatherback_sea_turtle",
+      "subjectTitle": "Leatherback sea turtle",
+      "imageDescription": "Scientific name: Dermochelys coriacea Common name Spanish: Tinglar Photo by Claudia Lombard, USFWS Location, Sandy Point National Wildlife Refuge, US Virgin Islands More information: [1]",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Great_White_Shark_%2814730796397%29.jpg/960px-Great_White_Shark_%2814730796397%29.jpg",
+      "answer": "כריש לבן",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Elias Levy · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Great_White_Shark_(14730796397).jpg",
+      "artist": "Elias Levy",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Blue_Whale_001_noaa_body_color.jpg",
+      "answer": "לווייתן כחול",
+      "aliases": [
+        "לוויתן כחול"
+      ],
+      "difficulty": 2,
+      "credit": "NOAA Fisheries ( TBjornstad 11:20, 18 April 2007 (UTC)) · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Blue_Whale_001_noaa_body_color.jpg",
+      "artist": "NOAA Fisheries ( TBjornstad 11:20, 18 April 2007 (UTC))",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Octopus_vulgaris2.jpg/960px-Octopus_vulgaris2.jpg",
+      "answer": "תמנון",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Beckmannjan · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Octopus_vulgaris2.jpg",
+      "artist": "Beckmannjan",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Jelly_cc11.jpg/960px-Jelly_cc11.jpg",
+      "answer": "מדוזה",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Dan90266 · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jelly_cc11.jpg",
+      "artist": "Dan90266",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Hippocampus_histrix%2C_Timor_Oriental.jpg/960px-Hippocampus_histrix%2C_Timor_Oriental.jpg",
+      "answer": "סוסון ים",
+      "aliases": [],
+      "difficulty": 3,
+      "credit": "prilfish · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hippocampus_histrix,_Timor_Oriental.jpg",
+      "artist": "prilfish",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Chelonia_Mydas.JPG/960px-Chelonia_Mydas.JPG",
+      "answer": "צב ים",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Bthv · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chelonia_Mydas.JPG",
+      "artist": "Bthv",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/KreeftbijDenOsse.jpg/960px-KreeftbijDenOsse.jpg",
+      "answer": "לובסטר",
+      "aliases": [],
+      "difficulty": 3,
+      "credit": "Bart Braun · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:KreeftbijDenOsse.jpg",
+      "artist": "Bart Braun",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Georgia_Aquarium_-_Cuttlefish_Jan_2006.jpg/960px-Georgia_Aquarium_-_Cuttlefish_Jan_2006.jpg",
+      "answer": "דיונון",
+      "aliases": [
+        "קלמארי"
+      ],
+      "difficulty": 3,
+      "credit": "Diliff · CC BY 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Georgia_Aquarium_-_Cuttlefish_Jan_2006.jpg",
+      "artist": "Diliff",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Sea_lion_on_the_beach.jpg/960px-Sea_lion_on_the_beach.jpg",
+      "answer": "אריה ים",
+      "aliases": [],
+      "difficulty": 3,
+      "credit": "Tomas Sobek · CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sea_lion_on_the_beach.jpg",
+      "artist": "Tomas Sobek",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Noaa-walrus22.jpg/960px-Noaa-walrus22.jpg",
+      "answer": "ניבתן",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Captain Budd Christman, NOAA Corps · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Noaa-walrus22.jpg",
+      "artist": "Captain Budd Christman, NOAA Corps",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Killerwhales_jumping.jpg/960px-Killerwhales_jumping.jpg",
+      "answer": "קטלן",
+      "aliases": [
+        "אורקה",
+        "לווייתן קטלן",
+        "לוויתן קטלן"
+      ],
+      "difficulty": 3,
+      "credit": "Robert Pittman · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg",
+      "artist": "Robert Pittman",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Water_baloon_%282196115607%29.jpg/960px-Water_baloon_%282196115607%29.jpg",
+      "answer": "דג נפוח",
+      "aliases": [
+        "אבו נפיחה"
+      ],
+      "difficulty": 4,
+      "credit": "TANAKA Juuyoh (田中十洋) · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Water_baloon_(2196115607).jpg",
+      "artist": "TANAKA Juuyoh (田中十洋)",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "reviewed": true
+    }
+  ]
 }
