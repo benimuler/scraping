@@ -364,7 +364,8 @@
       "artist": "Ben Townsend from Blacksburg, Virginia",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "reviewed": true
+      "reviewed": true,
+      "imageDescription": "Museum-mounted skeleton or fossil of ולוצירפטור"
     },
     {
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Spinosaurus_in_Japan_Expo.jpg/960px-Spinosaurus_in_Japan_Expo.jpg",
@@ -376,7 +377,152 @@
       "artist": "★Kumiko★",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "reviewed": true
+      "reviewed": true,
+      "imageDescription": "Museum-mounted skeleton or fossil of ספינוזאורוס"
+    },
+    {
+      "answer": "סטגוזאורוס",
+      "aliases": [
+        "סטגוסאורוס"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Journal.pone.0138352.g001A.jpg/960px-Journal.pone.0138352.g001A.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Journal.pone.0138352.g001A.jpg",
+      "artist": "Susannah Maidment et al. &amp; Natural History Museum, London",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "credit": "Susannah Maidment et al. &amp; Natural History Museum, London · CC BY 4.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Stegosaurus",
+      "subjectTitle": "Stegosaurus",
+      "difficulty": 2,
+      "reviewed": true,
+      "imageDescription": "Museum-mounted skeleton or fossil of Stegosaurus"
+    },
+    {
+      "answer": "טריצרטופס",
+      "aliases": [
+        "טריקרטופס"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/LA-Triceratops_mount-2.jpg/960px-LA-Triceratops_mount-2.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:LA-Triceratops_mount-2.jpg",
+      "artist": "Source: Allie_Caulfield Derivative: User:MathKnight",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "credit": "Source: Allie_Caulfield Derivative: User:MathKnight · CC BY-SA 3.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Triceratops",
+      "subjectTitle": "Triceratops",
+      "difficulty": 2,
+      "reviewed": true,
+      "imageDescription": "Museum-mounted skeleton or fossil of Triceratops"
+    },
+    {
+      "answer": "טירנוזאורוס",
+      "aliases": [
+        "טי רקס",
+        "טירקס"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Tyrannosaurus_Rex_Holotype.jpg/960px-Tyrannosaurus_Rex_Holotype.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Tyrannosaurus_Rex_Holotype.jpg",
+      "artist": "ScottRobertAnselmo",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "credit": "ScottRobertAnselmo · CC BY-SA 3.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Tyrannosaurus",
+      "subjectTitle": "Tyrannosaurus",
+      "difficulty": 2,
+      "reviewed": true,
+      "imageDescription": "Museum-mounted skeleton or fossil of Tyrannosaurus"
+    },
+    {
+      "answer": "אלוזאורוס",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/WLA_hmns_Allosaurus_White_Background.jpg/960px-WLA_hmns_Allosaurus_White_Background.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:WLA_hmns_Allosaurus_White_Background.jpg",
+      "artist": "The_Wookies",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+      "credit": "The_Wookies · CC BY 2.5",
+      "subjectSource": "https://en.wikipedia.org/wiki/Allosaurus",
+      "subjectTitle": "Allosaurus",
+      "difficulty": 2,
+      "reviewed": true,
+      "imageDescription": "Museum-mounted skeleton or fossil of Allosaurus"
+    },
+    {
+      "answer": "ברכיוזאורוס",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Brachiosaurus_mount.jpg/960px-Brachiosaurus_mount.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Brachiosaurus_mount.jpg",
+      "artist": "Matt Wedel",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "credit": "Matt Wedel · CC BY 3.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Brachiosaurus",
+      "subjectTitle": "Brachiosaurus",
+      "difficulty": 2,
+      "reviewed": true,
+      "imageDescription": "Museum-mounted skeleton or fossil of Brachiosaurus"
+    },
+    {
+      "answer": "ארכיאופטריקס",
+      "aliases": [
+        "ארכאופטריקס"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Archaeopteryx_lithographica_%28Berlin_specimen%29.jpg/960px-Archaeopteryx_lithographica_%28Berlin_specimen%29.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Archaeopteryx_lithographica_%28Berlin_specimen%29.jpg",
+      "artist": "H. Raab ( User: Vesta )",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "credit": "H. Raab ( User: Vesta ) · CC BY-SA 3.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Archaeopteryx",
+      "subjectTitle": "Archaeopteryx",
+      "difficulty": 2,
+      "reviewed": true,
+      "imageDescription": "Museum-mounted skeleton or fossil of Archaeopteryx"
+    },
+    {
+      "answer": "צרטוזאורוס",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Ceratosaurus_mount_utah_museum_1.jpg/960px-Ceratosaurus_mount_utah_museum_1.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ceratosaurus_mount_utah_museum_1.jpg",
+      "artist": "Jens Lallensack",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "credit": "Jens Lallensack · CC BY-SA 4.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Ceratosaurus",
+      "subjectTitle": "Ceratosaurus",
+      "difficulty": 2,
+      "reviewed": true,
+      "imageDescription": "Museum-mounted skeleton or fossil of Ceratosaurus"
+    },
+    {
+      "answer": "קמרזאורוס",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Camarasaurus_lentus_Carnegie.jpg/960px-Camarasaurus_lentus_Carnegie.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Camarasaurus_lentus_Carnegie.jpg",
+      "artist": "James St. John",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "credit": "James St. John · CC BY 2.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Camarasaurus",
+      "subjectTitle": "Camarasaurus",
+      "difficulty": 2,
+      "reviewed": true,
+      "imageDescription": "Museum-mounted skeleton or fossil of Camarasaurus"
+    },
+    {
+      "answer": "קרנוטאורוס",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Carnotaurus%2C_Chlup%C3%A1%C4%8D_Museum%2C_Prague-2.jpg/960px-Carnotaurus%2C_Chlup%C3%A1%C4%8D_Museum%2C_Prague-2.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Carnotaurus%2C_Chlup%C3%A1%C4%8D_Museum%2C_Prague-2.jpg",
+      "artist": "Carnotaurus, Chlupáč Museum, Prague-2.jpg : Czech Wikipedia user Packa derivative work: Hic et nunc",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "credit": "Carnotaurus, Chlupáč Museum, Prague-2.jpg : Czech Wikipedia user Packa derivative work: Hic et nunc · CC BY-SA 3.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Carnotaurus",
+      "subjectTitle": "Carnotaurus",
+      "difficulty": 2,
+      "reviewed": true,
+      "imageDescription": "Museum-mounted skeleton or fossil of Carnotaurus"
     }
   ]
 }
