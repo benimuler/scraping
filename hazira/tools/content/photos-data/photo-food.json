@@ -1,177 +1,859 @@
 {
- "id": "photo-food",
- "name": "מאכלים (תמונות)",
- "hint": "אומרים את שם המנה",
- "items": [
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Das_coisas_simples_e_boas_da_vida._Aqui_na_Piazza_25_Aprile_%2825157691204%29.jpg/960px-Das_coisas_simples_e_boas_da_vida._Aqui_na_Piazza_25_Aprile_%2825157691204%29.jpg",
-   "answer": "פיצה",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Shoichi Iwashita · CC BY 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Das_coisas_simples_e_boas_da_vida._Aqui_na_Piazza_25_Aprile_(25157691204).jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Bistro_56_Burger_and_French_Fries.jpg/960px-Bistro_56_Burger_and_French_Fries.jpg",
-   "answer": "המבורגר",
-   "aliases": [
-    "בורגר"
-   ],
-   "difficulty": 2,
-   "credit": "Yotam Nachum · CC0",
-   "source": "https://commons.wikimedia.org/wiki/File:Bistro_56_Burger_and_French_Fries.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/JapanesFood.jpg/960px-JapanesFood.jpg",
-   "answer": "סושי",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Shahzad Afzal · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:JapanesFood.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Hummus_from_The_Nile.jpg/960px-Hummus_from_The_Nile.jpg",
-   "answer": "חומוס",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Paul Goyette · CC BY-SA 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Hummus_from_The_Nile.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Falafel_beim_Isarinselfest_M%C3%BCnchen_2.jpg/960px-Falafel_beim_Isarinselfest_M%C3%BCnchen_2.jpg",
-   "answer": "פלאפל",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Burkhard Mücke · CC BY-SA 4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Falafel_beim_Isarinselfest_M%C3%BCnchen_2.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/PikiWiki_Israel_62597_shakshuka_beet.jpg/960px-PikiWiki_Israel_62597_shakshuka_beet.jpg",
-   "answer": "שקשוקה",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "ישראל פרקר · CC BY 2.5",
-   "source": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_62597_shakshuka_beet.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/%28Pasta%29_by_David_Adam_Kess_%28pic.2%29.jpg/960px-%28Pasta%29_by_David_Adam_Kess_%28pic.2%29.jpg",
-   "answer": "פסטה",
-   "aliases": [
-    "ספגטי"
-   ],
-   "difficulty": 2,
-   "credit": "David Adam Kess · CC BY-SA 4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:(Pasta)_by_David_Adam_Kess_(pic.2).jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Bologna_sandwich.jpg",
-   "answer": "כריך",
-   "aliases": [
-    "סנדוויץ׳",
-    "סנדוויץ"
-   ],
-   "difficulty": 2,
-   "credit": "Diderot's dreams · CC BY 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Bologna_sandwich.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Maize_-_Corn.jpg/960px-Maize_-_Corn.jpg",
-   "answer": "טאקו",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "WiseMan42 · CC0",
-   "source": "https://commons.wikimedia.org/wiki/File:Maize_-_Corn.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Falafel%27s_Etc_-_Dinner.jpg/960px-Falafel%27s_Etc_-_Dinner.jpg",
-   "answer": "קציצות",
-   "aliases": [
-    "קציצה"
-   ],
-   "difficulty": 3,
-   "credit": "Ernesto Andrade · CC BY 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Falafel's_Etc_-_Dinner.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Red_lentil_soup.jpg",
-   "answer": "מרק עדשים",
-   "aliases": [
-    "מרק"
-   ],
-   "difficulty": 3,
-   "credit": "Gilabrand at English Wikipedia · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Red_lentil_soup.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/FoodOmelete.jpg/960px-FoodOmelete.jpg",
-   "answer": "חביתה",
-   "aliases": [
-    "אומלט"
-   ],
-   "difficulty": 2,
-   "credit": "Renee Comet (photographer) · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:FoodOmelete.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Bourekas.jpg/960px-Bourekas.jpg",
-   "answer": "בורקס",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Shlomif at en.wikipedia · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Bourekas.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Couscous.jpeg/960px-Couscous.jpeg",
-   "answer": "קוסקוס",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "User:Vinzv · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Couscous.jpeg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Wiener-Schnitzel02.jpg/960px-Wiener-Schnitzel02.jpg",
-   "answer": "שניצל",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Kobako · CC BY-SA 2.5",
-   "source": "https://commons.wikimedia.org/wiki/File:Wiener-Schnitzel02.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Pita_From_Greece.jpg/960px-Pita_From_Greece.jpg",
-   "answer": "פיתה",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "CC BY 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Pita_From_Greece.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Challah_Bread_Six_Braid_1.JPG/960px-Challah_Bread_Six_Braid_1.JPG",
-   "answer": "חלה",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Aviv Hod · CC BY 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Challah_Bread_Six_Braid_1.JPG"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/HK_SW_Wing_Lok_Street_FWD_Financial_Centre_shop_Maxim%27s_MX_Restaurant_afternoon_meal_food_July_2020_SS2_02.jpg/960px-HK_SW_Wing_Lok_Street_FWD_Financial_Centre_shop_Maxim%27s_MX_Restaurant_afternoon_meal_food_July_2020_SS2_02.jpg",
-   "answer": "נקניקייה בלחמנייה",
-   "aliases": [
-    "נקניקיה בלחמניה",
-    "הוט דוג"
-   ],
-   "difficulty": 2,
-   "credit": "Lim Tsze Kin 207073 · CC BY-SA 4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:HK_SW_Wing_Lok_Street_FWD_Financial_Centre_shop_Maxim's_MX_Restaurant_afternoon_meal_food_July_2020_SS2_02.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Farshirovannyi_peretz.jpg/960px-Farshirovannyi_peretz.jpg",
-   "answer": "פלפל ממולא",
-   "aliases": [
-    "ממולאים"
-   ],
-   "difficulty": 4,
-   "credit": "User:Zserghei · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Farshirovannyi_peretz.jpg"
-  }
- ]
+  "id": "photo-food",
+  "name": "מאכלים (תמונות)",
+  "hint": "אומרים את שם המנה",
+  "items": [
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Lasagne_-_stonesoup.jpg/960px-Lasagne_-_stonesoup.jpg",
+      "answer": "לזניה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "jules / stonesoup · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lasagne_-_stonesoup.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "jules / stonesoup",
+      "subjectSource": "https://en.wikipedia.org/wiki/Lasagna",
+      "subjectTitle": "Lasagna",
+      "imageDescription": "Lasagne served on a white plate",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Flickr_-_cyclonebill_-_Ravioli_med_skinke_og_asparges_i_mascarponecreme.jpg/960px-Flickr_-_cyclonebill_-_Ravioli_med_skinke_og_asparges_i_mascarponecreme.jpg",
+      "answer": "רביולי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "cyclonebill · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Flickr_-_cyclonebill_-_Ravioli_med_skinke_og_asparges_i_mascarponecreme.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "cyclonebill",
+      "subjectSource": "https://en.wikipedia.org/wiki/Ravioli",
+      "subjectTitle": "Ravioli",
+      "imageDescription": "Ravioli med skinke og asparges i mascarponecreme",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Tortellini_Bolognesi.jpg/960px-Tortellini_Bolognesi.jpg",
+      "answer": "טורטליני",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Angelo.Muratore · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tortellini_Bolognesi.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Angelo.Muratore",
+      "subjectSource": "https://en.wikipedia.org/wiki/Tortellini",
+      "subjectTitle": "Tortellini",
+      "imageDescription": "Alcuni tortellini Bolognesi sul piano di legno appena prodotti dalla sfoglina",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/86/Gnocchi_di_ricotta_burro_e_salvia.jpg",
+      "answer": "ניוקי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Paoletta S. · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gnocchi_di_ricotta_burro_e_salvia.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Paoletta S.",
+      "subjectSource": "https://en.wikipedia.org/wiki/Gnocchi",
+      "subjectTitle": "Gnocchi",
+      "imageDescription": "Gnocchi with ricotta.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Risotto_with_speck_and_goat_cheese_%286101067436%29.jpg/960px-Risotto_with_speck_and_goat_cheese_%286101067436%29.jpg",
+      "answer": "ריזוטו",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Luca Nebuloni from Milan, Italy · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Risotto_with_speck_and_goat_cheese_(6101067436).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Luca Nebuloni from Milan, Italy",
+      "subjectSource": "https://en.wikipedia.org/wiki/Risotto",
+      "subjectTitle": "Risotto",
+      "imageDescription": "Risotto with speck and goat cheese",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/01_Paella_Valenciana_original.jpg/960px-01_Paella_Valenciana_original.jpg",
+      "answer": "פאייה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Jan Harenburg · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:01_Paella_Valenciana_original.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Jan Harenburg",
+      "subjectSource": "https://en.wikipedia.org/wiki/Paella",
+      "subjectTitle": "Paella",
+      "imageDescription": "Paella - original Paella from Valencia",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/%22Hyderabadi_Dum_Biryani%22.jpg/960px-%22Hyderabadi_Dum_Biryani%22.jpg",
+      "answer": "ביריאני",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Mahi Tatavarty · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%22Hyderabadi_Dum_Biryani%22.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Mahi Tatavarty",
+      "subjectSource": "https://en.wikipedia.org/wiki/Biryani",
+      "subjectTitle": "Biryani",
+      "imageDescription": "Hyderabadi Dum Biryani, a popular type of biryani",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Afghan_Palo.jpg",
+      "answer": "פילאף",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Jost Wagner · CC BY-SA 1.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Afghan_Palo.jpg",
+      "license": "CC BY-SA 1.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0",
+      "artist": "Jost Wagner",
+      "subjectSource": "https://en.wikipedia.org/wiki/Pilaf",
+      "subjectTitle": "Pilaf",
+      "imageDescription": "Popular Afghani Palo. It is rice cooked with sliced carrots, sliced orange peels (removing the white part), raisins, almonds, and other stuff.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Taj_Mahal_-_Lamb_Curry_Madras.jpg/960px-Taj_Mahal_-_Lamb_Curry_Madras.jpg",
+      "answer": "קארי",
+      "aliases": [
+        "מאכלי קארי"
+      ],
+      "difficulty": 4,
+      "credit": "Francesc Fort · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_-_Lamb_Curry_Madras.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Francesc Fort",
+      "subjectSource": "https://en.wikipedia.org/wiki/Curry",
+      "subjectTitle": "Curry",
+      "imageDescription": "Taj Mahal (Restaurant de València)",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Shoyu_Ramen%EF%BC%88Tokyo_Ramen%EF%BC%89_-_01.jpg/960px-Shoyu_Ramen%EF%BC%88Tokyo_Ramen%EF%BC%89_-_01.jpg",
+      "answer": "ראמן",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Quercus acuta · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Shoyu_Ramen%EF%BC%88Tokyo_Ramen%EF%BC%89_-_01.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Quercus acuta",
+      "subjectSource": "https://en.wikipedia.org/wiki/Ramen",
+      "subjectTitle": "Ramen",
+      "imageDescription": "醤油ラーメン（東京ラーメン）",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Bowl_of_Meatball_pho.jpg/960px-Bowl_of_Meatball_pho.jpg",
+      "answer": "פו",
+      "aliases": [
+        "מרק פו"
+      ],
+      "difficulty": 4,
+      "credit": "SerraKnightz · CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bowl_of_Meatball_pho.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "SerraKnightz",
+      "subjectSource": "https://en.wikipedia.org/wiki/Pho",
+      "subjectTitle": "Pho",
+      "imageDescription": "Bowl of Meatball Pho with a side a cold glass of coca-cola",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Phat_Thai_kung_Chang_Khien_street_stall.jpg/960px-Phat_Thai_kung_Chang_Khien_street_stall.jpg",
+      "answer": "פאד תאי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Takeaway · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Phat_Thai_kung_Chang_Khien_street_stall.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Takeaway",
+      "subjectSource": "https://en.wikipedia.org/wiki/Pad_thai",
+      "subjectTitle": "Pad thai",
+      "imageDescription": "Phat Thai kung sot (\"fresh\" prawn phat Thai), costing 35 baht, from a street stall in the Chang Khien neighbourhood of Chiang Mai, Thailand. The kung sot (\"fresh prawn\") acts as a contrast to kung haeng (\"dried prawns/shrimp\"). Dried shrimp should feature in every version of phat Thai except in the purely vegetarian variations.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Spring_Rolls_%283357696061%29.jpg/960px-Spring_Rolls_%283357696061%29.jpg",
+      "answer": "ספרינג רול",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Donna Benjamin · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Spring_Rolls_(3357696061).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Donna Benjamin",
+      "subjectSource": "https://en.wikipedia.org/wiki/Spring_roll",
+      "subjectTitle": "Spring roll",
+      "imageDescription": "Spring Rolls",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/88/%E5%8F%B0%E7%81%A3%E5%8D%97%E6%8A%95%E8%8D%89%E5%B1%AF%E6%B0%B4%E9%A4%83Nantou%2C_Taiwan_Caotun_dumplings.jpg",
+      "answer": "גיוזה",
+      "aliases": [
+        "ג'יאוזי"
+      ],
+      "difficulty": 4,
+      "credit": "Yeepunchmen · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E5%8F%B0%E7%81%A3%E5%8D%97%E6%8A%95%E8%8D%89%E5%B1%AF%E6%B0%B4%E9%A4%83Nantou,_Taiwan_Caotun_dumplings.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Yeepunchmen",
+      "subjectSource": "https://en.wikipedia.org/wiki/Jiaozi",
+      "subjectTitle": "Jiaozi",
+      "imageDescription": "​南投草屯販賣的水餃",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Baozi_Chengdu.JPG/960px-Baozi_Chengdu.JPG",
+      "answer": "באו",
+      "aliases": [
+        "באוזי"
+      ],
+      "difficulty": 4,
+      "credit": "Popo le Chien · CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Baozi_Chengdu.JPG",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Popo le Chien",
+      "subjectSource": "https://en.wikipedia.org/wiki/Baozi",
+      "subjectTitle": "Baozi",
+      "imageDescription": "A bunch of baozi, chinese buns filled with meat and/or vegetables",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Samosas%2C_snack_food_at_Wikipedia%27s_16th_Birthday_celebration_in_Chittagong_%2801%29.jpg/960px-Samosas%2C_snack_food_at_Wikipedia%27s_16th_Birthday_celebration_in_Chittagong_%2801%29.jpg",
+      "answer": "סמוסה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Moheen Reeyad · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Samosas,_snack_food_at_Wikipedia%27s_16th_Birthday_celebration_in_Chittagong_(01).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Moheen Reeyad",
+      "subjectSource": "https://en.wikipedia.org/wiki/Samosa",
+      "subjectTitle": "Samosa",
+      "imageDescription": "Samosas is a popular food especially in Bangladesh and India; at Wikipedia's 16th Birthday celebration in Chittagong.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Annapurna_Naan.jpg/960px-Annapurna_Naan.jpg",
+      "answer": "נאן",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "snowpea&bokchoi · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Annapurna_Naan.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "snowpea&bokchoi",
+      "subjectSource": "https://en.wikipedia.org/wiki/Naan",
+      "subjectTitle": "Naan",
+      "imageDescription": "Annapurna Naan",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/2_Chapati_warm_and_ready_to_be_eaten.jpg/960px-2_Chapati_warm_and_ready_to_be_eaten.jpg",
+      "answer": "צפאטי",
+      "aliases": [
+        "צ'פאטי"
+      ],
+      "difficulty": 4,
+      "credit": "KittyKaht from Hong Kong, Hong Kong · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2_Chapati_warm_and_ready_to_be_eaten.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "KittyKaht from Hong Kong, Hong Kong",
+      "subjectSource": "https://en.wikipedia.org/wiki/Chapati",
+      "subjectTitle": "Chapati",
+      "imageDescription": "Chapati roti bread India",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Stacks_of_corn_tortillas_and_flour_tortillas%2C_with_the_top_one_rolled%2C_side_view_%282%29.jpg/960px-Stacks_of_corn_tortillas_and_flour_tortillas%2C_with_the_top_one_rolled%2C_side_view_%282%29.jpg",
+      "answer": "טורטייה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Vigilantcosmicpenguin · CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Stacks_of_corn_tortillas_and_flour_tortillas,_with_the_top_one_rolled,_side_view_(2).jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "Vigilantcosmicpenguin",
+      "subjectSource": "https://en.wikipedia.org/wiki/Tortilla",
+      "subjectTitle": "Tortilla",
+      "imageDescription": "A stack of flour tortillas (left) and a stack of corn tortillas (right). These tortillas were purchased from a local Hispanic grocery store slash tortillería.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Empanada_flor_de_Calabaza.jpg/960px-Empanada_flor_de_Calabaza.jpg",
+      "answer": "קסדייה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "nsaum75 ¡שיחת! ‎ · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Empanada_flor_de_Calabaza.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "nsaum75 ¡שיחת! ‎",
+      "subjectSource": "https://en.wikipedia.org/wiki/Quesadilla",
+      "subjectTitle": "Quesadilla",
+      "imageDescription": "An (opened) Squash Flower or Flor de Calabaza Empanada in Oaxaca, Mexico.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Burrito.JPG/960px-Burrito.JPG",
+      "answer": "בוריטו",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "samuelfernandezrivera · CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Burrito.JPG",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "samuelfernandezrivera",
+      "subjectSource": "https://en.wikipedia.org/wiki/Burrito",
+      "subjectTitle": "Burrito",
+      "imageDescription": "Burrito",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Nachos-cheese.jpg/960px-Nachos-cheese.jpg",
+      "answer": "נאצוס",
+      "aliases": [
+        "נאצ'וס"
+      ],
+      "difficulty": 4,
+      "credit": "chee.hong from Kuala Lumpur, Malaysia · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nachos-cheese.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "chee.hong from Kuala Lumpur, Malaysia",
+      "subjectSource": "https://en.wikipedia.org/wiki/Nachos",
+      "subjectTitle": "Nachos",
+      "imageDescription": "A plate of Nachos —tortilla chips topped with melted cheese, sliced chile peppers, sliced black olives, and chili sauce—as served by the Logenhaus Roast & Grill in the UEP Subang Jaya township of Selangor, Malaysia. Cheese Nachos",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Guacamole_IMGP1271.jpg/960px-Guacamole_IMGP1271.jpg",
+      "answer": "גוואקמולי",
+      "aliases": [
+        "גואקמולה"
+      ],
+      "difficulty": 4,
+      "credit": "Nikodem Nijaki · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Guacamole_IMGP1271.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Nikodem Nijaki",
+      "subjectSource": "https://en.wikipedia.org/wiki/Guacamole",
+      "subjectTitle": "Guacamole",
+      "imageDescription": "Guacamole - avocado-based dip originated in Mexico",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Cebiche_de_corvina.JPG/960px-Cebiche_de_corvina.JPG",
+      "answer": "סביצה",
+      "aliases": [
+        "סביצ'ה"
+      ],
+      "difficulty": 4,
+      "credit": "Picanteria karol · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cebiche_de_corvina.JPG",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Picanteria karol",
+      "subjectSource": "https://en.wikipedia.org/wiki/Ceviche",
+      "subjectTitle": "Ceviche",
+      "imageDescription": "ceviche",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Gulyas080.jpg/960px-Gulyas080.jpg",
+      "answer": "גולאש",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Lily15 · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gulyas080.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Lily15",
+      "subjectSource": "https://en.wikipedia.org/wiki/Goulash",
+      "subjectTitle": "Goulash",
+      "imageDescription": "Bogrács gulyás , készült a fegyverneki gulyásfesztiválon",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Borscht_served.jpg/960px-Borscht_served.jpg",
+      "answer": "בורשט",
+      "aliases": [
+        "חמיצה"
+      ],
+      "difficulty": 4,
+      "credit": "liz west from Boxborough, MA · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Borscht_served.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "liz west from Boxborough, MA",
+      "subjectSource": "https://en.wikipedia.org/wiki/Borscht",
+      "subjectTitle": "Borscht",
+      "imageDescription": "Borsch can be served hot or cold. It is usually served with sour cream and sometimes dill.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/MussakasMeMelitsanesKePatates01.JPG/960px-MussakasMeMelitsanesKePatates01.JPG",
+      "answer": "מוסקה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Robert Kindermann aka RobertK · CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:MussakasMeMelitsanesKePatates01.JPG",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+      "artist": "Robert Kindermann aka RobertK",
+      "subjectSource": "https://en.wikipedia.org/wiki/Moussaka",
+      "subjectTitle": "Moussaka",
+      "imageDescription": "Moussaka with aubergine and potatoes",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Speca_te_mbushura_me_mish.JPG/960px-Speca_te_mbushura_me_mish.JPG",
+      "answer": "דולמה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Violetamyftari · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Speca_te_mbushura_me_mish.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Violetamyftari",
+      "subjectSource": "https://en.wikipedia.org/wiki/Dolma",
+      "subjectTitle": "Dolma",
+      "imageDescription": "Gatim tradicional Kosovarëi njohur si speca dollma nga turqishtja",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Kibbeh3.jpg/960px-Kibbeh3.jpg",
+      "answer": "קובה (מאכל)",
+      "aliases": [
+        "קובה"
+      ],
+      "difficulty": 4,
+      "credit": "Bazel · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kibbeh3.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Bazel",
+      "subjectSource": "https://en.wikipedia.org/wiki/Kibbeh",
+      "subjectTitle": "Kibbeh",
+      "imageDescription": "Kibbeh",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Tabouleh_1.JPG/960px-Tabouleh_1.JPG",
+      "answer": "טאבולה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Miansari66 · CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tabouleh_1.JPG",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Miansari66",
+      "subjectSource": "https://en.wikipedia.org/wiki/Tabbouleh",
+      "subjectTitle": "Tabbouleh",
+      "imageDescription": "Tabouleh",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Baba_Ganoush_05of05_%288735238183%29.jpg/960px-Baba_Ganoush_05of05_%288735238183%29.jpg",
+      "answer": "באבא גנוש",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Breville USA · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Baba_Ganoush_05of05_(8735238183).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Breville USA",
+      "subjectSource": "https://en.wikipedia.org/wiki/Baba_ghanoush",
+      "subjectTitle": "Baba ghanoush",
+      "imageDescription": "Baba Ganoush_05of05",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Shawarma_2.jpg/960px-Shawarma_2.jpg",
+      "answer": "שווארמה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Vis M · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Shawarma_2.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Vis M",
+      "subjectSource": "https://en.wikipedia.org/wiki/Shawarma",
+      "subjectTitle": "Shawarma",
+      "imageDescription": "Shawarma making, Alappuzha, Kerala",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Lula_kebab_2.jpg/960px-Lula_kebab_2.jpg",
+      "answer": "קבב",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Lesya Dolyk · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lula_kebab_2.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Lesya Dolyk",
+      "subjectSource": "https://en.wikipedia.org/wiki/Kebab",
+      "subjectTitle": "Kebab",
+      "imageDescription": "Kebab of lamb, with homemade bread.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Jachnun.jpg/960px-Jachnun.jpg",
+      "answer": "גחנון",
+      "aliases": [
+        "ג'חנון"
+      ],
+      "difficulty": 4,
+      "credit": "Joshua Herzig-Marx · CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Jachnun.jpg",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+      "artist": "Joshua Herzig-Marx",
+      "subjectSource": "https://en.wikipedia.org/wiki/Jachnun",
+      "subjectTitle": "Jachnun",
+      "imageDescription": "Plate of Jachnun, a Yemenite Jewish Sabbath bread",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/78/Malawach.jpg",
+      "answer": "מלאווח",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Ayala Sender · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Malawach.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Ayala Sender",
+      "subjectSource": "https://en.wikipedia.org/wiki/Malawach",
+      "subjectTitle": "Malawach",
+      "imageDescription": "Malawach Malawach",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Gefilte_fish_topped_with_slices_of_carrot.jpg/960px-Gefilte_fish_topped_with_slices_of_carrot.jpg",
+      "answer": "גפילטע פיש",
+      "aliases": [
+        "געפילטע פיש"
+      ],
+      "difficulty": 4,
+      "credit": "Mushki Brichta · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gefilte_fish_topped_with_slices_of_carrot.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Mushki Brichta",
+      "subjectSource": "https://en.wikipedia.org/wiki/Gefilte_fish",
+      "subjectTitle": "Gefilte fish",
+      "imageDescription": "Gefilte fish topped with slices of carrot",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Chol_001.jpg/960px-Chol_001.jpg",
+      "answer": "חמין",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Gilabrand · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chol_001.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Gilabrand",
+      "subjectSource": "https://en.wikipedia.org/wiki/Cholent",
+      "subjectTitle": "Cholent",
+      "imageDescription": "Cholent, slow-cooked Shabbat stew",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/LatkeFry.JPG/960px-LatkeFry.JPG",
+      "answer": "לביבה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Jonathunder · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:LatkeFry.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Jonathunder",
+      "subjectSource": "https://en.wikipedia.org/wiki/Latke",
+      "subjectTitle": "Latke",
+      "imageDescription": "Potato latke made from Manischewitz brand mix frying in hot olive oil.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Waffles_with_Strawberries.jpg/960px-Waffles_with_Strawberries.jpg",
+      "answer": "ופל (מאפה)",
+      "aliases": [
+        "ופל בלגי"
+      ],
+      "difficulty": 4,
+      "credit": "Parkerman & Christie from San Diego, USA · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Waffles_with_Strawberries.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Parkerman & Christie from San Diego, USA",
+      "subjectSource": "https://en.wikipedia.org/wiki/Waffle",
+      "subjectTitle": "Waffle",
+      "imageDescription": "A w:Belgian waffle (a North American style of waffle) with strawberries",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/83/French_Fries.JPG",
+      "answer": "ציפס",
+      "aliases": [
+        "טוגנים"
+      ],
+      "difficulty": 4,
+      "credit": "StockSnap · CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:French_Fries.JPG",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "StockSnap",
+      "subjectSource": "https://en.wikipedia.org/wiki/French_fries",
+      "subjectTitle": "French fries",
+      "imageDescription": "French fries",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/OnionRings.JPG/960px-OnionRings.JPG",
+      "answer": "טבעות בצל",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Jonathunder · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:OnionRings.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Jonathunder",
+      "subjectSource": "https://en.wikipedia.org/wiki/Onion_ring",
+      "subjectTitle": "Onion ring",
+      "imageDescription": "Basket of onion rings from \"El Carambas\" Mexican restaurant in Rochester, Minnesota.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Fish_and_chips_blackpool.jpg/960px-Fish_and_chips_blackpool.jpg",
+      "answer": "פיש אנד ציפס",
+      "aliases": [
+        "פיש אנד צ'יפס"
+      ],
+      "difficulty": 4,
+      "credit": "Matthias Meckel · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Fish_and_chips_blackpool.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Matthias Meckel",
+      "subjectSource": "https://en.wikipedia.org/wiki/Fish_and_chips",
+      "subjectTitle": "Fish and chips",
+      "imageDescription": "Fish and Chips, photo taken in November 2018 in Blackpool",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Food_at_WIkimanian_2017_02.jpg/960px-Food_at_WIkimanian_2017_02.jpg",
+      "answer": "פוטין (מאכל)",
+      "aliases": [
+        "פוטין"
+      ],
+      "difficulty": 4,
+      "credit": "Camelia.boban · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Food_at_WIkimanian_2017_02.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Camelia.boban",
+      "subjectSource": "https://en.wikipedia.org/wiki/Poutine",
+      "subjectTitle": "Poutine",
+      "imageDescription": "Food at Wikimania 2017, served at La 3 Brasseurs, Montreal, Quebec",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Croquetas_Caseras_%287068664101%29.jpg/960px-Croquetas_Caseras_%287068664101%29.jpg",
+      "answer": "קרוקט (מאכל)",
+      "aliases": [
+        "קרוקט"
+      ],
+      "difficulty": 4,
+      "credit": "Jonathan Pincas from Leon, Spain · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Croquetas_Caseras_(7068664101).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Jonathan Pincas from Leon, Spain",
+      "subjectSource": "https://en.wikipedia.org/wiki/Croquette",
+      "subjectTitle": "Croquette",
+      "imageDescription": "De jamon si no me acuerdo mal. Las hacen de una forma distinta en el sur - con perejil creo. Tomada durante una comida fantastica en una venta en los montes de Malaga. I take photos for fun and for my business blog ( Say No! to the Office ), food company website ( The Tapas Lunch Company ) and Spanish food portal ( Spanish Food World ) . Copyright © 2011 Jonathan Pincas. All Rights Reserved. Please contact me if you're interested in using one of my pictures.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Tapa_de_empanadillitas.JPG/960px-Tapa_de_empanadillitas.JPG",
+      "answer": "אמפנדה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Tamorlan · CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tapa_de_empanadillitas.JPG",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "Tamorlan",
+      "subjectSource": "https://en.wikipedia.org/wiki/Empanada",
+      "subjectTitle": "Empanada",
+      "imageDescription": "Tapas de empanadillas rellenas de atún y salsa de tomate con huevo cocido",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Das_coisas_simples_e_boas_da_vida._Aqui_na_Piazza_25_Aprile_%2825157691204%29.jpg/960px-Das_coisas_simples_e_boas_da_vida._Aqui_na_Piazza_25_Aprile_%2825157691204%29.jpg",
+      "answer": "פיצה",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Shoichi Iwashita · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Das_coisas_simples_e_boas_da_vida._Aqui_na_Piazza_25_Aprile_(25157691204).jpg",
+      "artist": "Shoichi Iwashita",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Bistro_56_Burger_and_French_Fries.jpg/960px-Bistro_56_Burger_and_French_Fries.jpg",
+      "answer": "המבורגר",
+      "aliases": [
+        "בורגר"
+      ],
+      "difficulty": 2,
+      "credit": "Yotam Nachum · CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bistro_56_Burger_and_French_Fries.jpg",
+      "artist": "Yotam Nachum",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/JapanesFood.jpg/960px-JapanesFood.jpg",
+      "answer": "סושי",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Shahzad Afzal · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:JapanesFood.jpg",
+      "artist": "Shahzad Afzal",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Falafel_beim_Isarinselfest_M%C3%BCnchen_2.jpg/960px-Falafel_beim_Isarinselfest_M%C3%BCnchen_2.jpg",
+      "answer": "פלאפל",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Burkhard Mücke · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Falafel_beim_Isarinselfest_M%C3%BCnchen_2.jpg",
+      "artist": "Burkhard Mücke",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/%28Pasta%29_by_David_Adam_Kess_%28pic.2%29.jpg/960px-%28Pasta%29_by_David_Adam_Kess_%28pic.2%29.jpg",
+      "answer": "פסטה",
+      "aliases": [
+        "ספגטי"
+      ],
+      "difficulty": 2,
+      "credit": "David Adam Kess · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:(Pasta)_by_David_Adam_Kess_(pic.2).jpg",
+      "artist": "David Adam Kess",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/FoodOmelete.jpg/960px-FoodOmelete.jpg",
+      "answer": "חביתה",
+      "aliases": [
+        "אומלט"
+      ],
+      "difficulty": 2,
+      "credit": "Renee Comet (photographer) · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:FoodOmelete.jpg",
+      "artist": "Renee Comet (photographer)",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Bourekas.jpg/960px-Bourekas.jpg",
+      "answer": "בורקס",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Shlomif at en.wikipedia · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Bourekas.jpg",
+      "artist": "Shlomif at en.wikipedia",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Couscous.jpeg/960px-Couscous.jpeg",
+      "answer": "קוסקוס",
+      "aliases": [],
+      "difficulty": 3,
+      "credit": "User:Vinzv · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Couscous.jpeg",
+      "artist": "User:Vinzv",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Wiener-Schnitzel02.jpg/960px-Wiener-Schnitzel02.jpg",
+      "answer": "שניצל",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Kobako · CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Wiener-Schnitzel02.jpg",
+      "artist": "Kobako",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/HK_SW_Wing_Lok_Street_FWD_Financial_Centre_shop_Maxim%27s_MX_Restaurant_afternoon_meal_food_July_2020_SS2_02.jpg/960px-HK_SW_Wing_Lok_Street_FWD_Financial_Centre_shop_Maxim%27s_MX_Restaurant_afternoon_meal_food_July_2020_SS2_02.jpg",
+      "answer": "נקניקייה בלחמנייה",
+      "aliases": [
+        "נקניקיה בלחמניה",
+        "הוט דוג"
+      ],
+      "difficulty": 2,
+      "credit": "Lim Tsze Kin 207073 · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:HK_SW_Wing_Lok_Street_FWD_Financial_Centre_shop_Maxim%27s_MX_Restaurant_afternoon_meal_food_July_2020_SS2_02.jpg",
+      "artist": "Lim Tsze Kin 207073",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Farshirovannyi_peretz.jpg/960px-Farshirovannyi_peretz.jpg",
+      "answer": "פלפל ממולא",
+      "aliases": [
+        "ממולאים"
+      ],
+      "difficulty": 4,
+      "credit": "User:Zserghei · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Farshirovannyi_peretz.jpg",
+      "artist": "User:Zserghei",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "reviewed": true
+    }
+  ]
 }
