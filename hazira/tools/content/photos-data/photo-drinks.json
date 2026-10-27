@@ -361,6 +361,106 @@
       "subjectSource": "https://en.wikipedia.org/wiki/Pomegranate_juice",
       "difficulty": 3,
       "reviewed": true
+    },
+    {
+      "answer": "אספרסו",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg/960px-Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg",
+      "artist": "Lemone",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "credit": "Lemone · CC BY-SA 4.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Espresso",
+      "subjectTitle": "Espresso",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "answer": "קפוצ׳ינו",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Cappuccino_in_original.jpg/960px-Cappuccino_in_original.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Cappuccino_in_original.jpg",
+      "artist": "Vee Satayamas",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "credit": "Vee Satayamas · CC BY 2.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Cappuccino",
+      "subjectTitle": "Cappuccino",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "answer": "וודקה",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Smirnoff_Red_Label_8213.jpg/960px-Smirnoff_Red_Label_8213.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Smirnoff_Red_Label_8213.jpg",
+      "artist": "Ashley Pomeroy",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "credit": "Ashley Pomeroy · CC BY 4.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Vodka",
+      "subjectTitle": "Vodka",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "answer": "קולה",
+      "aliases": [
+        "קוקה קולה"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Glass_of_Cola.jpg/960px-Glass_of_Cola.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Glass_of_Cola.jpg",
+      "artist": "Cocktailmarler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "credit": "Cocktailmarler · CC BY-SA 4.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Cola",
+      "subjectTitle": "Cola",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "answer": "קוסמופוליטן",
+      "aliases": [],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Cosmopolitan_%285076906532%29.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Cosmopolitan_%285076906532%29.jpg",
+      "artist": "TheCulinaryGeek from Chicago, USA",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "credit": "TheCulinaryGeek from Chicago, USA · CC BY 2.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Cosmopolitan_%28cocktail%29",
+      "subjectTitle": "Cosmopolitan (cocktail)",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "answer": "יין חם",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Gl%C3%BChwein_Weinnachtsmarkt_OS.JPG/960px-Gl%C3%BChwein_Weinnachtsmarkt_OS.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Gl%C3%BChwein_Weinnachtsmarkt_OS.JPG",
+      "artist": "Basotxerri",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "credit": "Basotxerri · CC BY-SA 4.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Mulled_wine",
+      "subjectTitle": "Mulled wine",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "answer": "סאקה",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Overflowing_sake_glass_in_masu.jpg/960px-Overflowing_sake_glass_in_masu.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Overflowing_sake_glass_in_masu.jpg",
+      "artist": "Intforce",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "credit": "Intforce · CC BY-SA 4.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Sake",
+      "subjectTitle": "Sake",
+      "difficulty": 2,
+      "reviewed": true
     }
   ]
 }
