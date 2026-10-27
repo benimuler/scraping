@@ -395,7 +395,9 @@
     {
       "subject": "Smartwatch",
       "answer": "שעון חכם",
-      "aliases": [],
+      "aliases": [
+        "שעון יד"
+      ],
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Samsung_Galaxy_Watch.jpg/960px-Samsung_Galaxy_Watch.jpg",
       "source": "https://commons.wikimedia.org/wiki/File:Samsung_Galaxy_Watch.jpg",
       "license": "CC0",
