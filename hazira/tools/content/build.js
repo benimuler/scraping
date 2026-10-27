@@ -18,6 +18,7 @@ const drawn = require('./drawn');
 const flags = require('./flags');
 const generated = require('./generated');
 const numeric = require('./numeric');
+const photos = require('./photos');
 const { judge, couldMatchProfile, transcriptProfile, prepareItem, findAllRivals } = require('../../server/judge');
 
 const ROOT = path.join(__dirname, '..', '..', 'content');
@@ -36,6 +37,16 @@ const slugify = (value, fallback) =>
 function normalize(category, kind) {
   const items = category.items.map((item, index) => {
     // מקורות אמוג'י וטקסט מחזירים מערך: [רמז, תשובה, ...נרדפות]
+    // פריט תמונה מוכן (קטגוריות תמונות אמיתיות): ה-URL כבר אפוי בנתונים
+    if (item.image) {
+      return {
+        image: item.image,
+        answer: item.answer,
+        aliases: item.aliases || [],
+        ...(item.credit ? { credit: item.credit } : {}),
+        difficulty: item.difficulty,
+      };
+    }
     if (Array.isArray(item)) {
       const [clue, answer, ...aliases] = item;
       if (kind === 'emoji') {
@@ -154,6 +165,7 @@ function build({ force = false, minItems = 10, quiet = false } = {}) {
     ...flags.build().map((c) => [c, 'drawn']),
     ...generated.build().map((c) => [c, 'drawn']),
     ...numeric.build().map((c) => [c, 'drawn']),
+    ...photos.CATEGORIES.map((c) => [c, 'photo']),
   ];
 
   const report = { categories: 0, items: 0, skipped: [], collisions: [], smallest: Infinity };
