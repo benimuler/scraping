@@ -1,0 +1,398 @@
+{
+  "id": "photo-tools",
+  "name": "כלי עבודה (צילומים)",
+  "hint": "אומרים את שם כלי העבודה",
+  "items": [
+    {
+      "answer": "מפתח שוודי",
+      "aliases": [
+        "מפתח מתכוונן"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Adjustablewrenches.jpg/960px-Adjustablewrenches.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Adjustablewrenches.jpg",
+      "artist": "Theresemk",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "credit": "Theresemk · CC BY 3.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Adjustable_spanner",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "פלייר שפיץ",
+      "aliases": [
+        "פלייר ארוך"
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Storchschnabelzange.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Storchschnabelzange.jpg",
+      "artist": "Sönke Kraft aka  Arnulf zu Linden",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "credit": "Sönke Kraft aka  Arnulf zu Linden · CC BY-SA 3.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Needle-nose_pliers",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "קטר",
+      "aliases": [
+        "פלייר חיתוך"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Seitenschneider.JPG/960px-Seitenschneider.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Seitenschneider.JPG",
+      "artist": "CSonic  at  German Wikipedia  (Later version(s) were uploaded by  Dalvin  at  de.wikipedia .)",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "CSonic  at  German Wikipedia  (Later version(s) were uploaded by  Dalvin  at  de.wikipedia .) · CC BY-SA 3.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Diagonal_pliers",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "מסור שרשרת",
+      "aliases": [
+        "מסור שרשרת בנזין"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Chainsaw.JPG/960px-Chainsaw.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Chainsaw.JPG",
+      "artist": "kallerna",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "credit": "kallerna · CC BY-SA 3.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Chainsaw",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "פטיש כבד",
+      "aliases": [
+        "קורנס"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Sledgehammers-1.jpg/960px-Sledgehammers-1.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Sledgehammers-1.jpg",
+      "artist": "Shakespeare  at  English Wikipedia",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "credit": "Shakespeare  at  English Wikipedia · CC BY-SA 3.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Sledgehammer",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "מקצוע",
+      "aliases": [
+        "מקצועה"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/JackPlane3.jpg/960px-JackPlane3.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:JackPlane3.jpg",
+      "artist": "Jameslwoodward",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "credit": "Jameslwoodward · CC BY-SA 3.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Plane_%28tool%29",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "פלס",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/DetalleNivelDeBurbuja.jpg/960px-DetalleNivelDeBurbuja.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:DetalleNivelDeBurbuja.jpg",
+      "artist": "aTarom",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "credit": "aTarom · Public domain",
+      "subjectSource": "https://en.wikipedia.org/wiki/Spirit_level",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "מכוש",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Pickaxe.jpg/960px-Pickaxe.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Pickaxe.jpg",
+      "artist": "Hyena~commonswiki",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "credit": "Hyena~commonswiki · Public domain",
+      "subjectSource": "https://en.wikipedia.org/wiki/Pickaxe",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "את חפירה",
+      "aliases": [
+        "את"
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Skovl.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Skovl.jpg",
+      "artist": "SvenPek",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "credit": "SvenPek · CC BY-SA 4.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Shovel",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "רולר צבע",
+      "aliases": [
+        "גלגלת צבע"
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Farbroller.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Farbroller.jpg",
+      "artist": "Photocapy",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "credit": "Photocapy · CC BY-SA 2.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Paint_roller",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "משחזת זווית",
+      "aliases": [
+        "דיסק"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/AngleGrinder.jpg/960px-AngleGrinder.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:AngleGrinder.jpg",
+      "artist": "soulfish (Flickr)",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "credit": "soulfish (Flickr) · CC BY-SA 2.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Angle_grinder",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "פטיש",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Claw-hammer.jpg/960px-Claw-hammer.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Claw-hammer.jpg",
+      "license": "Public domain",
+      "artist": "Evan-Amos",
+      "licenseUrl": "",
+      "credit": "Evan-Amos · Public domain",
+      "subjectSource": "https://en.wikipedia.org/wiki/Claw_hammer",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "מפסלת",
+      "aliases": [
+        "אזמל עץ"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Wood_chisel.JPG/960px-Wood_chisel.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Wood_chisel.JPG",
+      "license": "Public domain",
+      "artist": "Fishdecoy  at  English Wikipedia",
+      "licenseUrl": "",
+      "credit": "Fishdecoy  at  English Wikipedia · Public domain",
+      "subjectSource": "https://en.wikipedia.org/wiki/Chisel",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "פלייר",
+      "aliases": [
+        "פלייר רגיל",
+        "צבת"
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Pliers_slip_01CJC.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Pliers_slip_01CJC.png",
+      "license": "CC BY-SA 3.0",
+      "artist": "C J Cowie  at  English Wikipedia",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "C J Cowie  at  English Wikipedia · CC BY-SA 3.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Pliers",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "מקדחה",
+      "aliases": [
+        "מקדחה נטענת",
+        "מברגה"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/CordlessDrill.jpg/960px-CordlessDrill.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:CordlessDrill.jpg",
+      "license": "CC BY-SA 3.0",
+      "artist": "Greg Hume",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "credit": "Greg Hume · CC BY-SA 3.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Drill",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "מקבת",
+      "aliases": [
+        "פטיש עץ"
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Wooden_mallet.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Wooden_mallet.jpg",
+      "license": "CC BY-SA 3.0",
+      "artist": "The original uploader was  Securiger  at  English Wikipedia .",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "The original uploader was  Securiger  at  English Wikipedia . · CC BY-SA 3.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Mallet",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "לום",
+      "aliases": [],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Standard_Crowbar_Black.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Standard_Crowbar_Black.jpg",
+      "license": "Public domain",
+      "artist": "Originally uploaded by  Surv1v4l1st  (Transferred by  Rockfang )",
+      "licenseUrl": "",
+      "credit": "Originally uploaded by  Surv1v4l1st  (Transferred by  Rockfang ) · Public domain",
+      "subjectSource": "https://en.wikipedia.org/wiki/Crowbar",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "מסור ברזל",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Tool-hacksaw.jpg/960px-Tool-hacksaw.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Tool-hacksaw.jpg",
+      "license": "Public domain",
+      "artist": "Evan-Amos",
+      "licenseUrl": "",
+      "credit": "Evan-Amos · Public domain",
+      "subjectSource": "https://en.wikipedia.org/wiki/Hacksaw",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "מגרפה",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/SoilRake.jpg/960px-SoilRake.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:SoilRake.jpg",
+      "license": "Public domain",
+      "artist": "AlbertCahalan",
+      "licenseUrl": "",
+      "credit": "AlbertCahalan · Public domain",
+      "subjectSource": "https://en.wikipedia.org/wiki/Rake_%28tool%29",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "מעדר",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Hoe_1.jpg/960px-Hoe_1.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Hoe_1.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Izvora",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "credit": "Izvora · CC BY-SA 4.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Hoe_%28tool%29",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "מלחציים",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/An_engineer%27s_vise._img_04.jpg/960px-An_engineer%27s_vise._img_04.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:An_engineer%27s_vise._img_04.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Dmitry Makeev",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "credit": "Dmitry Makeev · CC BY-SA 4.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Vise",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "פצירה",
+      "aliases": [
+        "שופין"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Flat_File.jpg/960px-Flat_File.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flat_File.jpg",
+      "license": "CC BY 2.0",
+      "artist": "Luke Milburn",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "credit": "Luke Milburn · CC BY 2.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/File_%28tool%29",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "כף בנאים",
+      "aliases": [
+        "מסטרינה"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Masons_trowel.jpg/960px-Masons_trowel.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Masons_trowel.jpg",
+      "license": "CC BY-SA 3.0",
+      "artist": "Mike Lupinacci",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "Mike Lupinacci · CC BY-SA 3.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Trowel",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "מלחם",
+      "aliases": [],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Electric_soldering_iron.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Electric_soldering_iron.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Александр Александрович Москвин",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "credit": "Александр Александрович Москвин · CC BY-SA 4.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Soldering_iron",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "סרט מדידה",
+      "aliases": [
+        "מטר"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Dual_Scale_Stanley_Tape_Measure.jpg/960px-Dual_Scale_Stanley_Tape_Measure.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Dual_Scale_Stanley_Tape_Measure.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Scott Brody",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "credit": "Scott Brody · CC BY-SA 4.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Tape_measure",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "נייר זכוכית",
+      "aliases": [
+        "נייר שיוף"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/SCSandpaper.jpg/960px-SCSandpaper.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:SCSandpaper.jpg",
+      "license": "Public domain",
+      "artist": "User:Ben_pcc",
+      "licenseUrl": "",
+      "credit": "User:Ben_pcc · Public domain",
+      "subjectSource": "https://en.wikipedia.org/wiki/Sandpaper",
+      "reviewed": true,
+      "difficulty": 3
+    },
+    {
+      "answer": "מסור אנכי",
+      "aliases": [
+        "ג׳קסון",
+        "גקסון",
+        "מסור גיגסו"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Decoupeerzaag.jpg/960px-Decoupeerzaag.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Decoupeerzaag.jpg",
+      "license": "CC BY-SA 3.0",
+      "artist": "M.Minderhoud",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "M.Minderhoud · CC BY-SA 3.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Jigsaw_%28tool%29",
+      "reviewed": true,
+      "difficulty": 3
+    }
+  ]
+}
