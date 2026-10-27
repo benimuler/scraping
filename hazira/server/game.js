@@ -595,6 +595,7 @@ class Game {
       rounds: duel.rounds,
       surrenderedBy: duel.surrenderedBy || null,
       matchOver,
+      decider: !!duel.decider,
     };
     this.history.push(this.lastResult);
     this._log({ type: 'duel_end', winnerId, loserId, matchOver });
@@ -813,7 +814,7 @@ class Game {
         live: duel.live,
         lastTurn: duel.lastTurn,
         transcript: duel.transcripts[duel.activeId] || '',
-        item: duel.item ? { image: duel.item.image, text: duel.item.text || null, credit: duel.item.credit || null } : null,
+        item: duel.item ? { image: duel.item.image, text: duel.item.text || null, credit: duel.item.credit || null, source: duel.item.source || null } : null,
         score: {
           [duel.challengerId]: duel.perPlayer[duel.challengerId].correct,
           [duel.defenderId]: duel.perPlayer[duel.defenderId].correct,
