@@ -365,6 +365,76 @@
       "subjectSource": "https://en.wikipedia.org/wiki/Infant_bed",
       "difficulty": 3,
       "reviewed": true
+    },
+    {
+      "answer": "שידת לילה",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Nightstand_2184073576.jpg/960px-Nightstand_2184073576.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Nightstand_2184073576.jpg",
+      "artist": "Allie from Mountain View, CA, United States, upload by Herrick",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "credit": "Allie from Mountain View, CA, United States, upload by Herrick · CC BY-SA 2.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Nightstand",
+      "subjectTitle": "Nightstand",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "answer": "ספה נפתחת",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Slaapbank2.JPG/960px-Slaapbank2.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Slaapbank2.JPG",
+      "artist": "Maniago",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "credit": "Maniago · Public domain",
+      "subjectSource": "https://en.wikipedia.org/wiki/Sofa_bed",
+      "subjectTitle": "Sofa bed",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "answer": "שולחן אוכל",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Copped_Hall_dining_room_mock-up_display%2C_Epping%2C_Essex%2C_England_01.jpg/960px-Copped_Hall_dining_room_mock-up_display%2C_Epping%2C_Essex%2C_England_01.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Copped_Hall_dining_room_mock-up_display%2C_Epping%2C_Essex%2C_England_01.jpg",
+      "artist": "Acabashi",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "credit": "Acabashi · CC BY-SA 4.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Dining_table",
+      "subjectTitle": "Dining table",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "answer": "ספסל כנסייה",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/ICS_traditional_church_pews.jpg/960px-ICS_traditional_church_pews.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:ICS_traditional_church_pews.jpg",
+      "artist": "HelenIMS",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "credit": "HelenIMS · CC BY-SA 4.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Pew",
+      "subjectTitle": "Church pew",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "answer": "אי מטבח",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Kitchen_with_island%2C_New_Orleans_2007.jpg/960px-Kitchen_with_island%2C_New_Orleans_2007.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Kitchen_with_island%2C_New_Orleans_2007.jpg",
+      "artist": "MeRyan",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "credit": "MeRyan · CC BY 2.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Kitchen_island",
+      "subjectTitle": "Kitchen island",
+      "difficulty": 2,
+      "reviewed": true
     }
   ]
 }
