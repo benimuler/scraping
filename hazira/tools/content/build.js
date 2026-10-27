@@ -44,6 +44,7 @@ function normalize(category, kind) {
         answer: item.answer,
         aliases: item.aliases || [],
         ...(item.credit ? { credit: item.credit } : {}),
+        ...(item.source ? { source: item.source } : {}),
         difficulty: item.difficulty,
       };
     }
