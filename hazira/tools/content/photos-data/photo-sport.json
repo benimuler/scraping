@@ -1,149 +1,497 @@
 {
- "id": "photo-sport",
- "name": "ענפי ספורט (תמונות)",
- "hint": "אומרים את ענף הספורט",
- "items": [
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Football_in_Bloomington%2C_Indiana%2C_1995.jpg/960px-Football_in_Bloomington%2C_Indiana%2C_1995.jpg",
-   "answer": "כדורגל",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Rick Dikeman · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Football_in_Bloomington%2C_Indiana%2C_1995.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Dr._James_Naismith.jpg/960px-Dr._James_Naismith.jpg",
-   "answer": "כדורסל",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Unknown authorUnknown author · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Dr._James_Naismith.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Centre_Court.jpg/960px-Centre_Court.jpg",
-   "answer": "טניס",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "The original uploader was Razzle-dazzle at English Wikipedia. · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Centre_Court.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/Swimming.breaststroke.arp.750pix.jpg",
-   "answer": "שחייה",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Adrian Pingstone at en.wikipedia · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Swimming.breaststroke.arp.750pix.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Golfer_swing.jpg/960px-Golfer_swing.jpg",
-   "answer": "גולף",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Lilrizz · CC0",
-   "source": "https://commons.wikimedia.org/wiki/File:Golfer_swing.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/1/13/ManifVelo2003.JPG",
-   "answer": "רכיבה על אופניים",
-   "aliases": [
-    "רכיבה"
-   ],
-   "difficulty": 2,
-   "credit": "http://fr.wikipedia.org/wiki/Utilisateur:Manuguf · CC BY 2.5",
-   "source": "https://commons.wikimedia.org/wiki/File:ManifVelo2003.JPG"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Gabe_Proctor_-_Nesero_Kadi_Berlin_2015.jpg/960px-Gabe_Proctor_-_Nesero_Kadi_Berlin_2015.jpg",
-   "answer": "ריצה",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Denis Barthel · CC BY-SA 4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Gabe_Proctor_-_Nesero_Kadi_Berlin_2015.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Wdomenada2003b.jpg",
-   "answer": "סקי",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "Photo taken by Andreube · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Wdomenada2003b.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/2010_mavericks_competition.jpg/960px-2010_mavericks_competition.jpg",
-   "answer": "גלישה",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "Shalom Jacobovitz · CC BY-SA 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:2010_mavericks_competition.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Boxing080905_photoshop.jpg/960px-Boxing080905_photoshop.jpg",
-   "answer": "איגרוף",
-   "aliases": [
-    "בוקס"
-   ],
-   "difficulty": 2,
-   "credit": "Wayne Short · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Boxing080905_photoshop.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/2/28/Gym_combination.JPG",
-   "answer": "התעמלות",
-   "aliases": [
-    "התעמלות מכשירים"
-   ],
-   "difficulty": 3,
-   "credit": "Jade_barbosa.jpg: Fotoprili Shawn_Johnson_competes.jpg: bryangeek FabianHambuechen-WM07.jpg: Original uploader was Enghdt at de.wikipedia (Original text : Torsten Hauptvogel) Stefani_bismpikou.jpg: Fotoprili derivative work: OTAVIO1981 (talk) · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Gym_combination.JPG"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Weightlifting.jpg/960px-Weightlifting.jpg",
-   "answer": "הרמת משקולות",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Weightlifting.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Skater_-_Barrido-Panning_-_01.jpg/960px-Skater_-_Barrido-Panning_-_01.jpg",
-   "answer": "סקייטבורד",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "Carlos Delgado · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Skater_-_Barrido-Panning_-_01.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/2/28/White-Snowboard-With-Bindings.jpg",
-   "answer": "סנובורד",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:White-Snowboard-With-Bindings.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Volleyball_game.jpg/960px-Volleyball_game.jpg",
-   "answer": "כדורעף",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "U.S Navy photo by Photographer's Mate 2nd Class Terry Spain · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:Volleyball_game.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/0408_USA_Olympic_fencing.jpg/960px-0408_USA_Olympic_fencing.jpg",
-   "answer": "סיף",
-   "aliases": [],
-   "difficulty": 4,
-   "credit": "DoD photo by Master Sgt. Lono Kollars, U.S. Air Force · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:0408_USA_Olympic_fencing.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Karate_WC_Tampere_2006-1.jpg/960px-Karate_WC_Tampere_2006-1.jpg",
-   "answer": "קראטה",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "Nagi BY SA",
-   "source": "https://commons.wikimedia.org/wiki/File:Karate_WC_Tampere_2006-1.jpg"
-  }
- ]
+  "id": "photo-sport",
+  "name": "ענפי ספורט (תמונות)",
+  "hint": "אומרים את ענף הספורט",
+  "items": [
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Australia_v_Japan_Game_7_034.JPG/960px-Australia_v_Japan_Game_7_034.JPG",
+      "answer": "סופטבול",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "LauraHale · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Australia_v_Japan_Game_7_034.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "LauraHale",
+      "subjectSource": "https://en.wikipedia.org/wiki/Softball",
+      "subjectTitle": "Softball",
+      "imageDescription": "Australia v Japan on 24 March 2012 at Hawker International Softball Centre.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/2014_Women%27s_Six_Nations_Championship_-_France_Italy_%2851%29.jpg/960px-2014_Women%27s_Six_Nations_Championship_-_France_Italy_%2851%29.jpg",
+      "answer": "רוגבי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Caroline Léna Becker · CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2014_Women%27s_Six_Nations_Championship_-_France_Italy_(51).jpg",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "Caroline Léna Becker",
+      "subjectSource": "https://en.wikipedia.org/wiki/Rugby_union",
+      "subjectTitle": "Rugby union",
+      "imageDescription": "2014 Women's Six Nations Championship ‒ 9 February 2014, Stade Ernest-Argelès . Match between: France women's national rugby union team ‒ Italy women's national rugby union team",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Larry_Fitzgerald_catches_TD_at_2009_Pro_Bowl.jpg/960px-Larry_Fitzgerald_catches_TD_at_2009_Pro_Bowl.jpg",
+      "answer": "פוטבול אמריקני",
+      "aliases": [
+        "פוטבול"
+      ],
+      "difficulty": 4,
+      "credit": "Mass Communication Specialist 2nd Class Michael A. Lantron, USN · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Larry_Fitzgerald_catches_TD_at_2009_Pro_Bowl.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Mass Communication Specialist 2nd Class Michael A. Lantron, USN",
+      "subjectSource": "https://en.wikipedia.org/wiki/American_football",
+      "subjectTitle": "American football",
+      "imageDescription": "Arizona Cardinals wide receiver Larry Fitzgerald catches a touchdown pass from New Orleans Saints quarterback Drew Brees during the fourth quarter of the National Football League Pro Bowl Feb. 8, 2009, at Aloha Stadium in Honolulu. VIRIN: 090208-N-9758L-854",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/WaterPolo.JPG/960px-WaterPolo.JPG",
+      "answer": "כדורמים",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Massimo Finizio · CC BY-SA 2.0 it",
+      "source": "https://commons.wikimedia.org/wiki/File:WaterPolo.JPG",
+      "license": "CC BY-SA 2.0 it",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/it/deed.en",
+      "artist": "Massimo Finizio",
+      "subjectSource": "https://en.wikipedia.org/wiki/Water_polo",
+      "subjectTitle": "Water polo",
+      "imageDescription": "Greece - Hungary WaterPolo match (World Junior Championship 2004 Naples , Italy )",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Pittsburgh_Penguins%2C_Washington_Capitals%2C_Bryan_Rust_%2833744033514%29.jpg/960px-Pittsburgh_Penguins%2C_Washington_Capitals%2C_Bryan_Rust_%2833744033514%29.jpg",
+      "answer": "הוקי קרח",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Keith Allison from Hanover, MD, USA · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pittsburgh_Penguins,_Washington_Capitals,_Bryan_Rust_(33744033514).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Keith Allison from Hanover, MD, USA",
+      "subjectSource": "https://en.wikipedia.org/wiki/Ice_hockey",
+      "subjectTitle": "Ice hockey",
+      "imageDescription": "Bryan Rust of the Pittsburgh Penguins scores a goal against the Washington Capitals in Game Seven of the Eastern Conference Second Round during the 2017 NHL Stanley Cup Playoffs at Verizon Center on May 10, 2017 in Washington, DC.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/UNC_Lacrosse.jpg/960px-UNC_Lacrosse.jpg",
+      "answer": "לקרוס",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "(User: Wgreaves ) · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:UNC_Lacrosse.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "(User: Wgreaves )",
+      "subjectSource": "https://en.wikipedia.org/wiki/Lacrosse",
+      "subjectTitle": "Lacrosse",
+      "imageDescription": "UNC lacrosse team playing Duke lacrosse team in the 2009 ACC Men's Lacrosse Tournament championship game. (Note: UNC's Billy Bitter is carrying the ball.)",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Semifinal_Squash_SM_2021.jpg/960px-Semifinal_Squash_SM_2021.jpg",
+      "answer": "סקווש",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "User5757 · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Semifinal_Squash_SM_2021.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "User5757",
+      "subjectSource": "https://en.wikipedia.org/wiki/Squash_%28sport%29",
+      "subjectTitle": "Squash (sport)",
+      "imageDescription": "Semifinal Squash SM 2021 Joel Viksten",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/ArcheryGermanyEarly1980s-2.jpg/960px-ArcheryGermanyEarly1980s-2.jpg",
+      "answer": "קשתות",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "derivative work: Saibo ( Δ ) Image-ArcheryGermanyEarly1980s-OriginalScan.jpg : RX-Guru · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:ArcheryGermanyEarly1980s-2.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "derivative work: Saibo ( Δ ) Image-ArcheryGermanyEarly1980s-OriginalScan.jpg : RX-Guru",
+      "subjectSource": "https://en.wikipedia.org/wiki/Archery",
+      "subjectTitle": "Archery",
+      "imageDescription": "Picture of an archery competition at Mönchengladbach in Germany, taken in June 1983.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/US_Navy_090819-N-2259V-119_A_Sailor_releases_the_ball_down_the_lane_at_a_bowling_competition_during_the_2009_San_Diego_Surface_Line_Week.jpg/960px-US_Navy_090819-N-2259V-119_A_Sailor_releases_the_ball_down_the_lane_at_a_bowling_competition_during_the_2009_San_Diego_Surface_Line_Week.jpg",
+      "answer": "באולינג",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "U.S. Navy photo by Mass Communication Specialist 2nd class Elena Velazquez · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:US_Navy_090819-N-2259V-119_A_Sailor_releases_the_ball_down_the_lane_at_a_bowling_competition_during_the_2009_San_Diego_Surface_Line_Week.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "U.S. Navy photo by Mass Communication Specialist 2nd class Elena Velazquez",
+      "subjectSource": "https://en.wikipedia.org/wiki/Bowling",
+      "subjectTitle": "Bowling",
+      "imageDescription": "SAN DIEGO (Aug. 19, 2009) A Sailor releases the ball down the lane at a bowling competition during the 2009 San Diego Surface Line Week. Surface Line Week is a time for Sailors to share the spirit of Navy camaraderie, pride in command and emphasis on physical fitness. (U.S. Navy photo by Mass Communication Specialist 2nd class Elena Velazquez/Released)",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Wrestling_at_the_2016_Summer_Olympics%2C_Gazyumov_vs_Andriitsev_6.jpg/960px-Wrestling_at_the_2016_Summer_Olympics%2C_Gazyumov_vs_Andriitsev_6.jpg",
+      "answer": "היאבקות",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Ilgar Jafarov · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Wrestling_at_the_2016_Summer_Olympics,_Gazyumov_vs_Andriitsev_6.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Ilgar Jafarov",
+      "subjectSource": "https://en.wikipedia.org/wiki/Wrestling",
+      "subjectTitle": "Wrestling",
+      "imageDescription": "Wrestling at the 2016 Summer Olympics, Gazyumov vs Andriitsev",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Milad_Kharchegani_at_the_2016_Summer_Olympics.jpg",
+      "answer": "טאקוונדו",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Javid Nikpour/Tasnim · CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Milad_Kharchegani_at_the_2016_Summer_Olympics.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "Javid Nikpour/Tasnim",
+      "subjectSource": "https://en.wikipedia.org/wiki/Taekwondo",
+      "subjectTitle": "Taekwondo",
+      "imageDescription": "Milad Kharchegani and Khodabakhshi at the 2016 Summer Olympics",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Asashoryu_fight_Jan08.JPG/960px-Asashoryu_fight_Jan08.JPG",
+      "answer": "סומו",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Eckhard Pecher User:Arcimboldo · CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Asashoryu_fight_Jan08.JPG",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "Eckhard Pecher User:Arcimboldo",
+      "subjectSource": "https://en.wikipedia.org/wiki/Sumo",
+      "subjectTitle": "Sumo",
+      "imageDescription": "Sumo Wrestler Asashōryū fighting against Kotoshogiku at the January Tournament 2008",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/USMC-050716-M-1837P-001.jpg/960px-USMC-050716-M-1837P-001.jpg",
+      "answer": "קיקבוקסינג",
+      "aliases": [
+        "קיקבוקס"
+      ],
+      "difficulty": 4,
+      "credit": "Pfc. C. Warren Peace · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:USMC-050716-M-1837P-001.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Pfc. C. Warren Peace",
+      "subjectSource": "https://en.wikipedia.org/wiki/Kickboxing",
+      "subjectTitle": "Kickboxing",
+      "imageDescription": "050716-M-1837P-001 KADENA AIR BASE, OKINAWA, Japan - Sgt. Idris N. Turay lands a massive kick to the midsection of Shota Koja during a kickboxing match in the King of Fights X at the Rocker NCO Club here July 16. Turay went on to win the fight by way of knock out in the second round. This Cedar Falls, Iowa, Native is an operations noncommissioned officer with Headquarters Group, III Marine Expeditionary Force. (Official U.S. Marine Corps photo by Pfc. C. Warren Peace)(Released)",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/UFC_131_Carwin_vs._JDS.jpg/960px-UFC_131_Carwin_vs._JDS.jpg",
+      "answer": "אמנויות לחימה משולבות",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Bad intentionz · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:UFC_131_Carwin_vs._JDS.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Bad intentionz",
+      "subjectSource": "https://en.wikipedia.org/wiki/Mixed_martial_arts",
+      "subjectTitle": "Mixed martial arts",
+      "imageDescription": "Picture of fighters Shane Carwin and Junior Dos Santos facing off at UFC 131 in Vancouver, Canada.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Nicole_Forrester.JPG/960px-Nicole_Forrester.JPG",
+      "answer": "קפיצה לגובה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Nicole Forrester · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nicole_Forrester.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Nicole Forrester",
+      "subjectSource": "https://en.wikipedia.org/wiki/High_jump",
+      "subjectTitle": "High jump",
+      "imageDescription": "A picture of Nicole Forrester - High Jumper",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/2013_IPC_Athletics_World_Championships_-_26072013_-_Maximiliano_Rodriguez_Magi_of_Spain_during_the_Men%27s_Long_jump_-_T12.jpg/960px-2013_IPC_Athletics_World_Championships_-_26072013_-_Maximiliano_Rodriguez_Magi_of_Spain_during_the_Men%27s_Long_jump_-_T12.jpg",
+      "answer": "קפיצה לרוחק",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Clément Bucco-Lechat · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2013_IPC_Athletics_World_Championships_-_26072013_-_Maximiliano_Rodriguez_Magi_of_Spain_during_the_Men%27s_Long_jump_-_T12.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Clément Bucco-Lechat",
+      "subjectSource": "https://en.wikipedia.org/wiki/Long_jump",
+      "subjectTitle": "Long jump",
+      "imageDescription": "Maximiliano Rodriguez Magi of Spain during the Men's Long jump - T12",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Leichtathletik_Gala_Linz_2018_men%C2%B4s_110m_hurdles_Okafor-6401.jpg/960px-Leichtathletik_Gala_Linz_2018_men%C2%B4s_110m_hurdles_Okafor-6401.jpg",
+      "answer": "ריצת משוכות",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Isiwal · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Leichtathletik_Gala_Linz_2018_men%C2%B4s_110m_hurdles_Okafor-6401.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Isiwal",
+      "subjectSource": "https://en.wikipedia.org/wiki/Hurdling",
+      "subjectTitle": "Hurdling",
+      "imageDescription": "Leichtathletik Gala Linz 2018; men´s 110m hurdles; Okafor",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Robert_Harting_%282008%29.jpg/960px-Robert_Harting_%282008%29.jpg",
+      "answer": "זריקת דיסקוס",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Robert_Harting_von_der_Sportfördergruppe_Potsdam_der_Bundeswehr.jpg : Bundeswehr-Fotos derivative work: César · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Robert_Harting_(2008).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Robert_Harting_von_der_Sportfördergruppe_Potsdam_der_Bundeswehr.jpg : Bundeswehr-Fotos derivative work: César",
+      "subjectSource": "https://en.wikipedia.org/wiki/Discus_throw",
+      "subjectTitle": "Discus throw",
+      "imageDescription": "Hauptgefreiter Robert Harting von der Sportfördergruppe Potsdam beim Diskuswerfen. ©Bundeswehr/Rott",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Team_Les_Supreme_Free_Skate_at_the_2026_ISU_Synchronized_Skating_World_Championships_01.jpg/960px-Team_Les_Supreme_Free_Skate_at_the_2026_ISU_Synchronized_Skating_World_Championships_01.jpg",
+      "answer": "החלקה אמנותית",
+      "aliases": [
+        "החלקה אמנותית על הקרח"
+      ],
+      "difficulty": 4,
+      "credit": "Quejaytee · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Team_Les_Supreme_Free_Skate_at_the_2026_ISU_Synchronized_Skating_World_Championships_01.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Quejaytee",
+      "subjectSource": "https://en.wikipedia.org/wiki/Figure_skating",
+      "subjectTitle": "Figure skating",
+      "imageDescription": "Team Les Supreme Free Skate at the 2026 ISU Synchronized Skating World Championships",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Paulien_van_Deutekom_%2808-12-2007%29.jpg/960px-Paulien_van_Deutekom_%2808-12-2007%29.jpg",
+      "answer": "החלקה מהירה",
+      "aliases": [
+        "החלקה מהירה על הקרח"
+      ],
+      "difficulty": 4,
+      "credit": "McSmit · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Paulien_van_Deutekom_(08-12-2007).jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "McSmit",
+      "subjectSource": "https://en.wikipedia.org/wiki/Speed_skating",
+      "subjectTitle": "Speed skating",
+      "imageDescription": "Paulien van Deutekom (NED) in action at a World Cup Speedskating in Heerenveen, the Netherlands.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Two-man_bobsleigh%2C_2014_winter_Olympics%2C_Jamaica.jpg/960px-Two-man_bobsleigh%2C_2014_winter_Olympics%2C_Jamaica.jpg",
+      "answer": "מזחלות (ספורט חורף)",
+      "aliases": [
+        "מזחלות בובסלי"
+      ],
+      "difficulty": 4,
+      "credit": "M. Smelter · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Two-man_bobsleigh,_2014_winter_Olympics,_Jamaica.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "M. Smelter",
+      "subjectSource": "https://en.wikipedia.org/wiki/Bobsleigh",
+      "subjectTitle": "Bobsleigh",
+      "imageDescription": "Two-man bobsleigh, 2014 winter Olympics, Jamaica",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Mortensen_and_Griffall.jpg/960px-Mortensen_and_Griffall.jpg",
+      "answer": "לוז",
+      "aliases": [
+        "לוז'"
+      ],
+      "difficulty": 4,
+      "credit": "The U.S. Army · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mortensen_and_Griffall.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "The U.S. Army",
+      "subjectSource": "https://en.wikipedia.org/wiki/Luge",
+      "subjectTitle": "Luge",
+      "imageDescription": "U.S. Army World Class Athlete Program Soldiers Sgt. Matt Mortensen (top) and Sgt. Preston Griffall (bottom) are clocked at 80 miles per hour on a run of 51.660 seconds during Olympic luge doubles training Feb. 10 at Sanki Sliding Centre in Krasnaya Polyana, Russia. (U.S. Army photo by Tim Hipps) <a href=\" http://www.army.mil/olympics/2014/ \" rel=\"nofollow\">www.army.mil/olympics/2014/</a>",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Mar%C3%ADa_Jos%C3%A9_Poncell_2024.jpg/960px-Mar%C3%ADa_Jos%C3%A9_Poncell_2024.jpg",
+      "answer": "שיט",
+      "aliases": [
+        "שיט תחרותי"
+      ],
+      "difficulty": 4,
+      "credit": "Chilean Olympic Committee · CC BY 3.0 cl",
+      "source": "https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Jos%C3%A9_Poncell_2024.jpg",
+      "license": "CC BY 3.0 cl",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/cl/deed.en",
+      "artist": "Chilean Olympic Committee",
+      "subjectSource": "https://en.wikipedia.org/wiki/Sailing_%28sport%29",
+      "subjectTitle": "Sailing (sport)",
+      "imageDescription": "María José Poncell en París 2024",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Hood_river_windsurfers_20060701_0759.jpeg/960px-Hood_river_windsurfers_20060701_0759.jpeg",
+      "answer": "גלישת רוח",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "EncMstr · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hood_river_windsurfers_20060701_0759.jpeg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "EncMstr",
+      "subjectSource": "https://en.wikipedia.org/wiki/Windsurfing",
+      "subjectTitle": "Windsurfing",
+      "imageDescription": "Windsurfing and kitesurfing on a fine summer day on the Columbia River at Hood River, Oregon . The Hood River bridge and Washington state across from the city are visible in the background.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/R3DE_StadiumJump.jpg/960px-R3DE_StadiumJump.jpg",
+      "answer": "קפיצות ראווה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Ronjamin (Ronald C. Yochum Jr.) · CC BY 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:R3DE_StadiumJump.jpg",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+      "artist": "Ronjamin (Ronald C. Yochum Jr.)",
+      "subjectSource": "https://en.wikipedia.org/wiki/Show_jumping",
+      "subjectTitle": "Show jumping",
+      "imageDescription": "Rider Donna Smith and horse \"Call Me Clifton\" negotiating a fence at the Show Jumping phase of the 2006 Rolex Kentucky Three Day Event.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Crack_climbing_in_Indian_Creek%2C_Utah.jpg/960px-Crack_climbing_in_Indian_Creek%2C_Utah.jpg",
+      "answer": "טיפוס מצוקים",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Crystal · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Crack_climbing_in_Indian_Creek,_Utah.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Crystal",
+      "subjectSource": "https://en.wikipedia.org/wiki/Rock_climbing",
+      "subjectTitle": "Rock climbing",
+      "imageDescription": "Climbing at Indian Creek climbing area in Canyonlands near Moab, Utah",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Football_in_Bloomington%2C_Indiana%2C_1995.jpg/960px-Football_in_Bloomington%2C_Indiana%2C_1995.jpg",
+      "answer": "כדורגל",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Rick Dikeman · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Football_in_Bloomington,_Indiana,_1995.jpg",
+      "artist": "Rick Dikeman",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Gabe_Proctor_-_Nesero_Kadi_Berlin_2015.jpg/960px-Gabe_Proctor_-_Nesero_Kadi_Berlin_2015.jpg",
+      "answer": "ריצה",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Denis Barthel · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gabe_Proctor_-_Nesero_Kadi_Berlin_2015.jpg",
+      "artist": "Denis Barthel",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/2010_mavericks_competition.jpg/960px-2010_mavericks_competition.jpg",
+      "answer": "גלישה",
+      "aliases": [],
+      "difficulty": 3,
+      "credit": "Shalom Jacobovitz · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2010_mavericks_competition.jpg",
+      "artist": "Shalom Jacobovitz",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Boxing080905_photoshop.jpg/960px-Boxing080905_photoshop.jpg",
+      "answer": "איגרוף",
+      "aliases": [
+        "בוקס"
+      ],
+      "difficulty": 2,
+      "credit": "Wayne Short · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Boxing080905_photoshop.jpg",
+      "artist": "Wayne Short",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Skater_-_Barrido-Panning_-_01.jpg/960px-Skater_-_Barrido-Panning_-_01.jpg",
+      "answer": "סקייטבורד",
+      "aliases": [],
+      "difficulty": 3,
+      "credit": "Carlos Delgado · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Skater_-_Barrido-Panning_-_01.jpg",
+      "artist": "Carlos Delgado",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Volleyball_game.jpg/960px-Volleyball_game.jpg",
+      "answer": "כדורעף",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "U.S Navy photo by Photographer's Mate 2nd Class Terry Spain · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Volleyball_game.jpg",
+      "artist": "U.S Navy photo by Photographer's Mate 2nd Class Terry Spain",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/0408_USA_Olympic_fencing.jpg/960px-0408_USA_Olympic_fencing.jpg",
+      "answer": "סיף",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "DoD photo by Master Sgt. Lono Kollars, U.S. Air Force · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:0408_USA_Olympic_fencing.jpg",
+      "artist": "DoD photo by Master Sgt. Lono Kollars, U.S. Air Force",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "reviewed": true
+    }
+  ]
 }
