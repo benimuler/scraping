@@ -6,8 +6,21 @@ import {
   TROPHIES, applyRound, loadProfile, saveProfile, levelProgress, personalBests, emptyProfile,
 } from './profile.mjs';
 import * as auth from './auth.mjs';
+import { createSounds } from './sounds.mjs';
 
 const $ = (id) => document.getElementById(id);
+const sounds = createSounds();
+const soundButton = $('sound-toggle');
+function updateSoundButton() {
+  soundButton.textContent = sounds.enabled ? '🔊' : '🔇';
+  soundButton.setAttribute('aria-label', sounds.enabled ? 'השתקת צלילים' : 'הפעלת צלילים');
+  soundButton.setAttribute('aria-pressed', String(sounds.enabled));
+}
+soundButton.addEventListener('click', () => { sounds.setEnabled(!sounds.enabled); updateSoundButton(); if(sounds.enabled) sounds.play('turn'); });
+document.addEventListener('pointerdown', () => sounds.unlock(), {passive:true});
+document.addEventListener('keydown', () => sounds.unlock());
+updateSoundButton();
+let soundPhase = null, soundTurn = null, countdownSecond = null, lowSecond = null;
 const screens = {
   welcome: $('s-welcome'), auth: $('s-auth'), join: $('s-join'),
   wait: $('s-wait'), quickwait: $('s-quickwait'), intro: $('s-intro'), pick: $('s-pick'),
@@ -36,6 +49,7 @@ let accountsAvailable = false;
 let authMode = 'register';
 let scoredDuelId = null;   // כדי שדו־קרב אחד לא ייספר פעמיים ברינדור חוזר
 let lastStreak = 0;
+let deadlineAt = 0;
 
 // ------------------------------------------------------------- מיקרופון
 
@@ -269,6 +283,7 @@ bootstrap();
 
 function applyState(next) {
   state = next;
+  deadlineAt = performance.now() + (next.deadlineInMs || 0);
   me = next.me;
   if (!me) return;
   next.players.forEach((p, i) => { if (!colors.has(p.id)) colors.set(p.id, playerColor(i)); });
@@ -282,6 +297,15 @@ function applyState(next) {
     };
   }
 
+  if (next.phase !== soundPhase) {
+    if (next.phase === 'duel') sounds.play('start');
+    if (next.phase === 'duel_result') sounds.play(next.lastResult?.winnerId === me.id ? 'win' : 'lose');
+    soundPhase = next.phase;
+  }
+  if(next.phase === 'duel' && next.duel?.activeId !== soundTurn) {
+    if(next.duel?.activeId === me.id) sounds.play('turn');
+    soundTurn = next.duel?.activeId;
+  }
   route();
 }
 
@@ -300,7 +324,8 @@ function route() {
 /** דו־קרב עצמאי: אין לוח ואין בחירת יריב, רק לובי ← זירה ← תוצאה. */
 function routeDuel() {
   switch (state.phase) {
-    case 'lobby': return renderWait();
+    case 'lobby':
+    case 'duel_paused': return renderWait();
     case 'duel_intro': return renderIntro();
     case 'duel': return renderDuel();
     case 'duel_result':
@@ -532,16 +557,19 @@ function renderWait() {
   $('wait-cat').textContent = me.category;
 
   const duelMode = state.mode === 'duel';
-  const ready = state.players.length >= 2;
+  const ready = state.players.length >= 2 && state.players.every(p => p.connected);
+  const mineReady = state.readiness?.playerIds.includes(me.id);
+  const paused = state.phase === 'duel_paused';
 
   // בדו־קרב מזמינים את היריב מהמסך הזה, ומי שמוכן פותח
-  $('invite').hidden = !duelMode || ready;
+  $('invite').hidden = !duelMode || ready || paused;
   $('wait-start').hidden = !(duelMode && ready);
-  $('wait-start').disabled = false;
-  if (duelMode && !ready) renderInvite();
+  $('wait-start').disabled = !!mineReady;
+  $('wait-start').textContent = mineReady ? 'אישרת מוכנות — ממתינים ליריב' : paused ? 'חזרתי — מוכן להמשיך' : 'אני מוכן — מתחילים כששנינו מאשרים';
+  if (duelMode && !ready && !paused) renderInvite();
 
   $('wait-note').textContent = duelMode
-    ? (ready ? `מול ${opponent()?.name} · ${opponentCategory()}` : 'ממתינים ליריב…')
+    ? (ready ? `${paused ? 'המשחק נעצר. ' : ''}מול ${opponent()?.name} · ${opponentCategory()} · נדרש אישור משניכם` : 'היריב לא מחובר — המשחק לא יתחיל')
     : (ready ? `${state.players.length} מתמודדים בזירה — ממתינים לפתיחה` : 'ממתינים למתמודדים נוספים…');
 
   renderMiniBoard($('wait-board'));
@@ -606,7 +634,7 @@ $('invite-share').addEventListener('click', async () => {
 
 $('wait-start').addEventListener('click', (e) => {
   e.currentTarget.disabled = true;
-  net.send({ t: 'start' });
+  net.send({ t: state.phase === 'duel_paused' ? 'resume' : 'start', epoch: state.readiness?.epoch });
 });
 
 function renderIntro() {
@@ -803,6 +831,7 @@ function renderStreak(duel) {
 }
 
 function onAnswer(msg) {
+  sounds.play(msg.correct ? 'correct' : 'wrong');
   const flash = $('flash');
   flash.className = `flash ${msg.correct ? 'correct' : 'pass'}`;
   setTimeout(() => { flash.className = 'flash'; }, 620);
@@ -838,6 +867,15 @@ function renderOver() {
     // ריאנץ' רק אחרי שהשרת סגר את הסיבוב, ורק כל עוד המשחק לא הוכרע
     $('btn-rematch').hidden = state.phase !== 'finished' || matchOver;
     $('btn-newmatch').hidden = state.phase !== 'finished' || !matchOver;
+    const mineReady = state.readiness?.playerIds.includes(me.id);
+    const bothConnected = state.players.every(p => p.connected);
+    $('ready-note').textContent = !bothConnected ? 'היריב לא מחובר. ממתינים לחזרתו ולאישור משניכם.'
+      : mineReady ? 'אישרת מוכנות. ממתינים לאישור היריב.'
+      : state.readiness?.playerIds.length ? 'היריב מוכן. אשרו כדי להתחיל ספירה לאחור.'
+      : 'נדרש אישור משניכם לפני הסיבוב הבא.';
+    $('btn-newmatch').disabled = !!mineReady || !bothConnected;
+    $('btn-newmatch').textContent = mineReady ? 'ממתינים לאישור היריב' : 'אני מוכן למשחק חדש מול אותו יריב';
+    $('btn-rematch').disabled = !!mineReady || !bothConnected;
     // בסיבוב השני התפקידים מתחלפים; ב-1:1 מחכה סיבוב מכריע בקטגוריה אקראית
     $('btn-rematch').textContent = (state.series?.round || 1) >= 2
       ? 'סיבוב מכריע — קטגוריה אקראית'
@@ -1007,14 +1045,14 @@ function renderSeries() {
 $('btn-rematch').addEventListener('click', (e) => {
   const button = e.currentTarget;
   button.disabled = true;
-  net.send({ t: 'rematch' });
+  net.send({ t: 'rematch', epoch: state.readiness?.epoch });
   setTimeout(() => { button.disabled = false; }, 1500);
 });
 
 $('btn-newmatch').addEventListener('click', (e) => {
   const button = e.currentTarget;
   button.disabled = true;
-  net.send({ t: 'newmatch' });
+  net.send({ t: 'newmatch', epoch: state.readiness?.epoch });
   setTimeout(() => { button.disabled = false; }, 1500);
 });
 
@@ -1037,13 +1075,19 @@ function renderMiniBoard(el) {
 
 function tickClocks() {
   requestAnimationFrame(tickClocks);
-  if (!state?.duel) return;
+  if (state?.phase === 'duel_intro') {
+    const second = Math.max(1, Math.ceil((deadlineAt - performance.now()) / 1000));
+    if(second !== countdownSecond) { sounds.play('tick'); countdownSecond = second; }
+    $('intro-countdown').textContent = `מתחילים בעוד ${second}`;
+  }
+  if (!state?.duel || state.phase !== 'duel') return;
   const elapsed = performance.now() - clock.at;
 
   for (const el of document.querySelectorAll('[data-clock]')) {
     const id = el.dataset.clock;
     const base = clock.clocks[id] ?? 0;
     const ms = id === clock.activeId ? Math.max(0, base - elapsed) : base;
+    if(id === me.id && id === clock.activeId && ms <= 5000 && Math.ceil(ms/1000) !== lowSecond) { lowSecond=Math.ceil(ms/1000); sounds.play('tick'); }
     el.textContent = formatClock(ms);
     el.className = `clock ${ms <= 5000 ? 'critical' : ms <= 15000 ? 'low' : ''}`;
   }
@@ -1082,3 +1126,4 @@ function cacheReward(key, reward) {
     localStorage.setItem('hazira:scored-rounds', JSON.stringify(Object.fromEntries(Object.entries(cache).slice(-100))));
   } catch { /* storage unavailable */ }
 }
+// End of player module.
