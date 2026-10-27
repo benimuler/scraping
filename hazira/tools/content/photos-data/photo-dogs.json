@@ -1,150 +1,896 @@
 {
- "id": "photo-dogs",
- "name": "גזעי כלבים",
- "hint": "אומרים את שם הגזע",
- "items": [
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/YellowLabradorLooking_new.jpg",
-   "answer": "לברדור",
-   "aliases": [
-    "לברדור רטריבר"
-   ],
-   "difficulty": 2,
-   "credit": "derivative work: Djmirko (talk)wereweweewewewg.jpg · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:YellowLabradorLooking_new.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Poodle0b.jpg",
-   "answer": "פודל",
-   "aliases": [],
-   "difficulty": 2,
-   "credit": "PardoY at Hebrew Wikipedia · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Poodle0b.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Racib%C3%B3rz_2007_082.jpg/960px-Racib%C3%B3rz_2007_082.jpg",
-   "answer": "בולדוג",
-   "aliases": [
-    "בולדוג אנגלי"
-   ],
-   "difficulty": 3,
-   "credit": "Pleple2000 · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Racib%C3%B3rz_2007_082.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/MiloSmet.JPG/960px-MiloSmet.JPG",
-   "answer": "ביגל",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "Jonatan De Geest · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:MiloSmet.JPG"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/European_Dobermann.jpg",
-   "answer": "דוברמן",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "Ilicivan at English Wikipedia · Public domain",
-   "source": "https://commons.wikimedia.org/wiki/File:European_Dobermann.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/SiberianHusky.jpg/960px-SiberianHusky.jpg",
-   "answer": "האסקי",
-   "aliases": [
-    "האסקי סיבירי"
-   ],
-   "difficulty": 2,
-   "credit": "בר · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:SiberianHusky.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Ray_agaver.jpg/960px-Ray_agaver.jpg",
-   "answer": "צ׳יוואווה",
-   "aliases": [
-    "ציוואווה"
-   ],
-   "difficulty": 2,
-   "credit": "Noam machlev · CC BY-SA 4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Ray_agaver.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Border_Collie_600.jpg",
-   "answer": "בורדר קולי",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Border_Collie_600.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Dax-chart-1959-2019.png/960px-Dax-chart-1959-2019.png",
-   "answer": "דאקס",
-   "aliases": [
-    "כלב נקניק",
-    "נקניק"
-   ],
-   "difficulty": 4,
-   "credit": "JamesBolsa · CC BY 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Dax-chart-1959-2019.png"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Cardigan_Welsh_Corgi%2C_Profile.png/960px-Cardigan_Welsh_Corgi%2C_Profile.png",
-   "answer": "קורגי",
-   "aliases": [
-    "וולש קורגי"
-   ],
-   "difficulty": 4,
-   "credit": "FatFairfax · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Cardigan_Welsh_Corgi%2C_Profile.png"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Rottweiler_kopf.jpg/960px-Rottweiler_kopf.jpg",
-   "answer": "רוטוויילר",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Rottweiler_kopf.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Boxer_%28dog%29.jpg",
-   "answer": "בוקסר",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "Photo by Elf | Talk 04:33, 28 Apr 2004 (UTC) April 25, 2004 at Power Paws agility camp · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Boxer_(dog).jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Dalmatian_liver_stacked.jpg/960px-Dalmatian_liver_stacked.jpg",
-   "answer": "דלמטי",
-   "aliases": [],
-   "difficulty": 3,
-   "credit": "Miroslav Cacik · Copyrighted free use",
-   "source": "https://commons.wikimedia.org/wiki/File:Dalmatian_liver_stacked.jpg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/1/11/Beerus1.jpg",
-   "answer": "שר פיי",
-   "aliases": [],
-   "difficulty": 4,
-   "credit": "ElsBrinkerink at Dutch Wikipedia · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Beerus1.jpg"
-  },
-  {
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Akita_inu.jpeg/960px-Akita_inu.jpeg",
-   "answer": "אקיטה",
-   "aliases": [],
-   "difficulty": 4,
-   "credit": "B@rt · CC BY-SA 3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Akita_inu.jpeg"
-  },
-  {
-   "image": "https://upload.wikimedia.org/wikipedia/commons/8/82/Golden_Retriever_standing_Tucker.jpg",
-   "answer": "גולדן רטריבר",
-   "aliases": [
-    "גולדן"
-   ],
-   "difficulty": 2,
-   "credit": "Edward from boston, usa · CC BY 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Golden_Retriever_standing_Tucker.jpg"
-  }
- ]
+  "id": "photo-dogs",
+  "name": "גזעי כלבים",
+  "hint": "אומרים את שם הגזע",
+  "items": [
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Dog_niemiecki_%C5%BC%C3%B3%C5%82ty_LM980.jpg/960px-Dog_niemiecki_%C5%BC%C3%B3%C5%82ty_LM980.jpg",
+      "answer": "דני ענק",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Lilly M · CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Dog_niemiecki_%C5%BC%C3%B3%C5%82ty_LM980.jpg",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+      "artist": "Lilly M",
+      "subjectSource": "https://en.wikipedia.org/wiki/Great_Dane",
+      "subjectTitle": "Great Dane",
+      "imageDescription": "Great Dane during dogs show in Katowice, Poland",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/da/%282%29_Irish_Wolfhound_4.jpg",
+      "answer": "וולפהאונד אירי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Dux · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:(2)_Irish_Wolfhound_4.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Dux",
+      "subjectSource": "https://en.wikipedia.org/wiki/Irish_Wolfhound",
+      "subjectTitle": "Irish Wolfhound",
+      "imageDescription": "Irish Wolfhound",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Karrie.JPG/960px-Karrie.JPG",
+      "answer": "דירהאונד סקוטי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Sisteskrik · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Karrie.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Sisteskrik",
+      "subjectSource": "https://en.wikipedia.org/wiki/Scottish_Deerhound",
+      "subjectTitle": "Scottish Deerhound",
+      "imageDescription": "Am.Int.Nord.Ch NV-01/02/03. NordV-02.SV-02, KbhV-01 Jaraluv Karaoke (Karrie)",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Newfoundland_dog_Smoky.jpg/960px-Newfoundland_dog_Smoky.jpg",
+      "answer": "ניופאונדלנד (כלב)",
+      "aliases": [
+        "ניופאונדלנד"
+      ],
+      "difficulty": 4,
+      "credit": "Flickr user DanDee Shots · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Newfoundland_dog_Smoky.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Flickr user DanDee Shots",
+      "subjectSource": "https://en.wikipedia.org/wiki/Newfoundland_dog",
+      "subjectTitle": "Newfoundland dog",
+      "imageDescription": "A sixteen-month-old Newfoundland named Smoky, who weighs about 63.5 kg (140 lb)",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/3-BerneseMountainDogInGrass.jpg/960px-3-BerneseMountainDogInGrass.jpg",
+      "answer": "ברנר זננהונד",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "FriendlyToaster · CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:3-BerneseMountainDogInGrass.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "FriendlyToaster",
+      "subjectSource": "https://en.wikipedia.org/wiki/Bernese_Mountain_Dog",
+      "subjectTitle": "Bernese Mountain Dog",
+      "imageDescription": "A 3½-year-old female Bernese Mountain Dog , “Piper,” standing outdoors in Washington State , May 2025.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Great_Pyrenees_Mountain_Dog_2.png/960px-Great_Pyrenees_Mountain_Dog_2.png",
+      "answer": "פירנאי ענק",
+      "aliases": [
+        "כלב הרים פירנאי"
+      ],
+      "difficulty": 4,
+      "credit": "HeartSpoon · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Great_Pyrenees_Mountain_Dog_2.png",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "HeartSpoon",
+      "subjectSource": "https://en.wikipedia.org/wiki/Pyrenean_Mountain_Dog",
+      "subjectTitle": "Pyrenean Mountain Dog",
+      "imageDescription": "Adjusted contrast.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/BIR_Grupp_2-_TIBETANSK_MASTIFF%2C_Legenda_Tibeta_Temudzhin_%2823938629470%29.jpg/960px-BIR_Grupp_2-_TIBETANSK_MASTIFF%2C_Legenda_Tibeta_Temudzhin_%2823938629470%29.jpg",
+      "answer": "מסטיף טיבטי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Svenska Mässan from Sweden · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:BIR_Grupp_2-_TIBETANSK_MASTIFF,_Legenda_Tibeta_Temudzhin_(23938629470).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Svenska Mässan from Sweden",
+      "subjectSource": "https://en.wikipedia.org/wiki/Tibetan_Mastiff",
+      "subjectTitle": "Tibetan Mastiff",
+      "imageDescription": "BIR Grupp 2 TIBETANSK MASTIFF DK V-15 Legenda Tibeta Temudzhin MyDOG, Nordens största hundevenemang: www.mydog.se",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Westgort_Anticipation_17_months.JPG/960px-Westgort_Anticipation_17_months.JPG",
+      "answer": "מסטיף אנגלי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Radovan Rohovsky · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Westgort_Anticipation_17_months.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Radovan Rohovsky",
+      "subjectSource": "https://en.wikipedia.org/wiki/English_Mastiff",
+      "subjectTitle": "English Mastiff",
+      "imageDescription": "English Mastiff Westgort Anticipation at the age of 17 months",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Bullmastiff_edited.JPG/960px-Bullmastiff_edited.JPG",
+      "answer": "בולמסטיף",
+      "aliases": [
+        "בול מסטיף"
+      ],
+      "difficulty": 4,
+      "credit": "Fausto Moreno · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bullmastiff_edited.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Fausto Moreno",
+      "subjectSource": "https://en.wikipedia.org/wiki/Bullmastiff",
+      "subjectTitle": "Bullmastiff",
+      "imageDescription": "A male Bullmastiff.",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/03/Cane_corso_temi_1_1024x768x24_%28cropped%29.png",
+      "answer": "קאנה קורסו",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Claudio Domiziani · CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Cane_corso_temi_1_1024x768x24_(cropped).png",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+      "artist": "Claudio Domiziani",
+      "subjectSource": "https://en.wikipedia.org/wiki/Cane_Corso",
+      "subjectTitle": "Cane Corso",
+      "imageDescription": "Cane corso femmina di nome Temi con orecchie integre",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/French_Mastiff_female_4.jpg/960px-French_Mastiff_female_4.jpg",
+      "answer": "דוג דה בורדו",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Canarian · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:French_Mastiff_female_4.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Canarian",
+      "subjectSource": "https://en.wikipedia.org/wiki/Dogue_de_Bordeaux",
+      "subjectTitle": "Dogue de Bordeaux",
+      "imageDescription": "French Mastiff, female.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Samojed00.jpg/960px-Samojed00.jpg",
+      "answer": "סמוייד",
+      "aliases": [
+        "סמויד"
+      ],
+      "difficulty": 4,
+      "credit": "No machine-readable author provided. Pleple2000 assumed (based on copyright claims). · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Samojed00.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "No machine-readable author provided. Pleple2000 assumed (based on copyright claims).",
+      "subjectSource": "https://en.wikipedia.org/wiki/Samoyed_dog",
+      "subjectTitle": "Samoyed dog",
+      "imageDescription": "author: Pleple2000",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Alaskan_Malamute.jpg",
+      "answer": "אלסקן מלמוט",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "SCMW · CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Alaskan_Malamute.jpg",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "SCMW",
+      "subjectSource": "https://en.wikipedia.org/wiki/Alaskan_Malamute",
+      "subjectTitle": "Alaskan Malamute",
+      "imageDescription": "Alaskan Malamute Ch.Windchaser's The Seventh Son",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Chow-chow_in_Tallinn.JPG/960px-Chow-chow_in_Tallinn.JPG",
+      "answer": "צאו צאו",
+      "aliases": [
+        "צ'או צ'או"
+      ],
+      "difficulty": 4,
+      "credit": "Томасина · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chow-chow_in_Tallinn.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Томасина",
+      "subjectSource": "https://en.wikipedia.org/wiki/Chow_Chow",
+      "subjectTitle": "Chow Chow",
+      "imageDescription": "chow-chow",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Taka_Shiba.jpg/960px-Taka_Shiba.jpg",
+      "answer": "שיבה אינו",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Takashiba at English Wikipedia · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Taka_Shiba.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Takashiba at English Wikipedia",
+      "subjectSource": "https://en.wikipedia.org/wiki/Shiba_Inu",
+      "subjectTitle": "Shiba Inu",
+      "imageDescription": "Shiba Inu",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Afghan_dog_-_cropped.jpg",
+      "answer": "אפגני",
+      "aliases": [
+        "כלב אפגני"
+      ],
+      "difficulty": 4,
+      "credit": "Weaveravel · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Afghan_dog_-_cropped.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Weaveravel",
+      "subjectSource": "https://en.wikipedia.org/wiki/Afghan_Hound",
+      "subjectTitle": "Afghan Hound",
+      "imageDescription": "A cream Afghan Hound. Cropped from File:Afghan dog.jpg",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Chart_rosyjski_borzoj_rybnik-kamien_pl.jpg/960px-Chart_rosyjski_borzoj_rybnik-kamien_pl.jpg",
+      "answer": "בורזוי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Pleple2000 · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chart_rosyjski_borzoj_rybnik-kamien_pl.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Pleple2000",
+      "subjectSource": "https://en.wikipedia.org/wiki/Borzoi",
+      "subjectTitle": "Borzoi",
+      "imageDescription": "Barzoï during show of dogs in Rybnik - Kamień, Poland",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Red_Smooth_Saluki.jpg/960px-Red_Smooth_Saluki.jpg",
+      "answer": "סלוקי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "r. · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Red_Smooth_Saluki.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "r.",
+      "subjectSource": "https://en.wikipedia.org/wiki/Saluki",
+      "subjectTitle": "Saluki",
+      "imageDescription": "Five year old red smooth saluki male.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/GraceTheGreyhound.jpg/960px-GraceTheGreyhound.jpg",
+      "answer": "גרייהאונד",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Neurodoc · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:GraceTheGreyhound.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Neurodoc",
+      "subjectSource": "https://en.wikipedia.org/wiki/Greyhound",
+      "subjectTitle": "Greyhound",
+      "imageDescription": "This is a photograph of a 4 year old, female greyhound named Grace.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Whippet_2018_6.jpg/960px-Whippet_2018_6.jpg",
+      "answer": "וויפט",
+      "aliases": [
+        "ויפט"
+      ],
+      "difficulty": 4,
+      "credit": "Canarian · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Whippet_2018_6.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Canarian",
+      "subjectSource": "https://en.wikipedia.org/wiki/Whippet",
+      "subjectTitle": "Whippet",
+      "imageDescription": "Whippet, fawn brindle",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Italian_Greyhound_standing_gray_%28cropped%29.jpg/960px-Italian_Greyhound_standing_gray_%28cropped%29.jpg",
+      "answer": "גרייהאונד איטלקי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "christina · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Italian_Greyhound_standing_gray_(cropped).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "christina",
+      "subjectSource": "https://en.wikipedia.org/wiki/Italian_Greyhound",
+      "subjectTitle": "Italian Greyhound",
+      "imageDescription": "A male Italian Greyhound.",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cf/BassetHound_profil.jpg",
+      "answer": "באסט האונד",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Cali1008 · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:BassetHound_profil.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Cali1008",
+      "subjectSource": "https://en.wikipedia.org/wiki/Basset_Hound",
+      "subjectTitle": "Basset Hound",
+      "imageDescription": "Basset Hound standing in profile.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Bloodhound_Erland22.jpg/960px-Bloodhound_Erland22.jpg",
+      "answer": "בלאדהאונד",
+      "aliases": [
+        "כלב דם"
+      ],
+      "difficulty": 4,
+      "credit": "User:Erland22 · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bloodhound_Erland22.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "User:Erland22",
+      "subjectSource": "https://en.wikipedia.org/wiki/Bloodhound",
+      "subjectTitle": "Bloodhound",
+      "imageDescription": "Bloodhound",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/28/Gessa_d%27Aran_Copo_de_Nieve-_arancio_roano-_prop.Kalesa.jpg",
+      "answer": "קוקר ספנייל",
+      "aliases": [
+        "קוקר ספניאל"
+      ],
+      "difficulty": 4,
+      "credit": "Fcocker · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gessa_d%27Aran_Copo_de_Nieve-_arancio_roano-_prop.Kalesa.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Fcocker",
+      "subjectSource": "https://en.wikipedia.org/wiki/Cocker_Spaniel",
+      "subjectTitle": "Cocker Spaniel",
+      "imageDescription": "Gessa d'Aran Copo de Nieve, cocker arancio roano",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Springer_Spaniel_Wide_Shot.jpg",
+      "answer": "ספרינגר ספנייל",
+      "aliases": [
+        "ספרינגר ספניאל אנגלי"
+      ],
+      "difficulty": 4,
+      "credit": "Ratsniffer · CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Springer_Spaniel_Wide_Shot.jpg",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Ratsniffer",
+      "subjectSource": "https://en.wikipedia.org/wiki/English_Springer_Spaniel",
+      "subjectTitle": "English Springer Spaniel",
+      "imageDescription": "An English Springer Spaniel in a Field",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Can_Setter_dog_GFDL.jpg/960px-Can_Setter_dog_GFDL.jpg",
+      "answer": "סטר אירי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Luis Miguel Bugallo Sánchez ( Lmbuga Commons )( Lmbuga Galipedia ) Publicada por/ Publish by : Luis Miguel Bugallo Sánchez · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Can_Setter_dog_GFDL.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Luis Miguel Bugallo Sánchez ( Lmbuga Commons )( Lmbuga Galipedia ) Publicada por/ Publish by : Luis Miguel Bugallo Sánchez",
+      "subjectSource": "https://en.wikipedia.org/wiki/Irish_Setter",
+      "subjectTitle": "Irish Setter",
+      "imageDescription": "self made Vigo - Galicia - Spain - 06-10-2006",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Weimaraner_Freika-2.jpg/960px-Weimaraner_Freika-2.jpg",
+      "answer": "ויימרנר",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Rufus46 · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Weimaraner_Freika-2.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Rufus46",
+      "subjectSource": "https://en.wikipedia.org/wiki/Weimaraner",
+      "subjectTitle": "Weimaraner",
+      "imageDescription": "Weimaraner-Hündin, zwei Jahre alt",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Wy%C5%BCe%C5%82_w%C4%99gierski_g%C5%82adkow%C5%82osy_500.jpg/960px-Wy%C5%BCe%C5%82_w%C4%99gierski_g%C5%82adkow%C5%82osy_500.jpg",
+      "answer": "ויסלה (כלב)",
+      "aliases": [
+        "ויסלה"
+      ],
+      "difficulty": 4,
+      "credit": "Pleple2000 · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Wy%C5%BCe%C5%82_w%C4%99gierski_g%C5%82adkow%C5%82osy_500.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Pleple2000",
+      "subjectSource": "https://en.wikipedia.org/wiki/Vizsla",
+      "subjectTitle": "Vizsla",
+      "imageDescription": "Wyżeł_węgierski_gładkowłosy na Światowej Wystawie Psów Rasowych w Poznaniu",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Duitse_staande_korthaar_10-10-2.jpg",
+      "answer": "פוינטר גרמני",
+      "aliases": [
+        "פוינטר גרמני קצר שיער"
+      ],
+      "difficulty": 4,
+      "credit": "Bonnie van den Born, http://www.bonfoto.nl · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Duitse_staande_korthaar_10-10-2.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Bonnie van den Born, http://www.bonfoto.nl",
+      "subjectSource": "https://en.wikipedia.org/wiki/German_Shorthaired_Pointer",
+      "subjectTitle": "German Shorthaired Pointer",
+      "imageDescription": "Rövidszőrű német vizsla",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Boston-terrier-carlos-de.JPG/960px-Boston-terrier-carlos-de.JPG",
+      "answer": "בוסטון טרייר",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Andreas Schlaugat · CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Boston-terrier-carlos-de.JPG",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "Andreas Schlaugat",
+      "subjectSource": "https://en.wikipedia.org/wiki/Boston_Terrier",
+      "subjectTitle": "Boston Terrier",
+      "imageDescription": "Boston Terrier [-> http://www.boston-terrier-carlos.de ]",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Bullterrier-3453301920.jpg/960px-Bullterrier-3453301920.jpg",
+      "answer": "בול טרייר",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Pixabay User TC-TORRES · CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bullterrier-3453301920.jpg",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Pixabay User TC-TORRES",
+      "subjectSource": "https://en.wikipedia.org/wiki/Bull_Terrier",
+      "subjectTitle": "Bull Terrier",
+      "imageDescription": "English Bull Terrier dam",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/de/%D7%A1%D7%90%D7%98%D7%A3_%D7%90%D7%A0%D7%92%D7%9C%D7%99.jpg",
+      "answer": "סטפורדשייר בול טרייר",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Or Logassi · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%D7%A1%D7%90%D7%98%D7%A3_%D7%90%D7%A0%D7%92%D7%9C%D7%99.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Or Logassi",
+      "subjectSource": "https://en.wikipedia.org/wiki/Staffordshire_Bull_Terrier",
+      "subjectTitle": "Staffordshire Bull Terrier",
+      "imageDescription": "קבוצה: טריירים ארץ מקור: אנגליה משקל: 25-45 גובה זכר: 20-40 גובה נקבה: 20-35 תוחלת חיים: 12-14 תיאור: פרווה קצרה ובארבע צבעים שונים כגון חום,לבן,שחור,ומנומר אופי: אנרגטי, דומיננטי, אינטליגנטי, אוהב,אמין שימוש: שמירה אילוף: הסתגלות גבוהה",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Scottish_Terrier_Photo_of_Face.jpg/960px-Scottish_Terrier_Photo_of_Face.jpg",
+      "answer": "טרייר סקוטי",
+      "aliases": [
+        "סקוטיש טרייר"
+      ],
+      "difficulty": 4,
+      "credit": "Elise Carroll · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Scottish_Terrier_Photo_of_Face.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Elise Carroll",
+      "subjectSource": "https://en.wikipedia.org/wiki/Scottish_Terrier",
+      "subjectTitle": "Scottish Terrier",
+      "imageDescription": "A Scottish Terrier, also known as a Scottie, smiling. This shows the breed's distinctive beard and tall ears.",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/41/%282_version%29_Grupp_3%2C_YORKSHIRETERRIER%2C_NO_UCH_SE_UCH_Oxzar_Amazing_Bel%E2%80%99s_Toffy_%2824310212305%29.jpg",
+      "answer": "יורקשייר טרייר",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Svenska Mässan from Sweden · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:(2_version)_Grupp_3,_YORKSHIRETERRIER,_NO_UCH_SE_UCH_Oxzar_Amazing_Bel%E2%80%99s_Toffy_(24310212305).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Svenska Mässan from Sweden",
+      "subjectSource": "https://en.wikipedia.org/wiki/Yorkshire_Terrier",
+      "subjectTitle": "Yorkshire Terrier",
+      "imageDescription": "An Yorkshire Terrier dog named \"NO UCH SE UCH Oxzar Amazing Bel’s Toffy\" at MyDOG show.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Jack_Russell_Terrier_1.jpg/960px-Jack_Russell_Terrier_1.jpg",
+      "answer": "גק ראסל טרייר",
+      "aliases": [
+        "ג'ק ראסל טרייר"
+      ],
+      "difficulty": 4,
+      "credit": "Plank · CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jack_Russell_Terrier_1.jpg",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "Plank",
+      "subjectSource": "https://en.wikipedia.org/wiki/Jack_Russell_Terrier",
+      "subjectTitle": "Jack Russell Terrier",
+      "imageDescription": "Jack Russell Terrier",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Miniature_Schnauzer_salt_%26_pepper_%28cropped%29.jpg/960px-Miniature_Schnauzer_salt_%26_pepper_%28cropped%29.jpg",
+      "answer": "שנאוצר ננסי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Canarian · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Miniature_Schnauzer_salt_%26_pepper_(cropped).jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Canarian",
+      "subjectSource": "https://en.wikipedia.org/wiki/Miniature_Schnauzer",
+      "subjectTitle": "Miniature Schnauzer",
+      "imageDescription": "Salt & pepper Miniature Schnauzer.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Nev_Lemar_Barbara1.jpg/960px-Nev_Lemar_Barbara1.jpg",
+      "answer": "שנאוצר ענק",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Petrucha · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nev_Lemar_Barbara1.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Petrucha",
+      "subjectSource": "https://en.wikipedia.org/wiki/Giant_Schnauzer",
+      "subjectTitle": "Giant Schnauzer",
+      "imageDescription": "Nev Lemar Barbara",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Bichon_Fris%C3%A9_-_studdogbichon.jpg/960px-Bichon_Fris%C3%A9_-_studdogbichon.jpg",
+      "answer": "בישון פריזה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Heike Andres · CC BY-SA 3.0 de",
+      "source": "https://commons.wikimedia.org/wiki/File:Bichon_Fris%C3%A9_-_studdogbichon.jpg",
+      "license": "CC BY-SA 3.0 de",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+      "artist": "Heike Andres",
+      "subjectSource": "https://en.wikipedia.org/wiki/Bichon_Fris%C3%A9",
+      "subjectTitle": "Bichon Frisé",
+      "imageDescription": "reinrassiger Bichon Frisé",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/1AKC_Pekingese_Dog_Show_2011.jpg/960px-1AKC_Pekingese_Dog_Show_2011.jpg",
+      "answer": "פקינז",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "SheltieBoy · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:1AKC_Pekingese_Dog_Show_2011.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "SheltieBoy",
+      "subjectSource": "https://en.wikipedia.org/wiki/Pekingese",
+      "subjectTitle": "Pekingese",
+      "imageDescription": "Pekingese",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Outdoor_Continental_Toy_Spaniel_Papillon.jpeg/960px-Outdoor_Continental_Toy_Spaniel_Papillon.jpeg",
+      "answer": "פפיון (כלב)",
+      "aliases": [
+        "פפיון"
+      ],
+      "difficulty": 4,
+      "credit": "Gvdmoort · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Outdoor_Continental_Toy_Spaniel_Papillon.jpeg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Gvdmoort",
+      "subjectSource": "https://en.wikipedia.org/wiki/Continental_Toy_Spaniel",
+      "subjectTitle": "Continental Toy Spaniel",
+      "imageDescription": "Un beau représentant de la race épagneul nain continental papillon, photographié en plein air.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/IndyStands.jpg/960px-IndyStands.jpg",
+      "answer": "סיני מצויץ",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Tommy Gildseth · CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:IndyStands.jpg",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "Tommy Gildseth",
+      "subjectSource": "https://en.wikipedia.org/wiki/Chinese_Crested_Dog",
+      "subjectTitle": "Chinese Crested Dog",
+      "imageDescription": "Hairless Chinese Crested dog Zucci High Virtue - Indy (2004-2011).",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Mops_oct09_cropped2.jpg/960px-Mops_oct09_cropped2.jpg",
+      "answer": "פאג",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Mops_oct09.jpg : Dagur Brynjólfsson from Hafnarfjordur, Iceland; derivative work: Anka Friedrich · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mops_oct09_cropped2.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Mops_oct09.jpg : Dagur Brynjólfsson from Hafnarfjordur, Iceland; derivative work: Anka Friedrich",
+      "subjectSource": "https://en.wikipedia.org/wiki/Pug",
+      "subjectTitle": "Pug",
+      "imageDescription": "Pug dog",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/2008-07-28_Dog_at_Frolick_Field.jpg/960px-2008-07-28_Dog_at_Frolick_Field.jpg",
+      "answer": "בולדוג צרפתי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Ildar Sagdejev ( Specious ) · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2008-07-28_Dog_at_Frolick_Field.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Ildar Sagdejev ( Specious )",
+      "subjectSource": "https://en.wikipedia.org/wiki/French_Bulldog",
+      "subjectTitle": "French Bulldog",
+      "imageDescription": "A French Bulldog in Durham, North Carolina .",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Australian_Shepherd_red_bi.JPG/960px-Australian_Shepherd_red_bi.JPG",
+      "answer": "רועה אוסטרלי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Trickdog-Fina · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Australian_Shepherd_red_bi.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Trickdog-Fina",
+      "subjectSource": "https://en.wikipedia.org/wiki/Australian_Shepherd",
+      "subjectTitle": "Australian Shepherd",
+      "imageDescription": "Australian Shepherd Fina, red bi aussie-fina.jimdo.com",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Old_English_Sheepdog_%28side%29.jpg/960px-Old_English_Sheepdog_%28side%29.jpg",
+      "answer": "בובטייל",
+      "aliases": [
+        "כלב צאן אנגלי עתיק"
+      ],
+      "difficulty": 4,
+      "credit": "AKS.9955 · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Old_English_Sheepdog_(side).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "AKS.9955",
+      "subjectSource": "https://en.wikipedia.org/wiki/Old_English_Sheepdog",
+      "subjectTitle": "Old English Sheepdog",
+      "imageDescription": "Old English Sheepdog",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Shetland_Sheepdog_sable.jpg/960px-Shetland_Sheepdog_sable.jpg",
+      "answer": "שלטי",
+      "aliases": [
+        "כלב רועים שלטי"
+      ],
+      "difficulty": 4,
+      "credit": "Flickr user nickobec (Nick Cowie) · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Shetland_Sheepdog_sable.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Flickr user nickobec (Nick Cowie)",
+      "subjectSource": "https://en.wikipedia.org/wiki/Shetland_Sheepdog",
+      "subjectTitle": "Shetland Sheepdog",
+      "imageDescription": "A Shetland Sheepdog named Cinnamon.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Rough-Collie-japan08_%28cropped%29.jpg/960px-Rough-Collie-japan08_%28cropped%29.jpg",
+      "answer": "קולי ארוך שיער",
+      "aliases": [
+        "קולי גס-שיער"
+      ],
+      "difficulty": 4,
+      "credit": "Yasu w · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rough-Collie-japan08_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Yasu w",
+      "subjectSource": "https://en.wikipedia.org/wiki/Rough_Collie",
+      "subjectTitle": "Rough Collie",
+      "imageDescription": "セーブルカラーのラフ・コリー",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/CanaanDogChakede.jpg",
+      "answer": "כלב כנעני",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Canaan Dog, Hodowla Samorodok Hanaana http://www.ruscanaan.ru · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:CanaanDogChakede.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Canaan Dog, Hodowla Samorodok Hanaana http://www.ruscanaan.ru",
+      "subjectSource": "https://en.wikipedia.org/wiki/Canaan_Dog",
+      "subjectTitle": "Canaan Dog",
+      "imageDescription": "Canaan Dog",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/YellowLabradorLooking_new.jpg",
+      "answer": "לברדור",
+      "aliases": [
+        "לברדור רטריבר"
+      ],
+      "difficulty": 2,
+      "credit": "derivative work: Djmirko ( talk )wereweweewewewg.jpg · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:YellowLabradorLooking_new.jpg",
+      "artist": "derivative work: Djmirko ( talk )wereweweewewewg.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Racib%C3%B3rz_2007_082.jpg/960px-Racib%C3%B3rz_2007_082.jpg",
+      "answer": "בולדוג",
+      "aliases": [
+        "בולדוג אנגלי"
+      ],
+      "difficulty": 3,
+      "credit": "Pleple2000 · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Racib%C3%B3rz_2007_082.jpg",
+      "artist": "Pleple2000",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/MiloSmet.JPG/960px-MiloSmet.JPG",
+      "answer": "ביגל",
+      "aliases": [],
+      "difficulty": 3,
+      "credit": "Jonatan De Geest · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:MiloSmet.JPG",
+      "artist": "Jonatan De Geest",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/SiberianHusky.jpg/960px-SiberianHusky.jpg",
+      "answer": "האסקי",
+      "aliases": [
+        "האסקי סיבירי"
+      ],
+      "difficulty": 2,
+      "credit": "בר · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:SiberianHusky.jpg",
+      "artist": "בר",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Ray_agaver.jpg/960px-Ray_agaver.jpg",
+      "answer": "צ׳יוואווה",
+      "aliases": [
+        "ציוואווה"
+      ],
+      "difficulty": 2,
+      "credit": "Noam machlev · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ray_agaver.jpg",
+      "artist": "Noam machlev",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Cardigan_Welsh_Corgi%2C_Profile.png/960px-Cardigan_Welsh_Corgi%2C_Profile.png",
+      "answer": "קורגי",
+      "aliases": [
+        "וולש קורגי"
+      ],
+      "difficulty": 4,
+      "credit": "FatFairfax · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cardigan_Welsh_Corgi,_Profile.png",
+      "artist": "FatFairfax",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Boxer_%28dog%29.jpg",
+      "answer": "בוקסר",
+      "aliases": [],
+      "difficulty": 3,
+      "credit": "Photo by Elf | Talk 04:33, 28 Apr 2004 (UTC) April 25, 2004 at Power Paws agility camp · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Boxer_(dog).jpg",
+      "artist": "Photo by Elf | Talk 04:33, 28 Apr 2004 (UTC) April 25, 2004 at Power Paws agility camp",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Akita_inu.jpeg/960px-Akita_inu.jpeg",
+      "answer": "אקיטה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "B@rt · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Akita_inu.jpeg",
+      "artist": "B@rt",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/82/Golden_Retriever_standing_Tucker.jpg",
+      "answer": "גולדן רטריבר",
+      "aliases": [
+        "גולדן"
+      ],
+      "difficulty": 2,
+      "credit": "Edward from boston, usa · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Golden_Retriever_standing_Tucker.jpg",
+      "artist": "Edward from boston, usa",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/A_Dachshund_on_the_streets_of_Budapest.jpg/330px-A_Dachshund_on_the_streets_of_Budapest.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:A_Dachshund_on_the_streets_of_Budapest.jpg",
+      "credit": "Slyronit · CC BY-SA 4.0",
+      "artist": "Slyronit",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "answer": "תחש",
+      "aliases": [],
+      "difficulty": 3,
+      "subjectSource": "https://commons.wikimedia.org/wiki/File:A_Dachshund_on_the_streets_of_Budapest.jpg",
+      "reviewed": true
+    }
+  ]
 }
