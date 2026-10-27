@@ -1,0 +1,187 @@
+{
+ "id": "photo-fruits",
+ "name": "פירות (תמונות)",
+ "hint": "אומרים את שם הפרי",
+ "items": [
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/6/63/G%C3%BCrsel%27in_Bah%C3%A7e_-_panoramio.jpg",
+   "answer": "תפוח",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Hüseyin Öcal · CC BY 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:G%C3%BCrsel'in_Bah%C3%A7e_-_panoramio.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Musa_basjoo_-_G%C3%B6ttingen.jpg/960px-Musa_basjoo_-_G%C3%B6ttingen.jpg",
+   "answer": "בננה",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Illustratedjc · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Musa_basjoo_-_G%C3%B6ttingen.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Viri_Galilaei_%289200926016%29.jpg/960px-Viri_Galilaei_%289200926016%29.jpg",
+   "answer": "תפוז",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "someone10x · CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Viri_Galilaei_(9200926016).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Watermelons.jpg/960px-Watermelons.jpg",
+   "answer": "אבטיח",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Steve Evans · CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Watermelons.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Starr_080914-9943_Cucumis_melo.jpg/960px-Starr_080914-9943_Cucumis_melo.jpg",
+   "answer": "מלון",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Forest &amp; Kim Starr · CC BY 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Starr_080914-9943_Cucumis_melo.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Table_grapes_on_white.jpg/960px-Table_grapes_on_white.jpg",
+   "answer": "ענבים",
+   "aliases": [
+    "ענב"
+   ],
+   "difficulty": 2,
+   "credit": "fir0002 flagstaffotos [at] gmail.com Canon 20D + Sigma 150mm f/2.8 · GFDL 1.2",
+   "source": "https://commons.wikimedia.org/wiki/File:Table_grapes_on_white.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Fruit_Fraise.jpg",
+   "answer": "תות",
+   "aliases": [
+    "תות שדה"
+   ],
+   "difficulty": 2,
+   "credit": "Savant-fou, Ken Hammond, FoeNyx, Isue · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Fruit_Fraise.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Pineapple_and_cross_section.jpg/960px-Pineapple_and_cross_section.jpg",
+   "answer": "אננס",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "fir0002 flagstaffotos [at] gmail.com Canon 20D + Sigma 150mm f/2.8 · GFDL 1.2",
+   "source": "https://commons.wikimedia.org/wiki/File:Pineapple_and_cross_section.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Apple_mango_and_cross_section.jpg/960px-Apple_mango_and_cross_section.jpg",
+   "answer": "מנגו",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Muhammad Mahdi Karim · GFDL",
+   "source": "https://commons.wikimedia.org/wiki/File:Apple_mango_and_cross_section.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Carica_papaya_005.JPG/960px-Carica_papaya_005.JPG",
+   "answer": "פפאיה",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "H. Zell · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Carica_papaya_005.JPG"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Zitonenbaum.jpg",
+   "answer": "לימון",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Michael J. zirbes · CC BY-SA 2.0 de",
+   "source": "https://commons.wikimedia.org/wiki/File:Zitonenbaum.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Citrus_paradisi_%28Grapefruit%2C_pink%29_white_bg.jpg/960px-Citrus_paradisi_%28Grapefruit%2C_pink%29_white_bg.jpg",
+   "answer": "אשכולית",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Citrus_paradisi_(Grapefruit,_pink).jpg: א (Aleph) derivative work: — raeky · CC BY-SA 2.5",
+   "source": "https://commons.wikimedia.org/wiki/File:Citrus_paradisi_(Grapefruit%2C_pink)_white_bg.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Cherry_tree%2C_Tasskertes%2C_2019_Kunszentmikl%C3%B3s.jpg/960px-Cherry_tree%2C_Tasskertes%2C_2019_Kunszentmikl%C3%B3s.jpg",
+   "answer": "דובדבן",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Globetrotter19 · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Cherry_tree%2C_Tasskertes%2C_2019_Kunszentmikl%C3%B3s.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Pear_DS.jpg/960px-Pear_DS.jpg",
+   "answer": "אגס",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Augustus Binu : flickr · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Pear_DS.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Peach_flowers.jpg",
+   "answer": "אפרסק",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "by Fir0002 · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Peach_flowers.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Plums_in_tree.jpg/960px-Plums_in_tree.jpg",
+   "answer": "שזיף",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "GFDL 1.2",
+   "source": "https://commons.wikimedia.org/wiki/File:Plums_in_tree.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/%D7%AA%D7%90%D7%A0%D7%94_%D7%91%D7%9E%D7%A4%D7%9C_%D7%94%D7%AA%D7%A0%D7%95%D7%A8_%D7%A9%D7%9C_%D7%A0%D7%97%D7%9C_%D7%A2%D7%99%D7%95%D7%9F.jpg/960px-%D7%AA%D7%90%D7%A0%D7%94_%D7%91%D7%9E%D7%A4%D7%9C_%D7%94%D7%AA%D7%A0%D7%95%D7%A8_%D7%A9%D7%9C_%D7%A0%D7%97%D7%9C_%D7%A2%D7%99%D7%95%D7%9F.jpg",
+   "answer": "תאנה",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Ariesaada · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:%D7%AA%D7%90%D7%A0%D7%94_%D7%91%D7%9E%D7%A4%D7%9C_%D7%94%D7%AA%D7%A0%D7%95%D7%A8_%D7%A9%D7%9C_%D7%A0%D7%97%D7%9C_%D7%A2%D7%99%D7%95%D7%9F.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Image2024-09-22_POMEGRANDE.jpg/960px-Image2024-09-22_POMEGRANDE.jpg",
+   "answer": "רימון",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "StealthREL · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Image2024-09-22_POMEGRANDE.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Kiwi_%28Actinidia_chinensis%29_1_Luc_Viatour.jpg/960px-Kiwi_%28Actinidia_chinensis%29_1_Luc_Viatour.jpg",
+   "answer": "קיווי",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Luc Viatour · CC BY-SA 2.5",
+   "source": "https://commons.wikimedia.org/wiki/File:Kiwi_(Actinidia_chinensis)_1_Luc_Viatour.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Bahia_Honda_State_Park_-_Coconut_Palm_01.jpg/960px-Bahia_Honda_State_Park_-_Coconut_Palm_01.jpg",
+   "answer": "קוקוס",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Daniel Di Palma · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Bahia_Honda_State_Park_-_Coconut_Palm_01.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Owoce_Awokado.jpg/960px-Owoce_Awokado.jpg",
+   "answer": "אבוקדו",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Agnieszka Kwiecień (Nova) · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Owoce_Awokado.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Common-nuts.png/960px-Common-nuts.png",
+   "answer": "אגוז",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Kazvorpal (talk) (Uploads) · CC BY 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Common-nuts.png"
+  }
+ ]
+}

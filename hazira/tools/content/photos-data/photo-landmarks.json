@@ -1,0 +1,211 @@
+{
+ "id": "photo-landmarks",
+ "name": "אתרים מפורסמים בעולם",
+ "hint": "אומרים את שם האתר",
+ "items": [
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/960px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg",
+   "answer": "מגדל אייפל",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Benh LIEU SONG · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_Wikimedia_Commons_(cropped).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/960px-Colosseo_2020.jpg",
+   "answer": "קולוסיאום",
+   "aliases": [
+    "הקולוסיאום"
+   ],
+   "difficulty": 2,
+   "credit": "FeaturedPics · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Colosseo_2020.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/The_Great_Wall_of_China_at_Jinshanling-edit.jpg/960px-The_Great_Wall_of_China_at_Jinshanling-edit.jpg",
+   "answer": "החומה הסינית",
+   "aliases": [
+    "החומה הגדולה של סין",
+    "חומת סין"
+   ],
+   "difficulty": 2,
+   "credit": "Severin.stalder · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:The_Great_Wall_of_China_at_Jinshanling-edit.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/All_Gizah_Pyramids.jpg/960px-All_Gizah_Pyramids.jpg",
+   "answer": "הפירמידות של גיזה",
+   "aliases": [
+    "הפירמידות",
+    "פירמידות גיזה"
+   ],
+   "difficulty": 2,
+   "credit": "Ricardo Liberato · CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:All_Gizah_Pyramids.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Taj_Mahal%2C_Agra%2C_India_edit3.jpg/960px-Taj_Mahal%2C_Agra%2C_India_edit3.jpg",
+   "answer": "טאג׳ מהאל",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Taj_Mahal,_Agra,_India_edit2.jpg: Yann; edited by King of Hearts derivative work: Jbarta (talk) · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Taj_Mahal%2C_Agra%2C_India_edit3.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Statue_of_Liberty_and_a_sightseeing_boat%2C_Liberty_Island%2C_New_York.jpg/960px-Statue_of_Liberty_and_a_sightseeing_boat%2C_Liberty_Island%2C_New_York.jpg",
+   "answer": "פסל החירות",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Christian David · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Statue_of_Liberty_and_a_sightseeing_boat%2C_Liberty_Island%2C_New_York.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Elizabeth_Tower%2C_June_2022.jpg/960px-Elizabeth_Tower%2C_June_2022.jpg",
+   "answer": "ביג בן",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Dave Bezaire · CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Elizabeth_Tower%2C_June_2022.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Berlin_-_0266_-_16052015_-_Brandenburger_Tor.jpg/960px-Berlin_-_0266_-_16052015_-_Brandenburger_Tor.jpg",
+   "answer": "שער ברנדנבורג",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Pierre-Selim Huard · CC BY 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Berlin_-_0266_-_16052015_-_Brandenburger_Tor.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Attica_06-13_Athens_50_View_from_Philopappos_-_Acropolis_Hill.jpg/960px-Attica_06-13_Athens_50_View_from_Philopappos_-_Acropolis_Hill.jpg",
+   "answer": "האקרופוליס",
+   "aliases": [
+    "אקרופוליס"
+   ],
+   "difficulty": 3,
+   "credit": "A.Savin · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Attica_06-13_Athens_50_View_from_Philopappos_-_Acropolis_Hill.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Piazza_del_Duomo_Pisa_9.jpg/960px-Piazza_del_Duomo_Pisa_9.jpg",
+   "answer": "המגדל הנטוי של פיזה",
+   "aliases": [
+    "מגדל פיזה"
+   ],
+   "difficulty": 2,
+   "credit": "kallerna · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Piazza_del_Duomo_Pisa_9.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Sydney_Australia._%2821339175489%29.jpg/960px-Sydney_Australia._%2821339175489%29.jpg",
+   "answer": "בית האופרה של סידני",
+   "aliases": [
+    "אופרה של סידני"
+   ],
+   "difficulty": 3,
+   "credit": "Bernard Spragg. NZ from Christchurch, New Zealand · CC0",
+   "source": "https://commons.wikimedia.org/wiki/File:Sydney_Australia._(21339175489).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Petronas_Towers_Logo.svg/960px-Petronas_Towers_Logo.svg.png",
+   "answer": "מגדלי פטרונס",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "Unknown authorUnknown author · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Petronas_Towers_Logo.svg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Moscow_July_2011-16.jpg/960px-Moscow_July_2011-16.jpg",
+   "answer": "הכיכר האדומה",
+   "aliases": [
+    "כיכר אדומה"
+   ],
+   "difficulty": 3,
+   "credit": "Alvesgaspar · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Moscow_July_2011-16.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Stonehenge_Total.jpg/960px-Stonehenge_Total.jpg",
+   "answer": "סטונהנג׳",
+   "aliases": [
+    "סטונהנג"
+   ],
+   "difficulty": 3,
+   "credit": "Stefan Kühn · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Stonehenge_Total.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/3Falls_Niagara.jpg/960px-3Falls_Niagara.jpg",
+   "answer": "מפלי ניאגרה",
+   "aliases": [
+    "ניאגרה"
+   ],
+   "difficulty": 2,
+   "credit": "Saffron Blaze · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:3Falls_Niagara.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/FujiSunriseKawaguchiko2025WP.jpg",
+   "answer": "הר פוג׳י",
+   "aliases": [
+    "פוג׳י"
+   ],
+   "difficulty": 3,
+   "credit": "Public domainPublic domainfalsefalse I, the copyright holder of this work, release this work into the public domain. This applies worldwide.In some countries this may not be legally possible; if so:I grant anyone the right to use this work for any purpose, without any conditions, unless such conditions are required by law. · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:FujiSunriseKawaguchiko2025WP.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/80_-_Machu_Picchu_-_Juin_2009_-_edit.jpg/960px-80_-_Machu_Picchu_-_Juin_2009_-_edit.jpg",
+   "answer": "מאצ׳ו פיצ׳ו",
+   "aliases": [
+    "מאצ׳ו פיקצ׳ו"
+   ],
+   "difficulty": 3,
+   "credit": "Martin St-Amant (S23678) · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:80_-_Machu_Picchu_-_Juin_2009_-_edit.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Golden_Gate_Bridge_as_seen_from_Marshall%E2%80%99s_Beach%2C_March_2018.jpg/960px-Golden_Gate_Bridge_as_seen_from_Marshall%E2%80%99s_Beach%2C_March_2018.jpg",
+   "answer": "גשר שער הזהב",
+   "aliases": [
+    "גשר הזהב"
+   ],
+   "difficulty": 3,
+   "credit": "Frank Schulenburg · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_as_seen_from_Marshall%E2%80%99s_Beach%2C_March_2018.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Buckingham_Palace_London_Morning_2020_01_%28cropped%29.jpg/960px-Buckingham_Palace_London_Morning_2020_01_%28cropped%29.jpg",
+   "answer": "ארמון בקינגהאם",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Julian Herzog (Website) · CC BY 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Buckingham_Palace_London_Morning_2020_01_(cropped).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Mount_Rushmore_detail_view_%28100MP%29.jpg/960px-Mount_Rushmore_detail_view_%28100MP%29.jpg",
+   "answer": "הר ראשמור",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Thomas Wolf, www.foto-tw.de · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Mount_Rushmore_detail_view_(100MP).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Tower_of_London_viewed_from_the_River_Thames.jpg/960px-Tower_of_London_viewed_from_the_River_Thames.jpg",
+   "answer": "מגדל לונדון",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "Bob Collowan · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Tower_of_London_viewed_from_the_River_Thames.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Great_Sphinx_of_Giza_May_2015.JPG/960px-Great_Sphinx_of_Giza_May_2015.JPG",
+   "answer": "הספינקס",
+   "aliases": [
+    "ספינקס"
+   ],
+   "difficulty": 3,
+   "credit": "MusikAnimal · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Great_Sphinx_of_Giza_May_2015.JPG"
+  }
+ ]
+}

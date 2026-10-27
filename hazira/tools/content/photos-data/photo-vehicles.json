@@ -1,0 +1,154 @@
+{
+ "id": "photo-vehicles",
+ "name": "כלי תחבורה (תמונות)",
+ "hint": "אומרים את כלי התחבורה",
+ "items": [
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/1966_Toyota_Corolla_02.jpg/960px-1966_Toyota_Corolla_02.jpg",
+   "answer": "מכונית",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Mytho88 · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:1966_Toyota_Corolla_02.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Trucks.gif",
+   "answer": "משאית",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "siehe unten/see below - Zusammenstellung durch/Combination by Magellan · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Trucks.gif"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Purple_Harley_Davidson_%E2%80%93_Front.jpg/960px-Purple_Harley_Davidson_%E2%80%93_Front.jpg",
+   "answer": "אופנוע",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "בר · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Purple_Harley_Davidson_%E2%80%93_Front.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/%D7%A4%D7%93%D7%9C.jpg/960px-%D7%A4%D7%93%D7%9C.jpg",
+   "answer": "אופניים",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "YB13B · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:%D7%A4%D7%93%D7%9C.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Buses02.jpg",
+   "answer": "אוטובוס",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "MathKnight · CC BY 2.5",
+   "source": "https://commons.wikimedia.org/wiki/File:Buses02.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Piaggio_X8_400_2007_Scooter.jpg/960px-Piaggio_X8_400_2007_Scooter.jpg",
+   "answer": "קטנוע",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Khaosaming · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Piaggio_X8_400_2007_Scooter.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Modern-tractor.jpg/960px-Modern-tractor.jpg",
+   "answer": "טרקטור",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Solitude · CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Modern-tractor.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/4X-EDA_Micha_A.jpg/960px-4X-EDA_Micha_A.jpg",
+   "answer": "מטוס נוסעים",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "LLHZ2805 · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:4X-EDA_Micha_A.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/LAPD_Bell_206_Jetranger.jpg/960px-LAPD_Bell_206_Jetranger.jpg",
+   "answer": "מסוק",
+   "aliases": [
+    "הליקופטר"
+   ],
+   "difficulty": 2,
+   "credit": "Mfield - Matthew Field, http://www.photography.mattfield.com · CC BY 2.5",
+   "source": "https://commons.wikimedia.org/wiki/File:LAPD_Bell_206_Jetranger.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Yachts_in_the_marina_-_geograph.org.uk_-_4696913.jpg/960px-Yachts_in_the_marina_-_geograph.org.uk_-_4696913.jpg",
+   "answer": "יאכטה",
+   "aliases": [
+    "ספינה"
+   ],
+   "difficulty": 3,
+   "credit": "Steve Fareham · CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Yachts_in_the_marina_-_geograph.org.uk_-_4696913.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Netanya_198808e1.jpg/960px-Netanya_198808e1.jpg",
+   "answer": "רכבת",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Nick Slocombe · Attribution",
+   "source": "https://commons.wikimedia.org/wiki/File:Netanya_198808e1.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/0/00/Halle_ad_Saale_Strassenbahn.jpg",
+   "answer": "חשמלית",
+   "aliases": [
+    "טרם"
+   ],
+   "difficulty": 3,
+   "credit": "Markv · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Halle_ad_Saale_Strassenbahn.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Taxi_in_Israel_Gett_and_Yango.jpg/960px-Taxi_in_Israel_Gett_and_Yango.jpg",
+   "answer": "מונית",
+   "aliases": [
+    "טקסי"
+   ],
+   "difficulty": 2,
+   "credit": "Vcohen · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Taxi_in_Israel_Gett_and_Yango.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Four_wheeler.jpg/960px-Four_wheeler.jpg",
+   "answer": "טרקטורון",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "fir0002 flagstaffotos [at] gmail.com Canon 20D + Tamron 28-75mm f/2.8 · GFDL 1.2",
+   "source": "https://commons.wikimedia.org/wiki/File:Four_wheeler.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Heftruck.JPG/960px-Heftruck.JPG",
+   "answer": "מלגזה",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "Vitaly Volkov · CC BY 2.5",
+   "source": "https://commons.wikimedia.org/wiki/File:Heftruck.JPG"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Oasis_of_the_Seas_%28cropped%29.jpg/960px-Oasis_of_the_Seas_%28cropped%29.jpg",
+   "answer": "אוניית תענוגות",
+   "aliases": [
+    "אוניה",
+    "אוניית נוסעים"
+   ],
+   "difficulty": 3,
+   "credit": "Baldwin040 · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Oasis_of_the_Seas_(cropped).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Falcon31.jpg/960px-Falcon31.jpg",
+   "answer": "מטוס קרב",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "U.S. Air Force photo by Tech. Sgt. Kevin Gruenwald · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Falcon31.jpg"
+  }
+ ]
+}

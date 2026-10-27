@@ -67,7 +67,7 @@
   <section class="screen" id="s-join" hidden>
     <div class="logo">דו קרב <span>תמונות</span></div>
     <form id="join-form" class="card">
-      <div class="field">
+      <div class="field" id="code-field">
         <label for="f-code">קוד המשחק</label>
         <input id="f-code" name="code" inputmode="latin" autocapitalize="characters"
                autocomplete="off" maxlength="4" placeholder="ABCD" required>
@@ -109,6 +109,15 @@
     <p class="muted" id="wait-note">ממתינים שהמשחק יתחיל…</p>
     <button class="btn primary lg" id="wait-start" hidden>מוכנים — מתחילים</button>
     <div class="mini-board" id="wait-board"></div>
+  </section>
+
+  <!-- ממתינים ליריב אקראי במשחק מהיר -->
+  <section class="screen center" id="s-quickwait" hidden>
+    <div class="status-dot"></div>
+    <h1>מחפשים יריב אקראי…</h1>
+    <p class="muted">ברגע שמישהו נוסף יפתח משחק מהיר, תשובצו יחד אוטומטית.
+      אם אף אחד לא מחובר כרגע — ההמתנה פשוט תימשך. אפשר לבטל ולחזור מאוחר יותר.</p>
+    <button class="btn ghost lg" id="quick-cancel">ביטול</button>
   </section>
 
   <!-- פתיח דו־קרב -->
@@ -156,6 +165,7 @@
     <figure class="item">
       <img id="d-image" alt="">
       <figcaption id="d-text" hidden></figcaption>
+      <div class="credit" id="d-credit" hidden></div>
       <div class="lock" id="d-lock" hidden><b id="d-lock-sec">3</b><span>תמונה חדשה</span></div>
       <div class="waiting-veil" id="d-veil" hidden>
         <span id="d-veil-text">התור של היריב</span>
@@ -175,6 +185,7 @@
     <div class="controls" id="d-controls">
       <button class="btn lg" id="btn-mic">🎤 הפעלת מיקרופון</button>
       <button class="btn danger lg" id="btn-pass">ויתור</button>
+      <button class="btn ghost" id="btn-surrender">🏳️ היכנע</button>
     </div>
 
     <form class="typed" id="typed-form">
@@ -213,6 +224,7 @@
     </div>
 
     <button class="btn primary lg" id="btn-rematch" hidden>סיבוב נוסף — הפעם בקטגוריה שלך</button>
+    <button class="btn primary lg" id="btn-newmatch" hidden>משחק חדש מול אותו יריב</button>
     <div class="mini-board" id="over-board"></div>
     <div class="my-stats" id="over-stats"></div>
   </section>

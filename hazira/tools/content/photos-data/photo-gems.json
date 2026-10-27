@@ -1,0 +1,89 @@
+{
+ "id": "photo-gems",
+ "name": "אבני חן",
+ "hint": "אומרים את שם האבן",
+ "items": [
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Diamond-39518.jpg",
+   "answer": "יהלום",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Robert M. Lavinsky · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Diamond-39518.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Corundum-winza-19a.jpg",
+   "answer": "אודם",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Robert M. Lavinsky · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Corundum-winza-19a.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Sapphire01.jpg/960px-Sapphire01.jpg",
+   "answer": "ספיר",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Azuncha · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Sapphire01.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Emerald_rough_300x422.jpg",
+   "answer": "אמרלד",
+   "aliases": [
+    "ברקת"
+   ],
+   "difficulty": 3,
+   "credit": "Ryan Salsbury · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Emerald_rough_300x422.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/GuerreroAm%C3%A9thyste.jpg/960px-GuerreroAm%C3%A9thyste.jpg",
+   "answer": "אמתיסט",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "Didier Descouens · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:GuerreroAm%C3%A9thyste.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Topaz-k310bb.jpg",
+   "answer": "טופז",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "Robert M. Lavinsky · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Topaz-k310bb.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Rosetta_Stone.JPG/960px-Rosetta_Stone.JPG",
+   "answer": "גרנט",
+   "aliases": [],
+   "difficulty": 5,
+   "credit": "Hans Hillewaert · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Rosetta_Stone.JPG"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/d/d1/TourmalineUSGOV.jpg",
+   "answer": "טורמלין",
+   "aliases": [],
+   "difficulty": 5,
+   "credit": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:TourmalineUSGOV.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/Beryl-260000.jpg",
+   "answer": "אקוומרין",
+   "aliases": [],
+   "difficulty": 5,
+   "credit": "Robert M. Lavinsky · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Beryl-260000.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Pearls.jpg",
+   "answer": "פנינה",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Pearls.jpg"
+  }
+ ]
+}

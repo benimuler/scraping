@@ -1,0 +1,149 @@
+{
+ "id": "photo-sport",
+ "name": "ענפי ספורט (תמונות)",
+ "hint": "אומרים את ענף הספורט",
+ "items": [
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Football_in_Bloomington%2C_Indiana%2C_1995.jpg/960px-Football_in_Bloomington%2C_Indiana%2C_1995.jpg",
+   "answer": "כדורגל",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Rick Dikeman · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Football_in_Bloomington%2C_Indiana%2C_1995.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Dr._James_Naismith.jpg/960px-Dr._James_Naismith.jpg",
+   "answer": "כדורסל",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Unknown authorUnknown author · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Dr._James_Naismith.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Centre_Court.jpg/960px-Centre_Court.jpg",
+   "answer": "טניס",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "The original uploader was Razzle-dazzle at English Wikipedia. · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Centre_Court.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/Swimming.breaststroke.arp.750pix.jpg",
+   "answer": "שחייה",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Adrian Pingstone at en.wikipedia · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Swimming.breaststroke.arp.750pix.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Golfer_swing.jpg/960px-Golfer_swing.jpg",
+   "answer": "גולף",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Lilrizz · CC0",
+   "source": "https://commons.wikimedia.org/wiki/File:Golfer_swing.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/1/13/ManifVelo2003.JPG",
+   "answer": "רכיבה על אופניים",
+   "aliases": [
+    "רכיבה"
+   ],
+   "difficulty": 2,
+   "credit": "http://fr.wikipedia.org/wiki/Utilisateur:Manuguf · CC BY 2.5",
+   "source": "https://commons.wikimedia.org/wiki/File:ManifVelo2003.JPG"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Gabe_Proctor_-_Nesero_Kadi_Berlin_2015.jpg/960px-Gabe_Proctor_-_Nesero_Kadi_Berlin_2015.jpg",
+   "answer": "ריצה",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Denis Barthel · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Gabe_Proctor_-_Nesero_Kadi_Berlin_2015.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Wdomenada2003b.jpg",
+   "answer": "סקי",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Photo taken by Andreube · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Wdomenada2003b.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/2010_mavericks_competition.jpg/960px-2010_mavericks_competition.jpg",
+   "answer": "גלישה",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Shalom Jacobovitz · CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:2010_mavericks_competition.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Boxing080905_photoshop.jpg/960px-Boxing080905_photoshop.jpg",
+   "answer": "איגרוף",
+   "aliases": [
+    "בוקס"
+   ],
+   "difficulty": 2,
+   "credit": "Wayne Short · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Boxing080905_photoshop.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/2/28/Gym_combination.JPG",
+   "answer": "התעמלות",
+   "aliases": [
+    "התעמלות מכשירים"
+   ],
+   "difficulty": 3,
+   "credit": "Jade_barbosa.jpg: Fotoprili Shawn_Johnson_competes.jpg: bryangeek FabianHambuechen-WM07.jpg: Original uploader was Enghdt at de.wikipedia (Original text : Torsten Hauptvogel) Stefani_bismpikou.jpg: Fotoprili derivative work: OTAVIO1981 (talk) · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Gym_combination.JPG"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Weightlifting.jpg/960px-Weightlifting.jpg",
+   "answer": "הרמת משקולות",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Weightlifting.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Skater_-_Barrido-Panning_-_01.jpg/960px-Skater_-_Barrido-Panning_-_01.jpg",
+   "answer": "סקייטבורד",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Carlos Delgado · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Skater_-_Barrido-Panning_-_01.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/2/28/White-Snowboard-With-Bindings.jpg",
+   "answer": "סנובורד",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:White-Snowboard-With-Bindings.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Volleyball_game.jpg/960px-Volleyball_game.jpg",
+   "answer": "כדורעף",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "U.S Navy photo by Photographer's Mate 2nd Class Terry Spain · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Volleyball_game.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/0408_USA_Olympic_fencing.jpg/960px-0408_USA_Olympic_fencing.jpg",
+   "answer": "סיף",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "DoD photo by Master Sgt. Lono Kollars, U.S. Air Force · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:0408_USA_Olympic_fencing.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Karate_WC_Tampere_2006-1.jpg/960px-Karate_WC_Tampere_2006-1.jpg",
+   "answer": "קראטה",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Nagi BY SA",
+   "source": "https://commons.wikimedia.org/wiki/File:Karate_WC_Tampere_2006-1.jpg"
+  }
+ ]
+}

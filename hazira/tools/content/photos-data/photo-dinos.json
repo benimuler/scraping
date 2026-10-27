@@ -1,0 +1,102 @@
+{
+ "id": "photo-dinos",
+ "name": "דינוזאורים",
+ "hint": "אומרים את שם הדינוזאור",
+ "items": [
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/AMNH_Trex.jpg/960px-AMNH_Trex.jpg",
+   "answer": "טירנוזאורוס",
+   "aliases": [
+    "טירנוזאורוס רקס",
+    "טי רקס"
+   ],
+   "difficulty": 2,
+   "credit": "Evolutionnumber9 · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:AMNH_Trex.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Triceratops-Yoshi-and-skull-v01.jpg/960px-Triceratops-Yoshi-and-skull-v01.jpg",
+   "answer": "טריצרטופס",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "MathKnight · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Triceratops-Yoshi-and-skull-v01.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Velociraptor_Wyoming_Dinosaur_Center_White_Background.jpg/960px-Velociraptor_Wyoming_Dinosaur_Center_White_Background.jpg",
+   "answer": "ולוצירפטור",
+   "aliases": [
+    "רפטור"
+   ],
+   "difficulty": 3,
+   "credit": "Ben Townsend from Blacksburg, Virginia · CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Velociraptor_Wyoming_Dinosaur_Center_White_Background.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Journal.pone.0138352.g001A.jpg/960px-Journal.pone.0138352.g001A.jpg",
+   "answer": "סטגוזאורוס",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Susannah Maidment et al. &amp; Natural History Museum, London · CC BY 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Journal.pone.0138352.g001A.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Diplodocus_carnegii.jpg/960px-Diplodocus_carnegii.jpg",
+   "answer": "דיפלודוקוס",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "Fred Wierum · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Diplodocus_carnegii.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Spinosaurus_in_Japan_Expo.jpg/960px-Spinosaurus_in_Japan_Expo.jpg",
+   "answer": "ספינוזאורוס",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "★Kumiko★ · CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Spinosaurus_in_Japan_Expo.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Arrow_for_fossil_range_8x9.png",
+   "answer": "אנקילוזאורוס",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "פרוגנתודון · CC0",
+   "source": "https://commons.wikimedia.org/wiki/File:Arrow_for_fossil_range_8x9.png"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Pteranodon_model_in_Vienna.jpg/960px-Pteranodon_model_in_Vienna.jpg",
+   "answer": "פטרנודון",
+   "aliases": [
+    "פטרודקטיל"
+   ],
+   "difficulty": 4,
+   "credit": "régine debatty · CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Pteranodon_model_in_Vienna.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Allosaurus_in_Ba%C5%82tow_white_background.jpg/960px-Allosaurus_in_Ba%C5%82tow_white_background.jpg",
+   "answer": "אלוזאורוס",
+   "aliases": [],
+   "difficulty": 5,
+   "credit": "Jakub Hałun · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Allosaurus_in_Ba%C5%82tow_white_background.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/8/80/Iguanodon_new_NT.jpg",
+   "answer": "איגואנודון",
+   "aliases": [],
+   "difficulty": 5,
+   "credit": "Nobu Tamura email:nobu.tamura@yahoo.com http://spinops.blogspot.com/ · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Iguanodon_new_NT.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Parasaurolophus_cyrtocristatus_1_salt_lake_city.jpg/960px-Parasaurolophus_cyrtocristatus_1_salt_lake_city.jpg",
+   "answer": "פרזאורולופוס",
+   "aliases": [],
+   "difficulty": 5,
+   "credit": "Jens Lallensack · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Parasaurolophus_cyrtocristatus_1_salt_lake_city.jpg"
+  }
+ ]
+}

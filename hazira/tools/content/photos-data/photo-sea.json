@@ -1,0 +1,174 @@
+{
+ "id": "photo-sea",
+ "name": "חיות ים (תמונות)",
+ "hint": "אומרים את שם חיית הים",
+ "items": [
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Great_White_Shark_%2814730796397%29.jpg/960px-Great_White_Shark_%2814730796397%29.jpg",
+   "answer": "כריש לבן",
+   "aliases": [
+    "כריש"
+   ],
+   "difficulty": 2,
+   "credit": "Elias Levy · CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Great_White_Shark_(14730796397).jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Blue_Whale_001_noaa_body_color.jpg",
+   "answer": "לווייתן כחול",
+   "aliases": [
+    "לוויתן כחול",
+    "לווייתן",
+    "לוויתן"
+   ],
+   "difficulty": 2,
+   "credit": "NOAA Fisheries (TBjornstad 11:20, 18 April 2007 (UTC)) · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Blue_Whale_001_noaa_body_color.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Delf%C3%ADn.jpg",
+   "answer": "דולפין",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "marfis75 · CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Delf%C3%ADn.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Octopus_vulgaris2.jpg/960px-Octopus_vulgaris2.jpg",
+   "answer": "תמנון",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Beckmannjan · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Octopus_vulgaris2.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Jelly_cc11.jpg/960px-Jelly_cc11.jpg",
+   "answer": "מדוזה",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Dan90266 · CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Jelly_cc11.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Starfish_-_sea_star_-_mosaic_showing_diversity.jpg/960px-Starfish_-_sea_star_-_mosaic_showing_diversity.jpg",
+   "answer": "כוכב ים",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Authors: File:Goniasteridae - Fromia monilis.jpg - Hectonichus File:Asterias rubens 01 Espen Rekdal.jpg - Espen Rekdal / Espen Rekdal Photography File:Cushion Sea Star, Cottongarden Bay.jpg - Dartrider File:Acanthaster planci mauritiensis.jpg - Philippe Bourjon File:Culcita novaeguineae 46596444.jpg - Greg III Espera File:Labidiaster annulatus.JPG - WereSpielChequers Mosaic created by Podzemnik · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Starfish_-_sea_star_-_mosaic_showing_diversity.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Hippocampus_histrix%2C_Timor_Oriental.jpg/960px-Hippocampus_histrix%2C_Timor_Oriental.jpg",
+   "answer": "סוסון ים",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "prilfish · CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Hippocampus_histrix%2C_Timor_Oriental.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Chelonia_Mydas.JPG/960px-Chelonia_Mydas.JPG",
+   "answer": "צב ים",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Bthv · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Chelonia_Mydas.JPG"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Brachyura_montage.jpg/960px-Brachyura_montage.jpg",
+   "answer": "סרטן",
+   "aliases": [
+    "סרטנים"
+   ],
+   "difficulty": 2,
+   "credit": "Biopics Dan Boone Honguyenseo Bernard Picton Biopics Philippe Boujon Splette Nosferattus Rushenb · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Brachyura_montage.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/KreeftbijDenOsse.jpg/960px-KreeftbijDenOsse.jpg",
+   "answer": "לובסטר",
+   "aliases": [
+    "שרימפס"
+   ],
+   "difficulty": 3,
+   "credit": "Bart Braun · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:KreeftbijDenOsse.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Georgia_Aquarium_-_Cuttlefish_Jan_2006.jpg/960px-Georgia_Aquarium_-_Cuttlefish_Jan_2006.jpg",
+   "answer": "דיונון",
+   "aliases": [
+    "קלמארי"
+   ],
+   "difficulty": 3,
+   "credit": "Diliff · CC BY 2.5",
+   "source": "https://commons.wikimedia.org/wiki/File:Georgia_Aquarium_-_Cuttlefish_Jan_2006.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Goldfish3.jpg",
+   "answer": "דג זהב",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "No machine-readable author provided. Heptagon assumed (based on copyright claims). · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Goldfish3.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Sea_lion_on_the_beach.jpg/960px-Sea_lion_on_the_beach.jpg",
+   "answer": "אריה ים",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Tomas Sobek · CC BY 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Sea_lion_on_the_beach.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Oberon%2C_Titania_and_Puck_with_Fairies_Dancing._William_Blake._c.1786.jpg/960px-Oberon%2C_Titania_and_Puck_with_Fairies_Dancing._William_Blake._c.1786.jpg",
+   "answer": "פוקה",
+   "aliases": [
+    "כלב ים"
+   ],
+   "difficulty": 3,
+   "credit": "William Blake · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Oberon%2C_Titania_and_Puck_with_Fairies_Dancing._William_Blake._c.1786.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Noaa-walrus22.jpg/960px-Noaa-walrus22.jpg",
+   "answer": "ניבתן",
+   "aliases": [
+    "סוס ים"
+   ],
+   "difficulty": 4,
+   "credit": "Captain Budd Christman, NOAA Corps · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Noaa-walrus22.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Killerwhales_jumping.jpg/960px-Killerwhales_jumping.jpg",
+   "answer": "קטלן",
+   "aliases": [
+    "אורקה",
+    "לווייתן קטלן",
+    "לוויתן קטלן"
+   ],
+   "difficulty": 3,
+   "credit": "Robert Pittman · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Water_baloon_%282196115607%29.jpg/960px-Water_baloon_%282196115607%29.jpg",
+   "answer": "דג נפוח",
+   "aliases": [
+    "דג תאווה",
+    "אבו נפיחה"
+   ],
+   "difficulty": 4,
+   "credit": "TANAKA Juuyoh (田中十洋) · CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Water_baloon_(2196115607).jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/7/79/Competitive_table_tennis.jpg",
+   "answer": "סרטן שולחן",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Competitive_table_tennis.jpg"
+  }
+ ]
+}

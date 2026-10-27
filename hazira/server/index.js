@@ -11,6 +11,7 @@ const QRCode = require('qrcode');
 
 const { ContentLibrary } = require('./content');
 const { RoomRegistry } = require('./room');
+const { Matchmaker } = require('./matchmaking');
 const db = require('./db');
 const accounts = require('./accounts');
 
@@ -32,6 +33,7 @@ const rooms = new RoomRegistry(content, {
   passLockMs: Number(process.env.PASS_LOCK_MS || 3_000),
 });
 setInterval(() => rooms.sweep(), 15 * 60 * 1000).unref();
+const matchmaker = new Matchmaker(rooms);
 
 const app = express();
 app.use(express.json());
@@ -198,6 +200,28 @@ app.get('/api/leaderboard', guarded(async (req, res) => {
 
 app.get('/api/categories', (_req, res) => res.json(content.list()));
 
+// משחק מהיר: שיבוץ מול יריב אקראי בלי קוד חדר. מי שמחכה לבד בתור
+// מקבל waiting עד שמישהו אמיתי נוסף מצטרף — אין יריבים מדומים.
+app.post('/api/quickmatch', (req, res) => {
+  const name = String(req.body?.name || '').slice(0, 24).trim();
+  if (!name) return res.status(400).json({ error: 'חסר שם' });
+  const categoryId = req.body?.categoryId && content.category(req.body.categoryId)
+    ? req.body.categoryId
+    : null;
+  res.json(matchmaker.join({ name, categoryId }));
+});
+
+app.get('/api/quickmatch/:ticket', (req, res) => {
+  const out = matchmaker.status(req.params.ticket);
+  if (!out) return res.status(404).json({ error: 'הכרטיס לא נמצא או שפג תוקפו' });
+  res.json(out);
+});
+
+app.delete('/api/quickmatch/:ticket', (req, res) => {
+  matchmaker.leave(req.params.ticket);
+  res.json({ ok: true });
+});
+
 const LOCAL_HOST = /^(localhost|127\.0\.0\.1|\[::1\])(:\d+)?$/i;
 
 /**
@@ -291,10 +315,12 @@ const ACTIONS = {
   pass: (room, ws) => room.game.pass(ws.playerId),
   decide: (room, ws, msg) => room.game.decide(ws.playerId, msg.choice),
   rematch: (room) => room.game.rematch(),
+  newmatch: (room) => room.game.newMatch(),
+  surrender: (room, ws) => room.game.surrender(ws.playerId),
   answer: (room, ws, msg) => room.game.submitText(ws.playerId, msg.text || ''),
   speech: (room, ws, msg) => room.game.speech(ws.playerId, msg.transcript || '', !!msg.isFinal),
 };
-const PLAYER_ONLY = new Set(['challenge', 'pass', 'decide', 'answer', 'speech', 'rematch']);
+const PLAYER_ONLY = new Set(['challenge', 'pass', 'decide', 'answer', 'speech', 'rematch', 'newmatch', 'surrender']);
 
 wss.on('connection', (ws) => {
   ws.isAlive = true;
@@ -348,6 +374,11 @@ function handleHello(ws, msg) {
         ws.playerId = room.game.addPlayer({ name: msg.name, categoryId: msg.categoryId });
       } catch (err) {
         return send(ws, { t: 'error', message: err.message, fatal: true });
+      }
+      // חדר משחק מהיר: ברגע ששני השחקנים בפנים, מתחילים בלי לחיצה נוספת
+      if (room.game.config.autoStart && room.game.phase === 'lobby'
+          && room.game.players.size === 2) {
+        try { room.game.start(); } catch { /* מישהו לחץ התחל בדיוק באותו רגע */ }
       }
     }
   }

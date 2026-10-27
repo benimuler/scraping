@@ -1,0 +1,240 @@
+{
+ "id": "photo-animals",
+ "name": "חיות (תמונות)",
+ "hint": "אומרים את שם החיה",
+ "items": [
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/2/23/Male_lion_picture._Shot_by_Vikta_JuiceBoy.jpg",
+   "answer": "אריה",
+   "aliases": [
+    "lion"
+   ],
+   "difficulty": 2,
+   "credit": "Victor Moses · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Male_lion_picture._Shot_by_Vikta_JuiceBoy.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Leopards_Davidraju_37_%28cropped%29.jpg/960px-Leopards_Davidraju_37_%28cropped%29.jpg",
+   "answer": "נמר",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Davidvraju · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Leopards_Davidraju_37_(cropped).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Elephants_at_Etosha_National_Park03.JPG/960px-Elephants_at_Etosha_National_Park03.JPG",
+   "answer": "פיל",
+   "aliases": [
+    "פיל אפריקני"
+   ],
+   "difficulty": 2,
+   "credit": "Vberger · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Elephants_at_Etosha_National_Park03.JPG"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/White_Rhinoceros1.jpg/960px-White_Rhinoceros1.jpg",
+   "answer": "קרנף",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "drplokta · CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:White_Rhinoceros1.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Hippopotamus_-_04.jpg/960px-Hippopotamus_-_04.jpg",
+   "answer": "היפופוטם",
+   "aliases": [
+    "היפו"
+   ],
+   "difficulty": 2,
+   "credit": "Kabacchi · CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Hippopotamus_-_04.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Burchell%27s_zebra_%28Equus_quagga_burchellii%29_2.jpg/960px-Burchell%27s_zebra_%28Equus_quagga_burchellii%29_2.jpg",
+   "answer": "זברה",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Charles J. Sharp · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Burchell's_zebra_(Equus_quagga_burchellii)_2.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Gorilla_498.jpg/960px-Gorilla_498.jpg",
+   "answer": "גורילה",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Ltshears · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Gorilla_498.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Pan_troglodytes_%28male%29.jpg/960px-Pan_troglodytes_%28male%29.jpg",
+   "answer": "שימפנזה",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Hans Hillewaert · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Pan_troglodytes_(male).jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/9/98/Mapa_distribuicao_pongo.png",
+   "answer": "אורנגאוטן",
+   "aliases": [
+    "אורנג אוטן",
+    "אורנגאוטאן"
+   ],
+   "difficulty": 2,
+   "credit": "Fabio b · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Mapa_distribuicao_pongo.png"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Dark_Grizzly_in_August_%285300913489%29.jpg/960px-Dark_Grizzly_in_August_%285300913489%29.jpg",
+   "answer": "גריזלי",
+   "aliases": [
+    "דוב גריזלי"
+   ],
+   "difficulty": 2,
+   "credit": "Denali National Park and Preserve · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Dark_Grizzly_in_August_(5300913489).jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/7/77/Bear_%286356496167%29.jpg",
+   "answer": "דוב קוטב",
+   "aliases": [
+    "דוב לבן"
+   ],
+   "difficulty": 2,
+   "credit": "Emma · CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Bear_(6356496167).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/%C3%84ht%C3%A4ri_Zoo%2C_Finland_%2840080326455%29.jpg/960px-%C3%84ht%C3%A4ri_Zoo%2C_Finland_%2840080326455%29.jpg",
+   "answer": "זאב",
+   "aliases": [
+    "זאב מצוי"
+   ],
+   "difficulty": 2,
+   "credit": "Ninara from Helsinki, Finland · CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:%C3%84ht%C3%A4ri_Zoo%2C_Finland_(40080326455).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Fox_at_the_British_Wildlife_Centre%2C_Newchapel%2C_Surrey_-_geograph.org.uk_-_2221750.jpg/960px-Fox_at_the_British_Wildlife_Centre%2C_Newchapel%2C_Surrey_-_geograph.org.uk_-_2221750.jpg",
+   "answer": "שועל",
+   "aliases": [
+    "שועל מצוי"
+   ],
+   "difficulty": 2,
+   "credit": "Peter Trimming · CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Fox_at_the_British_Wildlife_Centre%2C_Newchapel%2C_Surrey_-_geograph.org.uk_-_2221750.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Eastern_Cottontail_%28Sylvilagus_floridanus%29_%2810616753486%29.jpg/960px-Eastern_Cottontail_%28Sylvilagus_floridanus%29_%2810616753486%29.jpg",
+   "answer": "ארנב",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Ryan Hodnett / Ryan Hodnett · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Eastern_Cottontail_(Sylvilagus_floridanus)_(10616753486).jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/6/68/Sciuridae.jpg",
+   "answer": "סנאי",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Chicoutimi (montage) Karakal AndiW National Park Service en:User:Markus Krötzsch The Lilac Breasted Roller Nico Conradie from Centurion, South Africa Hans Hillewaert Sylvouille National Park Service · CC BY 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Sciuridae.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Erinaceus_europaeus_%28Linnaeus%2C_1758%29.jpg/960px-Erinaceus_europaeus_%28Linnaeus%2C_1758%29.jpg",
+   "answer": "קיפוד",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Michael Gäbler · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Erinaceus_europaeus_(Linnaeus%2C_1758).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Wikipedia-Bats-001-v01.jpg/960px-Wikipedia-Bats-001-v01.jpg",
+   "answer": "עטלף",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "MathKnight · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Wikipedia-Bats-001-v01.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Red_kangaroo_-_melbourne_zoo.jpg/960px-Red_kangaroo_-_melbourne_zoo.jpg",
+   "answer": "קנגורו",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "fir0002 flagstaffotos [at] gmail.com Canon 20D + Canon 70-200mm f/2.8 L · GFDL 1.2",
+   "source": "https://commons.wikimedia.org/wiki/File:Red_kangaroo_-_melbourne_zoo.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/2/21/Koala_Bear_%285449957625%29.jpg",
+   "answer": "קואלה",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Steven Byles from Singapore, Singapore · CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Koala_Bear_(5449957625).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Crouching_Panda.jpg/960px-Crouching_Panda.jpg",
+   "answer": "פנדה",
+   "aliases": [
+    "פנדה גדולה",
+    "פנדה ענקית"
+   ],
+   "difficulty": 2,
+   "credit": "Bilby · CC BY 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Crouching_Panda.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Sumatra-tiger_Panthera-tigris-sumatrae.jpg/960px-Sumatra-tiger_Panthera-tigris-sumatrae.jpg",
+   "answer": "טיגריס",
+   "aliases": [
+    "נמר הפסים"
+   ],
+   "difficulty": 2,
+   "credit": "Alfonsopazphoto · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Sumatra-tiger_Panthera-tigris-sumatrae.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Cheetah_%28112706399%29.jpeg/960px-Cheetah_%28112706399%29.jpeg",
+   "answer": "צ׳יטה",
+   "aliases": [
+    "ברדלס",
+    "ציטה"
+   ],
+   "difficulty": 3,
+   "credit": "Yu Miyawaki · CC BY 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Cheetah_(112706399).jpeg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/PikiWiki_Israel_38769_Male_Ibex.jpg/960px-PikiWiki_Israel_38769_Male_Ibex.jpg",
+   "answer": "יעל",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "netzach farbiash · CC BY 2.5",
+   "source": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_38769_Male_Ibex.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/Cervidae1.jpg",
+   "answer": "אייל",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "LACM 20609 · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Cervidae1.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Dromedary_Range.png/960px-Dromedary_Range.png",
+   "answer": "גמל",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Phoenix_B_1of3 (talk) (Uploads) / Original uploader was Phoenix B 1of3 at English Wikipedia · CC0",
+   "source": "https://commons.wikimedia.org/wiki/File:Dromedary_Range.png"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/7/76/Llama_presidencial.jpg",
+   "answer": "למה",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Lukirossi95 · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Llama_presidencial.jpg"
+  }
+ ]
+}

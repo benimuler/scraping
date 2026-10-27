@@ -84,9 +84,13 @@ updateMicUi();
 
 // ------------------------------------------------------------ טופס כניסה
 
+const params = new URLSearchParams(location.search);
+const quickMode = params.get('quick') === '1';
 const stored = readStored();
-$('f-code').value = (new URLSearchParams(location.search).get('code') || stored.code || '').toUpperCase();
+$('f-code').value = (params.get('code') || stored.code || '').toUpperCase();
 $('f-name').value = stored.name || '';
+// במשחק מהיר אין קוד — היריב משובץ אוטומטית מול שחקן אקראי אחר שמחכה
+if (quickMode) $('code-field').hidden = true;
 
 fetch('/api/categories').then((r) => r.json()).then((cats) => {
   $('f-cat').innerHTML = '<option value="">שהמערכת תבחר בשבילי</option>' +
@@ -97,7 +101,9 @@ $('join-form').addEventListener('submit', (e) => {
   e.preventDefault();
   const code = $('f-code').value.trim().toUpperCase();
   const name = $('f-name').value.trim();
-  if (!code || !name) return;
+  if (!name) return;
+  if (quickMode) return startQuickMatch(name, $('f-cat').value || null);
+  if (!code) return;
   // מזהה שחקן נשמר רק אם חוזרים לאותה זירה — אחרת מצטרפים מחדש
   const playerId = stored.code === code ? stored.playerId : null;
   join({ code, name, categoryId: $('f-cat').value || null, playerId });
@@ -132,6 +138,63 @@ function join({ code, name, categoryId, playerId }) {
     },
   });
 }
+
+// --------------------------------------------------------- משחק מהיר
+
+let quickTicket = null;
+let quickTimer = null;
+let quickJoin = null;
+
+async function startQuickMatch(name, categoryId) {
+  quickJoin = { name, categoryId };
+  $('join-error').hidden = true;
+  try {
+    const res = await fetch('/api/quickmatch', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ name, categoryId }),
+    });
+    const out = await res.json();
+    if (!res.ok) throw new Error(out.error || 'לא הצלחתי להצטרף לתור');
+    if (out.status === 'matched') {
+      return join({ code: out.code, name, categoryId, playerId: null });
+    }
+    quickTicket = out.ticket;
+    show('quickwait');
+    quickTimer = setInterval(pollQuickMatch, 2000);
+  } catch (err) {
+    $('join-error').textContent = err.message;
+    $('join-error').hidden = false;
+  }
+}
+
+async function pollQuickMatch() {
+  if (!quickTicket || !quickJoin) return;
+  try {
+    const res = await fetch(`/api/quickmatch/${quickTicket}`);
+    if (res.status === 404) return cancelQuickMatch(false);
+    const out = await res.json();
+    if (out.status === 'matched') {
+      clearInterval(quickTimer);
+      quickTimer = null;
+      const { name, categoryId } = quickJoin;
+      quickTicket = null;
+      join({ code: out.code, name, categoryId, playerId: null });
+    }
+  } catch { /* תקלה ברשת — הסבב הבא ינסה שוב */ }
+}
+
+async function cancelQuickMatch(notify = true) {
+  clearInterval(quickTimer);
+  quickTimer = null;
+  if (quickTicket && notify) {
+    try { await fetch(`/api/quickmatch/${quickTicket}`, { method: 'DELETE' }); } catch { /* לא קריטי */ }
+  }
+  quickTicket = null;
+  show('join');
+}
+
+$('quick-cancel').addEventListener('click', () => cancelQuickMatch());
 
 // ------------------------------------------------------------ חשבון
 
@@ -553,9 +616,12 @@ function renderIntro() {
   const iChallenge = duel.challengerId === me.id;
   $('intro-versus').textContent = `${me.name} נגד ${opponent()?.name || 'היריב'}`;
   $('intro-cat').textContent = duel.category;
-  $('intro-role').textContent = iChallenge
+  const role = iChallenge
     ? 'אתה המאתגר — אתה מתחיל, בקטגוריה שלו'
     : 'אתה המותקף — משחקים בקטגוריה שלך';
+  $('intro-role').textContent = duel.decider
+    ? `סיבוב מכריע בקטגוריה אקראית! ${role.replace('בקטגוריה שלו', 'בקטגוריה אקראית').replace('בקטגוריה שלך', 'בקטגוריה אקראית')}`
+    : role;
 }
 
 function renderWatch() {
@@ -613,7 +679,15 @@ function renderDuel() {
   const rivalId = duel.challengerId === me.id ? duel.defenderId : duel.challengerId;
   const myTurn = duel.activeId === me.id;
 
-  $('duel-cat').textContent = duel.category;
+  const winsNow = state.series?.wins || {};
+  $('duel-cat').textContent = duel.category
+    + (state.series?.round ? ` · סיבוב ${state.series.round} · ${winsNow[me.id] || 0}:${winsNow[rivalId] || 0}` : '');
+  if (duel.item?.credit) {
+    $('d-credit').textContent = `תמונה: ${duel.item.credit}`;
+    $('d-credit').hidden = false;
+  } else {
+    $('d-credit').hidden = true;
+  }
   $('rival-name').textContent = playerById(rivalId)?.name || 'יריב';
   $('my-side').classList.toggle('active', myTurn);
   $('rival-side').classList.toggle('active', !myTurn);
@@ -654,6 +728,12 @@ function renderDuel() {
 }
 
 $('btn-pass').addEventListener('click', () => net.send({ t: 'pass' }));
+
+$('btn-surrender').addEventListener('click', () => {
+  if (confirm('להיכנע בדו־קרב? הניצחון בסיבוב הולך ליריב.')) {
+    net.send({ t: 'surrender' });
+  }
+});
 
 $('typed-form').addEventListener('submit', (e) => {
   e.preventDefault();
@@ -734,22 +814,34 @@ function renderOver() {
   const won = duelMode ? result?.winnerId === me.id : state.winnerId === me.id;
 
   if (duelMode) {
-    $('over-title').textContent = won ? '🏆 ניצחת' : 'הפסדת';
+    const matchWinnerId = state.series?.matchWinnerId || null;
+    const matchOver = !!matchWinnerId;
+    const matchWon = matchWinnerId === me.id;
+    $('over-title').textContent = matchOver
+      ? (matchWon ? '🏆 ניצחת במשחק' : 'הפסדת במשחק')
+      : (won ? '🏆 לקחת את הסיבוב' : 'הפסדת בסיבוב');
+    const surrendered = result?.surrenderedBy
+      ? ` · ${result.surrenderedBy === me.id ? 'נכנעת' : `${esc(playerById(result.surrenderedBy)?.name || 'היריב')} נכנע`}`
+      : '';
     $('over-sub').innerHTML = result
-      ? `${esc(result.categoryName)} · השעון של ${esc(playerById(result.loserId)?.name || '')} נגמר`
-        + (result.missedAnswer ? `<br><span class="missed">התשובה הייתה: ${esc(result.missedAnswer)}</span>` : '')
+      ? `${esc(result.categoryName)}${result.decider ? ' (מכריע אקראי)' : ''} · ${result.surrenderedBy ? 'הכרעה בהכנעה' : `השעון של ${esc(playerById(result.loserId)?.name || '')} נגמר`}`
+        + (result.missedAnswer && !result.surrenderedBy ? `<br><span class="missed">התשובה הייתה: ${esc(result.missedAnswer)}</span>` : '')
       : '';
     renderSeries();
     renderReward(result);
-    // ריאנץ' רק אחרי שהשרת סגר את הסיבוב — בחלון התוצאה עוד אי אפשר
-    $('btn-rematch').hidden = state.phase !== 'finished';
-    // בסיבוב הבא התפקידים מתחלפים, ולכן משחקים בקטגוריה של מי שאתגר עכשיו
-    $('btn-rematch').textContent = result?.challengerId === me.id
-      ? 'סיבוב נוסף — הפעם בקטגוריה שלך'
-      : `סיבוב נוסף — הפעם בקטגוריה של ${opponent()?.name || 'היריב'}`;
+    // ריאנץ' רק אחרי שהשרת סגר את הסיבוב, ורק כל עוד המשחק לא הוכרע
+    $('btn-rematch').hidden = state.phase !== 'finished' || matchOver;
+    $('btn-newmatch').hidden = !matchOver;
+    // בסיבוב השני התפקידים מתחלפים; ב-1:1 מחכה סיבוב מכריע בקטגוריה אקראית
+    $('btn-rematch').textContent = (state.series?.round || 1) >= 2
+      ? 'סיבוב מכריע — קטגוריה אקראית'
+      : (result?.challengerId === me.id
+        ? 'סיבוב נוסף — הפעם בקטגוריה שלך'
+        : `סיבוב נוסף — הפעם בקטגוריה של ${opponent()?.name || 'היריב'}`);
   } else {
     $('over-series').hidden = true;
     $('btn-rematch').hidden = true;
+    $('btn-newmatch').hidden = true;
     $('over-title').textContent = state.phase === 'finished'
       ? (won ? '🏆 אלוף הדו־קרב' : 'נגמר המשחק')
       : 'הודחת מהמשחק';
@@ -904,6 +996,12 @@ $('btn-rematch').addEventListener('click', (e) => {
   setTimeout(() => { e.currentTarget.disabled = false; }, 1500);
 });
 
+$('btn-newmatch').addEventListener('click', (e) => {
+  e.currentTarget.disabled = true;
+  net.send({ t: 'newmatch' });
+  setTimeout(() => { e.currentTarget.disabled = false; }, 1500);
+});
+
 // ------------------------------------------------------------- לוח ושעון
 
 function renderMiniBoard(el) {
@@ -942,13 +1040,19 @@ requestAnimationFrame(tickClocks);
 
 // ------------------------------------------------------------------ עזר
 
+// ההפעלה נשמרת ב-localStorage ולא ב-sessionStorage: יציאה בטעות (סגירת
+// הלשונית, דפדפן שקרס) לא צריכה לזרוק את השחקן מהדו־קרב — בכניסה הבאה
+// הוא יתחבר מחדש לאותו חדר עם אותו מזהה, כל עוד החדר חי.
 function readStored() {
-  try { return JSON.parse(sessionStorage.getItem(STORAGE_KEY) || '{}'); } catch { return {}; }
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch { return {}; }
 }
 function writeStored(value) {
-  try { sessionStorage.setItem(STORAGE_KEY, JSON.stringify(value)); } catch { /* מצב פרטי */ }
+  try {
+    if (value && value.code) localStorage.setItem(STORAGE_KEY, JSON.stringify(value));
+    else localStorage.removeItem(STORAGE_KEY);
+  } catch { /* מצב פרטי */ }
 }
 function esc(value) {
   return String(value ?? '').replace(/[&<>"']/g, (c) =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-}
+  }

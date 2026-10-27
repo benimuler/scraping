@@ -1,0 +1,150 @@
+{
+ "id": "photo-dogs",
+ "name": "גזעי כלבים",
+ "hint": "אומרים את שם הגזע",
+ "items": [
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/YellowLabradorLooking_new.jpg",
+   "answer": "לברדור",
+   "aliases": [
+    "לברדור רטריבר"
+   ],
+   "difficulty": 2,
+   "credit": "derivative work: Djmirko (talk)wereweweewewewg.jpg · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:YellowLabradorLooking_new.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Poodle0b.jpg",
+   "answer": "פודל",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "PardoY at Hebrew Wikipedia · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Poodle0b.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Racib%C3%B3rz_2007_082.jpg/960px-Racib%C3%B3rz_2007_082.jpg",
+   "answer": "בולדוג",
+   "aliases": [
+    "בולדוג אנגלי"
+   ],
+   "difficulty": 3,
+   "credit": "Pleple2000 · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Racib%C3%B3rz_2007_082.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/MiloSmet.JPG/960px-MiloSmet.JPG",
+   "answer": "ביגל",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Jonatan De Geest · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:MiloSmet.JPG"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/European_Dobermann.jpg",
+   "answer": "דוברמן",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Ilicivan at English Wikipedia · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:European_Dobermann.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/SiberianHusky.jpg/960px-SiberianHusky.jpg",
+   "answer": "האסקי",
+   "aliases": [
+    "האסקי סיבירי"
+   ],
+   "difficulty": 2,
+   "credit": "בר · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:SiberianHusky.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Ray_agaver.jpg/960px-Ray_agaver.jpg",
+   "answer": "צ׳יוואווה",
+   "aliases": [
+    "ציוואווה"
+   ],
+   "difficulty": 2,
+   "credit": "Noam machlev · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Ray_agaver.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Border_Collie_600.jpg",
+   "answer": "בורדר קולי",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Border_Collie_600.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Dax-chart-1959-2019.png/960px-Dax-chart-1959-2019.png",
+   "answer": "דאקס",
+   "aliases": [
+    "כלב נקניק",
+    "נקניק"
+   ],
+   "difficulty": 4,
+   "credit": "JamesBolsa · CC BY 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Dax-chart-1959-2019.png"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Cardigan_Welsh_Corgi%2C_Profile.png/960px-Cardigan_Welsh_Corgi%2C_Profile.png",
+   "answer": "קורגי",
+   "aliases": [
+    "וולש קורגי"
+   ],
+   "difficulty": 4,
+   "credit": "FatFairfax · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Cardigan_Welsh_Corgi%2C_Profile.png"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Rottweiler_kopf.jpg/960px-Rottweiler_kopf.jpg",
+   "answer": "רוטוויילר",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Rottweiler_kopf.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Boxer_%28dog%29.jpg",
+   "answer": "בוקסר",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Photo by Elf | Talk 04:33, 28 Apr 2004 (UTC) April 25, 2004 at Power Paws agility camp · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Boxer_(dog).jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Dalmatian_liver_stacked.jpg/960px-Dalmatian_liver_stacked.jpg",
+   "answer": "דלמטי",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Miroslav Cacik · Copyrighted free use",
+   "source": "https://commons.wikimedia.org/wiki/File:Dalmatian_liver_stacked.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/1/11/Beerus1.jpg",
+   "answer": "שר פיי",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "ElsBrinkerink at Dutch Wikipedia · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Beerus1.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Akita_inu.jpeg/960px-Akita_inu.jpeg",
+   "answer": "אקיטה",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "B@rt · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Akita_inu.jpeg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/8/82/Golden_Retriever_standing_Tucker.jpg",
+   "answer": "גולדן רטריבר",
+   "aliases": [
+    "גולדן"
+   ],
+   "difficulty": 2,
+   "credit": "Edward from boston, usa · CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Golden_Retriever_standing_Tucker.jpg"
+  }
+ ]
+}

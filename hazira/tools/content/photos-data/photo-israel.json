@@ -1,0 +1,141 @@
+{
+ "id": "photo-israel",
+ "name": "אתרים בישראל",
+ "hint": "אומרים את שם האתר",
+ "items": [
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/16-03-30-Klagemauer_Jerusalem_RalfR-DSCF7673.jpg/960px-16-03-30-Klagemauer_Jerusalem_RalfR-DSCF7673.jpg",
+   "answer": "הכותל",
+   "aliases": [
+    "הכותל המערבי"
+   ],
+   "difficulty": 2,
+   "credit": "Ralf Roletschek · GFDL 1.2",
+   "source": "https://commons.wikimedia.org/wiki/File:16-03-30-Klagemauer_Jerusalem_RalfR-DSCF7673.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Israel-2013-Aerial_21-Masada.jpg/960px-Israel-2013-Aerial_21-Masada.jpg",
+   "answer": "מצדה",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Godot13 · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Israel-2013-Aerial_21-Masada.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/89882_migdal_shalom_meir_PikiWiki_Israel.jpg/960px-89882_migdal_shalom_meir_PikiWiki_Israel.jpg",
+   "answer": "מגדל שלום",
+   "aliases": [
+    "מגדל שלום מאיר"
+   ],
+   "difficulty": 3,
+   "credit": "ישראל פרקר Israel Preker · CC BY 2.5",
+   "source": "https://commons.wikimedia.org/wiki/File:89882_migdal_shalom_meir_PikiWiki_Israel.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Sea_of_Galilee.jpg/960px-Sea_of_Galilee.jpg",
+   "answer": "הכנרת",
+   "aliases": [
+    "כנרת"
+   ],
+   "difficulty": 2,
+   "credit": "Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Sea_of_Galilee.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/JERUSALEM_Mount_of_Olives_Cemetery.JPG/960px-JERUSALEM_Mount_of_Olives_Cemetery.JPG",
+   "answer": "הר הזיתים",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Matthias Kopp · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:JERUSALEM_Mount_of_Olives_Cemetery.JPG"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/16-04-04-Felsendom-Tempelberg-Jerusalem-RalfR-WAT_6385.jpg/960px-16-04-04-Felsendom-Tempelberg-Jerusalem-RalfR-WAT_6385.jpg",
+   "answer": "כיפת הסלע",
+   "aliases": [],
+   "difficulty": 2,
+   "credit": "Ralf Roletschek · GFDL 1.2",
+   "source": "https://commons.wikimedia.org/wiki/File:16-04-04-Felsendom-Tempelberg-Jerusalem-RalfR-WAT_6385.jpg"
+  },
+  {
+   "image": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Bahai-house-of-worship-delhi2.jpg",
+   "answer": "הגנים הבאהים",
+   "aliases": [
+    "הגנים הבאהיים"
+   ],
+   "difficulty": 3,
+   "credit": "CC BY-SA 2.5",
+   "source": "https://commons.wikimedia.org/wiki/File:Bahai-house-of-worship-delhi2.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Shuk_%2826%29.JPG/960px-Shuk_%2826%29.JPG",
+   "answer": "שוק מחנה יהודה",
+   "aliases": [
+    "מחנה יהודה"
+   ],
+   "difficulty": 3,
+   "credit": "Sir kiss · Public domain",
+   "source": "https://commons.wikimedia.org/wiki/File:Shuk_(26).JPG"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/ISR-2013-Aerial-Jaffa-Port_of_Jaffa.jpg/960px-ISR-2013-Aerial-Jaffa-Port_of_Jaffa.jpg",
+   "answer": "יפו העתיקה",
+   "aliases": [
+    "יפו"
+   ],
+   "difficulty": 3,
+   "credit": "Godot13 · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:ISR-2013-Aerial-Jaffa-Port_of_Jaffa.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Soreq_Cave.jpg/960px-Soreq_Cave.jpg",
+   "answer": "מערת הנטיפים",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Relly.hendel · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Soreq_Cave.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Mediterranean_Sea_from_Rosh_HaNikra.jpg/960px-Mediterranean_Sea_from_Rosh_HaNikra.jpg",
+   "answer": "ראש הנקרה",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "בר · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Mediterranean_Sea_from_Rosh_HaNikra.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/MakhteshRamonMar262022_01.jpg/960px-MakhteshRamonMar262022_01.jpg",
+   "answer": "מכתש רמון",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "Hagai Agmon-Snir حچاي اچمون-سنير חגי אגמון-שניר · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:MakhteshRamonMar262022_01.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Tel_Aviv_Port_Lowshot.jpg/960px-Tel_Aviv_Port_Lowshot.jpg",
+   "answer": "נמל תל אביב",
+   "aliases": [],
+   "difficulty": 3,
+   "credit": "אילן ארד · CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Tel_Aviv_Port_Lowshot.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Aerial_view_of_Acre_1.jpg/960px-Aerial_view_of_Acre_1.jpg",
+   "answer": "עכו העתיקה",
+   "aliases": [
+    "עכו"
+   ],
+   "difficulty": 3,
+   "credit": "israeltourism from Israel · CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Acre_1.jpg"
+  },
+  {
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/%D7%A7%D7%99%D7%A1%D7%A8%D7%99%D7%94_%D7%94%D7%A2%D7%AA%D7%99%D7%A7%D7%94.jpg/960px-%D7%A7%D7%99%D7%A1%D7%A8%D7%99%D7%94_%D7%94%D7%A2%D7%AA%D7%99%D7%A7%D7%94.jpg",
+   "answer": "קיסריה",
+   "aliases": [],
+   "difficulty": 4,
+   "credit": "Idomeir · CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:%D7%A7%D7%99%D7%A1%D7%A8%D7%99%D7%94_%D7%94%D7%A2%D7%AA%D7%99%D7%A7%D7%94.jpg"
+  }
+ ]
+}
