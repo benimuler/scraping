@@ -872,7 +872,7 @@ function renderOver() {
     $('ready-note').textContent = !bothConnected ? 'היריב לא מחובר. ממתינים לחזרתו ולאישור משניכם.'
       : mineReady ? 'אישרת מוכנות. ממתינים לאישור היריב.'
       : state.readiness?.playerIds.length ? 'היריב מוכן. אשרו כדי להתחיל ספירה לאחור.'
-      : 'נדרש אישור משניכם לפני הסיבוב הבא.';
+      : (matchOver ? 'נדרש אישור משניכם לפני משחק חדש.' : 'נדרש אישור משניכם לפני הסיבוב הבא.');
     $('btn-newmatch').disabled = !!mineReady || !bothConnected;
     $('btn-newmatch').textContent = mineReady ? 'ממתינים לאישור היריב' : 'אני מוכן למשחק חדש מול אותו יריב';
     $('btn-rematch').disabled = !!mineReady || !bothConnected;
