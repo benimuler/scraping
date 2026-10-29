@@ -70,7 +70,7 @@ test('NMNH exact reviewed object/media bindings reject substitutions and rights 
 
 test('USGS exact source/photo bindings reject substitutions and rights changes',()=>{
  const items=CATEGORIES.flatMap(c=>c.items).filter(i=>i.provider==='usgs');
- assert.equal(items.length,20);
+ assert.equal(items.length,30);
  for(const base of items){
   reviewedAsset(base);
   for(const patch of [{provider:undefined},{objectID:'unknown-photo'},{isPublicDomain:false},{metadataSource:'https://www.usgs.gov/media/images/other'},{license:'CC BY-NC 4.0'},{licenseUrl:'https://example.test/'},{source:base.source.replace('https://','http://')},{image:base.image.replace('d9-wret','another-bucket')},{image:base.image+'&extra=1'},{image:items.find(i=>i.image!==base.image).image},{source:items.find(i=>i.source!==base.source).source}]) assert.throws(()=>reviewedAsset({...base,...patch}));
