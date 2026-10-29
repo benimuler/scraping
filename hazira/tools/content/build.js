@@ -1366,7 +1366,8 @@ for (const [id, items] of Object.entries(require('./issuer-additions.json'))) {
 }
 for(const category of photos.CATEGORIES) {
   for(const item of PHOTO_ADDITIONS[category.id] || []) {
-    if (!category.items.some(i=>i.image===item.image || i.answer===item.answer)) category.items.push(item);
+    const gestureVariant = category.id === 'photo-hands' && item.variantOf === item.answer && item.provider === 'pexels';
+    if (!category.items.some(i=>i.image===item.image || !gestureVariant && i.answer===item.answer)) category.items.push(item);
   }
 }
 const { judge, couldMatchProfile, transcriptProfile, prepareItem, findAllRivals } = require('../../server/judge');
