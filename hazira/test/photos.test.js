@@ -86,3 +86,11 @@ test('DVIDS exact source/photo bindings reject substitutions, missing disclaimer
 });
 
 test('DVIDS sports photos remain quarantined without established likeness coverage',()=>{assert.throws(()=>reviewedAsset({"answer":"כדורסל","aliases":[],"image":"https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/1310/1035742/1000w_q95.jpg","source":"https://www.dvidshub.net/image/1035742/basketball-slam-dunk-djiboutian-american-relations","artist":"Petty Officer 1st Class Thomas Ouellette","license":"Public domain","licenseUrl":"https://www.dvidshub.net/about/copyright","credit":"Petty Officer 1st Class Thomas Ouellette / DVIDS · Public domain. The appearance of U.S. Department of War (DoW) visual information does not imply or constitute DoW endorsement.","subjectTitle":"Basketball slam dunk for Djiboutian-American relations [Image 2 of 6] — dvidshub.net","subjectSource":"https://www.dvidshub.net/image/1035742/basketball-slam-dunk-djiboutian-american-relations","difficulty":2,"reviewed":true,"provider":"dvids","objectID":1035742,"isPublicDomain":true,"metadataSource":"https://www.dvidshub.net/image/1035742/basketball-slam-dunk-djiboutian-american-relations"}));});
+
+test('Pexels only accepts exact reviewed page and item-only media bindings',()=>{
+ const items=CATEGORIES.flatMap(c=>c.items).filter(i=>i.provider==='pexels');assert.equal(items.length,7);
+ for(const base of items){
+  reviewedAsset(base);
+  for(const patch of [{provider:undefined},{objectID:1},{metadataSource:'https://www.pexels.com/photo/other-1/'},{license:'Public domain'},{licenseUrl:'https://example.test/'},{source:base.source.replace('https:','http:')},{source:base.source.replace('www.pexels.com','www.pexels.com.evil.test')},{image:base.image.replace('images.pexels.com','evil.test')},{image:base.image+'&extra=1'},{image:items.find(i=>i.image!==base.image).image},{source:items.find(i=>i.source!==base.source).source}]) assert.throws(()=>reviewedAsset({...base,...patch}));
+ }
+});
