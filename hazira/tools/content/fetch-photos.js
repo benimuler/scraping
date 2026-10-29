@@ -14,6 +14,8 @@ const path = require('path');
 const DIR = path.join(__dirname, 'photos-data');
 const strip = (s) => String(s || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
 const free = (s) => /^(CC BY(?:-SA)? [1234]|CC0|Public domain)/.test(s) && !/NC|ND/.test(s);
+// Exact official object/media pairs, individually checked for selected-media CC0 rights.
+const NMNH_MEDIA = {"nmnhmineralsciences_17124213":{"source":"https://www.si.edu/object/nmnhmineralsciences_17124213","mediaID":"ark:/65665/m3e4558f4224274d4794f5a6d9c78dbf24","image":"https://ids.si.edu/ids/deliveryService?id=ark:/65665/m3e4558f4224274d4794f5a6d9c78dbf24&max_w=800"},"nmnhmineralsciences_1008594":{"source":"https://www.si.edu/object/opal%3Anmnhmineralsciences_1008594","mediaID":"ark:/65665/m33af5655485d44cf59dbb4c8c563808a8","image":"https://ids.si.edu/ids/deliveryService?id=ark:/65665/m33af5655485d44cf59dbb4c8c563808a8&max_w=800"},"nmnhmineralsciences_1105408":{"source":"https://www.si.edu/object/beryl-var-aquamarine:nmnhmineralsciences_1105408","mediaID":"ark:/65665/m30d94671f6ee8479487a6b4f0cfae8d5f","image":"https://ids.si.edu/ids/deliveryService?id=ark:/65665/m30d94671f6ee8479487a6b4f0cfae8d5f&max_w=800"},"nmnhmineralsciences_1079737":{"source":"https://www.si.edu/object/topaz%3Anmnhmineralsciences_1079737","mediaID":"ark:/65665/m3d063bd4d3ccd452298364572e7133a96","image":"https://ids.si.edu/ids/deliveryService?id=ark:/65665/m3d063bd4d3ccd452298364572e7133a96&max_w=800"},"nmnhmineralsciences_16580233":{"source":"https://www.si.edu/object/nmnhmineralsciences_16580233","mediaID":"ark:/65665/m30153e2b1fb614146a2c086f1a23b0cc4","image":"https://ids.si.edu/ids/deliveryService?id=ark:/65665/m30153e2b1fb614146a2c086f1a23b0cc4&max_w=800"},"nmnhmineralsciences_1174303":{"source":"https://www.si.edu/object/elbaite:nmnhmineralsciences_1174303","mediaID":"ark:/65665/m3c7cd06dba803492190018e93806ca44f","image":"https://ids.si.edu/ids/deliveryService?id=ark:/65665/m3c7cd06dba803492190018e93806ca44f&max_w=800"},"nmnhmineralsciences_1082279":{"source":"https://www.si.edu/object/beryl-var-emerald:nmnhmineralsciences_1082279","mediaID":"ark:/65665/m3b949c5d43a8e414fa69eceaae90e3f05","image":"https://ids.si.edu/ids/deliveryService?id=ark:/65665/m3b949c5d43a8e414fa69eceaae90e3f05&max_w=800"},"nmnhmineralsciences_11722358":{"source":"https://www.si.edu/object/spinel:nmnhmineralsciences_11722358","mediaID":"ark:/65665/m3f85fcfdff6a345b39275ffeabd829789","image":"https://ids.si.edu/ids/deliveryService?id=ark:/65665/m3f85fcfdff6a345b39275ffeabd829789&max_w=800"},"nmnhmineralsciences_10209820":{"source":"https://naturalhistory.si.edu/object/nmnhmineralsciences_10209820","mediaID":"ark:/65665/m31861ef226ed344e4b5a154a76f064b6c","image":"https://ids.si.edu/ids/deliveryService?max=800&id=ark:/65665/m31861ef226ed344e4b5a154a76f064b6c"},"nmnhmineralsciences_1000714":{"source":"https://www.naturalhistory.si.edu/object/nmnhmineralsciences_1000714","mediaID":"ark:/65665/m3eb01b22b80d542d7933e61a42ae5a7b9","image":"https://ids.si.edu/ids/deliveryService?max=800&id=ark:/65665/m3eb01b22b80d542d7933e61a42ae5a7b9"}};
 function reviewedAsset(item) {
   const source = new URL(item.source);
   const image = new URL(item.image);
@@ -37,7 +39,12 @@ function reviewedAsset(item) {
   const inaturalist = observationID && photoID && item.provider === 'inaturalist' && item.observationID === Number(observationID) &&
     item.photoID === Number(photoID) && item.metadataSource === `https://api.inaturalist.org/v1/observations/${observationID}` &&
     item.taxonName && inatLicense && item.license === inatLicense[0] && item.licenseUrl === inatLicense[1];
-  if (!commons && !met && !smithsonian && !inaturalist) throw Error('Invalid reviewed asset provenance');
+  const bound = NMNH_MEDIA[item.recordID];
+  const nmnh = item.provider === 'smithsonian-nmnh' && bound &&
+    item.source === bound.source && item.image === bound.image && item.mediaID === bound.mediaID &&
+    item.mediaPublicDomain === true && item.metadataSource === item.source &&
+    item.license === 'CC0' && item.licenseUrl === 'https://creativecommons.org/publicdomain/zero/1.0/';
+  if (!commons && !met && !smithsonian && !inaturalist && !nmnh) throw Error('Invalid reviewed asset provenance');
 }
 function validate(category) {
   const answers = new Set();
@@ -55,7 +62,7 @@ async function main() {
   const categories = files.map((f) => JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8')));
   categories.forEach(validate);
   if (process.argv.includes('--refresh')) {
-    if (categories.some(c => c.items.some(i => ['smithsonian-nasm','inaturalist'].includes(i.provider))))
+    if (categories.some(c => c.items.some(i => ['smithsonian-nasm','smithsonian-nmnh','inaturalist'].includes(i.provider))))
       throw Error('Issuer-specific manual rights refresh required; no files written');
     // Never apply Commons metadata to another issuer. Recheck exact Met object.
     for (const c of categories) for (const i of c.items.filter(i => i.provider === 'met')) {
