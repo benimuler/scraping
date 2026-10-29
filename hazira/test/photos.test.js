@@ -2,7 +2,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const { CATEGORIES } = require('../tools/content/photos');
-const { validate } = require('../tools/content/fetch-photos');
+const { validate, reviewedAsset } = require('../tools/content/fetch-photos');
 const { findCollisions } = require('../tools/content/build');
 const fs = require('fs');
 const path = require('path');
@@ -28,11 +28,33 @@ test('build retains source and license provenance in every photo pack', () => {
     const pack = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'content', 'packs', c.id+'.json'), 'utf8'));
     assert.equal(pack.items.length, c.items.length);
     for (const i of pack.items) {
-      assert.match(i.source, /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/);
+      reviewedAsset(i);
       assert.ok(i.credit && i.license && i.artist);
     }
   }
 });
 test('dinosaurs are honestly labeled as photographed museum skeletons', () => {
   assert.match(CATEGORIES.find((c) => c.id === 'photo-dinos').name, /שלדים/);
+});
+test('Met asset validation is exact-host and object-bound, never a general external bypass', () => {
+  const base = {answer:'בדיקה',reviewed:true,source:'https://www.metmuseum.org/art/collection/search/436105',image:'https://images.metmuseum.org/CRDImages/ep/web-large/DP-13139-001.jpg',artist:'Jacques Louis David',credit:'The Met',license:'CC0',licenseUrl:'https://www.metmuseum.org/openaccess',provider:'met',objectID:436105,isPublicDomain:true,metadataSource:'https://collectionapi.metmuseum.org/public/collection/v1/objects/436105'};
+  const check = item => validate({id:'test',items:[item]});
+  assert.doesNotThrow(()=>check(base));
+  for(const change of [
+    {image:base.image.replace('images.metmuseum.org','images.metmuseum.org.evil.test')},
+    {source:base.source.replace('www.metmuseum.org','unverified.test')},
+    {image:base.image.replace('/CRDImages/','/unverified/')},
+    {objectID:436106},{isPublicDomain:false},{license:'CC BY 4.0'},
+    {metadataSource:base.metadataSource.replace('436105','436106')},
+    {provider:undefined},{licenseUrl:'https://example.test/license'},
+    {image:base.image.replace('https:','http:')},
+    {image:base.image.replace('.jpg','.svg')},
+  ]) assert.throws(()=>check({...base,...change}),JSON.stringify(change));
+});
+test('new issuer adapters reject mismatched IDs, hosts and restricted photo licenses',()=>{
+ for(const provider of ['smithsonian-nasm','inaturalist']){
+  const items=CATEGORIES.flatMap(c=>c.items).filter(i=>i.provider===provider);assert.ok(items.length);
+  const base=items[0];reviewedAsset(base);
+  for(const patch of [{image:base.image.replace('https://','http://')},{source:'https://example.test/observation/1'},{provider:undefined},{license:'CC BY-NC 4.0'},provider==='inaturalist'?{photoID:1}:{mediaID:'NASM-wrong'},provider==='inaturalist'?{photoLicenseCode:'cc-by-nc'}:{image:base.image.replace('ids.si.edu','evil.si.edu')}])assert.throws(()=>reviewedAsset({...base,...patch}));
+ }
 });
