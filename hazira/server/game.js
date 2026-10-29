@@ -814,6 +814,7 @@ class Game {
     const state = {
       phase: this.phase,
       mode: this.mode,
+      quick: !!this.config.quick,
       readiness: { epoch: this.readinessEpoch, playerIds: [...this.readyIds] },
       series: this.series,
       matchWins: this.config.matchWins,
