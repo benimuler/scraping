@@ -58,3 +58,12 @@ test('new issuer adapters reject mismatched IDs, hosts and restricted photo lice
   for(const patch of [{image:base.image.replace('https://','http://')},{source:'https://example.test/observation/1'},{provider:undefined},{license:'CC BY-NC 4.0'},provider==='inaturalist'?{photoID:1}:{mediaID:'NASM-wrong'},provider==='inaturalist'?{photoLicenseCode:'cc-by-nc'}:{image:base.image.replace('ids.si.edu','evil.si.edu')}])assert.throws(()=>reviewedAsset({...base,...patch}));
  }
 });
+
+test('NMNH exact reviewed object/media bindings reject substitutions and rights changes',()=>{
+ const items=CATEGORIES.flatMap(c=>c.items).filter(i=>i.provider==='smithsonian-nmnh');
+ assert.equal(items.length,10);
+ for(const base of items){
+  reviewedAsset(base);
+  for(const patch of [{provider:undefined},{objectID:'nmnhmineralsciences_1'},{mediaID:'ark:/65665/m3wrong'},{isPublicDomain:false},{metadataSource:'https://www.si.edu/object/other'},{license:'CC BY-NC 4.0'},{licenseUrl:'https://example.test/'},{source:base.source.replace('https://','http://')},{image:base.image.replace('ids.si.edu','evil.si.edu')},{image:base.image+'&extra=1'},{image:items.find(i=>i.mediaID!==base.mediaID).image},{source:items.find(i=>i.objectID!==base.objectID).source}]) assert.throws(()=>reviewedAsset({...base,...patch}));
+ }
+});
