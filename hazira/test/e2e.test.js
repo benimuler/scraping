@@ -16,11 +16,14 @@ test.before(async () => {
   await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
   base = `127.0.0.1:${server.address().port}`;
 });
-test.after(() => server.close());
+const liveClients = new Set();
+test.after(() => { for (const ws of liveClients) ws.terminate(); server.closeAllConnections(); server.close(); });
 
 /** לקוח דק שצובר הודעות ויודע להמתין לתנאי. */
 function client(role, opts = {}) {
   const ws = new WebSocket(`ws://${base}/ws`);
+  liveClients.add(ws);
+  ws.on('close', () => liveClients.delete(ws));
   const inbox = [];
   const waiters = [];
   let state = null;
@@ -65,8 +68,9 @@ function client(role, opts = {}) {
 }
 
 /** התשובה הנכונה לפריט שמוצג — הלקוחות לא מקבלים אותה, הבדיקה שולפת מהתוכן. */
-function answerFor(image) {
+function answerFor(image, categoryName) {
   for (const category of content.categories.values()) {
+    if (categoryName && category.name !== categoryName) continue;
     const item = category.items.find((i) => i.image === image);
     if (item) return item.answer;
   }
@@ -111,7 +115,7 @@ test('דו־קרב מלא: הצטרפות, אתגור, תשובה בדיבור �
   assert.equal(board.state.duel.activeId, controller.playerId);
 
   // המאתגר אומר את התשובה בקול — השליטה עוברת ליריב
-  const spoken = answerFor(board.state.duel.item.image);
+  const spoken = answerFor(board.state.duel.item.image, board.state.duel.category);
   controller.send({ t: 'speech', transcript: `אהh רגע זה ${spoken}`, isFinal: true });
   const { msg } = await board.until((m) => m.t === 'answer' && m.correct);
   assert.equal(msg.answer, spoken);
@@ -158,7 +162,7 @@ test('הודעת דיבור ממי שאינו בתורו לא משפיעה', asy
   controller.send({ t: 'challenge', defenderId: rival.playerId });
   await board.until((_, s) => s.phase === 'duel' && s.duel?.item);
 
-  const spoken = answerFor(board.state.duel.item.image);
+  const spoken = answerFor(board.state.duel.item.image, board.state.duel.category);
   rival.send({ t: 'speech', transcript: spoken, isFinal: true });
   await new Promise((r) => setTimeout(r, 300));
 
@@ -203,7 +207,7 @@ test('דו־קרב עצמאי: שני טלפונים, הכרעה על השעון
   assert.equal(dana.state.duel.activeId, challengerId);
 
   // המאתגר עונה נכון, ואז המותקף שותק עד שהשעון שלו נגמר
-  const spoken = answerFor(dana.state.duel.item.image);
+  const spoken = answerFor(dana.state.duel.item.image, dana.state.duel.category);
   challenger.send({ t: 'speech', transcript: `זה ${spoken}`, isFinal: true });
   await dana.until((_, s) => s.duel?.activeId === defenderId);
 
