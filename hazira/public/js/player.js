@@ -100,6 +100,7 @@ updateMicUi();
 
 const params = new URLSearchParams(location.search);
 const quickMode = params.get('quick') === '1';
+const urlCode = (params.get('code') || '').trim().toUpperCase();
 const stored = readStored();
 $('f-code').value = (params.get('code') || stored.code || '').toUpperCase();
 $('f-name').value = stored.name || '';
@@ -226,7 +227,11 @@ async function bootstrap() {
     $('f-name').value = account.displayName;
   }
 
-  if (stored.code && stored.playerId && stored.name) {
+  // חיבור חוזר אוטומטי לחדר השמור — רק כשאין בכתובת כוונה אחרת.
+  // קישור הזמנה לחדר אחר או כניסה למשחק מהיר גוברים על החדר השמור,
+  // אחרת מי שנשאר בחדר מת נתקע בו בכל כניסה.
+  const explicitTarget = quickMode || (urlCode && urlCode !== stored.code);
+  if (stored.code && stored.playerId && stored.name && !explicitTarget) {
     return join({ code: stored.code, name: stored.name, playerId: stored.playerId });
   }
   if (account || auth.isGuest() || !accountsAvailable) {
@@ -557,19 +562,21 @@ function renderWait() {
   $('wait-cat').textContent = me.category;
 
   const duelMode = state.mode === 'duel';
+  const quickRoom = !!state.quick;
   const ready = state.players.length >= 2 && state.players.every(p => p.connected);
   const mineReady = state.readiness?.playerIds.includes(me.id);
   const paused = state.phase === 'duel_paused';
 
-  // בדו־קרב מזמינים את היריב מהמסך הזה, ומי שמוכן פותח
-  $('invite').hidden = !duelMode || ready || paused;
+  // בדו־קרב רגיל מזמינים את היריב מהמסך הזה, ומי שמוכן פותח.
+  // במשחק מהיר היריב נבחר אקראית — אין למי לשלוח הזמנה, אז מסתירים את הבלוק.
+  $('invite').hidden = !duelMode || ready || paused || quickRoom;
   $('wait-start').hidden = !(duelMode && ready);
   $('wait-start').disabled = !!mineReady;
   $('wait-start').textContent = mineReady ? 'אישרת מוכנות — ממתינים ליריב' : paused ? 'חזרתי — מוכן להמשיך' : 'אני מוכן — מתחילים כששנינו מאשרים';
-  if (duelMode && !ready && !paused) renderInvite();
+  if (duelMode && !ready && !paused && !quickRoom) renderInvite();
 
   $('wait-note').textContent = duelMode
-    ? (ready ? `${paused ? 'המשחק נעצר. ' : ''}מול ${opponent()?.name} · ${opponentCategory()} · נדרש אישור משניכם` : 'היריב לא מחובר — המשחק לא יתחיל')
+    ? (ready ? `${paused ? 'המשחק נעצר. ' : ''}מול ${opponent()?.name} · ${opponentCategory()} · נדרש אישור משניכם` : quickRoom ? 'היריב האקראי עוד לא התחבר — אפשר להמתין או לצאת ולחפש שוב' : 'היריב לא מחובר — המשחק לא יתחיל')
     : (ready ? `${state.players.length} מתמודדים בזירה — ממתינים לפתיחה` : 'ממתינים למתמודדים נוספים…');
 
   renderMiniBoard($('wait-board'));
@@ -635,6 +642,16 @@ $('invite-share').addEventListener('click', async () => {
 $('wait-start').addEventListener('click', (e) => {
   e.currentTarget.disabled = true;
   net.send({ t: state.phase === 'duel_paused' ? 'resume' : 'start', epoch: state.readiness?.epoch });
+});
+
+// יציאה מהזירה: ניתוק, מחיקת החדר השמור וחזרה לדף הבית — היציאה היחידה
+// מחדר שהיריב עזב, וגם הדרך לצאת מחיפוש אקראי שנתקע.
+$('wait-leave').addEventListener('click', () => {
+  try { net?.close(); } catch { /* כבר סגור */ }
+  net = null;
+  writeStored({});
+  inviteDrawn = false;
+  location.href = '/';
 });
 
 function renderIntro() {
