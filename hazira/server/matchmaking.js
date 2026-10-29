@@ -23,7 +23,7 @@ class Matchmaker {
     this.sweep();
     for (const waiting of this.tickets.values()) {
       if (waiting.code) continue; // כבר שובץ לחדר, ממתין שהלקוח יתחבר
-      const room = this.rooms.create({ mode: 'duel', autoStart: true });
+      const room = this.rooms.create({ mode: 'duel', autoStart: true, quick: true });
       waiting.code = room.code;
       const ticket = randomUUID();
       this.tickets.set(ticket, { name, categoryId, code: room.code, createdAt: this.now() });
@@ -35,6 +35,7 @@ class Matchmaker {
   }
 
   status(ticket) {
+    this.sweep();
     const entry = this.tickets.get(ticket);
     if (!entry) return null;
     return entry.code ? { status: 'matched', code: entry.code } : { status: 'waiting' };
