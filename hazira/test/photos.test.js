@@ -11,7 +11,7 @@ test('all photo pools are reviewed, licensed, attributed, deep and unique', () =
   let count = 0;
   for (const c of CATEGORIES) {
     validate(c);
-    const minimum = c.id === 'photo-hands' ? 14 : c.id === 'photo-masterpieces' ? 15 : 25; // Finite, distinct gestures: never pad with near-duplicates.
+    const minimum = c.id === 'photo-hands' ? 50 : c.id === 'photo-masterpieces' ? 15 : 25; // Finite gestures use pixel-reviewed distinct photographic clues.
     assert.ok(c.items.length >= minimum, `${c.id}: ${c.items.length}`);
     assert.deepEqual(findCollisions(c), [], `${c.id}: ambiguous answers`);
     count += c.items.length;
@@ -88,9 +88,22 @@ test('DVIDS exact source/photo bindings reject substitutions, missing disclaimer
 test('DVIDS sports photos remain quarantined without established likeness coverage',()=>{assert.throws(()=>reviewedAsset({"answer":"כדורסל","aliases":[],"image":"https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/1310/1035742/1000w_q95.jpg","source":"https://www.dvidshub.net/image/1035742/basketball-slam-dunk-djiboutian-american-relations","artist":"Petty Officer 1st Class Thomas Ouellette","license":"Public domain","licenseUrl":"https://www.dvidshub.net/about/copyright","credit":"Petty Officer 1st Class Thomas Ouellette / DVIDS · Public domain. The appearance of U.S. Department of War (DoW) visual information does not imply or constitute DoW endorsement.","subjectTitle":"Basketball slam dunk for Djiboutian-American relations [Image 2 of 6] — dvidshub.net","subjectSource":"https://www.dvidshub.net/image/1035742/basketball-slam-dunk-djiboutian-american-relations","difficulty":2,"reviewed":true,"provider":"dvids","objectID":1035742,"isPublicDomain":true,"metadataSource":"https://www.dvidshub.net/image/1035742/basketball-slam-dunk-djiboutian-american-relations"}));});
 
 test('Pexels only accepts exact reviewed page and item-only media bindings',()=>{
- const items=CATEGORIES.flatMap(c=>c.items).filter(i=>i.provider==='pexels');assert.equal(items.length,36);
+ const items=CATEGORIES.flatMap(c=>c.items).filter(i=>i.provider==='pexels');assert.equal(items.length,72);
  for(const base of items){
   reviewedAsset(base);
   for(const patch of [{provider:undefined},{objectID:1},{metadataSource:'https://www.pexels.com/photo/other-1/'},{license:'Public domain'},{licenseUrl:'https://example.test/'},{source:base.source.replace('https:','http:')},{source:base.source.replace('www.pexels.com','www.pexels.com.evil.test')},{image:base.image.replace('images.pexels.com','evil.test')},{image:base.image+'&extra=1'},{image:items.find(i=>i.image!==base.image).image},{source:items.find(i=>i.source!==base.source).source}]) assert.throws(()=>reviewedAsset({...base,...patch}));
  }
+});
+
+test('approved hand variants require same canonical answer and aliases, never repeat images or widen other categories',()=>{
+ const hand=CATEGORIES.find(c=>c.id==='photo-hands');assert.equal(hand.items.length,50);
+ const variant=hand.items.find(i=>i.variantOf && hand.items.filter(j=>j.answer===i.answer).length>1);
+ const base=hand.items.find(i=>i.answer===variant.answer && i.image!==variant.image);
+ assert.ok(variant && base);assert.doesNotThrow(()=>validate({id:'photo-hands',items:[base,variant]}));
+ assert.throws(()=>validate({id:'photo-sport',items:[base,variant]}));
+ assert.throws(()=>validate({id:'photo-hands',items:[base,{...variant,variantOf:'wrong'}]}));
+ assert.throws(()=>validate({id:'photo-hands',items:[base,{...variant,aliases:['wrong']}]}));
+ assert.throws(()=>validate({id:'photo-hands',items:[base,{...variant,image:base.image,source:base.source,objectID:base.objectID,metadataSource:base.metadataSource}]}));
+ assert.throws(()=>validate({id:'photo-hands',items:[base,{...variant,variantOf:undefined}]}));
+ for(const item of hand.items.filter(i=>i.variantOf)) {assert.equal(item.variantOf,item.answer); assert.equal(item.provider,'pexels');}
 });
