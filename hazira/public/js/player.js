@@ -109,7 +109,7 @@ if (quickMode) { $('code-field').hidden = true; $('f-code').required = false; }
 
 fetch('/api/categories').then((r) => r.json()).then((cats) => {
   $('f-cat').innerHTML = '<option value="">שהמערכת תבחר בשבילי</option>' +
-    cats.map((c) => `<option value="${c.id}">${c.name} (${c.size} פריטים)</option>`).join('');
+    cats.map((c) => `<option value="${c.id}">${c.name}</option>`).join('');
 });
 
 $('join-form').addEventListener('submit', (e) => {
