@@ -39,10 +39,10 @@ function reviewedAsset(item) {
   const inaturalist = observationID && photoID && item.provider === 'inaturalist' && item.observationID === Number(observationID) &&
     item.photoID === Number(photoID) && item.metadataSource === `https://api.inaturalist.org/v1/observations/${observationID}` &&
     item.taxonName && inatLicense && item.license === inatLicense[0] && item.licenseUrl === inatLicense[1];
-  const bound = NMNH_MEDIA[item.recordID];
+  const bound = NMNH_MEDIA[item.objectID];
   const nmnh = item.provider === 'smithsonian-nmnh' && bound &&
     item.source === bound.source && item.image === bound.image && item.mediaID === bound.mediaID &&
-    item.mediaPublicDomain === true && item.metadataSource === item.source &&
+    item.isPublicDomain === true && item.metadataSource === item.source &&
     item.license === 'CC0' && item.licenseUrl === 'https://creativecommons.org/publicdomain/zero/1.0/';
   if (!commons && !met && !smithsonian && !inaturalist && !nmnh) throw Error('Invalid reviewed asset provenance');
 }
