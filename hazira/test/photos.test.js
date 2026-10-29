@@ -76,3 +76,11 @@ test('USGS exact source/photo bindings reject substitutions and rights changes',
   for(const patch of [{provider:undefined},{objectID:'unknown-photo'},{isPublicDomain:false},{metadataSource:'https://www.usgs.gov/media/images/other'},{license:'CC BY-NC 4.0'},{licenseUrl:'https://example.test/'},{source:base.source.replace('https://','http://')},{image:base.image.replace('d9-wret','another-bucket')},{image:base.image+'&extra=1'},{image:items.find(i=>i.image!==base.image).image},{source:items.find(i=>i.source!==base.source).source}]) assert.throws(()=>reviewedAsset({...base,...patch}));
  }
 });
+
+test('DVIDS exact source/photo bindings reject substitutions, missing disclaimer and rights changes',()=>{
+ const items=CATEGORIES.flatMap(c=>c.items).filter(i=>i.provider==='dvids');assert.equal(items.length,12);
+ for(const base of items){
+  reviewedAsset(base);
+  for(const patch of [{provider:undefined},{objectID:1},{isPublicDomain:false},{metadataSource:'https://www.dvidshub.net/image/1/other'},{credit:'DVIDS'},{license:'CC BY-NC 4.0'},{licenseUrl:'https://example.test/'},{source:base.source.replace('https://','http://')},{image:base.image.replace('d1ldvf68ux039x','other')},{image:base.image+'?extra=1'},{image:items.find(i=>i.image!==base.image).image},{source:items.find(i=>i.source!==base.source).source}]) assert.throws(()=>reviewedAsset({...base,...patch}));
+ }
+});
