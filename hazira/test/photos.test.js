@@ -11,7 +11,7 @@ test('all photo pools are reviewed, licensed, attributed, deep and unique', () =
   let count = 0;
   for (const c of CATEGORIES) {
     validate(c);
-    const minimum = ['photo-hands','photo-dinos'].includes(c.id) ? 50 : c.id === 'photo-masterpieces' ? 15 : 25; // Finite gestures use pixel-reviewed distinct photographic clues.
+    const minimum = ['photo-hands','photo-dinos','photo-body'].includes(c.id) ? 50 : c.id === 'photo-masterpieces' ? 15 : 25; // Finite gestures use pixel-reviewed distinct photographic clues.
     assert.ok(c.items.length >= minimum, `${c.id}: ${c.items.length}`);
     assert.deepEqual(findCollisions(c), [], `${c.id}: ambiguous answers`);
     count += c.items.length;
@@ -114,4 +114,12 @@ test('dinosaur additions reach 50 distinct Hebrew subjects with photographed mus
  for(const item of additions){reviewedAsset(item);assert.ok(item.subjectTitle && item.subjectSource && item.imageDescription);assert.equal(item.reviewed,true);assert.equal(item.difficulty,5);}
  const reidentified=additions.find(i=>i.subjectTitle==='Scolosaurus');assert.equal(reidentified.answer,'סקולוזאורוס');assert.match(reidentified.imageDescription,/Scolosaurus thronus/);
  assert.ok(additions.some(i=>i.subjectTitle==='Microraptor'));assert.ok(additions.some(i=>i.subjectTitle==='Sinosauropteryx'));
+});
+
+
+test('body photo category reaches fifty with twelve reviewed non-graphic teaching models',()=>{
+ const c=CATEGORIES.find(c=>c.id==='photo-body');assert.equal(c.items.length,50);assert.equal(new Set(c.items.map(i=>i.answer)).size,50);
+ const additions=require('../tools/content/issuer-additions.json')['photo-body'];assert.equal(additions.length,12);
+ for(const i of additions){reviewedAsset(i);assert.equal(i.teachingModel,true);assert.ok(i.imageDescription && i.subjectSource);assert.ok(i.difficulty>=3);}
+ assert.ok(additions.some(i=>i.answer==='לב'));assert.ok(additions.some(i=>i.answer==='מוח'));assert.ok(additions.some(i=>i.answer==='עצם הירך'));
 });
