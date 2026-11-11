@@ -107,6 +107,52 @@ $('f-name').value = stored.name || '';
 // במשחק מהיר אין קוד — היריב משובץ אוטומטית מול שחקן אקראי אחר שמחכה
 if (quickMode) { $('code-field').hidden = true; $('f-code').required = false; }
 
+// ------------------------------------------------ חדרים מדורגים במשחק מהיר
+//
+// משתמש מחובר רואה את כרטיסי החדרים של מנגנון הגביעים והמטבעות; אורח
+// ממשיך במשחק הידידות הרגיל בלי שינוי. חדר נועל כשהוא סגור בשרת, כשהוא
+// עוד לא נפתח לשחקן, או כשאין כיסוי לדמי הכניסה.
+let quickRoomId = null;
+let economyConfig = null;
+
+async function loadRankedRooms() {
+  if (!quickMode || !account) return;
+  try {
+    economyConfig = await (await fetch('/api/economy')).json();
+  } catch { return; }
+  if (!economyConfig?.rooms) return;
+  renderRankedRooms();
+}
+
+function renderRankedRooms() {
+  if (!economyConfig?.rooms) return;
+  $('rooms-field').hidden = false;
+  const myHighest = profile.highestTrophyPoints | 0;
+  const myCoins = profile.coins | 0;
+  const cards = [{ friendly: true }, ...economyConfig.rooms];
+  $('room-cards').innerHTML = cards.map((r) => {
+    if (r.friendly) {
+      return `<button type="button" class="room-card ${!quickRoomId ? 'on' : ''}" data-room="">
+        <b>ידידות</b><span>בלי מטבעות ובלי גביעים</span></button>`;
+    }
+    const lockedReason = !r.available ? 'נסגר זמנית'
+      : myHighest < r.unlockTrophies ? `נפתח ב-${r.unlockTrophies} 🏆`
+      : myCoins < r.entryCoins ? `חסרים 🪙 ${r.entryCoins - myCoins}` : null;
+    return `<button type="button" class="room-card ${quickRoomId === r.id ? 'on' : ''}" data-room="${r.id}" ${lockedReason ? 'disabled' : ''}>
+      <b>${esc(r.nameHe)}</b>
+      <span>כניסה 🪙 ${r.entryCoins} · זכייה 🪙 ${r.winCoins} ועוד 🏆 ${r.winTrophies}</span>
+      ${lockedReason ? `<span class="lock">🔒 ${lockedReason}</span>` : ''}
+    </button>`;
+  }).join('');
+}
+
+$('room-cards').addEventListener('click', (e) => {
+  const btn = e.target.closest('[data-room]');
+  if (!btn || btn.disabled) return;
+  quickRoomId = btn.dataset.room || null;
+  renderRankedRooms();
+});
+
 fetch('/api/categories').then((r) => r.json()).then((cats) => {
   $('f-cat').innerHTML = '<option value="">שהמערכת תבחר בשבילי</option>' +
     cats.map((c) => `<option value="${c.id}">${c.name}</option>`).join('');
@@ -128,6 +174,7 @@ function join({ code, name, categoryId, playerId }) {
   net = connect({
     role: 'player',
     code, name, categoryId, playerId,
+    token: auth.getToken(),
     on: {
       joined: (msg) => {
         writeStored({ code, name, playerId: msg.playerId });
@@ -164,10 +211,11 @@ async function startQuickMatch(name, categoryId) {
   quickJoin = { name, categoryId };
   $('join-error').hidden = true;
   try {
+    const token = auth.getToken();
     const res = await fetch('/api/quickmatch', {
       method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ name, categoryId }),
+      headers: { 'content-type': 'application/json', ...(token ? { authorization: `Bearer ${token}` } : {}) },
+      body: JSON.stringify({ name, categoryId, roomId: quickRoomId }),
     });
     const out = await res.json();
     if (!res.ok) throw new Error(out.error || 'לא הצלחתי להצטרף לתור');
@@ -225,6 +273,7 @@ async function bootstrap() {
     account = session.user;
     profile = session.profile || emptyProfile(session.user.displayName);
     $('f-name').value = account.displayName;
+    loadRankedRooms();
   }
 
   // חיבור חוזר אוטומטי לחדר השמור — רק כשאין בכתובת כוונה אחרת.
@@ -272,6 +321,7 @@ $('auth-form').addEventListener('submit', async (e) => {
       : await auth.login({ username, password });
     account = out.user;
     profile = out.profile || emptyProfile(out.user.displayName);
+    loadRankedRooms();
     $('f-name').value = account.displayName;
     show('join');
   } catch (err) {
@@ -410,14 +460,24 @@ async function fetchHistory() {
   }
 }
 
+let boardBy = 'trophies';
+
 async function fetchLeaderboard() {
   if (!accountsAvailable) return { players: [], unavailable: true };
   try {
-    return { players: (await auth.leaderboard(25)).players };
+    return { by: boardBy, players: (await auth.leaderboard(25, boardBy)).players };
   } catch (err) {
-    return { players: [], error: err.message };
+    return { by: boardBy, players: [], error: err.message };
   }
 }
+
+$('board-tabs').addEventListener('click', async (e) => {
+  const btn = e.target.closest('[data-by]');
+  if (!btn || btn.dataset.by === boardBy) return;
+  boardBy = btn.dataset.by;
+  for (const b of $('board-tabs').querySelectorAll('button')) b.classList.toggle('on', b === btn);
+  renderLeaderboard(await fetchLeaderboard());
+});
 
 function renderHistory({ duels, local, error }) {
   const list = $('history-list');
@@ -446,7 +506,7 @@ function renderHistory({ duels, local, error }) {
   }).join('');
 }
 
-function renderLeaderboard({ players, unavailable, error }) {
+function renderLeaderboard({ players, unavailable, error, by = 'trophies' }) {
   const list = $('board-list');
   if (unavailable) {
     list.innerHTML = '<p class="empty-note">טבלת השיאים דורשת חשבון — היא אינה זמינה כרגע.</p>';
@@ -463,9 +523,11 @@ function renderLeaderboard({ players, unavailable, error }) {
       <span class="rank">${p.rank}</span>
       <span>
         <b>${esc(p.name)}</b>
-        <span>${p.wins} ניצחונות · ${p.duels} דו־קרבות · 🏆 ${p.trophies}</span>
+        <span>${by === 'xp'
+          ? `${p.wins} ניצחונות · ${p.duels} דו־קרבות`
+          : `${p.rankedWins || 0} ניצחונות מדורגים`}</span>
       </span>
-      <span class="xp">${p.xp}</span>
+      <span class="xp">${by === 'xp' ? p.xp : `🏆 ${p.trophyPoints || 0}`}</span>
     </div>`).join('');
 }
 
@@ -499,6 +561,12 @@ function renderTopbar(screen) {
   $('chip-level').textContent = `רמה ${p.level}`;
   $('chip-bar').style.width = `${Math.round(p.ratio * 100)}%`;
   $('chip-trophies').textContent = `🏆 ${Object.keys(profile.trophies).length}`;
+  // יתרות המשחק המדורג מוצגות רק למשתמשים מחוברים — אצל אורחים אין סליקה
+  $('chip-economy').hidden = !account;
+  if (account) {
+    $('chip-coins').textContent = String(profile.coins | 0);
+    $('chip-points').textContent = String(profile.trophyPoints | 0);
+  }
 }
 
 function renderTrophies() {
@@ -880,6 +948,7 @@ function renderOver() {
         + (result.missedAnswer && !result.surrenderedBy ? `<br><span class="missed">התשובה הייתה: ${esc(result.missedAnswer)}</span>` : '')
       : '';
     renderSeries();
+    renderSettlement(matchOver);
     renderReward(result);
     // ריאנץ' רק אחרי שהשרת סגר את הסיבוב, ורק כל עוד המשחק לא הוכרע
     $('btn-rematch').hidden = state.phase !== 'finished' || matchOver;
@@ -928,6 +997,46 @@ function renderOver() {
   ];
   $('over-stats').innerHTML = rows
     .map(([k, v]) => `<div><span>${k}</span><span>${v}</span></div>`).join('');
+}
+
+/**
+ * תצוגת הסליקה של משחק מדורג: מטבעות, גביעים, רצף ועליית ליגה. הנתונים
+ * מגיעים מהשרת אחרי ההכרעה; הפרופיל המקומי מתרענן כדי שהצ׳יפים ישקפו
+ * את היתרה החדשה.
+ */
+function renderSettlement(matchOver) {
+  const box = $('settlement');
+  const st = state.settlement;
+  if (!st || !matchOver) { box.hidden = true; return; }
+  box.hidden = false;
+  if (!st.settled) {
+    box.innerHTML = '<div class="settle-note muted">הסליקה המדורגת לא בוצעה — המשחק נספר כמשחק ידידות.</div>';
+    return;
+  }
+  const won = st.winner.playerId === me.id;
+  const mine = won ? st.winner : st.loser;
+  const lines = [];
+  if (mine.delta.coins) lines.push(`<div class="settle-line" dir="ltr">🪙 ${mine.delta.coins > 0 ? '+' : ''}${mine.delta.coins}</div>`);
+  if (mine.delta.trophies) lines.push(`<div class="settle-line" dir="ltr">🏆 ${mine.delta.trophies > 0 ? '+' : ''}${mine.delta.trophies}</div>`);
+  if (won && mine.streak >= 2) lines.push(`<div class="settle-line">🔥 רצף ${mine.streak}</div>`);
+  if (won && mine.leagueAfter && mine.leagueBefore?.id !== mine.leagueAfter?.id) {
+    lines.push(`<div class="settle-line up">🎖️ עלית לליגת ${esc(mine.leagueAfter.nameHe)}</div>`);
+  }
+  box.innerHTML = lines.join('');
+  refreshEconomyProfile();
+}
+
+/** מושך את היתרות העדכניות מהשרת אחרי סליקה ומרענן את הצ׳יפים. */
+async function refreshEconomyProfile() {
+  if (!account) return;
+  try {
+    const session = await auth.me();
+    if (session?.profile) {
+      profile = session.profile;
+      renderTopbar('over');
+      renderRankedRooms();
+    }
+  } catch { /* הרענון הבא יצליח */ }
 }
 
 /**
@@ -985,7 +1094,7 @@ function renderReward(result) {
   $('reward-unlocked').innerHTML = (shown.unlocked || []).map((t, i) => `
     <div class="trophy-pop" style="animation-delay:${i * 140 + 200}ms">
       <span class="ico">${t.icon}</span>
-      <span><b>גביע חדש — ${esc(t.name)}</b><span>${esc(t.desc)}</span></span>
+      <span><b>הישג חדש — ${esc(t.name)}</b><span>${esc(t.desc)}</span></span>
     </div>`).join('');
 
   renderTopbar('over');

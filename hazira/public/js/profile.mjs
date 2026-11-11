@@ -98,6 +98,16 @@ export function emptyProfile(name = '') {
     categoriesWon: [],
     categoriesPlayed: [],
     trophies: {},
+    // שדות הכלכלה של המשחק המדורג (גביעים ומטבעות). אצל אורחים הם
+    // נשארים על אפס — הסליקה עצמה מתרחשת רק בצד השרת אצל משתמשים רשומים.
+    coins: 0,
+    trophyPoints: 0,
+    highestTrophyPoints: 0,
+    rankedWins: 0,
+    rankedLosses: 0,
+    rankedWinStreak: 0,
+    bestRankedWinStreak: 0,
+    welcomeGranted: false,
     updatedAt: null,
   };
 }

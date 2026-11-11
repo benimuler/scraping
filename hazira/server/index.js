@@ -14,6 +14,7 @@ const { RoomRegistry } = require('./room');
 const { Matchmaker } = require('./matchmaking');
 const db = require('./db');
 const accounts = require('./accounts');
+const economy = require('./economy');
 
 // אותה לוגיקת ניסיון וגביעים שרצה בטלפון במצב אורח. שיתוף המודול מונע
 // מצב שבו אורח ומשתמש רשום מתקדמים לפי כללים שונים.
@@ -34,6 +35,9 @@ const rooms = new RoomRegistry(content, {
 });
 setInterval(() => rooms.sweep(), 15 * 60 * 1000).unref();
 const matchmaker = new Matchmaker(rooms);
+// כל חדר מדורג שנוצר מהשיבוץ מקבל את ווידג'טי הסליקה שלו (דמי כניסה
+// בפתיחת הסידרה, הכרעה בסוף המשחק, החזר בסגירה לפני הכרעה).
+matchmaker.onRoomCreated = (room) => attachEconomyHooks(room);
 
 const app = express();
 app.use(express.json());
@@ -122,12 +126,18 @@ function guarded(handler) {
 /** הלקוח שואל מראש אם בכלל להציע הרשמה. */
 app.get('/api/auth/status', (_req, res) => res.json({ accounts: db.enabled() }));
 
+// ההגדרות הציבוריות של מנגנון הגביעים והמטבעות — כרטיסי החדרים, הליגות
+// וחבילת הפתיחה. חדרים בלי ערכים מפורסמים מסומנים available:false.
+app.get('/api/economy', (_req, res) => {
+  res.json({ ...economy.publicConfig(), accounts: db.enabled() });
+});
+
 app.post('/api/auth/register', guarded(async (req, res) => {
   const user = await accounts.register(req.body || {});
   const token = await accounts.createSession(user.id);
-  const profile = await accounts.saveProfile(user.id, {
-    ...progression.emptyProfile(user.displayName),
-  });
+  // חשבון חדש מקבל את חבילת הפתיחה המתועדת (500 מטבעות, פעם אחת).
+  const welcome = economy.grantWelcome(progression.emptyProfile(user.displayName));
+  const profile = await accounts.saveProfile(user.id, welcome.profile);
   res.json({ token, user, profile });
 }));
 
@@ -135,9 +145,11 @@ app.post('/api/auth/login', guarded(async (req, res) => {
   const user = await accounts.login(req.body || {});
   const token = await accounts.createSession(user.id);
   const stored = await accounts.getProfile(user.id);
-  const profile = stored || await accounts.saveProfile(
-    user.id, progression.emptyProfile(user.displayName),
-  );
+  // חשבון קיים: בלי העברת מלאי רטרואקטיבית — ההחלטה על מתן מטבעות
+  // לחשבונות ותיקים ממתינה לאישור מפורש. השדות רק מנורמלים לתצוגה.
+  const profile = stored
+    ? economy.withEconomy(stored)
+    : await accounts.saveProfile(user.id, economy.grantWelcome(progression.emptyProfile(user.displayName)).profile);
   res.json({ token, user, profile });
 }));
 
@@ -147,8 +159,11 @@ app.post('/api/auth/logout', guarded(async (req, res) => {
 }));
 
 app.get('/api/me', withUser(async (_req, res, user) => {
-  const profile = await accounts.getProfile(user.id)
-    || await accounts.saveProfile(user.id, progression.emptyProfile(user.displayName));
+  const stored = await accounts.getProfile(user.id);
+  // כנ"ל: חשבון קיים לא מקבל מטבעות רטרואקטיבית עד שיאושר
+  const profile = stored
+    ? economy.withEconomy(stored)
+    : await accounts.saveProfile(user.id, economy.grantWelcome(progression.emptyProfile(user.displayName)).profile);
   res.json({ user, profile });
 }));
 
@@ -195,19 +210,47 @@ app.get('/api/me/history', withUser(async (req, res, user) => {
 }));
 
 app.get('/api/leaderboard', guarded(async (req, res) => {
-  res.json({ players: await accounts.leaderboard(Number(req.query.limit) || 25) });
+  const by = req.query.by === 'xp' ? 'xp' : 'trophies';
+  res.json({ by, players: await accounts.leaderboard(Number(req.query.limit) || 25, by) });
 }));
 
 app.get('/api/categories', (_req, res) => res.json(content.list()));
 
 // משחק מהיר: שיבוץ מול יריב אקראי בלי קוד חדר. מי שמחכה לבד בתור
 // מקבל waiting עד שמישהו אמיתי נוסף מצטרף — אין יריבים מדומים.
-app.post('/api/quickmatch', (req, res) => {
+app.post('/api/quickmatch', async (req, res) => {
   const name = String(req.body?.name || '').slice(0, 24).trim();
   if (!name) return res.status(400).json({ error: 'חסר שם' });
   const categoryId = req.body?.categoryId && content.category(req.body.categoryId)
     ? req.body.categoryId
     : null;
+
+  // חדר מדורג: חייבים חשבון מחובר, חדר פתוח לשחקן ויתרה שמכסה כניסה.
+  const roomId = req.body?.roomId || null;
+  if (roomId) {
+    if (!economy.ROOMS[roomId]) return res.status(400).json({ error: 'חדר לא מוכר' });
+    if (!economy.roomAvailable(roomId)) {
+      return res.status(409).json({ error: 'החדר סגור כרגע' });
+    }
+    if (!db.enabled()) return res.status(503).json({ error: 'חדרים מדורגים דורשים חשבון' });
+    try {
+      const user = await accounts.userForToken(bearer(req));
+      if (!user) return res.status(401).json({ error: 'חדרים מדורגים דורשים התחברות' });
+      const profile = economy.withEconomy(
+        await accounts.getProfile(user.id) || progression.emptyProfile(user.displayName),
+      );
+      if (!economy.roomUnlocked(roomId, profile.highestTrophyPoints)) {
+        return res.status(403).json({ error: 'החדר נעול — חסרים גביעים כדי לפתוח אותו' });
+      }
+      if (profile.coins < economy.ROOMS[roomId].entryCoins) {
+        return res.status(403).json({ error: 'אין מספיק מטבעות לדמי הכניסה' });
+      }
+      return res.json(matchmaker.join({ name, categoryId, roomId, userId: user.id }));
+    } catch (err) {
+      return res.status(err.status || 500).json({ error: err.message });
+    }
+  }
+
   res.json(matchmaker.join({ name, categoryId }));
 });
 
@@ -336,7 +379,13 @@ wss.on('connection', (ws) => {
       return send(ws, { t: 'error', message: 'הודעה לא תקינה' });
     }
 
-    if (msg.t === 'hello') return handleHello(ws, msg);
+    if (msg.t === 'hello') {
+      handleHello(ws, msg).catch((err) => {
+        send(ws, { t: 'error', message: 'הצטרפות נכשלה', fatal: true });
+        console.error('handleHello נכשל:', err);
+      });
+      return;
+    }
 
     const room = ws.room;
     if (!room) return send(ws, { t: 'error', message: 'לא מחוברים לחדר' });
@@ -359,7 +408,140 @@ wss.on('connection', (ws) => {
   });
 });
 
-function handleHello(ws, msg) {
+// -------------------------------------------------- סליקת משחקים מדורגים
+//
+// הווים האלה מחוברים לכל חדר מדורג שנוצר מהשיבוץ:
+//  - seriesStart: גביית דמי הכניסה משני המתמודדים.
+//  - matchEnd:    הכרעת המטבעות והגביעים לפי התוצאה.
+//  - dispose:     החזר דמי כניסה אם החדר נסגר בלי הכרעה.
+//
+// עקרון הבטיחות: אם הגבייה או הסליקה לא יכולות להתבצע במלואן (ערך
+// חסר בקונפיגורציה, שחקן בלי חשבון, כיסוי חסר) — לא זז אף מטבע ואף
+// גביע, והמשחק יורד למצב ידידות בלי תשלום במקום לסלק חצי דרך.
+
+/** טוען פרופיל לצורכי כלכלה. חשבון חדש כבר קיבל את חבילת הפתיחה
+ *  בהרשמה; כאן רק מנרמלים שדות חסרים, בלי הענקה רטרואקטיבית. */
+async function loadEconomyProfile(userId) {
+  const stored = await accounts.getProfile(userId);
+  if (!stored) return null;
+  return economy.withEconomy(stored);
+}
+
+/** משיג את פרופילי הכלכלה של שני השחקנים בחדר. null אם אחד חסר. */
+async function roomEconomyProfiles(room) {
+  const out = new Map();
+  for (const player of room.game.players.values()) {
+    if (!player.userId) return null;
+    const profile = await loadEconomyProfile(player.userId);
+    if (!profile) return null;
+    out.set(player.id, { userId: player.userId, name: player.name, profile });
+  }
+  return out;
+}
+
+/** משדר מצב עדכני לכל הלקוחות אחרי שינוי סליקה. */
+function broadcastEconomy(room) {
+  try { room.broadcastState(); } catch (err) { console.error('שידור סליקה נכשל:', err.message); }
+}
+
+/** מוריד חדר ממדורג לידידות כשאי אפשר לסלק אותו כמתוכנן. */
+function downgradeRanked(room, reason) {
+  console.warn(`חדר ${room.code} ירד למשחק ידידות: ${reason}`);
+  room.game.ranked = null;
+  room.entryCharged = null;
+  room.game.settlement = { settled: false, reason };
+}
+
+async function chargeSeriesEntries(room) {
+  const game = room.game;
+  if (!game.ranked || room.entryCharged) return;
+  const roomId = game.ranked.roomId;
+  try {
+    const profiles = await roomEconomyProfiles(room);
+    if (!profiles || profiles.size !== 2) {
+      return downgradeRanked(room, 'ranked-requires-accounts');
+    }
+    const charged = [];
+    for (const entry of profiles.values()) {
+      const res = economy.chargeEntry(entry.profile, roomId);
+      if (!res.ok) {
+        // מחזירים למי שכבר שילם לפני שמורידים את החדר לידידות
+        for (const prev of charged) {
+          await accounts.saveProfile(prev.userId, economy.refundEntry(prev.profile, roomId).profile);
+        }
+        return downgradeRanked(room, `entry-failed:${res.reason}`);
+      }
+      entry.profile = res.profile;
+      charged.push(entry);
+    }
+    for (const entry of charged) await accounts.saveProfile(entry.userId, entry.profile);
+    room.entryCharged = { roomId, amount: economy.ROOMS[roomId].entryCoins };
+    broadcastEconomy(room);
+  } catch (err) {
+    console.error('גביית דמי כניסה נכשלה:', err);
+    downgradeRanked(room, 'entry-error');
+  }
+}
+
+async function settleSeriesMatch(room, { winnerId, loserId }) {
+  const game = room.game;
+  if (!game.ranked || !room.entryCharged) return;
+  const roomId = room.entryCharged.roomId;
+  room.entryCharged = null;
+  try {
+    const profiles = await roomEconomyProfiles(room);
+    const winner = profiles?.get(winnerId);
+    const loser = profiles?.get(loserId);
+    if (!winner || !loser) {
+      return downgradeRanked(room, 'settlement-missing-profiles');
+    }
+    const result = economy.settleMatch(roomId, winner.profile, loser.profile);
+    if (!result.settled) {
+      // ערכים חסרים בקונפיגורציה — דמי הכניסה חוזרים, שום דבר לא זז
+      await accounts.saveProfile(winner.userId, economy.refundEntry(winner.profile, roomId).profile);
+      await accounts.saveProfile(loser.userId, economy.refundEntry(loser.profile, roomId).profile);
+      game.settlement = { settled: false, missing: result.missing, roomId };
+      return broadcastEconomy(room);
+    }
+    await accounts.saveProfile(winner.userId, result.winner.profile);
+    await accounts.saveProfile(loser.userId, result.loser.profile);
+    game.settlement = {
+      settled: true,
+      roomId,
+      winner: {
+        playerId: winnerId, name: winner.name,
+        delta: result.winner.delta, streak: result.winner.streak,
+        leagueBefore: result.winner.leagueBefore, leagueAfter: result.winner.leagueAfter,
+      },
+      loser: { playerId: loserId, name: loser.name, delta: result.loser.delta },
+    };
+    broadcastEconomy(room);
+  } catch (err) {
+    console.error('סליקת משחק מדורג נכשלה:', err);
+  }
+}
+
+/** החזר דמי כניסה כשהחדר נסגר לפני שהמשחק הוכרע. */
+function refundUnfinishedRanked(room) {
+  if (!room.entryCharged) return;
+  const roomId = room.entryCharged.roomId;
+  room.entryCharged = null;
+  roomEconomyProfiles(room).then(async (profiles) => {
+    if (!profiles) return;
+    for (const entry of profiles.values()) {
+      await accounts.saveProfile(entry.userId, economy.refundEntry(entry.profile, roomId).profile);
+    }
+  }).catch((err) => console.error('החזר דמי כניסה נכשל:', err));
+}
+
+function attachEconomyHooks(room) {
+  if (!room.game.ranked) return;
+  room.game.hooks.seriesStart = () => { chargeSeriesEntries(room); };
+  room.game.hooks.matchEnd = (_game, ids) => { settleSeriesMatch(room, ids); };
+  room.onDispose = () => refundUnfinishedRanked(room);
+}
+
+async function handleHello(ws, msg) {
   const room = rooms.get(msg.code);
   if (!room) return send(ws, { t: 'error', message: 'קוד חדר לא נמצא', fatal: true });
 
@@ -372,8 +554,20 @@ function handleHello(ws, msg) {
       ws.playerId = msg.playerId;
       room.game.setConnected(ws.playerId, true);
     } else {
+      // חדר מדורג מחייב חשבון מזוהה — בלעדיו אי אפשר לסלק תוצאות
+      let userId = null;
+      if (room.game.ranked) {
+        const user = await accounts.userForToken(msg.token);
+        if (!user) {
+          room.detach(ws);
+          return send(ws, { t: 'error', message: 'חדרים מדורגים דורשים התחברות', fatal: true });
+        }
+        userId = user.id;
+      } else if (msg.token) {
+        userId = (await accounts.userForToken(msg.token))?.id || null;
+      }
       try {
-        ws.playerId = room.game.addPlayer({ name: msg.name, categoryId: msg.categoryId });
+        ws.playerId = room.game.addPlayer({ name: msg.name, categoryId: msg.categoryId, userId });
       } catch (err) {
         return send(ws, { t: 'error', message: err.message, fatal: true });
       }

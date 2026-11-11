@@ -83,6 +83,8 @@ class Room {
   }
 
   dispose() {
+    // השרת מחזיר דמי כניסה של חדר מדורג שלא הושלם לפני הסגירה
+    this.onDispose?.(this);
     this.game.dispose();
     for (const ws of this.sockets) {
       try { ws.close(); } catch { /* כבר סגור */ }
