@@ -1,0 +1,512 @@
+{
+  "id": "photo-bugs",
+  "name": "חרקים ופרוקי רגליים (צילומים)",
+  "hint": "אומרים את שם בעל החיים",
+  "items": [
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/European_praying_mantis_%28Mantis_religiosa%29_green_female_Dobruja.jpg/960px-European_praying_mantis_%28Mantis_religiosa%29_green_female_Dobruja.jpg",
+      "answer": "גמל שלמה אירופי",
+      "aliases": [
+        "גמל-שלמה מתפלל"
+      ],
+      "difficulty": 4,
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:European_praying_mantis_(Mantis_religiosa)_green_female_Dobruja.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Charles J. Sharp",
+      "subjectSource": "https://en.wikipedia.org/wiki/European_mantis",
+      "subjectTitle": "European mantis",
+      "imageDescription": "European praying mantis ( Mantis religiosa ) green female, Dobruja, Romania",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Dynastes_hercules_ecuatorianus_MHNT.jpg/960px-Dynastes_hercules_ecuatorianus_MHNT.jpg",
+      "answer": "חיפושית הרקולס",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Didier Descouens · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dynastes_hercules_ecuatorianus_MHNT.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Didier Descouens",
+      "subjectSource": "https://en.wikipedia.org/wiki/Hercules_beetle",
+      "subjectTitle": "Hercules beetle",
+      "imageDescription": "Hercules beetle ♂ - 15.5 cm Locality: Iquitos , Loreto, Northern Peru",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Scarabaeus_viettei_01.jpg/960px-Scarabaeus_viettei_01.jpg",
+      "answer": "זבלית",
+      "aliases": [
+        "חיפושיות זבל"
+      ],
+      "difficulty": 4,
+      "credit": "Axel Strauß · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Scarabaeus_viettei_01.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Axel Strauß",
+      "subjectSource": "https://en.wikipedia.org/wiki/Dung_beetle",
+      "subjectTitle": "Dung beetle",
+      "imageDescription": "Scarabaeus viettei (syn. Madateuchus viettei, Scarabaeidae); picture taken in dry spiny forest close to Mangily, western Madagascar",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Photuris_lucicrescens.jpg/960px-Photuris_lucicrescens.jpg",
+      "answer": "גחלילית",
+      "aliases": [
+        "גחליליות"
+      ],
+      "difficulty": 4,
+      "credit": "Bruce Marlin · CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Photuris_lucicrescens.jpg",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+      "artist": "Bruce Marlin",
+      "subjectSource": "https://en.wikipedia.org/wiki/Firefly",
+      "subjectTitle": "Firefly",
+      "imageDescription": "Adult beetle in the family Lampyridae, commonly called \"firefly or lightning bug\".",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/European_earwig_%2881241%29.jpg/960px-European_earwig_%2881241%29.jpg",
+      "answer": "צבתן",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Rhododendrites · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:European_earwig_(81241).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Rhododendrites",
+      "subjectSource": "https://en.wikipedia.org/wiki/Forficula_auricularia",
+      "subjectTitle": "Forficula auricularia",
+      "imageDescription": "European earwig",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f2/SGR_laying.jpg",
+      "answer": "ארבה המדבר",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Christiaan Kooyman · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:SGR_laying.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Christiaan Kooyman",
+      "subjectSource": "https://en.wikipedia.org/wiki/Desert_locust",
+      "subjectTitle": "Desert locust",
+      "imageDescription": "Desert locust ( Schistocerca gregaria ) laying eggs during the 1994 locust outbreak in Mauritania (photographed by Christiaan Kooyman).",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Cicada_-_Neotibicen_linnei%2C_Woodbridge%2C_Virginia.jpg/960px-Cicada_-_Neotibicen_linnei%2C_Woodbridge%2C_Virginia.jpg",
+      "answer": "ציקדה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Judy Gallagher · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cicada_-_Neotibicen_linnei,_Woodbridge,_Virginia.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Judy Gallagher",
+      "subjectSource": "https://en.wikipedia.org/wiki/Cicada",
+      "subjectTitle": "Cicada",
+      "imageDescription": "Cicada - Neotibicen linnei, Woodbridge, Virginia.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Aphids_September_2008-1.jpg/960px-Aphids_September_2008-1.jpg",
+      "answer": "כנימה",
+      "aliases": [
+        "כנימות עלה"
+      ],
+      "difficulty": 4,
+      "credit": "Alvesgaspar · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Aphids_September_2008-1.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Alvesgaspar",
+      "subjectSource": "https://en.wikipedia.org/wiki/Aphid",
+      "subjectTitle": "Aphid",
+      "imageDescription": "Oleander aphids ( Aphis nerii ).",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/LepismaSaccharina.jpg/960px-LepismaSaccharina.jpg",
+      "answer": "זנבזיף כספי",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Christian Fischer · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:LepismaSaccharina.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Christian Fischer",
+      "subjectSource": "https://en.wikipedia.org/wiki/Silverfish",
+      "subjectTitle": "Silverfish",
+      "imageDescription": "Close-up of a Silverfish , Lepisma saccharina , on a room wall. Estimated length: 1 cm (body only). Location: Lower Saxony, Germany ( indoors ). (Given the right texture — in this case, a painted drywall panel — silverfish can certainly climb vertical surfaces as well.)",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/%28MHNT%29_Chrysoperla_carnea_-_dorsal_view.jpg/960px-%28MHNT%29_Chrysoperla_carnea_-_dorsal_view.jpg",
+      "answer": "עינפז ירוק",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Didier Descouens · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:(MHNT)_Chrysoperla_carnea_-_dorsal_view.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Didier Descouens",
+      "subjectSource": "https://en.wikipedia.org/wiki/Chrysoperla_carnea",
+      "subjectTitle": "Chrysoperla carnea",
+      "imageDescription": "(common green lacewing) Locality : Fronton , France.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Attacus_atlas_qtl3.jpg/960px-Attacus_atlas_qtl3.jpg",
+      "answer": "עש אטלס",
+      "aliases": [
+        "אטקוס אטלס"
+      ],
+      "difficulty": 4,
+      "credit": "Quartl · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Attacus_atlas_qtl3.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Quartl",
+      "subjectSource": "https://en.wikipedia.org/wiki/Attacus_atlas",
+      "subjectTitle": "Attacus atlas",
+      "imageDescription": "Male Atlas Moth ( Attacus atlas ) with cocoon in the Wilhelma, Stuttgart, Germany.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Actias_luna-male.jpg/960px-Actias_luna-male.jpg",
+      "answer": "עש לונה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "David notMD · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Actias_luna-male.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "David notMD",
+      "subjectSource": "https://en.wikipedia.org/wiki/Luna_moth",
+      "subjectTitle": "Luna moth",
+      "imageDescription": "Actias luna moth, male",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Acherontia_lachesis_MHNT_Female_N%C3%AElg%C3%AEri_%28Tamil_Nadu%29_Dorsal.jpg/960px-Acherontia_lachesis_MHNT_Female_N%C3%AElg%C3%AEri_%28Tamil_Nadu%29_Dorsal.jpg",
+      "answer": "רפרף גולגולת",
+      "aliases": [
+        "רפרף גולגולת המת"
+      ],
+      "difficulty": 4,
+      "credit": "Didier Descouens · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Acherontia_lachesis_MHNT_Female_N%C3%AElg%C3%AEri_(Tamil_Nadu)_Dorsal.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Didier Descouens",
+      "subjectSource": "https://en.wikipedia.org/wiki/Death%27s-head_hawkmoth",
+      "subjectTitle": "Death's-head hawkmoth",
+      "imageDescription": "Acherontia lachesis - Dorsal side Collection of the Mathematician Laurent Schwartz",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/0_Belle-dame_%28Vanessa_cardui%29_-_Echinacea_purpurea_-_Havr%C3%A9_%283%29.jpg/960px-0_Belle-dame_%28Vanessa_cardui%29_-_Echinacea_purpurea_-_Havr%C3%A9_%283%29.jpg",
+      "answer": "נימפית החורשף",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Jean-Pol GRANDMONT · CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:0_Belle-dame_(Vanessa_cardui)_-_Echinacea_purpurea_-_Havr%C3%A9_(3).jpg",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "Jean-Pol GRANDMONT",
+      "subjectSource": "https://en.wikipedia.org/wiki/Vanessa_cardui",
+      "subjectTitle": "Vanessa cardui",
+      "imageDescription": "Painted Lady ( Vanessa cardui ) foraging a flower of a purple coneflower ( Echinacea purpurea ) - Havré ( Belgium )",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/PapilioMachaon2016_001.JPG/960px-PapilioMachaon2016_001.JPG",
+      "answer": "זנב סנונית נאה",
+      "aliases": [
+        "זנב-סנונית נאה"
+      ],
+      "difficulty": 4,
+      "credit": "Entomolo · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:PapilioMachaon2016_001.JPG",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Entomolo",
+      "subjectSource": "https://en.wikipedia.org/wiki/Papilio_machaon",
+      "subjectTitle": "Papilio machaon",
+      "imageDescription": "Papilio machaon femelle le jour de l'émergence, Normandie.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Greta_oto.jpg/960px-Greta_oto.jpg",
+      "answer": "פרפר כנף זכוכית",
+      "aliases": [
+        "גרטה אוטו"
+      ],
+      "difficulty": 4,
+      "credit": "David Tiller · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Greta_oto.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "David Tiller",
+      "subjectSource": "https://en.wikipedia.org/wiki/Greta_oto",
+      "subjectTitle": "Greta oto",
+      "imageDescription": "Greta oto - Glasswing",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Bombus_lapidarius_-_Melilotus_officinalis_-_Tallinn.jpg/960px-Bombus_lapidarius_-_Melilotus_officinalis_-_Tallinn.jpg",
+      "answer": "בומבוס",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Ivar Leidus · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bombus_lapidarius_-_Melilotus_officinalis_-_Tallinn.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Ivar Leidus",
+      "subjectSource": "https://en.wikipedia.org/wiki/Bumblebee",
+      "subjectTitle": "Bumblebee",
+      "imageDescription": "Red-tailed bumblebee ( Bombus lapidarius ) on the yellow sweet clover ( Melilotus officinalis ). Tallinn, Estonia.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Southern_Carpenter_Bee_%28Xylocopa_micans%29_%E2%99%80_%287995162522%29.jpg/960px-Southern_Carpenter_Bee_%28Xylocopa_micans%29_%E2%99%80_%287995162522%29.jpg",
+      "answer": "דבורת עץ",
+      "aliases": [
+        "דבורת-עץ"
+      ],
+      "difficulty": 4,
+      "credit": "Bob Peterson from North Palm Beach, Florida, Planet Earth! · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Southern_Carpenter_Bee_(Xylocopa_micans)_%E2%99%80_(7995162522).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Bob Peterson from North Palm Beach, Florida, Planet Earth!",
+      "subjectSource": "https://en.wikipedia.org/wiki/Carpenter_bee",
+      "subjectTitle": "Carpenter bee",
+      "imageDescription": "A female southern carpenter bee nectaring on white twinevine in the local cypress swamp. This big beautiful buzzer is considered a solitary bee and is a useful pollinator. It's the less common of the two Florida species of carpenter bees. The males look completely different! (I'm getting a bit backlogged on bees so it may be buzzing around here for awhile.)",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Glossina-morsitans.jpg/960px-Glossina-morsitans.jpg",
+      "answer": "זבוב צה צה",
+      "aliases": [
+        "זבוב הצה צה"
+      ],
+      "difficulty": 4,
+      "credit": "Alan R Walker · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Glossina-morsitans.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Alan R Walker",
+      "subjectSource": "https://en.wikipedia.org/wiki/Tsetse_fly",
+      "subjectTitle": "Tsetse fly",
+      "imageDescription": "Adult Glossina morsitans, transmitter of Trypanosoma protozoa in Africa.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Horse_fly_Tabanus_2.jpg/960px-Horse_fly_Tabanus_2.jpg",
+      "answer": "זבוב הסוס",
+      "aliases": [
+        "טבניים"
+      ],
+      "difficulty": 4,
+      "credit": "Bruce Marlin · CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Horse_fly_Tabanus_2.jpg",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+      "artist": "Bruce Marlin",
+      "subjectSource": "https://en.wikipedia.org/wiki/Tabanidae",
+      "subjectTitle": "Tabanidae",
+      "imageDescription": "Horse fly, Diptera family Tabanidae, Tabanus sp . Location: Winfield IL USA",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Beautiful_demoiselle_%28Calopteryx_virgo%29_male_3.jpg/960px-Beautiful_demoiselle_%28Calopteryx_virgo%29_male_3.jpg",
+      "answer": "שפרירית",
+      "aliases": [
+        "שפריריות"
+      ],
+      "difficulty": 4,
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Beautiful_demoiselle_(Calopteryx_virgo)_male_3.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Charles J. Sharp",
+      "subjectSource": "https://en.wikipedia.org/wiki/Damselfly",
+      "subjectTitle": "Damselfly",
+      "imageDescription": "Beautiful demoiselle ( Calopteryx virgo ) male, Crockford Stream, Hampshire",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Rhithrogena_germanica_subimago_on_Equisetum_hyemale.jpg/960px-Rhithrogena_germanica_subimago_on_Equisetum_hyemale.jpg",
+      "answer": "בריומאי",
+      "aliases": [
+        "בריומאים"
+      ],
+      "difficulty": 4,
+      "credit": "Richard Bartz , Munich aka Makro Freak Image:MFB.jpg · CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Rhithrogena_germanica_subimago_on_Equisetum_hyemale.jpg",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+      "artist": "Richard Bartz , Munich aka Makro Freak Image:MFB.jpg",
+      "subjectSource": "https://en.wikipedia.org/wiki/Mayfly",
+      "subjectTitle": "Mayfly",
+      "imageDescription": "A female subimago of March Brown ( Rhithrogena germanica ) mayfly in the family Heptageniidae. Mayflies are insects which belong to the Order Ephemeroptera (from the Greek ephemeros , short-lived and pteron , wing, referring to the short life span of adults). They have been placed into an ancient group of insects termed the Paleoptera, which also contains the dragonflies and damselflies. They are aquatic insects whose immature stage (called naiad or, colloquially, nymph) usually lasts one year in fresh water. It is resting on a Rough Horsetail Equisetum hyemale stem.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Trichoptera_caddisfly_1.jpg/960px-Trichoptera_caddisfly_1.jpg",
+      "answer": "שעיר כנף",
+      "aliases": [
+        "שעירי-כנף"
+      ],
+      "difficulty": 4,
+      "credit": "Bruce Marlin · CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Trichoptera_caddisfly_1.jpg",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+      "artist": "Bruce Marlin",
+      "subjectSource": "https://en.wikipedia.org/wiki/Caddisfly",
+      "subjectTitle": "Caddisfly",
+      "imageDescription": "Original description on website: \"Caddisfly adults resemble moths, but the wings are covered with fine hair instead of scales. (Trichoptera = \"hair wing.\") Caddisfly larvae are a favorite food of many fish, including trout, and are used as bait by sport fishermen. The larvae are especially sensitive to water pollution and their numbers can be monitored over a period of time as a good indicator of water quality. These primitive flying insects are most abundant near well-aerated streams and fast-flowing water, but also frequent lakes, ponds and marshes. This specimen was found at the west branch of the DuPage River, a fairly sluggish body of water, home to both large and smallmouth bass, walleye, and panfish such as bluegills and sunfish.\"",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Coptotermes_formosanus_shiraki_USGov_k8204-7.jpg/960px-Coptotermes_formosanus_shiraki_USGov_k8204-7.jpg",
+      "answer": "טרמיט",
+      "aliases": [
+        "טרמיטים"
+      ],
+      "difficulty": 4,
+      "credit": "Photo by Scott Bauer. · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Coptotermes_formosanus_shiraki_USGov_k8204-7.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Photo by Scott Bauer.",
+      "subjectSource": "https://en.wikipedia.org/wiki/Termite",
+      "subjectTitle": "Termite",
+      "imageDescription": "Coptotermes formosanus shiraki; Formosan subterranean termites( en:Termite ), イエシロアリ( ja:シロアリ )",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Monarch_Butterfly_Red_Zinnia_2050px.jpg/960px-Monarch_Butterfly_Red_Zinnia_2050px.jpg",
+      "answer": "פרפר מונרך",
+      "aliases": [
+        "מונרך",
+        "דנאית מלכותית"
+      ],
+      "difficulty": 3,
+      "credit": "Photo (c)2006 Derek Ramsey ( Ram-Man ) · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Monarch_Butterfly_Red_Zinnia_2050px.jpg",
+      "artist": "Photo (c)2006 Derek Ramsey ( Ram-Man )",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Apis_mellifera_%2852848692477%29.jpg/960px-Apis_mellifera_%2852848692477%29.jpg",
+      "answer": "דבורה",
+      "aliases": [
+        "דבורת דבש"
+      ],
+      "difficulty": 2,
+      "credit": "Gilles San Martin from Namur, Belgium · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Apis_mellifera_(52848692477).jpg",
+      "artist": "Gilles San Martin from Namur, Belgium",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Polistes_in_Catalonia.jpg/960px-Polistes_in_Catalonia.jpg",
+      "answer": "צרעה",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Hans Hillewaert · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Polistes_in_Catalonia.jpg",
+      "artist": "Hans Hillewaert",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Mosquito_-_Ochlerotatus_canadensis%2C_Pickering_Creek_Audubon_Center%2C_Easton%2C_Maryland.jpg/960px-Mosquito_-_Ochlerotatus_canadensis%2C_Pickering_Creek_Audubon_Center%2C_Easton%2C_Maryland.jpg",
+      "answer": "יתוש",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Judy Gallagher · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mosquito_-_Ochlerotatus_canadensis,_Pickering_Creek_Audubon_Center,_Easton,_Maryland.jpg",
+      "artist": "Judy Gallagher",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Tettigonia_virdissima_nymph_on_Phleum_pratense.jpg/960px-Tettigonia_virdissima_nymph_on_Phleum_pratense.jpg",
+      "answer": "חרגול",
+      "aliases": [],
+      "difficulty": 3,
+      "credit": "Richard Bartz , Munich aka Makro Freak Image:MFB.jpg · CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Tettigonia_virdissima_nymph_on_Phleum_pratense.jpg",
+      "artist": "Richard Bartz , Munich aka Makro Freak Image:MFB.jpg",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Tick_male_%28aka%29.jpg",
+      "answer": "קרצית",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "André Karwath aka Aka · CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Tick_male_(aka).jpg",
+      "artist": "André Karwath aka Aka",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Xenopsylla_cheopis_flea_PHIL_2069_lores.jpg/960px-Xenopsylla_cheopis_flea_PHIL_2069_lores.jpg",
+      "answer": "פרעוש",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "CDC/Dr. Pratt · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Xenopsylla_cheopis_flea_PHIL_2069_lores.jpg",
+      "artist": "CDC/Dr. Pratt",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/7-Spotted-Ladybug-Coccinella-septempunctata-sq1.jpg/960px-7-Spotted-Ladybug-Coccinella-septempunctata-sq1.jpg",
+      "answer": "פרת משה רבנו",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Photographer: Dominik Stodulski Graphic Processing: User:MathKnight · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:7-Spotted-Ladybug-Coccinella-septempunctata-sq1.jpg",
+      "artist": "Photographer: Dominik Stodulski Graphic Processing: User:MathKnight",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Flickr_-_Lukjonis_-_Jumping_spider_-_Evarcha_arcuata_%28Set_of_pictures%29_%281%29.jpg/960px-Flickr_-_Lukjonis_-_Jumping_spider_-_Evarcha_arcuata_%28Set_of_pictures%29_%281%29.jpg",
+      "answer": "קופצני",
+      "aliases": [
+        "קופצנית"
+      ],
+      "difficulty": 5,
+      "credit": "Lukas Jonaitis from Vilnius, Lithuania · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Flickr_-_Lukjonis_-_Jumping_spider_-_Evarcha_arcuata_(Set_of_pictures)_(1).jpg",
+      "artist": "Lukas Jonaitis from Vilnius, Lithuania",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "reviewed": true
+    }
+  ]
+}

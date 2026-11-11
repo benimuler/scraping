@@ -1,0 +1,219 @@
+{
+  "id": "photo-hands",
+  "name": "תנועות יד (צילומים)",
+  "hint": "איזו תנועה?",
+  "items": [
+    {
+      "subject": "Thumbs signal",
+      "answer": "אגודל למעלה",
+      "aliases": [
+        "לייק"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Jempol_Ngadep_Atas_%28cropped%29.jpg/960px-Jempol_Ngadep_Atas_%28cropped%29.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Jempol_Ngadep_Atas_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Pinerineks",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "credit": "Pinerineks · CC BY-SA 4.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Thumb_signal",
+      "difficulty": 1,
+      "reviewed": true
+    },
+    {
+      "subject": "V sign",
+      "answer": "סימן ניצחון",
+      "aliases": [
+        "ניצחון",
+        "וי"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Churchill_V_sign_HU_55521.jpg/960px-Churchill_V_sign_HU_55521.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Churchill_V_sign_HU_55521.jpg",
+      "license": "Public domain",
+      "artist": "Unknown author Unknown author",
+      "licenseUrl": "",
+      "credit": "Unknown author Unknown author · Public domain",
+      "subjectSource": "https://en.wikipedia.org/wiki/V_sign",
+      "difficulty": 1,
+      "reviewed": true
+    },
+    {
+      "subject": "Handshake",
+      "answer": "לחיצת יד",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Hermandad_-_friendship.jpg/960px-Hermandad_-_friendship.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Hermandad_-_friendship.jpg",
+      "license": "CC BY-SA 2.0",
+      "artist": "Rufino",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "credit": "Rufino · CC BY-SA 2.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Handshake",
+      "difficulty": 1,
+      "reviewed": true
+    },
+    {
+      "subject": "Clapping",
+      "answer": "מחיאות כפיים",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Clapping_hand.jpg/960px-Clapping_hand.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Clapping_hand.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Mona Hassan Abo-Abda",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "credit": "Mona Hassan Abo-Abda · CC BY-SA 4.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Clapping",
+      "difficulty": 1,
+      "reviewed": true
+    },
+    {
+      "subject": "High five",
+      "answer": "כיף",
+      "aliases": [
+        "היי פייב",
+        "תן כיף"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/US_Navy_110804-N-DR144-456_Master_Chief_Petty_Officer_of_the_Navy_%28MCPON%29_Rick_D._West_high_fives_Commander%2C_Naval_Surface_Force_U.S._Pacific_Fleet.jpg/960px-US_Navy_110804-N-DR144-456_Master_Chief_Petty_Officer_of_the_Navy_%28MCPON%29_Rick_D._West_high_fives_Commander%2C_Naval_Surface_Force_U.S._Pacific_Fleet.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:US_Navy_110804-N-DR144-456_Master_Chief_Petty_Officer_of_the_Navy_(MCPON)_Rick_D._West_high_fives_Commander,_Naval_Surface_Force_U.S._Pacific_Fleet.jpg",
+      "license": "Public domain",
+      "artist": "U.S. Navy photo by Mass Communication Specialist 2nd Class James R. Evans",
+      "licenseUrl": "",
+      "credit": "U.S. Navy photo by Mass Communication Specialist 2nd Class James R. Evans · Public domain",
+      "subjectSource": "https://en.wikipedia.org/wiki/High_five",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "subject": "Namaste",
+      "answer": "נמסטה",
+      "aliases": [
+        "תפילה",
+        "ידיים בתפילה"
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d6/An_Oberoi_Hotel_employee_doing_Namaste%2C_New_Delhi.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:An_Oberoi_Hotel_employee_doing_Namaste,_New_Delhi.jpg",
+      "license": "CC BY 2.0",
+      "artist": "Saptarshi Biswas",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "credit": "Saptarshi Biswas · CC BY 2.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Namaste",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "subject": "Crossed fingers",
+      "answer": "אצבעות משולבות",
+      "aliases": [],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Hands-Fingers-Crossed.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Hands-Fingers-Crossed.jpg",
+      "license": "CC BY-SA 3.0",
+      "artist": "Evan-Amos",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "credit": "Evan-Amos · CC BY-SA 3.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Crossed_fingers",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "subject": "Shaka sign",
+      "answer": "שאקה",
+      "aliases": [
+        "תתקשר אליי"
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/42/Gesture_raised_fist_with_thumb_and_pinky_lifted.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Gesture_raised_fist_with_thumb_and_pinky_lifted.jpg",
+      "license": "CC BY-SA 3.0",
+      "artist": "User  Jeremykemp  on  en.wikipedia",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "User  Jeremykemp  on  en.wikipedia · CC BY-SA 3.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Shaka_sign",
+      "difficulty": 2,
+      "reviewed": true
+    },
+    {
+      "subject": "Finger snapping",
+      "answer": "נקישת אצבעות",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Snapping_fingers.ogv/500px--Snapping_fingers.ogv.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Snapping_fingers.ogv",
+      "license": "CC0",
+      "artist": "Mx. Granger",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "credit": "Mx. Granger · CC0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Finger_snapping",
+      "difficulty": 3,
+      "reviewed": true
+    },
+    {
+      "subject": "Finger heart",
+      "answer": "לב אצבעות",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Playback_%28South_Korea%29_member_with_finger_heart_in_2015.jpg/960px-Playback_%28South_Korea%29_member_with_finger_heart_in_2015.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Playback_(South_Korea)_member_with_finger_heart_in_2015.jpg",
+      "license": "CC BY 4.0",
+      "artist": "덴오빠 (denoppa)",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "credit": "덴오빠 (denoppa) · CC BY 4.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Finger_heart",
+      "difficulty": 3,
+      "reviewed": true
+    },
+    {
+      "subject": "Hand heart",
+      "answer": "לב מהידיים",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Amore_carmen_fiano.jpg/960px-Amore_carmen_fiano.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Amore_carmen_fiano.jpg",
+      "license": "Public domain",
+      "artist": "Carmen Fiano",
+      "licenseUrl": "",
+      "credit": "Carmen Fiano · Public domain",
+      "subjectSource": "https://en.wikipedia.org/wiki/Hand_heart",
+      "difficulty": 3,
+      "reviewed": true
+    },
+    {
+      "subject": "Salute",
+      "answer": "הצדעה",
+      "aliases": [],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Victory_Day_Parade_2005-14.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Victory_Day_Parade_2005-14.jpg",
+      "license": "CC BY 4.0",
+      "artist": "Presidential Press and Information Office",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "credit": "Presidential Press and Information Office · CC BY 4.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Salute",
+      "difficulty": 3,
+      "reviewed": true
+    },
+    {
+      "subject": "Waving",
+      "answer": "נפנוף לשלום",
+      "aliases": [
+        "שלום",
+        "נפנוף"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Waving_RCMP_%287612733982%29_%28cropped%29.jpg/960px-Waving_RCMP_%287612733982%29_%28cropped%29.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Waving_RCMP_(7612733982)_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "artist": "Kurt Bauschardt  from Edmonton, Canada",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "credit": "Kurt Bauschardt  from Edmonton, Canada · CC BY-SA 2.0",
+      "subjectSource": "https://en.wikipedia.org/wiki/Waving",
+      "difficulty": 4,
+      "reviewed": true
+    },
+    {
+      "subject": "Pointing",
+      "answer": "הצבעה",
+      "aliases": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Joe_Schmidt_coaching_Irish_team_%28cropped%29.jpg/960px-Joe_Schmidt_coaching_Irish_team_%28cropped%29.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Joe_Schmidt_coaching_Irish_team_(cropped).jpg",
+      "license": "Public domain",
+      "artist": "Stephen McCarthy",
+      "licenseUrl": "",
+      "credit": "Stephen McCarthy · Public domain",
+      "subjectSource": "https://en.wikipedia.org/wiki/Pointing",
+      "difficulty": 4,
+      "reviewed": true
+    }
+  ]
+}

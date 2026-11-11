@@ -1,0 +1,846 @@
+{
+  "id": "photo-animals",
+  "name": "חיות (תמונות)",
+  "hint": "אומרים את שם החיה",
+  "items": [
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/de/Nokota_Horses_cropped.jpg",
+      "answer": "סוס",
+      "aliases": [
+        "סוס הבית"
+      ],
+      "difficulty": 4,
+      "credit": "Nokota_Horses.jpg : François Marchal derivative work: Dana boomer ( talk ) · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nokota_Horses_cropped.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Nokota_Horses.jpg : François Marchal derivative work: Dana boomer ( talk )",
+      "subjectSource": "https://en.wikipedia.org/wiki/Horse",
+      "subjectTitle": "Horse",
+      "imageDescription": "Two young Nokota mares",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Donkey_in_Clovelly%2C_North_Devon%2C_England.jpg",
+      "answer": "חמור",
+      "aliases": [
+        "חמור הבית"
+      ],
+      "difficulty": 4,
+      "credit": "Adrian Pingstone · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Donkey_in_Clovelly,_North_Devon,_England.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Adrian Pingstone",
+      "subjectSource": "https://en.wikipedia.org/wiki/Donkey",
+      "subjectTitle": "Donkey",
+      "imageDescription": "A donkey at Clovelly, North Devon, England.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Pig_farm_Vampula_1.jpg/960px-Pig_farm_Vampula_1.jpg",
+      "answer": "חזיר",
+      "aliases": [
+        "חזיר הבית"
+      ],
+      "difficulty": 4,
+      "credit": "kallerna · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pig_farm_Vampula_1.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "kallerna",
+      "subjectSource": "https://en.wikipedia.org/wiki/Pig",
+      "subjectTitle": "Pig",
+      "imageDescription": "Pig farm in Vampula, Finland.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Flock_of_sheep.jpg/960px-Flock_of_sheep.jpg",
+      "answer": "כבשה",
+      "aliases": [
+        "כבש הבית"
+      ],
+      "difficulty": 4,
+      "credit": "Keith Weller · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Flock_of_sheep.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Keith Weller",
+      "subjectSource": "https://en.wikipedia.org/wiki/Sheep",
+      "subjectTitle": "Sheep",
+      "imageDescription": "These particular sheep belong to a research flock at the US Sheep Experiment Station near Dubois , Idaho , USA",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Hausziege_04.jpg/960px-Hausziege_04.jpg",
+      "answer": "עז",
+      "aliases": [
+        "עז הבית"
+      ],
+      "difficulty": 4,
+      "credit": "Kuebi = Armin Kübelbeck · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hausziege_04.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Kuebi = Armin Kübelbeck",
+      "subjectSource": "https://en.wikipedia.org/wiki/Goat",
+      "subjectTitle": "Goat",
+      "imageDescription": "Goat, located in Fiesch, Valais (Switzerland).",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg/960px-Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg",
+      "answer": "פרה",
+      "aliases": [
+        "בקר הבית"
+      ],
+      "difficulty": 4,
+      "credit": "Kim Hansen · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cow_(Fleckvieh_breed)_Oeschinensee_Slaunger_2009-07-07.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Kim Hansen",
+      "subjectSource": "https://en.wikipedia.org/wiki/Cattle",
+      "subjectTitle": "Cattle",
+      "imageDescription": "A dual breed (beef and milk) cow near Oeschinen Lake , Switzerland at an altitude of 1575 m. The breed is most likely Swiss Fleckvieh , alternatively Simmentaler-Fleckvieh or another dual breed, cf. this enquiry at the Wikipedia help desk .",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Sarlyk_Yak2.jpg/960px-Sarlyk_Yak2.jpg",
+      "answer": "יאק",
+      "aliases": [
+        "יאק הבית"
+      ],
+      "difficulty": 4,
+      "credit": "Alexandr frolov · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sarlyk_Yak2.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Alexandr frolov",
+      "subjectSource": "https://en.wikipedia.org/wiki/Yak",
+      "subjectTitle": "Yak",
+      "imageDescription": "Tibetan Yak or Sarlyk, as they say in Altai",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Water_buffalo_at_Rinca.jpg/960px-Water_buffalo_at_Rinca.jpg",
+      "answer": "תאו מים",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Alexander Vasenin · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Water_buffalo_at_Rinca.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Alexander Vasenin",
+      "subjectSource": "https://en.wikipedia.org/wiki/Water_buffalo",
+      "subjectTitle": "Water buffalo",
+      "imageDescription": "Water buffalo (Bubalus bubalis) at Rinca Island, Indonesia",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/American_bison_k5680-1.jpg/960px-American_bison_k5680-1.jpg",
+      "answer": "ביזון אמריקני",
+      "aliases": [
+        "ביזון אמריקאי"
+      ],
+      "difficulty": 4,
+      "credit": "Jack Dykinga · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:American_bison_k5680-1.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Jack Dykinga",
+      "subjectSource": "https://en.wikipedia.org/wiki/American_bison",
+      "subjectTitle": "American bison",
+      "imageDescription": "Bison bison . Original caption: \"scientists are helping users of American rangelands meet the challenge of managing multiple uses sustainably.\")",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Alaska_moose.jpg/960px-Alaska_moose.jpg",
+      "answer": "אייל קורא",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Paxson Woelber · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Alaska_moose.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Paxson Woelber",
+      "subjectSource": "https://en.wikipedia.org/wiki/Moose",
+      "subjectTitle": "Moose",
+      "imageDescription": "A bull moose in South Fork Eagle River, Alaska.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Reinbukken_p%C3%A5_frisk_gr%C3%B8nt_beite._-_panoramio.jpg/960px-Reinbukken_p%C3%A5_frisk_gr%C3%B8nt_beite._-_panoramio.jpg",
+      "answer": "אייל הצפון",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Are G Nilsen · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Reinbukken_p%C3%A5_frisk_gr%C3%B8nt_beite._-_panoramio.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Are G Nilsen",
+      "subjectSource": "https://en.wikipedia.org/wiki/Reindeer",
+      "subjectTitle": "Reindeer",
+      "imageDescription": "Reinbukken på frisk grønt beite.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Saint-Aignan_%28Loir-et-Cher%29._Okapi.jpg/960px-Saint-Aignan_%28Loir-et-Cher%29._Okapi.jpg",
+      "answer": "אוקפי",
+      "aliases": [
+        "אוקאפי"
+      ],
+      "difficulty": 4,
+      "credit": "Daniel Jolivet · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Saint-Aignan_(Loir-et-Cher)._Okapi.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Daniel Jolivet",
+      "subjectSource": "https://en.wikipedia.org/wiki/Okapi",
+      "subjectTitle": "Okapi",
+      "imageDescription": "Male Okapi in captivity at ZooParc de Beauval , located in Saint-Aignan-sur-Cher, in the department of Loir-et-Cher, France.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Capybaracropped.jpg/960px-Capybaracropped.jpg",
+      "answer": "קפיברה",
+      "aliases": [
+        "קפיבארה מצויה"
+      ],
+      "difficulty": 4,
+      "credit": "Giles Laurent · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Capybaracropped.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Giles Laurent",
+      "subjectSource": "https://en.wikipedia.org/wiki/Capybara",
+      "subjectTitle": "Capybara",
+      "imageDescription": "This is a cropped version of this file by photographer Giles Laurent: https://commons.wikimedia.org/wiki/File:046_Capybara_by_the_river_in_Encontro_das_%C3%81guas_State_Park_Photo_by_Giles_Laurent.jpg It was cropped for the purpose of using it on on the English Wikipedia's article Capybara. © Giles Laurent, gileslaurent.com, License CC BY-SA",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Vombatus_ursinus_-Maria_Island_National_Park.jpg/960px-Vombatus_ursinus_-Maria_Island_National_Park.jpg",
+      "answer": "וומבט",
+      "aliases": [
+        "וומבט מצוי"
+      ],
+      "difficulty": 4,
+      "credit": "JJ Harrison ( jjharrison89@facebook.com ) · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vombatus_ursinus_-Maria_Island_National_Park.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "JJ Harrison ( jjharrison89@facebook.com )",
+      "subjectSource": "https://en.wikipedia.org/wiki/Common_wombat",
+      "subjectTitle": "Common wombat",
+      "imageDescription": "Common Wombat ( Vombatus ursinus tasmaniensis ) on Maria Island, Tasmania, Australia. The entire island is a national park, Maria Island National Park. The adult is just under a metre in length on average.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Sarcophilus_harrisii_taranna.jpg/960px-Sarcophilus_harrisii_taranna.jpg",
+      "answer": "שד טסמני",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "JJ Harrison ( https://www.jjharrison.com.au/ ) · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sarcophilus_harrisii_taranna.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "JJ Harrison ( https://www.jjharrison.com.au/ )",
+      "subjectSource": "https://en.wikipedia.org/wiki/Tasmanian_devil",
+      "subjectTitle": "Tasmanian devil",
+      "imageDescription": "Tasmanian Devil ( Sarcophilus harrisii ), Tasmanian Devil Conservation Park, Taranna, Tasmania, Australia",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Meerkat_%28Suricata_suricatta%29_Tswalu.jpg/960px-Meerkat_%28Suricata_suricatta%29_Tswalu.jpg",
+      "answer": "סוריקטה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Meerkat_(Suricata_suricatta)_Tswalu.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Charles J. Sharp",
+      "subjectSource": "https://en.wikipedia.org/wiki/Meerkat",
+      "subjectTitle": "Meerkat",
+      "imageDescription": "Meerkats ( Suricata suricatta ), Tswalu Kalahari Reserve, South Africa.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Raccoon_in_Central_Park_%2835264%29.jpg/960px-Raccoon_in_Central_Park_%2835264%29.jpg",
+      "answer": "דביבון",
+      "aliases": [
+        "דביבון מצוי"
+      ],
+      "difficulty": 4,
+      "credit": "Rhododendrites · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Raccoon_in_Central_Park_(35264).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Rhododendrites",
+      "subjectSource": "https://en.wikipedia.org/wiki/Raccoon",
+      "subjectTitle": "Raccoon",
+      "imageDescription": "Raccoon ( Procyon lotor ) in the Central Park Ramble",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Skunk_about_to_spray.jpg/960px-Skunk_about_to_spray.jpg",
+      "answer": "בואש",
+      "aliases": [
+        "בואש מפוספס"
+      ],
+      "difficulty": 4,
+      "credit": "Wallace Keck · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Skunk_about_to_spray.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Wallace Keck",
+      "subjectSource": "https://en.wikipedia.org/wiki/Striped_skunk",
+      "subjectTitle": "Striped skunk",
+      "imageDescription": "Skunk ( Mephitis mephitis ) in defensive posture with erect and puffed tail, indicating that they may be about to spray.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/European_badger_%28Meles_meles_taxus%29_Drenthe.jpg/960px-European_badger_%28Meles_meles_taxus%29_Drenthe.jpg",
+      "answer": "גירית",
+      "aliases": [
+        "גירית מצויה"
+      ],
+      "difficulty": 4,
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:European_badger_(Meles_meles_taxus)_Drenthe.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Charles J. Sharp",
+      "subjectSource": "https://en.wikipedia.org/wiki/European_badger",
+      "subjectTitle": "European badger",
+      "imageDescription": "European badger ( Meles meles taxus ), Drenthe, Netherlands",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/J%C3%A4rv1.jpg/960px-J%C3%A4rv1.jpg",
+      "answer": "גרגרן",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Esquilo · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:J%C3%A4rv1.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Esquilo",
+      "subjectSource": "https://en.wikipedia.org/wiki/Wolverine",
+      "subjectTitle": "Wolverine",
+      "imageDescription": "Wolverine in Skansen Zoo , Stockholm",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Honey_Badger.jpg/960px-Honey_Badger.jpg",
+      "answer": "גירית הדבש",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Sumeet Moghe · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Honey_Badger.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Sumeet Moghe",
+      "subjectSource": "https://en.wikipedia.org/wiki/Honey_badger",
+      "subjectTitle": "Honey badger",
+      "imageDescription": "Honey badger at Satara camp in Kruger National Park , South Africa.",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Fischotter%2C_Lutra_Lutra.JPG",
+      "answer": "לוטרה",
+      "aliases": [
+        "לוטרה אירופית"
+      ],
+      "difficulty": 4,
+      "credit": "Bernard Landgraf · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Fischotter,_Lutra_Lutra.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Bernard Landgraf",
+      "subjectSource": "https://en.wikipedia.org/wiki/Eurasian_otter",
+      "subjectTitle": "Eurasian otter",
+      "imageDescription": "European Otter ( Lutra lutra ).",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Beaver_pho34.jpg",
+      "answer": "בונה",
+      "aliases": [
+        "בונה אירופי"
+      ],
+      "difficulty": 4,
+      "credit": "Per Harald Olsen · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Beaver_pho34.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Per Harald Olsen",
+      "subjectSource": "https://en.wikipedia.org/wiki/Eurasian_beaver",
+      "subjectTitle": "Eurasian beaver",
+      "imageDescription": "A European Beaver in Norway.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Duck-billed_platypus_%28Ornithorhynchus_anatinus%29_Scottsdale.jpg/960px-Duck-billed_platypus_%28Ornithorhynchus_anatinus%29_Scottsdale.jpg",
+      "answer": "ברווזן",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Duck-billed_platypus_(Ornithorhynchus_anatinus)_Scottsdale.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Charles J. Sharp",
+      "subjectSource": "https://en.wikipedia.org/wiki/Platypus",
+      "subjectTitle": "Platypus",
+      "imageDescription": "Duck-billed platypus ( Ornithorhynchus anatinus ), Scottsdale, TAS, Australia",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Myresluger2.jpg",
+      "answer": "דוב נמלים",
+      "aliases": [
+        "דוב נמלים ענק"
+      ],
+      "difficulty": 4,
+      "credit": "Malene Thyssen · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Myresluger2.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Malene Thyssen",
+      "subjectSource": "https://en.wikipedia.org/wiki/Giant_anteater",
+      "subjectTitle": "Giant anteater",
+      "imageDescription": "Giant anteater ( Myrmecophaga tridactyla ), Copenhagen Zoo, Denmark, 2005.",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Dasypus_novemcinctus_en_Zool%C3%B3gico_de_Paraguan%C3%A1.jpg/960px-Dasypus_novemcinctus_en_Zool%C3%B3gico_de_Paraguan%C3%A1.jpg",
+      "answer": "ארמדיל",
+      "aliases": [
+        "ארמדיל טאטו"
+      ],
+      "difficulty": 4,
+      "credit": "Aramburu Carlos · CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dasypus_novemcinctus_en_Zool%C3%B3gico_de_Paraguan%C3%A1.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "artist": "Aramburu Carlos",
+      "subjectSource": "https://en.wikipedia.org/wiki/Nine-banded_armadillo",
+      "subjectTitle": "Nine-banded armadillo",
+      "imageDescription": "Dasypus novemcinctus en Zoológico de Paraguaná, Venezuela",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Red_Panda%2C_Gentle_Tree-Dweller_of_the_Himalayas.jpg/960px-Red_Panda%2C_Gentle_Tree-Dweller_of_the_Himalayas.jpg",
+      "answer": "פנדה אדומה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Sunuwargr · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Red_Panda,_Gentle_Tree-Dweller_of_the_Himalayas.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Sunuwargr",
+      "subjectSource": "https://en.wikipedia.org/wiki/Red_panda",
+      "subjectTitle": "Red panda",
+      "imageDescription": "The red panda is a small, tree-dwelling mammal native to the Himalayas, known for its reddish fur, bushy tail, and shy nature. I photograph it in Langtang National Park, Helambu, Nepal",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Ring-tailed_lemur_%28Lemur_catta%29.jpg/960px-Ring-tailed_lemur_%28Lemur_catta%29.jpg",
+      "answer": "למור זנב טבעת",
+      "aliases": [
+        "למור זנב-טבעת"
+      ],
+      "difficulty": 4,
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ring-tailed_lemur_(Lemur_catta).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Charles J. Sharp",
+      "subjectSource": "https://en.wikipedia.org/wiki/Ring-tailed_lemur",
+      "subjectTitle": "Ring-tailed lemur",
+      "imageDescription": "Ring-tailed lemur ( Lemur catta ), Andasibe, Madagascar",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Mandrill_Albert_September_2015_Zoo_Berlin_%282%29.jpg/960px-Mandrill_Albert_September_2015_Zoo_Berlin_%282%29.jpg",
+      "answer": "מנדריל",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Katma0601 · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mandrill_Albert_September_2015_Zoo_Berlin_(2).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Katma0601",
+      "subjectSource": "https://en.wikipedia.org/wiki/Mandrill",
+      "subjectTitle": "Mandrill",
+      "imageDescription": "Mandrill in the Berlin Zoo",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Papio_hamadryas_pair.jpg/960px-Papio_hamadryas_pair.jpg",
+      "answer": "בבון",
+      "aliases": [
+        "בבון מצרים"
+      ],
+      "difficulty": 4,
+      "credit": "Manuel González Olaechea y Franco · CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Papio_hamadryas_pair.jpg",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "Manuel González Olaechea y Franco",
+      "subjectSource": "https://en.wikipedia.org/wiki/Hamadryas_baboon",
+      "subjectTitle": "Hamadryas baboon",
+      "imageDescription": "Papio. (Cercopithecidae). Foto tomada por © Manuel González Olaechea y Franco",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Spotted_hyena_%28Crocuta_crocuta%29.jpg/960px-Spotted_hyena_%28Crocuta_crocuta%29.jpg",
+      "answer": "צבוע נקוד",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Spotted_hyena_(Crocuta_crocuta).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Charles J. Sharp",
+      "subjectSource": "https://en.wikipedia.org/wiki/Spotted_hyena",
+      "subjectTitle": "Spotted hyena",
+      "imageDescription": "Spotted hyena ( Crocuta crocuta ), Etosha National Park, Namibia",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Caracal_on_the_road%2C_early_morning_in_Kgalagadi_%2836173878220%29_%28cropped%29.jpg/960px-Caracal_on_the_road%2C_early_morning_in_Kgalagadi_%2836173878220%29_%28cropped%29.jpg",
+      "answer": "קרקל",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Derek Keats · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Caracal_on_the_road,_early_morning_in_Kgalagadi_(36173878220)_(cropped).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Derek Keats",
+      "subjectSource": "https://en.wikipedia.org/wiki/Caracal",
+      "subjectTitle": "Caracal",
+      "imageDescription": "Caracal on a road, early morning in Kgalagadi",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Servalcropped.png/960px-Servalcropped.png",
+      "answer": "סרוואל",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Diego Delso · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Servalcropped.png",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Diego Delso",
+      "subjectSource": "https://en.wikipedia.org/wiki/Serval",
+      "subjectTitle": "Serval",
+      "imageDescription": "A cropped version of this photo by Diego Delso: https://commons.wikimedia.org/wiki/File:Serval_(Leptailurus_serval),_parque_nacional_de_Tarangire,_Tanzania,_2024-05-25,_DD_56.jpg Diego Delso | Website: delso.photo | License: CC BY-SA 4.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Irbis4.JPG/960px-Irbis4.JPG",
+      "answer": "נמר שלג",
+      "aliases": [
+        "נמר השלג"
+      ],
+      "difficulty": 4,
+      "credit": "Irbis1983 · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Irbis4.JPG",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Irbis1983",
+      "subjectSource": "https://en.wikipedia.org/wiki/Snow_leopard",
+      "subjectTitle": "Snow leopard",
+      "imageDescription": "snow leopard",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Mountain_Lion_in_Glacier_National_Park.jpg/960px-Mountain_Lion_in_Glacier_National_Park.jpg",
+      "answer": "פומה",
+      "aliases": [
+        "פומת ההרים"
+      ],
+      "difficulty": 4,
+      "credit": "National Park Service · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Mountain_Lion_in_Glacier_National_Park.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "National Park Service",
+      "subjectSource": "https://en.wikipedia.org/wiki/Cougar",
+      "subjectTitle": "Cougar",
+      "imageDescription": "North American cougar (Puma concolor couguar) in Glacier National Park in the U.S. state of Montana.",
+      "reviewed": true
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Standing_jaguar.jpg",
+      "answer": "יגואר",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "USFWS · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Standing_jaguar.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "USFWS",
+      "subjectSource": "https://en.wikipedia.org/wiki/Jaguar",
+      "subjectTitle": "Jaguar",
+      "imageDescription": "Panther Panthera onca",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Fennec_Fox_Vulpes_zerda.jpg/960px-Fennec_Fox_Vulpes_zerda.jpg",
+      "answer": "פנק",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Drew Avery · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Fennec_Fox_Vulpes_zerda.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Drew Avery",
+      "subjectSource": "https://en.wikipedia.org/wiki/Fennec_fox",
+      "subjectTitle": "Fennec fox",
+      "imageDescription": "Fennec ( Vulpes zerda ), Norfolk Zoo",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Vulpes_lagopus_in_Iceland_%28cropped_3%29.jpg/960px-Vulpes_lagopus_in_Iceland_%28cropped_3%29.jpg",
+      "answer": "שועל שלג",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "Jonatan Pie ( unsplash.com/@r3dmax ) · CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vulpes_lagopus_in_Iceland_(cropped_3).jpg",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "artist": "Jonatan Pie ( unsplash.com/@r3dmax )",
+      "subjectSource": "https://en.wikipedia.org/wiki/Arctic_fox",
+      "subjectTitle": "Arctic fox",
+      "imageDescription": "Arctic fox ( Vulpes lagopus ) in winter coat on snow, Iceland",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Alpaca_in_Higashiyama_Zoo_-_1.jpg/960px-Alpaca_in_Higashiyama_Zoo_-_1.jpg",
+      "answer": "אלפקה",
+      "aliases": [],
+      "difficulty": 4,
+      "credit": "KKPCW · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Alpaca_in_Higashiyama_Zoo_-_1.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "KKPCW",
+      "subjectSource": "https://en.wikipedia.org/wiki/Alpaca",
+      "subjectTitle": "Alpaca",
+      "imageDescription": "東山動植物園内の「こども動物園」で飼育されてるアルパカ。",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Leopards_Davidraju_37_%28cropped%29.jpg/960px-Leopards_Davidraju_37_%28cropped%29.jpg",
+      "answer": "נמר",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Davidvraju · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Leopards_Davidraju_37_(cropped).jpg",
+      "artist": "Davidvraju",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Elephants_at_Etosha_National_Park03.JPG/960px-Elephants_at_Etosha_National_Park03.JPG",
+      "answer": "פיל",
+      "aliases": [
+        "פיל אפריקני"
+      ],
+      "difficulty": 2,
+      "credit": "Vberger · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Elephants_at_Etosha_National_Park03.JPG",
+      "artist": "Vberger",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/White_Rhinoceros1.jpg/960px-White_Rhinoceros1.jpg",
+      "answer": "קרנף",
+      "aliases": [],
+      "difficulty": 3,
+      "credit": "drplokta · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:White_Rhinoceros1.jpg",
+      "artist": "drplokta",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Hippopotamus_-_04.jpg/960px-Hippopotamus_-_04.jpg",
+      "answer": "היפופוטם",
+      "aliases": [
+        "היפו"
+      ],
+      "difficulty": 2,
+      "credit": "Kabacchi · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hippopotamus_-_04.jpg",
+      "artist": "Kabacchi",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Burchell%27s_zebra_%28Equus_quagga_burchellii%29_2.jpg/960px-Burchell%27s_zebra_%28Equus_quagga_burchellii%29_2.jpg",
+      "answer": "זברה",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Burchell%27s_zebra_(Equus_quagga_burchellii)_2.jpg",
+      "artist": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Gorilla_498.jpg/960px-Gorilla_498.jpg",
+      "answer": "גורילה",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Ltshears · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gorilla_498.jpg",
+      "artist": "Ltshears",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Pan_troglodytes_%28male%29.jpg/960px-Pan_troglodytes_%28male%29.jpg",
+      "answer": "שימפנזה",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Hans Hillewaert · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pan_troglodytes_(male).jpg",
+      "artist": "Hans Hillewaert",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Dark_Grizzly_in_August_%285300913489%29.jpg/960px-Dark_Grizzly_in_August_%285300913489%29.jpg",
+      "answer": "גריזלי",
+      "aliases": [
+        "דוב גריזלי"
+      ],
+      "difficulty": 2,
+      "credit": "Denali National Park and Preserve · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Dark_Grizzly_in_August_(5300913489).jpg",
+      "artist": "Denali National Park and Preserve",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/%C3%84ht%C3%A4ri_Zoo%2C_Finland_%2840080326455%29.jpg/960px-%C3%84ht%C3%A4ri_Zoo%2C_Finland_%2840080326455%29.jpg",
+      "answer": "זאב",
+      "aliases": [
+        "זאב מצוי"
+      ],
+      "difficulty": 2,
+      "credit": "Ninara from Helsinki, Finland · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%C3%84ht%C3%A4ri_Zoo,_Finland_(40080326455).jpg",
+      "artist": "Ninara from Helsinki, Finland",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Fox_at_the_British_Wildlife_Centre%2C_Newchapel%2C_Surrey_-_geograph.org.uk_-_2221750.jpg/960px-Fox_at_the_British_Wildlife_Centre%2C_Newchapel%2C_Surrey_-_geograph.org.uk_-_2221750.jpg",
+      "answer": "שועל",
+      "aliases": [
+        "שועל מצוי"
+      ],
+      "difficulty": 2,
+      "credit": "Peter Trimming · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Fox_at_the_British_Wildlife_Centre,_Newchapel,_Surrey_-_geograph.org.uk_-_2221750.jpg",
+      "artist": "Peter Trimming",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Eastern_Cottontail_%28Sylvilagus_floridanus%29_%2810616753486%29.jpg/960px-Eastern_Cottontail_%28Sylvilagus_floridanus%29_%2810616753486%29.jpg",
+      "answer": "ארנב",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Ryan Hodnett / Ryan Hodnett · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Eastern_Cottontail_(Sylvilagus_floridanus)_(10616753486).jpg",
+      "artist": "Ryan Hodnett / Ryan Hodnett",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Erinaceus_europaeus_%28Linnaeus%2C_1758%29.jpg/960px-Erinaceus_europaeus_%28Linnaeus%2C_1758%29.jpg",
+      "answer": "קיפוד",
+      "aliases": [],
+      "difficulty": 2,
+      "credit": "Michael Gäbler · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Erinaceus_europaeus_(Linnaeus,_1758).jpg",
+      "artist": "Michael Gäbler",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Crouching_Panda.jpg/960px-Crouching_Panda.jpg",
+      "answer": "פנדה",
+      "aliases": [
+        "פנדה גדולה",
+        "פנדה ענקית"
+      ],
+      "difficulty": 2,
+      "credit": "Bilby · CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Crouching_Panda.jpg",
+      "artist": "Bilby",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Sumatra-tiger_Panthera-tigris-sumatrae.jpg/960px-Sumatra-tiger_Panthera-tigris-sumatrae.jpg",
+      "answer": "טיגריס",
+      "aliases": [
+        "נמר הפסים"
+      ],
+      "difficulty": 2,
+      "credit": "Alfonsopazphoto · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sumatra-tiger_Panthera-tigris-sumatrae.jpg",
+      "artist": "Alfonsopazphoto",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Cheetah_%28112706399%29.jpeg/960px-Cheetah_%28112706399%29.jpeg",
+      "answer": "צ׳יטה",
+      "aliases": [
+        "ברדלס",
+        "ציטה"
+      ],
+      "difficulty": 3,
+      "credit": "Yu Miyawaki · CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cheetah_(112706399).jpeg",
+      "artist": "Yu Miyawaki",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "reviewed": true
+    },
+    {
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/PikiWiki_Israel_38769_Male_Ibex.jpg/960px-PikiWiki_Israel_38769_Male_Ibex.jpg",
+      "answer": "יעל",
+      "aliases": [],
+      "difficulty": 3,
+      "credit": "netzach farbiash · CC BY 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_38769_Male_Ibex.jpg",
+      "artist": "netzach farbiash",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+      "reviewed": true
+    }
+  ]
+}
