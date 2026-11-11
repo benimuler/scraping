@@ -158,19 +158,14 @@ async function history(userId, limit = 30) {
 }
 
 /**
- * טבלת השיאים. שני דירוגים:
- *  - trophies (ברירת מחדל): גביעי הדירוג של המשחק המדורג — כמו טבלת
- *    הגביעים של "ראש בראש" (כל הזמן).
- *  - xp: הניסיון המצטבר, שמאחד גם ותק וגם איכות במשחק הידידות.
+ * טבלת השיאים. הדירוג לפי ניסיון, כי הוא המדד היחיד שמאחד גם ותק וגם
+ * איכות — מי ששיחק הרבה והפסיד לא יעקוף את מי ששיחק מעט וניצח הכול.
  */
-async function leaderboard(limit = 25, by = 'trophies') {
-  const order = by === 'xp'
-    ? `(p.data->>'xp')::int DESC NULLS LAST`
-    : `(p.data->>'trophyPoints')::int DESC NULLS LAST`;
+async function leaderboard(limit = 25) {
   const found = await db.query(
     `SELECT u.display_name, p.data
        FROM profiles p JOIN users u ON u.id = p.user_id
-      ORDER BY ${order}
+      ORDER BY (p.data->>'xp')::int DESC NULLS LAST
       LIMIT $1`,
     [Math.min(100, Math.max(1, limit))],
   );
@@ -179,16 +174,13 @@ async function leaderboard(limit = 25, by = 'trophies') {
     return {
       rank: i + 1,
       name: r.display_name,
-      trophyPoints: d.trophyPoints || 0,
-      rankedWins: d.rankedWins || 0,
-      rankedLosses: d.rankedLosses || 0,
       xp: d.xp || 0,
       wins: d.wins || 0,
       duels: d.duels || 0,
       correct: d.correct || 0,
       bestStreak: d.bestStreak || 0,
       fastestMs: d.fastestMs ?? null,
-      achievements: Object.keys(d.trophies || {}).length,
+      trophies: Object.keys(d.trophies || {}).length,
     };
   });
 }

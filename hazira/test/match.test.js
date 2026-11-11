@@ -135,34 +135,6 @@ test('משחק מהיר משבץ שני ממתינים לאותו חדר, ומכ
   assert.equal(mm.status(stale.ticket), null);
 });
 
-test('שיבוץ מדורג: ממתינים לחדרים שונים לא מזווגים, וחדר מדורג מקבל ווידג׳ט סליקה', () => {
-  const created = [];
-  const rooms = { create: (config) => { const r = { code: 'ROOM' + created.length, config }; created.push(r); return r; } };
-  let now = 1_000;
-  const mm = new Matchmaker(rooms, () => now);
-  const hooked = [];
-  mm.onRoomCreated = (room) => hooked.push(room);
-
-  const friendly = mm.join({ name: 'דנה', roomId: null });
-  assert.equal(friendly.status, 'waiting');
-  const classic = mm.join({ name: 'יוסי', roomId: 'classic', userId: 'u1' });
-  assert.equal(classic.status, 'waiting', 'ממתין לחדר אחר לא נזוג עם משחק הידידות');
-  const advanced = mm.join({ name: 'רוני', roomId: 'advanced', userId: 'u2' });
-  assert.equal(advanced.status, 'waiting', 'קלאסי ומתקדם הם חדרים נפרדים');
-  assert.equal(created.length, 0, 'אף חדר לא נפתח בלי זוג באותו חדר');
-
-  const classic2 = mm.join({ name: 'מאיה', roomId: 'classic', userId: 'u3' });
-  assert.equal(classic2.status, 'matched');
-  assert.equal(created.length, 1);
-  assert.deepEqual(created[0].config.ranked, { roomId: 'classic' }, 'החדר נוצר כמדורג');
-  assert.equal(hooked.length, 1, 'ווידג׳ט הסליקה חובר בעת יצירת החדר');
-
-  // שני הממתינים שנותרו (ידידות + מתקדם) עדיין בתור
-  const advanced2 = mm.join({ name: 'נועה', roomId: 'advanced', userId: 'u4' });
-  assert.equal(advanced2.status, 'matched');
-  assert.deepEqual(created[1].config.ranked, { roomId: 'advanced' });
-});
-
 test('קטגוריות התמונות נטענות עם תמונה אמיתית וקרדיט', () => {
   const photoCats = content.list().filter((c) => c.id.startsWith('photo-'));
   assert.ok(photoCats.length >= 15, `ציפיתי להרחבה משמעותית, נמצאו ${photoCats.length}`);

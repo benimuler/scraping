@@ -4,7 +4,7 @@
  * חיבור WebSocket עמיד: מתחבר מחדש אחרי ניתוק (מסך שננעל בטלפון הוא המקרה
  * הנפוץ), ומריץ handler לכל סוג הודעה.
  */
-export function connect({ role, code, name, categoryId, playerId, token, on }) {
+export function connect({ role, code, name, categoryId, playerId, on }) {
   const url = `${location.protocol === 'https:' ? 'wss' : 'ws'}://${location.host}/ws`;
   let ws = null;
   let closed = false;
@@ -28,7 +28,7 @@ export function connect({ role, code, name, categoryId, playerId, token, on }) {
 
     ws.onopen = () => {
       backoff = 500;
-      ws.send(JSON.stringify({ t: 'hello', role, code, name, categoryId, playerId: currentPlayerId, token }));
+      ws.send(JSON.stringify({ t: 'hello', role, code, name, categoryId, playerId: currentPlayerId }));
       on.status?.('connected');
     };
 

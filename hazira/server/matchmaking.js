@@ -18,31 +18,19 @@ class Matchmaker {
     this.tickets = new Map();
   }
 
-  /**
-   * מצטרף לתור. אם מישהו כבר מחכה — משבץ את שניהם לחדר חדש.
-   * roomId הוא חדר מדורג מתוך economy.החדרים (null = משחק ידידות בלי
-   * תשלום); שני שחקנים משובצים רק אם הם מחכים לאותו חדר.
-   */
-  join({ name, categoryId = null, roomId = null, userId = null }) {
+  /** מצטרף לתור. אם מישהו כבר מחכה — משבץ את שניהם לחדר חדש. */
+  join({ name, categoryId = null }) {
     this.sweep();
     for (const waiting of this.tickets.values()) {
       if (waiting.code) continue; // כבר שובץ לחדר, ממתין שהלקוח יתחבר
-      if ((waiting.roomId || null) !== (roomId || null)) continue;
-      const room = this.rooms.create({
-        mode: 'duel',
-        autoStart: true,
-        quick: true,
-        ranked: roomId ? { roomId } : null,
-      });
+      const room = this.rooms.create({ mode: 'duel', autoStart: true, quick: true });
       waiting.code = room.code;
       const ticket = randomUUID();
-      this.tickets.set(ticket, { name, categoryId, roomId: roomId || null, userId, code: room.code, createdAt: this.now() });
-      // השרת מחבר לחדר המדורג את ווידג'טי הסליקה (כניסה, הכרעה, החזר)
-      this.onRoomCreated?.(room);
+      this.tickets.set(ticket, { name, categoryId, code: room.code, createdAt: this.now() });
       return { ticket, status: 'matched', code: room.code };
     }
     const ticket = randomUUID();
-    this.tickets.set(ticket, { name, categoryId, roomId: roomId || null, userId, code: null, createdAt: this.now() });
+    this.tickets.set(ticket, { name, categoryId, code: null, createdAt: this.now() });
     return { ticket, status: 'waiting' };
   }
 

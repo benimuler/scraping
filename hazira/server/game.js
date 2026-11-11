@@ -59,10 +59,6 @@ class Game {
     // 'duel' — דו־קרב עצמאי בין שני טלפונים, בלי לוח ובלי כיבוש.
     // 'board' — משחק הכיבוש המלא על לוח המשבצות.
     this.mode = config.mode === 'board' ? 'board' : 'duel';
-    // חדר מדורג: {roomId} מתוך economy.החדרים. null = משחק ידידות בלי סליקה.
-    this.ranked = config.ranked || null;
-    this.settlement = null; // נתוני הסליקה, ממולאים על ידי השרת אחרי match_end
-    this.hooks = config.hooks || {};
     this.code = null;
     this.phase = PHASES.LOBBY;
     this.players = new Map();
@@ -85,7 +81,7 @@ class Game {
 
   // ---------------------------------------------------------------- שחקנים
 
-  addPlayer({ name, categoryId, userId = null }) {
+  addPlayer({ name, categoryId }) {
     if (this.phase !== PHASES.LOBBY) throw new Error('המשחק כבר התחיל');
     const capacity = this.mode === 'duel' ? 2 : this.config.maxGrid ** 2;
     if (this.players.size >= capacity) {
@@ -104,7 +100,6 @@ class Game {
 
     this.players.set(id, {
       id,
-      userId, // חשבון רשום — בסיס הסליקה הכלכלית. null אצל אורחים.
       name: String(name || 'מתמודד').slice(0, 24).trim() || 'מתמודד',
       categoryId: category,
       alive: true,
@@ -197,7 +192,6 @@ class Game {
       this.series.round = 1;
       for (const id of this.players.keys()) this.series.wins[id] = 0;
       this._log({ type: 'game_start', mode: 'duel', players: 2 });
-      this.hooks.seriesStart?.(this);
       return this._beginDuel(challenger, defender);
     }
 
@@ -624,10 +618,7 @@ class Game {
     // פורמט המשחק: ראשון לשני ניצחונות. 2:0 מספיק; אם אחרי שני סיבובים
     // התוצאה 1:1 — הסיבוב השלישי מכריע בקטגוריה אקראית.
     const matchOver = this.series.wins[winnerId] >= this.config.matchWins;
-    if (matchOver) {
-      this.matchWinnerId = winnerId;
-      this.hooks.matchEnd?.(this, { winnerId, loserId });
-    }
+    if (matchOver) this.matchWinnerId = winnerId;
 
     this.lastResult = {
       duelId: duel.id,
@@ -709,9 +700,6 @@ class Game {
     const [challengerId, defenderId] = shuffle([...this.players.keys()], this.rand);
     this.series.round = 1;
     this._log({ type: 'match_start', mode: 'duel', players: 2 });
-    // משחק חדש מול אותו יריב — סידרה חדשה, דמי כניסה חדשים
-    this.settlement = null;
-    this.hooks.seriesStart?.(this);
     return this._beginDuel(challengerId, defenderId);
   }
 
@@ -831,8 +819,6 @@ class Game {
       series: this.series,
       matchWins: this.config.matchWins,
       matchWinnerId: this.matchWinnerId,
-      ranked: this.ranked,
-      settlement: this.settlement,
       code: this.code,
       gridSize: this.gridSize,
       tiles: this.tiles.map((t) => t.ownerId),

@@ -96,4 +96,4 @@ export async function me() {
 
 export const submitDuel = (payload) => call('/api/me/duel', { method: 'POST', body: payload });
 export const history = (limit = 30) => call(`/api/me/history?limit=${limit}`);
-export const leaderboard = (limit = 25, by = 'trophies') => call(`/api/leaderboard?limit=${limit}&by=${by}`);
+export const leaderboard = (limit = 25) => call(`/api/leaderboard?limit=${limit}`);

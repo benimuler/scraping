@@ -21,7 +21,6 @@
     <button class="chip" id="open-trophies" type="button">
       <span id="chip-trophies">🏆 0</span>
     </button>
-    <span class="chip econ" id="chip-economy" hidden>🪙 <b id="chip-coins">0</b> · 🏆 <b id="chip-points">0</b></span>
     <button class="chip" id="open-history" type="button">📜</button>
     <button class="chip" id="open-board" type="button">📊</button>
     <div class="level-chip">
@@ -82,10 +81,6 @@
         <label for="f-cat">הקטגוריה שלך</label>
         <select id="f-cat" name="categoryId"></select>
         <div class="muted hint">זו הקטגוריה שבה יילחמו נגדך. בחרו משהו שאתם חזקים בו.</div>
-      </div>
-      <div class="field" id="rooms-field" hidden>
-        <label>משחק מדורג על מטבעות וגביעים</label>
-        <div class="room-cards" id="room-cards"></div>
       </div>
       <button class="btn primary block lg" type="submit">כניסה לזירה</button>
       <div class="error" id="join-error" hidden></div>
@@ -219,7 +214,6 @@
     <h1 id="over-title">—</h1>
     <div class="my-cat" id="over-sub">—</div>
     <div class="series" id="over-series" hidden></div>
-    <div class="settlement" id="settlement" hidden></div>
 
     <div class="reward" id="reward" hidden>
       <div class="xp-line"><span id="xp-gained">+0</span> ניסיון</div>
@@ -253,10 +247,6 @@
       <button class="btn ghost back" id="board-back" type="button">→ חזרה</button>
       <h2>טבלת שיאים</h2>
     </div>
-    <div class="board-tabs" id="board-tabs">
-      <button type="button" data-by="trophies" class="on">🏆 גביעים</button>
-      <button type="button" data-by="xp">ניסיון</button>
-    </div>
     <div class="board-list" id="board-list"></div>
   </section>
 
@@ -264,7 +254,7 @@
   <section class="screen overlay" id="s-trophies" hidden>
     <div class="overlay-head">
       <button class="btn ghost back" id="trophies-back" type="button">→ חזרה</button>
-      <h2>ההישגים שלי</h2>
+      <h2>הגביעים שלי</h2>
     </div>
     <div class="profile-summary" id="profile-summary"></div>
     <div class="account-row" id="account-row"></div>
